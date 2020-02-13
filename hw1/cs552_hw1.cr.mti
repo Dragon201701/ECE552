@@ -75,19 +75,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	nor2
 
-} {} {}} D:/ECE552/hw1/cla_4b_tb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/cla_4b_tb.v
+} {} {}} D:/ECE552/hw1/nor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/nor3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module cla_4b_tb
+-- Compiling module nor3
 
 Top level modules:
-	cla_4b_tb
-
-} {} {}} D:/ECE552/hw1/fullAdder_1b_tb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/fullAdder_1b_tb.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module fullAdder_1b_tb
-
-Top level modules:
-	fullAdder_1b_tb
+	nor3
 
 } {} {}} D:/ECE552/hw1/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/not1.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -96,19 +89,19 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	not1
 
-} {} {}} D:/ECE552/hw1/nor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/nor3.v
+} {} {}} D:/ECE552/hw1/fullAdder_1b_tb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/fullAdder_1b_tb.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module nor3
+-- Compiling module fullAdder_1b_tb
 
 Top level modules:
-	nor3
+	fullAdder_1b_tb
 
-} {} {}} D:/ECE552/hw1/mux4_1_tb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/mux4_1_tb.v
+} {} {}} D:/ECE552/hw1/cla_4b_tb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/cla_4b_tb.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module mux4_1_tb
+-- Compiling module cla_4b_tb
 
 Top level modules:
-	mux4_1_tb
+	cla_4b_tb
 
 } {} {}} D:/ECE552/hw1/mux4_1_4b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/mux4_1_4b.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -117,12 +110,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	mux4_1_4b
 
-} {} {}} D:/ECE552/hw1/fullAdder_1b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/fullAdder_1b.v
+} {} {}} D:/ECE552/hw1/mux4_1_tb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/mux4_1_tb.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module fullAdder_1b
+-- Compiling module mux4_1_tb
 
 Top level modules:
-	fullAdder_1b
+	mux4_1_tb
 
 } {} {}} D:/ECE552/hw1/cla_4b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/cla_4b.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -130,6 +123,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	cla_4b
+
+} {} {}} D:/ECE552/hw1/fullAdder_1b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/fullAdder_1b.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module fullAdder_1b
+
+Top level modules:
+	fullAdder_1b
 
 } {} {}} D:/ECE552/hw1/cla_16b_bench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw1/cla_16b_bench.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
