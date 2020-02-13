@@ -1,0 +1,22 @@
+module mux2_1_tb();
+	reg InA;
+	reg InB;
+	reg InC;
+	reg InD;
+	reg [1:0] S;
+	wire Out;
+	mux4_1 iDUT(.InA(InA), .InB(InB), .InC(InC), .InD(InD), .S(S), .Out(Out));
+
+	initial begin
+		InB = 1'b0;
+
+	end
+	initial begin
+		InA = 1'b0;
+		#5
+		forever
+			#10 InA = ~InA;
+	end
+	always
+		#10 InB = ~InA;
+endmodule
