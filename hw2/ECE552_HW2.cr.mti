@@ -1,0 +1,22 @@
+D:/ECE552/hw2/shifter_hier_bench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/shifter_hier_bench.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module shifter_hier_bench
+
+Top level modules:
+	shifter_hier_bench
+
+} {} {}} D:/ECE552/hw2/clkrst.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/clkrst.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} D:/ECE552/hw2/shifter_hier.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/shifter_hier.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module shifter_hier
+
+Top level modules:
+	shifter_hier
+
+} {} {}}
