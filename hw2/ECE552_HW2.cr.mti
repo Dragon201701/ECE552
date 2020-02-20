@@ -1,4 +1,102 @@
-D:/ECE552/hw2/clkrst.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/clkrst.v
+D:/ECE552/hw2/nor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/nor2.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module nor2
+
+Top level modules:
+	nor2
+
+} {} {}} D:/ECE552/hw2/alu_hier.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/alu_hier.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module alu_hier
+
+Top level modules:
+	alu_hier
+
+} {} {}} D:/ECE552/hw2/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/not1.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module not1
+
+Top level modules:
+	not1
+
+} {} {}} D:/ECE552/hw2/nor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/nor3.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module nor3
+
+Top level modules:
+	nor3
+
+} {} {}} D:/ECE552/hw2/nand2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/nand2.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module nand2
+
+Top level modules:
+	nand2
+
+} {} {}} D:/ECE552/hw2/nand3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/nand3.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module nand3
+
+Top level modules:
+	nand3
+
+} {} {}} D:/ECE552/hw2/shifter_hier.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/shifter_hier.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module shifter_hier
+
+Top level modules:
+	shifter_hier
+
+} {} {}} D:/ECE552/hw2/shifter.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/shifter.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} D:/ECE552/hw2/fullAdder_1b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/fullAdder_1b.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module fullAdder_1b
+
+Top level modules:
+	fullAdder_1b
+
+} {} {}} D:/ECE552/hw2/cla_4b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/cla_4b.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module cla_4b
+
+Top level modules:
+	cla_4b
+
+} {} {}} D:/ECE552/hw2/alu_hier_bench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/alu_hier_bench.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module alu_hier_bench
+
+Top level modules:
+	alu_hier_bench
+
+} {} {}} D:/ECE552/hw2/cla_16b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/cla_16b.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module cla_16b
+
+Top level modules:
+	cla_16b
+
+} {} {}} D:/ECE552/hw2/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/alu.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} D:/ECE552/hw2/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/xor2.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module xor2
+
+Top level modules:
+	xor2
+
+} {} {}} D:/ECE552/hw2/clkrst.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/clkrst.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module clkrst
 
@@ -11,5 +109,33 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	shifter_hier_bench
+
+} {} {}} D:/ECE552/hw2/mux4_1_4b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/mux4_1_4b.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux4_1_4b
+
+Top level modules:
+	mux4_1_4b
+
+} {} {}} D:/ECE552/hw2/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/xor3.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module xor3
+
+Top level modules:
+	xor3
+
+} {} {}} D:/ECE552/hw2/mux2_1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/mux2_1.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux2_1
+
+Top level modules:
+	mux2_1
+
+} {} {}} D:/ECE552/hw2/mux4_1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw2/mux4_1.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux4_1
+
+Top level modules:
+	mux4_1
 
 } {} {}}
