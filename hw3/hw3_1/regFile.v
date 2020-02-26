@@ -25,6 +25,6 @@ module regFile (
    output [15:0] read2Data;
    output        err;
 
-   /* YOUR CODE HERE */
+   mux8_16 registers(.clk(clk), .rst(rst), .wr_en(writenEn), .read1_sel(read1RegSel), .read2_sel(read2RegSel), .write1_sel(writeRegSel), .data_in(writeData), .read1_out(read1Data), .read2_out(read2Data), .err(err));
 
 endmodule
