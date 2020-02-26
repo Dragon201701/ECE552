@@ -8,7 +8,6 @@ module mux8_16 (clk, rst, wr_en, read1_sel, read2_sel, write1_sel, data_in, read
 	input	[N-1:0]	data_in;
 	output	[N-1:0]	read1_out, read2_out;
 
-	wire [N-1:0] out0, out1, out2, out3, out4, out5, out6, out7;
 	wire [7:0] decode_out_r1, decode_out_r2, decode_out_w1, en;
 
 	// The 3 bits select the register
