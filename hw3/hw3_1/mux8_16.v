@@ -1,4 +1,4 @@
-module mux8_16 (clk, rst, wr_en, read1_sel, read2_sel, write1_sel, data_in, read1_out, read2_out, write1_out);
+module mux8_16 (clk, rst, wr_en, read1_sel, read2_sel, write1_sel, data_in, read1_out, read2_out, err);
 
 	// TODO: Probably want to do this param in regFile.v
 	parameter N = 16;
@@ -6,7 +6,7 @@ module mux8_16 (clk, rst, wr_en, read1_sel, read2_sel, write1_sel, data_in, read
 	input clk, rst, en;
 	input	[2:0]	read1_sel, read2_sel, write1_sel;
 	input	[N-1:0]	data_in;
-	output	[N-1:0]	read1_out, read2_out, write1_out;
+	output	[N-1:0]	read1_out, read2_out;
 
 	wire [N-1:0] out0, out1, out2, out3, out4, out5, out6, out7;
 	wire [7:0] decode_out_r1, decode_out_r2, decode_out_w1, en;
@@ -51,13 +51,16 @@ module mux8_16 (clk, rst, wr_en, read1_sel, read2_sel, write1_sel, data_in, read
 
 	// Output logic for write1
 	case (decode_out_[7:0])
-		8'b00000001: assign write1_out[15:0] = out_0[15:0]; assign en = wr_en ? 8'b00000001 : 8'b00000000
-		8'b00000010: assign write1_out[15:0] = out_1[15:0]; assign en = wr_en ? 8'b00000010 : 8'b00000000
-		8'b00000100: assign write1_out[15:0] = out_2[15:0]; assign en = wr_en ? 8'b00000100 : 8'b00000000
-		8'b00001000: assign write1_out[15:0] = out_3[15:0]; assign en = wr_en ? 8'b00001000 : 8'b00000000
-		8'b00010000: assign write1_out[15:0] = out_4[15:0]; assign en = wr_en ? 8'b00010000 : 8'b00000000
-		8'b00100000: assign write1_out[15:0] = out_5[15:0]; assign en = wr_en ? 8'b00100000 : 8'b00000000
-		8'b01000000: assign write1_out[15:0] = out_6[15:0]; assign en = wr_en ? 8'b01000000 : 8'b00000000
-		8'b10000000: assign write1_out[15:0] = out_7[15:0]; assign en = wr_en ? 8'b10000000 : 8'b00000000
+		8'b00000001: assign en = wr_en ? 8'b00000001 : 8'b00000000
+		8'b00000010: assign en = wr_en ? 8'b00000010 : 8'b00000000
+		8'b00000100: assign en = wr_en ? 8'b00000100 : 8'b00000000
+		8'b00001000: assign en = wr_en ? 8'b00001000 : 8'b00000000
+		8'b00010000: assign en = wr_en ? 8'b00010000 : 8'b00000000
+		8'b00100000: assign en = wr_en ? 8'b00100000 : 8'b00000000
+		8'b01000000: assign en = wr_en ? 8'b01000000 : 8'b00000000
+		8'b10000000: assign en = wr_en ? 8'b10000000 : 8'b00000000
+			
+	// TODO: error logic
+	assign err = 1'b0;
 		
 endmodule
