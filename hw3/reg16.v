@@ -1,8 +1,11 @@
 module reg16 (D, clk, rst, en, Q);
+
+	parameter N = 16;
+
 	input	clk, rst, en;
-	input	[15:0]	D;
-	output	[15:0]	Q;
-	wire 	[15:0]	in, out;
+	input	[N-1:0]	D;
+	output	[N-1:0]	Q;
+	wire 	[N-1:0]	in, out;
 	
 	assign in = (en)? D : out;
 	assign Q = out;
