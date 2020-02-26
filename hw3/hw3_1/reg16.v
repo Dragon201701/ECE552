@@ -4,8 +4,8 @@ module reg16 (D, clk, rst, en, Q);
 	output	[15:0]	Q;	
 	wire 	[15:0]	in, out;	
 
-	assign in = (en)? D : out;	
-	assign Q = out;	
+	assign in = (en)? D[15:0] : out[15:0];	
+	assign Q = out[15:0];	
 	dff dff_0(.d(in[0]), .clk(clk), .rst(rst), .q(out[0]));	
 	dff dff_1(.d(in[1]), .clk(clk), .rst(rst), .q(out[1]));	
 	dff dff_2(.d(in[2]), .clk(clk), .rst(rst), .q(out[2]));	
