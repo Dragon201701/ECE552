@@ -39,7 +39,7 @@ module mux8_16 (clk, rst, wr_en, read1_sel, read2_sel, write1_sel, data_in, read
 		8'b10000000: assign read1_out[15:0] = out_7[15:0];
 
 	// Output logic for read2
-	case (decode_out_w1[7:0])
+	case (decode_out_r2[7:0])
 		8'b00000001: assign read2_out[15:0] = out_0[15:0];
 		8'b00000010: assign read2_out[15:0] = out_1[15:0];
 		8'b00000100: assign read2_out[15:0] = out_2[15:0];
@@ -50,7 +50,7 @@ module mux8_16 (clk, rst, wr_en, read1_sel, read2_sel, write1_sel, data_in, read
 		8'b10000000: assign read2_out[15:0] = out_7[15:0];
 
 	// Output logic for write1
-	case (decode_out_[7:0])
+	case (decode_out_w1[7:0])
 		8'b00000001: assign en = wr_en ? 8'b00000001 : 8'b00000000
 		8'b00000010: assign en = wr_en ? 8'b00000010 : 8'b00000000
 		8'b00000100: assign en = wr_en ? 8'b00000100 : 8'b00000000
