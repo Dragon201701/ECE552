@@ -28,11 +28,9 @@ module mux8_16 (clk, rst, wr_en, read1_sel, read2_sel, write1_sel, data_in, read
 	dec3to8 decode_read2(.in(read2_sel[2:0]), .out(decode_out_r2[7:0]));
 	dec3to8 decode_out1(.in(write1_sel[2:0]), .out(decode_out_w1[7:0]));
 
-<<<<<<< HEAD
-always @ (*) begin
-=======
+
 always @ (decode_out_r1, decode_out_r2) begin
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
+
 	// Output logic for read1
 	err <= 1'b0;
 	case (decode_out_r1[7:0])

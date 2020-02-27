@@ -23,5 +23,7 @@ module regFile_bypass (
    output        err;
 
    /* YOUR CODE HERE */
-
+   wire   [15:0]  regfile_out1;
+   regFile regfile(.clk(clk), .rst(rst), .writeEn(writeEn), .read1RegSel(read1RegSel), .read2RegSel(read2RegSel), .writeRegSel(writeRegSel), .writeData(writeData), .read1Data(regfile_out1), .read2Data(read2Data), .err(err));
+   assign read1Data = (writeEn)? writeData : regfile_out1;
 endmodule
