@@ -1,9 +1,5 @@
 $date
-<<<<<<< HEAD
-	Wed Feb 26 17:04:16 2020
-=======
-	Wed Feb 26 16:45:25 2020
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
+	Fri Feb 28 14:00:46 2020
 $end
 $version
 	ModelSim Version 10.7c
@@ -189,22 +185,12 @@ $var wire 1 > read2Data [2] $end
 $var wire 1 ? read2Data [1] $end
 $var wire 1 @ read2Data [0] $end
 $var wire 1 h err $end
-<<<<<<< HEAD
 
 $scope module registers $end
 $var parameter 32 l N $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $var wire 1 e wr_en $end
-=======
-$var wire 1 l writenEn $end
-
-$scope module registers $end
-$var parameter 32 m N $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$var wire 1 l wr_en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 L read1_sel [2] $end
 $var wire 1 M read1_sel [1] $end
 $var wire 1 N read1_sel [0] $end
@@ -230,7 +216,6 @@ $var wire 1 a data_in [3] $end
 $var wire 1 b data_in [2] $end
 $var wire 1 c data_in [1] $end
 $var wire 1 d data_in [0] $end
-<<<<<<< HEAD
 $var reg 16 m read1_out [15:0] $end
 $var reg 16 n read2_out [15:0] $end
 $var reg 1 o err $end
@@ -394,180 +379,11 @@ $var wire 1 P" en [3] $end
 $var wire 1 Q" en [2] $end
 $var wire 1 R" en [1] $end
 $var wire 1 S" en [0] $end
-=======
-$var reg 16 n read1_out [15:0] $end
-$var reg 16 o read2_out [15:0] $end
-$var reg 1 p err $end
-$var wire 1 q out_0 [15] $end
-$var wire 1 r out_0 [14] $end
-$var wire 1 s out_0 [13] $end
-$var wire 1 t out_0 [12] $end
-$var wire 1 u out_0 [11] $end
-$var wire 1 v out_0 [10] $end
-$var wire 1 w out_0 [9] $end
-$var wire 1 x out_0 [8] $end
-$var wire 1 y out_0 [7] $end
-$var wire 1 z out_0 [6] $end
-$var wire 1 { out_0 [5] $end
-$var wire 1 | out_0 [4] $end
-$var wire 1 } out_0 [3] $end
-$var wire 1 ~ out_0 [2] $end
-$var wire 1 !! out_0 [1] $end
-$var wire 1 "! out_0 [0] $end
-$var wire 1 #! out_1 [15] $end
-$var wire 1 $! out_1 [14] $end
-$var wire 1 %! out_1 [13] $end
-$var wire 1 &! out_1 [12] $end
-$var wire 1 '! out_1 [11] $end
-$var wire 1 (! out_1 [10] $end
-$var wire 1 )! out_1 [9] $end
-$var wire 1 *! out_1 [8] $end
-$var wire 1 +! out_1 [7] $end
-$var wire 1 ,! out_1 [6] $end
-$var wire 1 -! out_1 [5] $end
-$var wire 1 .! out_1 [4] $end
-$var wire 1 /! out_1 [3] $end
-$var wire 1 0! out_1 [2] $end
-$var wire 1 1! out_1 [1] $end
-$var wire 1 2! out_1 [0] $end
-$var wire 1 3! out_2 [15] $end
-$var wire 1 4! out_2 [14] $end
-$var wire 1 5! out_2 [13] $end
-$var wire 1 6! out_2 [12] $end
-$var wire 1 7! out_2 [11] $end
-$var wire 1 8! out_2 [10] $end
-$var wire 1 9! out_2 [9] $end
-$var wire 1 :! out_2 [8] $end
-$var wire 1 ;! out_2 [7] $end
-$var wire 1 <! out_2 [6] $end
-$var wire 1 =! out_2 [5] $end
-$var wire 1 >! out_2 [4] $end
-$var wire 1 ?! out_2 [3] $end
-$var wire 1 @! out_2 [2] $end
-$var wire 1 A! out_2 [1] $end
-$var wire 1 B! out_2 [0] $end
-$var wire 1 C! out_3 [15] $end
-$var wire 1 D! out_3 [14] $end
-$var wire 1 E! out_3 [13] $end
-$var wire 1 F! out_3 [12] $end
-$var wire 1 G! out_3 [11] $end
-$var wire 1 H! out_3 [10] $end
-$var wire 1 I! out_3 [9] $end
-$var wire 1 J! out_3 [8] $end
-$var wire 1 K! out_3 [7] $end
-$var wire 1 L! out_3 [6] $end
-$var wire 1 M! out_3 [5] $end
-$var wire 1 N! out_3 [4] $end
-$var wire 1 O! out_3 [3] $end
-$var wire 1 P! out_3 [2] $end
-$var wire 1 Q! out_3 [1] $end
-$var wire 1 R! out_3 [0] $end
-$var wire 1 S! out_4 [15] $end
-$var wire 1 T! out_4 [14] $end
-$var wire 1 U! out_4 [13] $end
-$var wire 1 V! out_4 [12] $end
-$var wire 1 W! out_4 [11] $end
-$var wire 1 X! out_4 [10] $end
-$var wire 1 Y! out_4 [9] $end
-$var wire 1 Z! out_4 [8] $end
-$var wire 1 [! out_4 [7] $end
-$var wire 1 \! out_4 [6] $end
-$var wire 1 ]! out_4 [5] $end
-$var wire 1 ^! out_4 [4] $end
-$var wire 1 _! out_4 [3] $end
-$var wire 1 `! out_4 [2] $end
-$var wire 1 a! out_4 [1] $end
-$var wire 1 b! out_4 [0] $end
-$var wire 1 c! out_5 [15] $end
-$var wire 1 d! out_5 [14] $end
-$var wire 1 e! out_5 [13] $end
-$var wire 1 f! out_5 [12] $end
-$var wire 1 g! out_5 [11] $end
-$var wire 1 h! out_5 [10] $end
-$var wire 1 i! out_5 [9] $end
-$var wire 1 j! out_5 [8] $end
-$var wire 1 k! out_5 [7] $end
-$var wire 1 l! out_5 [6] $end
-$var wire 1 m! out_5 [5] $end
-$var wire 1 n! out_5 [4] $end
-$var wire 1 o! out_5 [3] $end
-$var wire 1 p! out_5 [2] $end
-$var wire 1 q! out_5 [1] $end
-$var wire 1 r! out_5 [0] $end
-$var wire 1 s! out_6 [15] $end
-$var wire 1 t! out_6 [14] $end
-$var wire 1 u! out_6 [13] $end
-$var wire 1 v! out_6 [12] $end
-$var wire 1 w! out_6 [11] $end
-$var wire 1 x! out_6 [10] $end
-$var wire 1 y! out_6 [9] $end
-$var wire 1 z! out_6 [8] $end
-$var wire 1 {! out_6 [7] $end
-$var wire 1 |! out_6 [6] $end
-$var wire 1 }! out_6 [5] $end
-$var wire 1 ~! out_6 [4] $end
-$var wire 1 !" out_6 [3] $end
-$var wire 1 "" out_6 [2] $end
-$var wire 1 #" out_6 [1] $end
-$var wire 1 $" out_6 [0] $end
-$var wire 1 %" out_7 [15] $end
-$var wire 1 &" out_7 [14] $end
-$var wire 1 '" out_7 [13] $end
-$var wire 1 (" out_7 [12] $end
-$var wire 1 )" out_7 [11] $end
-$var wire 1 *" out_7 [10] $end
-$var wire 1 +" out_7 [9] $end
-$var wire 1 ," out_7 [8] $end
-$var wire 1 -" out_7 [7] $end
-$var wire 1 ." out_7 [6] $end
-$var wire 1 /" out_7 [5] $end
-$var wire 1 0" out_7 [4] $end
-$var wire 1 1" out_7 [3] $end
-$var wire 1 2" out_7 [2] $end
-$var wire 1 3" out_7 [1] $end
-$var wire 1 4" out_7 [0] $end
-$var wire 1 5" decode_out_r1 [7] $end
-$var wire 1 6" decode_out_r1 [6] $end
-$var wire 1 7" decode_out_r1 [5] $end
-$var wire 1 8" decode_out_r1 [4] $end
-$var wire 1 9" decode_out_r1 [3] $end
-$var wire 1 :" decode_out_r1 [2] $end
-$var wire 1 ;" decode_out_r1 [1] $end
-$var wire 1 <" decode_out_r1 [0] $end
-$var wire 1 =" decode_out_r2 [7] $end
-$var wire 1 >" decode_out_r2 [6] $end
-$var wire 1 ?" decode_out_r2 [5] $end
-$var wire 1 @" decode_out_r2 [4] $end
-$var wire 1 A" decode_out_r2 [3] $end
-$var wire 1 B" decode_out_r2 [2] $end
-$var wire 1 C" decode_out_r2 [1] $end
-$var wire 1 D" decode_out_r2 [0] $end
-$var wire 1 E" decode_out_w1 [7] $end
-$var wire 1 F" decode_out_w1 [6] $end
-$var wire 1 G" decode_out_w1 [5] $end
-$var wire 1 H" decode_out_w1 [4] $end
-$var wire 1 I" decode_out_w1 [3] $end
-$var wire 1 J" decode_out_w1 [2] $end
-$var wire 1 K" decode_out_w1 [1] $end
-$var wire 1 L" decode_out_w1 [0] $end
-$var wire 1 M" en [7] $end
-$var wire 1 N" en [6] $end
-$var wire 1 O" en [5] $end
-$var wire 1 P" en [4] $end
-$var wire 1 Q" en [3] $end
-$var wire 1 R" en [2] $end
-$var wire 1 S" en [1] $end
-$var wire 1 T" en [0] $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 
 $scope module in_0 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 S" en $end
-=======
-$var wire 1 T" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -584,7 +400,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 p Q [15] $end
 $var wire 1 q Q [14] $end
 $var wire 1 r Q [13] $end
@@ -635,281 +450,122 @@ $var wire 1 r" out [1] $end
 $var wire 1 s" out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 q Q [15] $end
-$var wire 1 r Q [14] $end
-$var wire 1 s Q [13] $end
-$var wire 1 t Q [12] $end
-$var wire 1 u Q [11] $end
-$var wire 1 v Q [10] $end
-$var wire 1 w Q [9] $end
-$var wire 1 x Q [8] $end
-$var wire 1 y Q [7] $end
-$var wire 1 z Q [6] $end
-$var wire 1 { Q [5] $end
-$var wire 1 | Q [4] $end
-$var wire 1 } Q [3] $end
-$var wire 1 ~ Q [2] $end
-$var wire 1 !! Q [1] $end
-$var wire 1 "! Q [0] $end
-$var wire 1 U" in [15] $end
-$var wire 1 V" in [14] $end
-$var wire 1 W" in [13] $end
-$var wire 1 X" in [12] $end
-$var wire 1 Y" in [11] $end
-$var wire 1 Z" in [10] $end
-$var wire 1 [" in [9] $end
-$var wire 1 \" in [8] $end
-$var wire 1 ]" in [7] $end
-$var wire 1 ^" in [6] $end
-$var wire 1 _" in [5] $end
-$var wire 1 `" in [4] $end
-$var wire 1 a" in [3] $end
-$var wire 1 b" in [2] $end
-$var wire 1 c" in [1] $end
-$var wire 1 d" in [0] $end
-$var wire 1 e" out [15] $end
-$var wire 1 f" out [14] $end
-$var wire 1 g" out [13] $end
-$var wire 1 h" out [12] $end
-$var wire 1 i" out [11] $end
-$var wire 1 j" out [10] $end
-$var wire 1 k" out [9] $end
-$var wire 1 l" out [8] $end
-$var wire 1 m" out [7] $end
-$var wire 1 n" out [6] $end
-$var wire 1 o" out [5] $end
-$var wire 1 p" out [4] $end
-$var wire 1 q" out [3] $end
-$var wire 1 r" out [2] $end
-$var wire 1 s" out [1] $end
-$var wire 1 t" out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 t" q $end
-$var wire 1 d" d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$var reg 1 u" state $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 s" q $end
 $var wire 1 c" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 t" state $end
 $upscope $end
 
 $scope module dff_1 $end
-=======
-$var reg 1 v" state $end
-$upscope $end
-
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 r" q $end
 $var wire 1 b" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 u" state $end
 $upscope $end
 
 $scope module dff_2 $end
-=======
-$var reg 1 w" state $end
-$upscope $end
-
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 q" q $end
 $var wire 1 a" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 v" state $end
 $upscope $end
 
 $scope module dff_3 $end
-=======
-$var reg 1 x" state $end
-$upscope $end
-
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 p" q $end
 $var wire 1 `" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 w" state $end
 $upscope $end
 
 $scope module dff_4 $end
-=======
-$var reg 1 y" state $end
-$upscope $end
-
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 o" q $end
 $var wire 1 _" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 x" state $end
 $upscope $end
 
 $scope module dff_5 $end
-=======
-$var reg 1 z" state $end
-$upscope $end
-
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 n" q $end
 $var wire 1 ^" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 y" state $end
 $upscope $end
 
 $scope module dff_6 $end
-=======
-$var reg 1 {" state $end
-$upscope $end
-
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 m" q $end
 $var wire 1 ]" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 z" state $end
 $upscope $end
 
 $scope module dff_7 $end
-=======
-$var reg 1 |" state $end
-$upscope $end
-
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 l" q $end
 $var wire 1 \" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 {" state $end
 $upscope $end
 
 $scope module dff_8 $end
-=======
-$var reg 1 }" state $end
-$upscope $end
-
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 k" q $end
 $var wire 1 [" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 |" state $end
 $upscope $end
 
 $scope module dff_9 $end
-=======
-$var reg 1 ~" state $end
-$upscope $end
-
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 j" q $end
 $var wire 1 Z" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 }" state $end
 $upscope $end
 
 $scope module dff_10 $end
-=======
-$var reg 1 !# state $end
-$upscope $end
-
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 i" q $end
 $var wire 1 Y" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 ~" state $end
 $upscope $end
 
 $scope module dff_11 $end
-=======
-$var reg 1 "# state $end
-$upscope $end
-
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 h" q $end
 $var wire 1 X" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 !# state $end
 $upscope $end
 
 $scope module dff_12 $end
-=======
-$var reg 1 ## state $end
-$upscope $end
-
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 g" q $end
 $var wire 1 W" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 "# state $end
 $upscope $end
 
 $scope module dff_13 $end
-=======
-$var reg 1 $# state $end
-$upscope $end
-
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 f" q $end
 $var wire 1 V" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 ## state $end
 $upscope $end
 
 $scope module dff_14 $end
-=======
-$var reg 1 %# state $end
-$upscope $end
-
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 e" q $end
 $var wire 1 U" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 $# state $end
 $upscope $end
 
@@ -919,20 +575,13 @@ $var wire 1 T" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $var reg 1 %# state $end
-=======
-$var reg 1 &# state $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 $upscope $end
 
 $scope module in_1 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 R" en $end
-=======
-$var wire 1 S" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -949,7 +598,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 "! Q [15] $end
 $var wire 1 #! Q [14] $end
 $var wire 1 $! Q [13] $end
@@ -1000,281 +648,122 @@ $var wire 1 D# out [1] $end
 $var wire 1 E# out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 #! Q [15] $end
-$var wire 1 $! Q [14] $end
-$var wire 1 %! Q [13] $end
-$var wire 1 &! Q [12] $end
-$var wire 1 '! Q [11] $end
-$var wire 1 (! Q [10] $end
-$var wire 1 )! Q [9] $end
-$var wire 1 *! Q [8] $end
-$var wire 1 +! Q [7] $end
-$var wire 1 ,! Q [6] $end
-$var wire 1 -! Q [5] $end
-$var wire 1 .! Q [4] $end
-$var wire 1 /! Q [3] $end
-$var wire 1 0! Q [2] $end
-$var wire 1 1! Q [1] $end
-$var wire 1 2! Q [0] $end
-$var wire 1 '# in [15] $end
-$var wire 1 (# in [14] $end
-$var wire 1 )# in [13] $end
-$var wire 1 *# in [12] $end
-$var wire 1 +# in [11] $end
-$var wire 1 ,# in [10] $end
-$var wire 1 -# in [9] $end
-$var wire 1 .# in [8] $end
-$var wire 1 /# in [7] $end
-$var wire 1 0# in [6] $end
-$var wire 1 1# in [5] $end
-$var wire 1 2# in [4] $end
-$var wire 1 3# in [3] $end
-$var wire 1 4# in [2] $end
-$var wire 1 5# in [1] $end
-$var wire 1 6# in [0] $end
-$var wire 1 7# out [15] $end
-$var wire 1 8# out [14] $end
-$var wire 1 9# out [13] $end
-$var wire 1 :# out [12] $end
-$var wire 1 ;# out [11] $end
-$var wire 1 <# out [10] $end
-$var wire 1 =# out [9] $end
-$var wire 1 ># out [8] $end
-$var wire 1 ?# out [7] $end
-$var wire 1 @# out [6] $end
-$var wire 1 A# out [5] $end
-$var wire 1 B# out [4] $end
-$var wire 1 C# out [3] $end
-$var wire 1 D# out [2] $end
-$var wire 1 E# out [1] $end
-$var wire 1 F# out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 F# q $end
-$var wire 1 6# d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$var reg 1 G# state $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 E# q $end
 $var wire 1 5# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 F# state $end
 $upscope $end
 
 $scope module dff_1 $end
-=======
-$var reg 1 H# state $end
-$upscope $end
-
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 D# q $end
 $var wire 1 4# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 G# state $end
 $upscope $end
 
 $scope module dff_2 $end
-=======
-$var reg 1 I# state $end
-$upscope $end
-
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 C# q $end
 $var wire 1 3# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 H# state $end
 $upscope $end
 
 $scope module dff_3 $end
-=======
-$var reg 1 J# state $end
-$upscope $end
-
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 B# q $end
 $var wire 1 2# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 I# state $end
 $upscope $end
 
 $scope module dff_4 $end
-=======
-$var reg 1 K# state $end
-$upscope $end
-
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 A# q $end
 $var wire 1 1# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 J# state $end
 $upscope $end
 
 $scope module dff_5 $end
-=======
-$var reg 1 L# state $end
-$upscope $end
-
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 @# q $end
 $var wire 1 0# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 K# state $end
 $upscope $end
 
 $scope module dff_6 $end
-=======
-$var reg 1 M# state $end
-$upscope $end
-
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ?# q $end
 $var wire 1 /# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 L# state $end
 $upscope $end
 
 $scope module dff_7 $end
-=======
-$var reg 1 N# state $end
-$upscope $end
-
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ># q $end
 $var wire 1 .# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 M# state $end
 $upscope $end
 
 $scope module dff_8 $end
-=======
-$var reg 1 O# state $end
-$upscope $end
-
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 =# q $end
 $var wire 1 -# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 N# state $end
 $upscope $end
 
 $scope module dff_9 $end
-=======
-$var reg 1 P# state $end
-$upscope $end
-
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 <# q $end
 $var wire 1 ,# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 O# state $end
 $upscope $end
 
 $scope module dff_10 $end
-=======
-$var reg 1 Q# state $end
-$upscope $end
-
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ;# q $end
 $var wire 1 +# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 P# state $end
 $upscope $end
 
 $scope module dff_11 $end
-=======
-$var reg 1 R# state $end
-$upscope $end
-
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 :# q $end
 $var wire 1 *# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 Q# state $end
 $upscope $end
 
 $scope module dff_12 $end
-=======
-$var reg 1 S# state $end
-$upscope $end
-
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 9# q $end
 $var wire 1 )# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 R# state $end
 $upscope $end
 
 $scope module dff_13 $end
-=======
-$var reg 1 T# state $end
-$upscope $end
-
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 8# q $end
 $var wire 1 (# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 S# state $end
 $upscope $end
 
 $scope module dff_14 $end
-=======
-$var reg 1 U# state $end
-$upscope $end
-
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 7# q $end
 $var wire 1 '# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 T# state $end
 $upscope $end
 
@@ -1284,20 +773,13 @@ $var wire 1 &# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $var reg 1 U# state $end
-=======
-$var reg 1 V# state $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 $upscope $end
 
 $scope module in_2 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 Q" en $end
-=======
-$var wire 1 R" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -1314,7 +796,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 2! Q [15] $end
 $var wire 1 3! Q [14] $end
 $var wire 1 4! Q [13] $end
@@ -1365,281 +846,122 @@ $var wire 1 t# out [1] $end
 $var wire 1 u# out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 3! Q [15] $end
-$var wire 1 4! Q [14] $end
-$var wire 1 5! Q [13] $end
-$var wire 1 6! Q [12] $end
-$var wire 1 7! Q [11] $end
-$var wire 1 8! Q [10] $end
-$var wire 1 9! Q [9] $end
-$var wire 1 :! Q [8] $end
-$var wire 1 ;! Q [7] $end
-$var wire 1 <! Q [6] $end
-$var wire 1 =! Q [5] $end
-$var wire 1 >! Q [4] $end
-$var wire 1 ?! Q [3] $end
-$var wire 1 @! Q [2] $end
-$var wire 1 A! Q [1] $end
-$var wire 1 B! Q [0] $end
-$var wire 1 W# in [15] $end
-$var wire 1 X# in [14] $end
-$var wire 1 Y# in [13] $end
-$var wire 1 Z# in [12] $end
-$var wire 1 [# in [11] $end
-$var wire 1 \# in [10] $end
-$var wire 1 ]# in [9] $end
-$var wire 1 ^# in [8] $end
-$var wire 1 _# in [7] $end
-$var wire 1 `# in [6] $end
-$var wire 1 a# in [5] $end
-$var wire 1 b# in [4] $end
-$var wire 1 c# in [3] $end
-$var wire 1 d# in [2] $end
-$var wire 1 e# in [1] $end
-$var wire 1 f# in [0] $end
-$var wire 1 g# out [15] $end
-$var wire 1 h# out [14] $end
-$var wire 1 i# out [13] $end
-$var wire 1 j# out [12] $end
-$var wire 1 k# out [11] $end
-$var wire 1 l# out [10] $end
-$var wire 1 m# out [9] $end
-$var wire 1 n# out [8] $end
-$var wire 1 o# out [7] $end
-$var wire 1 p# out [6] $end
-$var wire 1 q# out [5] $end
-$var wire 1 r# out [4] $end
-$var wire 1 s# out [3] $end
-$var wire 1 t# out [2] $end
-$var wire 1 u# out [1] $end
-$var wire 1 v# out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 v# q $end
-$var wire 1 f# d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$var reg 1 w# state $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 u# q $end
 $var wire 1 e# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 v# state $end
 $upscope $end
 
 $scope module dff_1 $end
-=======
-$var reg 1 x# state $end
-$upscope $end
-
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 t# q $end
 $var wire 1 d# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 w# state $end
 $upscope $end
 
 $scope module dff_2 $end
-=======
-$var reg 1 y# state $end
-$upscope $end
-
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 s# q $end
 $var wire 1 c# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 x# state $end
 $upscope $end
 
 $scope module dff_3 $end
-=======
-$var reg 1 z# state $end
-$upscope $end
-
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 r# q $end
 $var wire 1 b# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 y# state $end
 $upscope $end
 
 $scope module dff_4 $end
-=======
-$var reg 1 {# state $end
-$upscope $end
-
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 q# q $end
 $var wire 1 a# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 z# state $end
 $upscope $end
 
 $scope module dff_5 $end
-=======
-$var reg 1 |# state $end
-$upscope $end
-
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 p# q $end
 $var wire 1 `# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 {# state $end
 $upscope $end
 
 $scope module dff_6 $end
-=======
-$var reg 1 }# state $end
-$upscope $end
-
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 o# q $end
 $var wire 1 _# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 |# state $end
 $upscope $end
 
 $scope module dff_7 $end
-=======
-$var reg 1 ~# state $end
-$upscope $end
-
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 n# q $end
 $var wire 1 ^# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 }# state $end
 $upscope $end
 
 $scope module dff_8 $end
-=======
-$var reg 1 !$ state $end
-$upscope $end
-
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 m# q $end
 $var wire 1 ]# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 ~# state $end
 $upscope $end
 
 $scope module dff_9 $end
-=======
-$var reg 1 "$ state $end
-$upscope $end
-
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 l# q $end
 $var wire 1 \# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 !$ state $end
 $upscope $end
 
 $scope module dff_10 $end
-=======
-$var reg 1 #$ state $end
-$upscope $end
-
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 k# q $end
 $var wire 1 [# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 "$ state $end
 $upscope $end
 
 $scope module dff_11 $end
-=======
-$var reg 1 $$ state $end
-$upscope $end
-
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 j# q $end
 $var wire 1 Z# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 #$ state $end
 $upscope $end
 
 $scope module dff_12 $end
-=======
-$var reg 1 %$ state $end
-$upscope $end
-
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 i# q $end
 $var wire 1 Y# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 $$ state $end
 $upscope $end
 
 $scope module dff_13 $end
-=======
-$var reg 1 &$ state $end
-$upscope $end
-
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 h# q $end
 $var wire 1 X# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 %$ state $end
 $upscope $end
 
 $scope module dff_14 $end
-=======
-$var reg 1 '$ state $end
-$upscope $end
-
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 g# q $end
 $var wire 1 W# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 &$ state $end
 $upscope $end
 
@@ -1649,20 +971,13 @@ $var wire 1 V# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $var reg 1 '$ state $end
-=======
-$var reg 1 ($ state $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 $upscope $end
 
 $scope module in_3 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 P" en $end
-=======
-$var wire 1 Q" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -1679,7 +994,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 B! Q [15] $end
 $var wire 1 C! Q [14] $end
 $var wire 1 D! Q [13] $end
@@ -1730,281 +1044,122 @@ $var wire 1 F$ out [1] $end
 $var wire 1 G$ out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 C! Q [15] $end
-$var wire 1 D! Q [14] $end
-$var wire 1 E! Q [13] $end
-$var wire 1 F! Q [12] $end
-$var wire 1 G! Q [11] $end
-$var wire 1 H! Q [10] $end
-$var wire 1 I! Q [9] $end
-$var wire 1 J! Q [8] $end
-$var wire 1 K! Q [7] $end
-$var wire 1 L! Q [6] $end
-$var wire 1 M! Q [5] $end
-$var wire 1 N! Q [4] $end
-$var wire 1 O! Q [3] $end
-$var wire 1 P! Q [2] $end
-$var wire 1 Q! Q [1] $end
-$var wire 1 R! Q [0] $end
-$var wire 1 )$ in [15] $end
-$var wire 1 *$ in [14] $end
-$var wire 1 +$ in [13] $end
-$var wire 1 ,$ in [12] $end
-$var wire 1 -$ in [11] $end
-$var wire 1 .$ in [10] $end
-$var wire 1 /$ in [9] $end
-$var wire 1 0$ in [8] $end
-$var wire 1 1$ in [7] $end
-$var wire 1 2$ in [6] $end
-$var wire 1 3$ in [5] $end
-$var wire 1 4$ in [4] $end
-$var wire 1 5$ in [3] $end
-$var wire 1 6$ in [2] $end
-$var wire 1 7$ in [1] $end
-$var wire 1 8$ in [0] $end
-$var wire 1 9$ out [15] $end
-$var wire 1 :$ out [14] $end
-$var wire 1 ;$ out [13] $end
-$var wire 1 <$ out [12] $end
-$var wire 1 =$ out [11] $end
-$var wire 1 >$ out [10] $end
-$var wire 1 ?$ out [9] $end
-$var wire 1 @$ out [8] $end
-$var wire 1 A$ out [7] $end
-$var wire 1 B$ out [6] $end
-$var wire 1 C$ out [5] $end
-$var wire 1 D$ out [4] $end
-$var wire 1 E$ out [3] $end
-$var wire 1 F$ out [2] $end
-$var wire 1 G$ out [1] $end
-$var wire 1 H$ out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 H$ q $end
-$var wire 1 8$ d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$var reg 1 I$ state $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 G$ q $end
 $var wire 1 7$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 H$ state $end
 $upscope $end
 
 $scope module dff_1 $end
-=======
-$var reg 1 J$ state $end
-$upscope $end
-
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 F$ q $end
 $var wire 1 6$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 I$ state $end
 $upscope $end
 
 $scope module dff_2 $end
-=======
-$var reg 1 K$ state $end
-$upscope $end
-
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 E$ q $end
 $var wire 1 5$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 J$ state $end
 $upscope $end
 
 $scope module dff_3 $end
-=======
-$var reg 1 L$ state $end
-$upscope $end
-
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 D$ q $end
 $var wire 1 4$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 K$ state $end
 $upscope $end
 
 $scope module dff_4 $end
-=======
-$var reg 1 M$ state $end
-$upscope $end
-
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 C$ q $end
 $var wire 1 3$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 L$ state $end
 $upscope $end
 
 $scope module dff_5 $end
-=======
-$var reg 1 N$ state $end
-$upscope $end
-
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 B$ q $end
 $var wire 1 2$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 M$ state $end
 $upscope $end
 
 $scope module dff_6 $end
-=======
-$var reg 1 O$ state $end
-$upscope $end
-
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 A$ q $end
 $var wire 1 1$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 N$ state $end
 $upscope $end
 
 $scope module dff_7 $end
-=======
-$var reg 1 P$ state $end
-$upscope $end
-
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 @$ q $end
 $var wire 1 0$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 O$ state $end
 $upscope $end
 
 $scope module dff_8 $end
-=======
-$var reg 1 Q$ state $end
-$upscope $end
-
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ?$ q $end
 $var wire 1 /$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 P$ state $end
 $upscope $end
 
 $scope module dff_9 $end
-=======
-$var reg 1 R$ state $end
-$upscope $end
-
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 >$ q $end
 $var wire 1 .$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 Q$ state $end
 $upscope $end
 
 $scope module dff_10 $end
-=======
-$var reg 1 S$ state $end
-$upscope $end
-
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 =$ q $end
 $var wire 1 -$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 R$ state $end
 $upscope $end
 
 $scope module dff_11 $end
-=======
-$var reg 1 T$ state $end
-$upscope $end
-
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 <$ q $end
 $var wire 1 ,$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 S$ state $end
 $upscope $end
 
 $scope module dff_12 $end
-=======
-$var reg 1 U$ state $end
-$upscope $end
-
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ;$ q $end
 $var wire 1 +$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 T$ state $end
 $upscope $end
 
 $scope module dff_13 $end
-=======
-$var reg 1 V$ state $end
-$upscope $end
-
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 :$ q $end
 $var wire 1 *$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 U$ state $end
 $upscope $end
 
 $scope module dff_14 $end
-=======
-$var reg 1 W$ state $end
-$upscope $end
-
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 9$ q $end
 $var wire 1 )$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 V$ state $end
 $upscope $end
 
@@ -2014,20 +1169,13 @@ $var wire 1 ($ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $var reg 1 W$ state $end
-=======
-$var reg 1 X$ state $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 $upscope $end
 
 $scope module in_4 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 O" en $end
-=======
-$var wire 1 P" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -2044,7 +1192,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 R! Q [15] $end
 $var wire 1 S! Q [14] $end
 $var wire 1 T! Q [13] $end
@@ -2095,281 +1242,122 @@ $var wire 1 v$ out [1] $end
 $var wire 1 w$ out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 S! Q [15] $end
-$var wire 1 T! Q [14] $end
-$var wire 1 U! Q [13] $end
-$var wire 1 V! Q [12] $end
-$var wire 1 W! Q [11] $end
-$var wire 1 X! Q [10] $end
-$var wire 1 Y! Q [9] $end
-$var wire 1 Z! Q [8] $end
-$var wire 1 [! Q [7] $end
-$var wire 1 \! Q [6] $end
-$var wire 1 ]! Q [5] $end
-$var wire 1 ^! Q [4] $end
-$var wire 1 _! Q [3] $end
-$var wire 1 `! Q [2] $end
-$var wire 1 a! Q [1] $end
-$var wire 1 b! Q [0] $end
-$var wire 1 Y$ in [15] $end
-$var wire 1 Z$ in [14] $end
-$var wire 1 [$ in [13] $end
-$var wire 1 \$ in [12] $end
-$var wire 1 ]$ in [11] $end
-$var wire 1 ^$ in [10] $end
-$var wire 1 _$ in [9] $end
-$var wire 1 `$ in [8] $end
-$var wire 1 a$ in [7] $end
-$var wire 1 b$ in [6] $end
-$var wire 1 c$ in [5] $end
-$var wire 1 d$ in [4] $end
-$var wire 1 e$ in [3] $end
-$var wire 1 f$ in [2] $end
-$var wire 1 g$ in [1] $end
-$var wire 1 h$ in [0] $end
-$var wire 1 i$ out [15] $end
-$var wire 1 j$ out [14] $end
-$var wire 1 k$ out [13] $end
-$var wire 1 l$ out [12] $end
-$var wire 1 m$ out [11] $end
-$var wire 1 n$ out [10] $end
-$var wire 1 o$ out [9] $end
-$var wire 1 p$ out [8] $end
-$var wire 1 q$ out [7] $end
-$var wire 1 r$ out [6] $end
-$var wire 1 s$ out [5] $end
-$var wire 1 t$ out [4] $end
-$var wire 1 u$ out [3] $end
-$var wire 1 v$ out [2] $end
-$var wire 1 w$ out [1] $end
-$var wire 1 x$ out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 x$ q $end
-$var wire 1 h$ d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$var reg 1 y$ state $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 w$ q $end
 $var wire 1 g$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 x$ state $end
 $upscope $end
 
 $scope module dff_1 $end
-=======
-$var reg 1 z$ state $end
-$upscope $end
-
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 v$ q $end
 $var wire 1 f$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 y$ state $end
 $upscope $end
 
 $scope module dff_2 $end
-=======
-$var reg 1 {$ state $end
-$upscope $end
-
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 u$ q $end
 $var wire 1 e$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 z$ state $end
 $upscope $end
 
 $scope module dff_3 $end
-=======
-$var reg 1 |$ state $end
-$upscope $end
-
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 t$ q $end
 $var wire 1 d$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 {$ state $end
 $upscope $end
 
 $scope module dff_4 $end
-=======
-$var reg 1 }$ state $end
-$upscope $end
-
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 s$ q $end
 $var wire 1 c$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 |$ state $end
 $upscope $end
 
 $scope module dff_5 $end
-=======
-$var reg 1 ~$ state $end
-$upscope $end
-
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 r$ q $end
 $var wire 1 b$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 }$ state $end
 $upscope $end
 
 $scope module dff_6 $end
-=======
-$var reg 1 !% state $end
-$upscope $end
-
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 q$ q $end
 $var wire 1 a$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 ~$ state $end
 $upscope $end
 
 $scope module dff_7 $end
-=======
-$var reg 1 "% state $end
-$upscope $end
-
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 p$ q $end
 $var wire 1 `$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 !% state $end
 $upscope $end
 
 $scope module dff_8 $end
-=======
-$var reg 1 #% state $end
-$upscope $end
-
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 o$ q $end
 $var wire 1 _$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 "% state $end
 $upscope $end
 
 $scope module dff_9 $end
-=======
-$var reg 1 $% state $end
-$upscope $end
-
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 n$ q $end
 $var wire 1 ^$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 #% state $end
 $upscope $end
 
 $scope module dff_10 $end
-=======
-$var reg 1 %% state $end
-$upscope $end
-
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 m$ q $end
 $var wire 1 ]$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 $% state $end
 $upscope $end
 
 $scope module dff_11 $end
-=======
-$var reg 1 &% state $end
-$upscope $end
-
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 l$ q $end
 $var wire 1 \$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 %% state $end
 $upscope $end
 
 $scope module dff_12 $end
-=======
-$var reg 1 '% state $end
-$upscope $end
-
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 k$ q $end
 $var wire 1 [$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 &% state $end
 $upscope $end
 
 $scope module dff_13 $end
-=======
-$var reg 1 (% state $end
-$upscope $end
-
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 j$ q $end
 $var wire 1 Z$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 '% state $end
 $upscope $end
 
 $scope module dff_14 $end
-=======
-$var reg 1 )% state $end
-$upscope $end
-
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 i$ q $end
 $var wire 1 Y$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 (% state $end
 $upscope $end
 
@@ -2379,20 +1367,13 @@ $var wire 1 X$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $var reg 1 )% state $end
-=======
-$var reg 1 *% state $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 $upscope $end
 
 $scope module in_5 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 N" en $end
-=======
-$var wire 1 O" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -2409,7 +1390,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 b! Q [15] $end
 $var wire 1 c! Q [14] $end
 $var wire 1 d! Q [13] $end
@@ -2460,281 +1440,122 @@ $var wire 1 H% out [1] $end
 $var wire 1 I% out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 c! Q [15] $end
-$var wire 1 d! Q [14] $end
-$var wire 1 e! Q [13] $end
-$var wire 1 f! Q [12] $end
-$var wire 1 g! Q [11] $end
-$var wire 1 h! Q [10] $end
-$var wire 1 i! Q [9] $end
-$var wire 1 j! Q [8] $end
-$var wire 1 k! Q [7] $end
-$var wire 1 l! Q [6] $end
-$var wire 1 m! Q [5] $end
-$var wire 1 n! Q [4] $end
-$var wire 1 o! Q [3] $end
-$var wire 1 p! Q [2] $end
-$var wire 1 q! Q [1] $end
-$var wire 1 r! Q [0] $end
-$var wire 1 +% in [15] $end
-$var wire 1 ,% in [14] $end
-$var wire 1 -% in [13] $end
-$var wire 1 .% in [12] $end
-$var wire 1 /% in [11] $end
-$var wire 1 0% in [10] $end
-$var wire 1 1% in [9] $end
-$var wire 1 2% in [8] $end
-$var wire 1 3% in [7] $end
-$var wire 1 4% in [6] $end
-$var wire 1 5% in [5] $end
-$var wire 1 6% in [4] $end
-$var wire 1 7% in [3] $end
-$var wire 1 8% in [2] $end
-$var wire 1 9% in [1] $end
-$var wire 1 :% in [0] $end
-$var wire 1 ;% out [15] $end
-$var wire 1 <% out [14] $end
-$var wire 1 =% out [13] $end
-$var wire 1 >% out [12] $end
-$var wire 1 ?% out [11] $end
-$var wire 1 @% out [10] $end
-$var wire 1 A% out [9] $end
-$var wire 1 B% out [8] $end
-$var wire 1 C% out [7] $end
-$var wire 1 D% out [6] $end
-$var wire 1 E% out [5] $end
-$var wire 1 F% out [4] $end
-$var wire 1 G% out [3] $end
-$var wire 1 H% out [2] $end
-$var wire 1 I% out [1] $end
-$var wire 1 J% out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 J% q $end
-$var wire 1 :% d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$var reg 1 K% state $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 I% q $end
 $var wire 1 9% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 J% state $end
 $upscope $end
 
 $scope module dff_1 $end
-=======
-$var reg 1 L% state $end
-$upscope $end
-
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 H% q $end
 $var wire 1 8% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 K% state $end
 $upscope $end
 
 $scope module dff_2 $end
-=======
-$var reg 1 M% state $end
-$upscope $end
-
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 G% q $end
 $var wire 1 7% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 L% state $end
 $upscope $end
 
 $scope module dff_3 $end
-=======
-$var reg 1 N% state $end
-$upscope $end
-
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 F% q $end
 $var wire 1 6% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 M% state $end
 $upscope $end
 
 $scope module dff_4 $end
-=======
-$var reg 1 O% state $end
-$upscope $end
-
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 E% q $end
 $var wire 1 5% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 N% state $end
 $upscope $end
 
 $scope module dff_5 $end
-=======
-$var reg 1 P% state $end
-$upscope $end
-
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 D% q $end
 $var wire 1 4% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 O% state $end
 $upscope $end
 
 $scope module dff_6 $end
-=======
-$var reg 1 Q% state $end
-$upscope $end
-
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 C% q $end
 $var wire 1 3% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 P% state $end
 $upscope $end
 
 $scope module dff_7 $end
-=======
-$var reg 1 R% state $end
-$upscope $end
-
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 B% q $end
 $var wire 1 2% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 Q% state $end
 $upscope $end
 
 $scope module dff_8 $end
-=======
-$var reg 1 S% state $end
-$upscope $end
-
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 A% q $end
 $var wire 1 1% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 R% state $end
 $upscope $end
 
 $scope module dff_9 $end
-=======
-$var reg 1 T% state $end
-$upscope $end
-
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 @% q $end
 $var wire 1 0% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 S% state $end
 $upscope $end
 
 $scope module dff_10 $end
-=======
-$var reg 1 U% state $end
-$upscope $end
-
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ?% q $end
 $var wire 1 /% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 T% state $end
 $upscope $end
 
 $scope module dff_11 $end
-=======
-$var reg 1 V% state $end
-$upscope $end
-
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 >% q $end
 $var wire 1 .% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 U% state $end
 $upscope $end
 
 $scope module dff_12 $end
-=======
-$var reg 1 W% state $end
-$upscope $end
-
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 =% q $end
 $var wire 1 -% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 V% state $end
 $upscope $end
 
 $scope module dff_13 $end
-=======
-$var reg 1 X% state $end
-$upscope $end
-
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 <% q $end
 $var wire 1 ,% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 W% state $end
 $upscope $end
 
 $scope module dff_14 $end
-=======
-$var reg 1 Y% state $end
-$upscope $end
-
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ;% q $end
 $var wire 1 +% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 X% state $end
 $upscope $end
 
@@ -2744,20 +1565,13 @@ $var wire 1 *% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $var reg 1 Y% state $end
-=======
-$var reg 1 Z% state $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 $upscope $end
 
 $scope module in_6 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 M" en $end
-=======
-$var wire 1 N" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -2774,7 +1588,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 r! Q [15] $end
 $var wire 1 s! Q [14] $end
 $var wire 1 t! Q [13] $end
@@ -2825,281 +1638,122 @@ $var wire 1 x% out [1] $end
 $var wire 1 y% out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 s! Q [15] $end
-$var wire 1 t! Q [14] $end
-$var wire 1 u! Q [13] $end
-$var wire 1 v! Q [12] $end
-$var wire 1 w! Q [11] $end
-$var wire 1 x! Q [10] $end
-$var wire 1 y! Q [9] $end
-$var wire 1 z! Q [8] $end
-$var wire 1 {! Q [7] $end
-$var wire 1 |! Q [6] $end
-$var wire 1 }! Q [5] $end
-$var wire 1 ~! Q [4] $end
-$var wire 1 !" Q [3] $end
-$var wire 1 "" Q [2] $end
-$var wire 1 #" Q [1] $end
-$var wire 1 $" Q [0] $end
-$var wire 1 [% in [15] $end
-$var wire 1 \% in [14] $end
-$var wire 1 ]% in [13] $end
-$var wire 1 ^% in [12] $end
-$var wire 1 _% in [11] $end
-$var wire 1 `% in [10] $end
-$var wire 1 a% in [9] $end
-$var wire 1 b% in [8] $end
-$var wire 1 c% in [7] $end
-$var wire 1 d% in [6] $end
-$var wire 1 e% in [5] $end
-$var wire 1 f% in [4] $end
-$var wire 1 g% in [3] $end
-$var wire 1 h% in [2] $end
-$var wire 1 i% in [1] $end
-$var wire 1 j% in [0] $end
-$var wire 1 k% out [15] $end
-$var wire 1 l% out [14] $end
-$var wire 1 m% out [13] $end
-$var wire 1 n% out [12] $end
-$var wire 1 o% out [11] $end
-$var wire 1 p% out [10] $end
-$var wire 1 q% out [9] $end
-$var wire 1 r% out [8] $end
-$var wire 1 s% out [7] $end
-$var wire 1 t% out [6] $end
-$var wire 1 u% out [5] $end
-$var wire 1 v% out [4] $end
-$var wire 1 w% out [3] $end
-$var wire 1 x% out [2] $end
-$var wire 1 y% out [1] $end
-$var wire 1 z% out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 z% q $end
-$var wire 1 j% d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$var reg 1 {% state $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 y% q $end
 $var wire 1 i% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 z% state $end
 $upscope $end
 
 $scope module dff_1 $end
-=======
-$var reg 1 |% state $end
-$upscope $end
-
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 x% q $end
 $var wire 1 h% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 {% state $end
 $upscope $end
 
 $scope module dff_2 $end
-=======
-$var reg 1 }% state $end
-$upscope $end
-
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 w% q $end
 $var wire 1 g% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 |% state $end
 $upscope $end
 
 $scope module dff_3 $end
-=======
-$var reg 1 ~% state $end
-$upscope $end
-
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 v% q $end
 $var wire 1 f% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 }% state $end
 $upscope $end
 
 $scope module dff_4 $end
-=======
-$var reg 1 !& state $end
-$upscope $end
-
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 u% q $end
 $var wire 1 e% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 ~% state $end
 $upscope $end
 
 $scope module dff_5 $end
-=======
-$var reg 1 "& state $end
-$upscope $end
-
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 t% q $end
 $var wire 1 d% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 !& state $end
 $upscope $end
 
 $scope module dff_6 $end
-=======
-$var reg 1 #& state $end
-$upscope $end
-
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 s% q $end
 $var wire 1 c% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 "& state $end
 $upscope $end
 
 $scope module dff_7 $end
-=======
-$var reg 1 $& state $end
-$upscope $end
-
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 r% q $end
 $var wire 1 b% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 #& state $end
 $upscope $end
 
 $scope module dff_8 $end
-=======
-$var reg 1 %& state $end
-$upscope $end
-
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 q% q $end
 $var wire 1 a% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 $& state $end
 $upscope $end
 
 $scope module dff_9 $end
-=======
-$var reg 1 && state $end
-$upscope $end
-
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 p% q $end
 $var wire 1 `% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 %& state $end
 $upscope $end
 
 $scope module dff_10 $end
-=======
-$var reg 1 '& state $end
-$upscope $end
-
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 o% q $end
 $var wire 1 _% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 && state $end
 $upscope $end
 
 $scope module dff_11 $end
-=======
-$var reg 1 (& state $end
-$upscope $end
-
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 n% q $end
 $var wire 1 ^% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 '& state $end
 $upscope $end
 
 $scope module dff_12 $end
-=======
-$var reg 1 )& state $end
-$upscope $end
-
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 m% q $end
 $var wire 1 ]% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 (& state $end
 $upscope $end
 
 $scope module dff_13 $end
-=======
-$var reg 1 *& state $end
-$upscope $end
-
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 l% q $end
 $var wire 1 \% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 )& state $end
 $upscope $end
 
 $scope module dff_14 $end
-=======
-$var reg 1 +& state $end
-$upscope $end
-
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 k% q $end
 $var wire 1 [% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 *& state $end
 $upscope $end
 
@@ -3109,20 +1763,13 @@ $var wire 1 Z% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $var reg 1 +& state $end
-=======
-$var reg 1 ,& state $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 $upscope $end
 
 $scope module in_7 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 L" en $end
-=======
-$var wire 1 M" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -3139,7 +1786,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 $" Q [15] $end
 $var wire 1 %" Q [14] $end
 $var wire 1 &" Q [13] $end
@@ -3190,281 +1836,122 @@ $var wire 1 J& out [1] $end
 $var wire 1 K& out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 %" Q [15] $end
-$var wire 1 &" Q [14] $end
-$var wire 1 '" Q [13] $end
-$var wire 1 (" Q [12] $end
-$var wire 1 )" Q [11] $end
-$var wire 1 *" Q [10] $end
-$var wire 1 +" Q [9] $end
-$var wire 1 ," Q [8] $end
-$var wire 1 -" Q [7] $end
-$var wire 1 ." Q [6] $end
-$var wire 1 /" Q [5] $end
-$var wire 1 0" Q [4] $end
-$var wire 1 1" Q [3] $end
-$var wire 1 2" Q [2] $end
-$var wire 1 3" Q [1] $end
-$var wire 1 4" Q [0] $end
-$var wire 1 -& in [15] $end
-$var wire 1 .& in [14] $end
-$var wire 1 /& in [13] $end
-$var wire 1 0& in [12] $end
-$var wire 1 1& in [11] $end
-$var wire 1 2& in [10] $end
-$var wire 1 3& in [9] $end
-$var wire 1 4& in [8] $end
-$var wire 1 5& in [7] $end
-$var wire 1 6& in [6] $end
-$var wire 1 7& in [5] $end
-$var wire 1 8& in [4] $end
-$var wire 1 9& in [3] $end
-$var wire 1 :& in [2] $end
-$var wire 1 ;& in [1] $end
-$var wire 1 <& in [0] $end
-$var wire 1 =& out [15] $end
-$var wire 1 >& out [14] $end
-$var wire 1 ?& out [13] $end
-$var wire 1 @& out [12] $end
-$var wire 1 A& out [11] $end
-$var wire 1 B& out [10] $end
-$var wire 1 C& out [9] $end
-$var wire 1 D& out [8] $end
-$var wire 1 E& out [7] $end
-$var wire 1 F& out [6] $end
-$var wire 1 G& out [5] $end
-$var wire 1 H& out [4] $end
-$var wire 1 I& out [3] $end
-$var wire 1 J& out [2] $end
-$var wire 1 K& out [1] $end
-$var wire 1 L& out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 L& q $end
-$var wire 1 <& d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$var reg 1 M& state $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 K& q $end
 $var wire 1 ;& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 L& state $end
 $upscope $end
 
 $scope module dff_1 $end
-=======
-$var reg 1 N& state $end
-$upscope $end
-
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 J& q $end
 $var wire 1 :& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 M& state $end
 $upscope $end
 
 $scope module dff_2 $end
-=======
-$var reg 1 O& state $end
-$upscope $end
-
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 I& q $end
 $var wire 1 9& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 N& state $end
 $upscope $end
 
 $scope module dff_3 $end
-=======
-$var reg 1 P& state $end
-$upscope $end
-
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 H& q $end
 $var wire 1 8& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 O& state $end
 $upscope $end
 
 $scope module dff_4 $end
-=======
-$var reg 1 Q& state $end
-$upscope $end
-
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 G& q $end
 $var wire 1 7& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 P& state $end
 $upscope $end
 
 $scope module dff_5 $end
-=======
-$var reg 1 R& state $end
-$upscope $end
-
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 F& q $end
 $var wire 1 6& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 Q& state $end
 $upscope $end
 
 $scope module dff_6 $end
-=======
-$var reg 1 S& state $end
-$upscope $end
-
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 E& q $end
 $var wire 1 5& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 R& state $end
 $upscope $end
 
 $scope module dff_7 $end
-=======
-$var reg 1 T& state $end
-$upscope $end
-
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 D& q $end
 $var wire 1 4& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 S& state $end
 $upscope $end
 
 $scope module dff_8 $end
-=======
-$var reg 1 U& state $end
-$upscope $end
-
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 C& q $end
 $var wire 1 3& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 T& state $end
 $upscope $end
 
 $scope module dff_9 $end
-=======
-$var reg 1 V& state $end
-$upscope $end
-
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 B& q $end
 $var wire 1 2& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 U& state $end
 $upscope $end
 
 $scope module dff_10 $end
-=======
-$var reg 1 W& state $end
-$upscope $end
-
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 A& q $end
 $var wire 1 1& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 V& state $end
 $upscope $end
 
 $scope module dff_11 $end
-=======
-$var reg 1 X& state $end
-$upscope $end
-
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 @& q $end
 $var wire 1 0& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 W& state $end
 $upscope $end
 
 $scope module dff_12 $end
-=======
-$var reg 1 Y& state $end
-$upscope $end
-
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ?& q $end
 $var wire 1 /& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 X& state $end
 $upscope $end
 
 $scope module dff_13 $end
-=======
-$var reg 1 Z& state $end
-$upscope $end
-
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 >& q $end
 $var wire 1 .& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 Y& state $end
 $upscope $end
 
 $scope module dff_14 $end
-=======
-$var reg 1 [& state $end
-$upscope $end
-
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 =& q $end
 $var wire 1 -& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var reg 1 Z& state $end
 $upscope $end
 
@@ -3474,9 +1961,6 @@ $var wire 1 ,& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $var reg 1 [& state $end
-=======
-$var reg 1 \& state $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 $upscope $end
 
@@ -3484,7 +1968,6 @@ $scope module decode_read1 $end
 $var wire 1 L in [2] $end
 $var wire 1 M in [1] $end
 $var wire 1 N in [0] $end
-<<<<<<< HEAD
 $var wire 1 4" out [7] $end
 $var wire 1 5" out [6] $end
 $var wire 1 6" out [5] $end
@@ -3493,23 +1976,12 @@ $var wire 1 8" out [3] $end
 $var wire 1 9" out [2] $end
 $var wire 1 :" out [1] $end
 $var wire 1 ;" out [0] $end
-=======
-$var wire 1 5" out [7] $end
-$var wire 1 6" out [6] $end
-$var wire 1 7" out [5] $end
-$var wire 1 8" out [4] $end
-$var wire 1 9" out [3] $end
-$var wire 1 :" out [2] $end
-$var wire 1 ;" out [1] $end
-$var wire 1 <" out [0] $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module decode_read2 $end
 $var wire 1 O in [2] $end
 $var wire 1 P in [1] $end
 $var wire 1 Q in [0] $end
-<<<<<<< HEAD
 $var wire 1 <" out [7] $end
 $var wire 1 =" out [6] $end
 $var wire 1 >" out [5] $end
@@ -3518,23 +1990,12 @@ $var wire 1 @" out [3] $end
 $var wire 1 A" out [2] $end
 $var wire 1 B" out [1] $end
 $var wire 1 C" out [0] $end
-=======
-$var wire 1 =" out [7] $end
-$var wire 1 >" out [6] $end
-$var wire 1 ?" out [5] $end
-$var wire 1 @" out [4] $end
-$var wire 1 A" out [3] $end
-$var wire 1 B" out [2] $end
-$var wire 1 C" out [1] $end
-$var wire 1 D" out [0] $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module decode_out1 $end
 $var wire 1 R in [2] $end
 $var wire 1 S in [1] $end
 $var wire 1 T in [0] $end
-<<<<<<< HEAD
 $var wire 1 D" out [7] $end
 $var wire 1 E" out [6] $end
 $var wire 1 F" out [5] $end
@@ -3543,16 +2004,6 @@ $var wire 1 H" out [3] $end
 $var wire 1 I" out [2] $end
 $var wire 1 J" out [1] $end
 $var wire 1 K" out [0] $end
-=======
-$var wire 1 E" out [7] $end
-$var wire 1 F" out [6] $end
-$var wire 1 G" out [5] $end
-$var wire 1 H" out [4] $end
-$var wire 1 I" out [3] $end
-$var wire 1 J" out [2] $end
-$var wire 1 K" out [1] $end
-$var wire 1 L" out [0] $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 $upscope $end
 $upscope $end
@@ -3721,19 +2172,11 @@ $var wire 1 > read2Data [2] $end
 $var wire 1 ? read2Data [1] $end
 $var wire 1 @ read2Data [0] $end
 $var wire 1 h err $end
-<<<<<<< HEAD
-=======
-$var wire 1 l writenEn $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 
 $scope module registers $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 e wr_en $end
-=======
-$var wire 1 l wr_en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 L read1_sel [2] $end
 $var wire 1 M read1_sel [1] $end
 $var wire 1 N read1_sel [0] $end
@@ -3759,7 +2202,6 @@ $var wire 1 a data_in [3] $end
 $var wire 1 b data_in [2] $end
 $var wire 1 c data_in [1] $end
 $var wire 1 d data_in [0] $end
-<<<<<<< HEAD
 $var wire 1 p out_0 [15] $end
 $var wire 1 q out_0 [14] $end
 $var wire 1 r out_0 [13] $end
@@ -3920,177 +2362,11 @@ $var wire 1 P" en [3] $end
 $var wire 1 Q" en [2] $end
 $var wire 1 R" en [1] $end
 $var wire 1 S" en [0] $end
-=======
-$var wire 1 q out_0 [15] $end
-$var wire 1 r out_0 [14] $end
-$var wire 1 s out_0 [13] $end
-$var wire 1 t out_0 [12] $end
-$var wire 1 u out_0 [11] $end
-$var wire 1 v out_0 [10] $end
-$var wire 1 w out_0 [9] $end
-$var wire 1 x out_0 [8] $end
-$var wire 1 y out_0 [7] $end
-$var wire 1 z out_0 [6] $end
-$var wire 1 { out_0 [5] $end
-$var wire 1 | out_0 [4] $end
-$var wire 1 } out_0 [3] $end
-$var wire 1 ~ out_0 [2] $end
-$var wire 1 !! out_0 [1] $end
-$var wire 1 "! out_0 [0] $end
-$var wire 1 #! out_1 [15] $end
-$var wire 1 $! out_1 [14] $end
-$var wire 1 %! out_1 [13] $end
-$var wire 1 &! out_1 [12] $end
-$var wire 1 '! out_1 [11] $end
-$var wire 1 (! out_1 [10] $end
-$var wire 1 )! out_1 [9] $end
-$var wire 1 *! out_1 [8] $end
-$var wire 1 +! out_1 [7] $end
-$var wire 1 ,! out_1 [6] $end
-$var wire 1 -! out_1 [5] $end
-$var wire 1 .! out_1 [4] $end
-$var wire 1 /! out_1 [3] $end
-$var wire 1 0! out_1 [2] $end
-$var wire 1 1! out_1 [1] $end
-$var wire 1 2! out_1 [0] $end
-$var wire 1 3! out_2 [15] $end
-$var wire 1 4! out_2 [14] $end
-$var wire 1 5! out_2 [13] $end
-$var wire 1 6! out_2 [12] $end
-$var wire 1 7! out_2 [11] $end
-$var wire 1 8! out_2 [10] $end
-$var wire 1 9! out_2 [9] $end
-$var wire 1 :! out_2 [8] $end
-$var wire 1 ;! out_2 [7] $end
-$var wire 1 <! out_2 [6] $end
-$var wire 1 =! out_2 [5] $end
-$var wire 1 >! out_2 [4] $end
-$var wire 1 ?! out_2 [3] $end
-$var wire 1 @! out_2 [2] $end
-$var wire 1 A! out_2 [1] $end
-$var wire 1 B! out_2 [0] $end
-$var wire 1 C! out_3 [15] $end
-$var wire 1 D! out_3 [14] $end
-$var wire 1 E! out_3 [13] $end
-$var wire 1 F! out_3 [12] $end
-$var wire 1 G! out_3 [11] $end
-$var wire 1 H! out_3 [10] $end
-$var wire 1 I! out_3 [9] $end
-$var wire 1 J! out_3 [8] $end
-$var wire 1 K! out_3 [7] $end
-$var wire 1 L! out_3 [6] $end
-$var wire 1 M! out_3 [5] $end
-$var wire 1 N! out_3 [4] $end
-$var wire 1 O! out_3 [3] $end
-$var wire 1 P! out_3 [2] $end
-$var wire 1 Q! out_3 [1] $end
-$var wire 1 R! out_3 [0] $end
-$var wire 1 S! out_4 [15] $end
-$var wire 1 T! out_4 [14] $end
-$var wire 1 U! out_4 [13] $end
-$var wire 1 V! out_4 [12] $end
-$var wire 1 W! out_4 [11] $end
-$var wire 1 X! out_4 [10] $end
-$var wire 1 Y! out_4 [9] $end
-$var wire 1 Z! out_4 [8] $end
-$var wire 1 [! out_4 [7] $end
-$var wire 1 \! out_4 [6] $end
-$var wire 1 ]! out_4 [5] $end
-$var wire 1 ^! out_4 [4] $end
-$var wire 1 _! out_4 [3] $end
-$var wire 1 `! out_4 [2] $end
-$var wire 1 a! out_4 [1] $end
-$var wire 1 b! out_4 [0] $end
-$var wire 1 c! out_5 [15] $end
-$var wire 1 d! out_5 [14] $end
-$var wire 1 e! out_5 [13] $end
-$var wire 1 f! out_5 [12] $end
-$var wire 1 g! out_5 [11] $end
-$var wire 1 h! out_5 [10] $end
-$var wire 1 i! out_5 [9] $end
-$var wire 1 j! out_5 [8] $end
-$var wire 1 k! out_5 [7] $end
-$var wire 1 l! out_5 [6] $end
-$var wire 1 m! out_5 [5] $end
-$var wire 1 n! out_5 [4] $end
-$var wire 1 o! out_5 [3] $end
-$var wire 1 p! out_5 [2] $end
-$var wire 1 q! out_5 [1] $end
-$var wire 1 r! out_5 [0] $end
-$var wire 1 s! out_6 [15] $end
-$var wire 1 t! out_6 [14] $end
-$var wire 1 u! out_6 [13] $end
-$var wire 1 v! out_6 [12] $end
-$var wire 1 w! out_6 [11] $end
-$var wire 1 x! out_6 [10] $end
-$var wire 1 y! out_6 [9] $end
-$var wire 1 z! out_6 [8] $end
-$var wire 1 {! out_6 [7] $end
-$var wire 1 |! out_6 [6] $end
-$var wire 1 }! out_6 [5] $end
-$var wire 1 ~! out_6 [4] $end
-$var wire 1 !" out_6 [3] $end
-$var wire 1 "" out_6 [2] $end
-$var wire 1 #" out_6 [1] $end
-$var wire 1 $" out_6 [0] $end
-$var wire 1 %" out_7 [15] $end
-$var wire 1 &" out_7 [14] $end
-$var wire 1 '" out_7 [13] $end
-$var wire 1 (" out_7 [12] $end
-$var wire 1 )" out_7 [11] $end
-$var wire 1 *" out_7 [10] $end
-$var wire 1 +" out_7 [9] $end
-$var wire 1 ," out_7 [8] $end
-$var wire 1 -" out_7 [7] $end
-$var wire 1 ." out_7 [6] $end
-$var wire 1 /" out_7 [5] $end
-$var wire 1 0" out_7 [4] $end
-$var wire 1 1" out_7 [3] $end
-$var wire 1 2" out_7 [2] $end
-$var wire 1 3" out_7 [1] $end
-$var wire 1 4" out_7 [0] $end
-$var wire 1 5" decode_out_r1 [7] $end
-$var wire 1 6" decode_out_r1 [6] $end
-$var wire 1 7" decode_out_r1 [5] $end
-$var wire 1 8" decode_out_r1 [4] $end
-$var wire 1 9" decode_out_r1 [3] $end
-$var wire 1 :" decode_out_r1 [2] $end
-$var wire 1 ;" decode_out_r1 [1] $end
-$var wire 1 <" decode_out_r1 [0] $end
-$var wire 1 =" decode_out_r2 [7] $end
-$var wire 1 >" decode_out_r2 [6] $end
-$var wire 1 ?" decode_out_r2 [5] $end
-$var wire 1 @" decode_out_r2 [4] $end
-$var wire 1 A" decode_out_r2 [3] $end
-$var wire 1 B" decode_out_r2 [2] $end
-$var wire 1 C" decode_out_r2 [1] $end
-$var wire 1 D" decode_out_r2 [0] $end
-$var wire 1 E" decode_out_w1 [7] $end
-$var wire 1 F" decode_out_w1 [6] $end
-$var wire 1 G" decode_out_w1 [5] $end
-$var wire 1 H" decode_out_w1 [4] $end
-$var wire 1 I" decode_out_w1 [3] $end
-$var wire 1 J" decode_out_w1 [2] $end
-$var wire 1 K" decode_out_w1 [1] $end
-$var wire 1 L" decode_out_w1 [0] $end
-$var wire 1 M" en [7] $end
-$var wire 1 N" en [6] $end
-$var wire 1 O" en [5] $end
-$var wire 1 P" en [4] $end
-$var wire 1 Q" en [3] $end
-$var wire 1 R" en [2] $end
-$var wire 1 S" en [1] $end
-$var wire 1 T" en [0] $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 
 $scope module in_0 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 S" en $end
-=======
-$var wire 1 T" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -4107,7 +2383,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 p Q [15] $end
 $var wire 1 q Q [14] $end
 $var wire 1 r Q [13] $end
@@ -4158,225 +2433,109 @@ $var wire 1 r" out [1] $end
 $var wire 1 s" out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 q Q [15] $end
-$var wire 1 r Q [14] $end
-$var wire 1 s Q [13] $end
-$var wire 1 t Q [12] $end
-$var wire 1 u Q [11] $end
-$var wire 1 v Q [10] $end
-$var wire 1 w Q [9] $end
-$var wire 1 x Q [8] $end
-$var wire 1 y Q [7] $end
-$var wire 1 z Q [6] $end
-$var wire 1 { Q [5] $end
-$var wire 1 | Q [4] $end
-$var wire 1 } Q [3] $end
-$var wire 1 ~ Q [2] $end
-$var wire 1 !! Q [1] $end
-$var wire 1 "! Q [0] $end
-$var wire 1 U" in [15] $end
-$var wire 1 V" in [14] $end
-$var wire 1 W" in [13] $end
-$var wire 1 X" in [12] $end
-$var wire 1 Y" in [11] $end
-$var wire 1 Z" in [10] $end
-$var wire 1 [" in [9] $end
-$var wire 1 \" in [8] $end
-$var wire 1 ]" in [7] $end
-$var wire 1 ^" in [6] $end
-$var wire 1 _" in [5] $end
-$var wire 1 `" in [4] $end
-$var wire 1 a" in [3] $end
-$var wire 1 b" in [2] $end
-$var wire 1 c" in [1] $end
-$var wire 1 d" in [0] $end
-$var wire 1 e" out [15] $end
-$var wire 1 f" out [14] $end
-$var wire 1 g" out [13] $end
-$var wire 1 h" out [12] $end
-$var wire 1 i" out [11] $end
-$var wire 1 j" out [10] $end
-$var wire 1 k" out [9] $end
-$var wire 1 l" out [8] $end
-$var wire 1 m" out [7] $end
-$var wire 1 n" out [6] $end
-$var wire 1 o" out [5] $end
-$var wire 1 p" out [4] $end
-$var wire 1 q" out [3] $end
-$var wire 1 r" out [2] $end
-$var wire 1 s" out [1] $end
-$var wire 1 t" out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 t" q $end
-$var wire 1 d" d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 s" q $end
 $var wire 1 c" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_1 $end
-=======
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 r" q $end
 $var wire 1 b" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_2 $end
-=======
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 q" q $end
 $var wire 1 a" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_3 $end
-=======
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 p" q $end
 $var wire 1 `" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_4 $end
-=======
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 o" q $end
 $var wire 1 _" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_5 $end
-=======
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 n" q $end
 $var wire 1 ^" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_6 $end
-=======
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 m" q $end
 $var wire 1 ]" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_7 $end
-=======
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 l" q $end
 $var wire 1 \" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_8 $end
-=======
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 k" q $end
 $var wire 1 [" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_9 $end
-=======
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 j" q $end
 $var wire 1 Z" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_10 $end
-=======
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 i" q $end
 $var wire 1 Y" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_11 $end
-=======
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 h" q $end
 $var wire 1 X" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_12 $end
-=======
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 g" q $end
 $var wire 1 W" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_13 $end
-=======
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 f" q $end
 $var wire 1 V" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_14 $end
-=======
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 e" q $end
 $var wire 1 U" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-<<<<<<< HEAD
 
 $scope module dff_15 $end
 $var wire 1 d" q $end
@@ -4384,18 +2543,12 @@ $var wire 1 T" d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-=======
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module in_1 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 R" en $end
-=======
-$var wire 1 S" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -4412,7 +2565,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 "! Q [15] $end
 $var wire 1 #! Q [14] $end
 $var wire 1 $! Q [13] $end
@@ -4463,225 +2615,109 @@ $var wire 1 D# out [1] $end
 $var wire 1 E# out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 #! Q [15] $end
-$var wire 1 $! Q [14] $end
-$var wire 1 %! Q [13] $end
-$var wire 1 &! Q [12] $end
-$var wire 1 '! Q [11] $end
-$var wire 1 (! Q [10] $end
-$var wire 1 )! Q [9] $end
-$var wire 1 *! Q [8] $end
-$var wire 1 +! Q [7] $end
-$var wire 1 ,! Q [6] $end
-$var wire 1 -! Q [5] $end
-$var wire 1 .! Q [4] $end
-$var wire 1 /! Q [3] $end
-$var wire 1 0! Q [2] $end
-$var wire 1 1! Q [1] $end
-$var wire 1 2! Q [0] $end
-$var wire 1 '# in [15] $end
-$var wire 1 (# in [14] $end
-$var wire 1 )# in [13] $end
-$var wire 1 *# in [12] $end
-$var wire 1 +# in [11] $end
-$var wire 1 ,# in [10] $end
-$var wire 1 -# in [9] $end
-$var wire 1 .# in [8] $end
-$var wire 1 /# in [7] $end
-$var wire 1 0# in [6] $end
-$var wire 1 1# in [5] $end
-$var wire 1 2# in [4] $end
-$var wire 1 3# in [3] $end
-$var wire 1 4# in [2] $end
-$var wire 1 5# in [1] $end
-$var wire 1 6# in [0] $end
-$var wire 1 7# out [15] $end
-$var wire 1 8# out [14] $end
-$var wire 1 9# out [13] $end
-$var wire 1 :# out [12] $end
-$var wire 1 ;# out [11] $end
-$var wire 1 <# out [10] $end
-$var wire 1 =# out [9] $end
-$var wire 1 ># out [8] $end
-$var wire 1 ?# out [7] $end
-$var wire 1 @# out [6] $end
-$var wire 1 A# out [5] $end
-$var wire 1 B# out [4] $end
-$var wire 1 C# out [3] $end
-$var wire 1 D# out [2] $end
-$var wire 1 E# out [1] $end
-$var wire 1 F# out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 F# q $end
-$var wire 1 6# d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 E# q $end
 $var wire 1 5# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_1 $end
-=======
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 D# q $end
 $var wire 1 4# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_2 $end
-=======
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 C# q $end
 $var wire 1 3# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_3 $end
-=======
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 B# q $end
 $var wire 1 2# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_4 $end
-=======
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 A# q $end
 $var wire 1 1# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_5 $end
-=======
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 @# q $end
 $var wire 1 0# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_6 $end
-=======
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ?# q $end
 $var wire 1 /# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_7 $end
-=======
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ># q $end
 $var wire 1 .# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_8 $end
-=======
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 =# q $end
 $var wire 1 -# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_9 $end
-=======
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 <# q $end
 $var wire 1 ,# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_10 $end
-=======
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ;# q $end
 $var wire 1 +# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_11 $end
-=======
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 :# q $end
 $var wire 1 *# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_12 $end
-=======
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 9# q $end
 $var wire 1 )# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_13 $end
-=======
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 8# q $end
 $var wire 1 (# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_14 $end
-=======
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 7# q $end
 $var wire 1 '# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-<<<<<<< HEAD
 
 $scope module dff_15 $end
 $var wire 1 6# q $end
@@ -4689,18 +2725,12 @@ $var wire 1 &# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-=======
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module in_2 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 Q" en $end
-=======
-$var wire 1 R" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -4717,7 +2747,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 2! Q [15] $end
 $var wire 1 3! Q [14] $end
 $var wire 1 4! Q [13] $end
@@ -4768,225 +2797,109 @@ $var wire 1 t# out [1] $end
 $var wire 1 u# out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 3! Q [15] $end
-$var wire 1 4! Q [14] $end
-$var wire 1 5! Q [13] $end
-$var wire 1 6! Q [12] $end
-$var wire 1 7! Q [11] $end
-$var wire 1 8! Q [10] $end
-$var wire 1 9! Q [9] $end
-$var wire 1 :! Q [8] $end
-$var wire 1 ;! Q [7] $end
-$var wire 1 <! Q [6] $end
-$var wire 1 =! Q [5] $end
-$var wire 1 >! Q [4] $end
-$var wire 1 ?! Q [3] $end
-$var wire 1 @! Q [2] $end
-$var wire 1 A! Q [1] $end
-$var wire 1 B! Q [0] $end
-$var wire 1 W# in [15] $end
-$var wire 1 X# in [14] $end
-$var wire 1 Y# in [13] $end
-$var wire 1 Z# in [12] $end
-$var wire 1 [# in [11] $end
-$var wire 1 \# in [10] $end
-$var wire 1 ]# in [9] $end
-$var wire 1 ^# in [8] $end
-$var wire 1 _# in [7] $end
-$var wire 1 `# in [6] $end
-$var wire 1 a# in [5] $end
-$var wire 1 b# in [4] $end
-$var wire 1 c# in [3] $end
-$var wire 1 d# in [2] $end
-$var wire 1 e# in [1] $end
-$var wire 1 f# in [0] $end
-$var wire 1 g# out [15] $end
-$var wire 1 h# out [14] $end
-$var wire 1 i# out [13] $end
-$var wire 1 j# out [12] $end
-$var wire 1 k# out [11] $end
-$var wire 1 l# out [10] $end
-$var wire 1 m# out [9] $end
-$var wire 1 n# out [8] $end
-$var wire 1 o# out [7] $end
-$var wire 1 p# out [6] $end
-$var wire 1 q# out [5] $end
-$var wire 1 r# out [4] $end
-$var wire 1 s# out [3] $end
-$var wire 1 t# out [2] $end
-$var wire 1 u# out [1] $end
-$var wire 1 v# out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 v# q $end
-$var wire 1 f# d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 u# q $end
 $var wire 1 e# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_1 $end
-=======
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 t# q $end
 $var wire 1 d# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_2 $end
-=======
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 s# q $end
 $var wire 1 c# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_3 $end
-=======
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 r# q $end
 $var wire 1 b# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_4 $end
-=======
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 q# q $end
 $var wire 1 a# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_5 $end
-=======
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 p# q $end
 $var wire 1 `# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_6 $end
-=======
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 o# q $end
 $var wire 1 _# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_7 $end
-=======
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 n# q $end
 $var wire 1 ^# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_8 $end
-=======
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 m# q $end
 $var wire 1 ]# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_9 $end
-=======
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 l# q $end
 $var wire 1 \# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_10 $end
-=======
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 k# q $end
 $var wire 1 [# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_11 $end
-=======
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 j# q $end
 $var wire 1 Z# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_12 $end
-=======
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 i# q $end
 $var wire 1 Y# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_13 $end
-=======
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 h# q $end
 $var wire 1 X# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_14 $end
-=======
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 g# q $end
 $var wire 1 W# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-<<<<<<< HEAD
 
 $scope module dff_15 $end
 $var wire 1 f# q $end
@@ -4994,18 +2907,12 @@ $var wire 1 V# d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-=======
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module in_3 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 P" en $end
-=======
-$var wire 1 Q" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -5022,7 +2929,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 B! Q [15] $end
 $var wire 1 C! Q [14] $end
 $var wire 1 D! Q [13] $end
@@ -5073,225 +2979,109 @@ $var wire 1 F$ out [1] $end
 $var wire 1 G$ out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 C! Q [15] $end
-$var wire 1 D! Q [14] $end
-$var wire 1 E! Q [13] $end
-$var wire 1 F! Q [12] $end
-$var wire 1 G! Q [11] $end
-$var wire 1 H! Q [10] $end
-$var wire 1 I! Q [9] $end
-$var wire 1 J! Q [8] $end
-$var wire 1 K! Q [7] $end
-$var wire 1 L! Q [6] $end
-$var wire 1 M! Q [5] $end
-$var wire 1 N! Q [4] $end
-$var wire 1 O! Q [3] $end
-$var wire 1 P! Q [2] $end
-$var wire 1 Q! Q [1] $end
-$var wire 1 R! Q [0] $end
-$var wire 1 )$ in [15] $end
-$var wire 1 *$ in [14] $end
-$var wire 1 +$ in [13] $end
-$var wire 1 ,$ in [12] $end
-$var wire 1 -$ in [11] $end
-$var wire 1 .$ in [10] $end
-$var wire 1 /$ in [9] $end
-$var wire 1 0$ in [8] $end
-$var wire 1 1$ in [7] $end
-$var wire 1 2$ in [6] $end
-$var wire 1 3$ in [5] $end
-$var wire 1 4$ in [4] $end
-$var wire 1 5$ in [3] $end
-$var wire 1 6$ in [2] $end
-$var wire 1 7$ in [1] $end
-$var wire 1 8$ in [0] $end
-$var wire 1 9$ out [15] $end
-$var wire 1 :$ out [14] $end
-$var wire 1 ;$ out [13] $end
-$var wire 1 <$ out [12] $end
-$var wire 1 =$ out [11] $end
-$var wire 1 >$ out [10] $end
-$var wire 1 ?$ out [9] $end
-$var wire 1 @$ out [8] $end
-$var wire 1 A$ out [7] $end
-$var wire 1 B$ out [6] $end
-$var wire 1 C$ out [5] $end
-$var wire 1 D$ out [4] $end
-$var wire 1 E$ out [3] $end
-$var wire 1 F$ out [2] $end
-$var wire 1 G$ out [1] $end
-$var wire 1 H$ out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 H$ q $end
-$var wire 1 8$ d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 G$ q $end
 $var wire 1 7$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_1 $end
-=======
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 F$ q $end
 $var wire 1 6$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_2 $end
-=======
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 E$ q $end
 $var wire 1 5$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_3 $end
-=======
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 D$ q $end
 $var wire 1 4$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_4 $end
-=======
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 C$ q $end
 $var wire 1 3$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_5 $end
-=======
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 B$ q $end
 $var wire 1 2$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_6 $end
-=======
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 A$ q $end
 $var wire 1 1$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_7 $end
-=======
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 @$ q $end
 $var wire 1 0$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_8 $end
-=======
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ?$ q $end
 $var wire 1 /$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_9 $end
-=======
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 >$ q $end
 $var wire 1 .$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_10 $end
-=======
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 =$ q $end
 $var wire 1 -$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_11 $end
-=======
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 <$ q $end
 $var wire 1 ,$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_12 $end
-=======
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ;$ q $end
 $var wire 1 +$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_13 $end
-=======
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 :$ q $end
 $var wire 1 *$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_14 $end
-=======
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 9$ q $end
 $var wire 1 )$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-<<<<<<< HEAD
 
 $scope module dff_15 $end
 $var wire 1 8$ q $end
@@ -5299,18 +3089,12 @@ $var wire 1 ($ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-=======
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module in_4 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 O" en $end
-=======
-$var wire 1 P" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -5327,7 +3111,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 R! Q [15] $end
 $var wire 1 S! Q [14] $end
 $var wire 1 T! Q [13] $end
@@ -5378,225 +3161,109 @@ $var wire 1 v$ out [1] $end
 $var wire 1 w$ out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 S! Q [15] $end
-$var wire 1 T! Q [14] $end
-$var wire 1 U! Q [13] $end
-$var wire 1 V! Q [12] $end
-$var wire 1 W! Q [11] $end
-$var wire 1 X! Q [10] $end
-$var wire 1 Y! Q [9] $end
-$var wire 1 Z! Q [8] $end
-$var wire 1 [! Q [7] $end
-$var wire 1 \! Q [6] $end
-$var wire 1 ]! Q [5] $end
-$var wire 1 ^! Q [4] $end
-$var wire 1 _! Q [3] $end
-$var wire 1 `! Q [2] $end
-$var wire 1 a! Q [1] $end
-$var wire 1 b! Q [0] $end
-$var wire 1 Y$ in [15] $end
-$var wire 1 Z$ in [14] $end
-$var wire 1 [$ in [13] $end
-$var wire 1 \$ in [12] $end
-$var wire 1 ]$ in [11] $end
-$var wire 1 ^$ in [10] $end
-$var wire 1 _$ in [9] $end
-$var wire 1 `$ in [8] $end
-$var wire 1 a$ in [7] $end
-$var wire 1 b$ in [6] $end
-$var wire 1 c$ in [5] $end
-$var wire 1 d$ in [4] $end
-$var wire 1 e$ in [3] $end
-$var wire 1 f$ in [2] $end
-$var wire 1 g$ in [1] $end
-$var wire 1 h$ in [0] $end
-$var wire 1 i$ out [15] $end
-$var wire 1 j$ out [14] $end
-$var wire 1 k$ out [13] $end
-$var wire 1 l$ out [12] $end
-$var wire 1 m$ out [11] $end
-$var wire 1 n$ out [10] $end
-$var wire 1 o$ out [9] $end
-$var wire 1 p$ out [8] $end
-$var wire 1 q$ out [7] $end
-$var wire 1 r$ out [6] $end
-$var wire 1 s$ out [5] $end
-$var wire 1 t$ out [4] $end
-$var wire 1 u$ out [3] $end
-$var wire 1 v$ out [2] $end
-$var wire 1 w$ out [1] $end
-$var wire 1 x$ out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 x$ q $end
-$var wire 1 h$ d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 w$ q $end
 $var wire 1 g$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_1 $end
-=======
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 v$ q $end
 $var wire 1 f$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_2 $end
-=======
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 u$ q $end
 $var wire 1 e$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_3 $end
-=======
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 t$ q $end
 $var wire 1 d$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_4 $end
-=======
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 s$ q $end
 $var wire 1 c$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_5 $end
-=======
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 r$ q $end
 $var wire 1 b$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_6 $end
-=======
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 q$ q $end
 $var wire 1 a$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_7 $end
-=======
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 p$ q $end
 $var wire 1 `$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_8 $end
-=======
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 o$ q $end
 $var wire 1 _$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_9 $end
-=======
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 n$ q $end
 $var wire 1 ^$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_10 $end
-=======
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 m$ q $end
 $var wire 1 ]$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_11 $end
-=======
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 l$ q $end
 $var wire 1 \$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_12 $end
-=======
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 k$ q $end
 $var wire 1 [$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_13 $end
-=======
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 j$ q $end
 $var wire 1 Z$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_14 $end
-=======
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 i$ q $end
 $var wire 1 Y$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-<<<<<<< HEAD
 
 $scope module dff_15 $end
 $var wire 1 h$ q $end
@@ -5604,18 +3271,12 @@ $var wire 1 X$ d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-=======
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module in_5 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 N" en $end
-=======
-$var wire 1 O" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -5632,7 +3293,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 b! Q [15] $end
 $var wire 1 c! Q [14] $end
 $var wire 1 d! Q [13] $end
@@ -5683,225 +3343,109 @@ $var wire 1 H% out [1] $end
 $var wire 1 I% out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 c! Q [15] $end
-$var wire 1 d! Q [14] $end
-$var wire 1 e! Q [13] $end
-$var wire 1 f! Q [12] $end
-$var wire 1 g! Q [11] $end
-$var wire 1 h! Q [10] $end
-$var wire 1 i! Q [9] $end
-$var wire 1 j! Q [8] $end
-$var wire 1 k! Q [7] $end
-$var wire 1 l! Q [6] $end
-$var wire 1 m! Q [5] $end
-$var wire 1 n! Q [4] $end
-$var wire 1 o! Q [3] $end
-$var wire 1 p! Q [2] $end
-$var wire 1 q! Q [1] $end
-$var wire 1 r! Q [0] $end
-$var wire 1 +% in [15] $end
-$var wire 1 ,% in [14] $end
-$var wire 1 -% in [13] $end
-$var wire 1 .% in [12] $end
-$var wire 1 /% in [11] $end
-$var wire 1 0% in [10] $end
-$var wire 1 1% in [9] $end
-$var wire 1 2% in [8] $end
-$var wire 1 3% in [7] $end
-$var wire 1 4% in [6] $end
-$var wire 1 5% in [5] $end
-$var wire 1 6% in [4] $end
-$var wire 1 7% in [3] $end
-$var wire 1 8% in [2] $end
-$var wire 1 9% in [1] $end
-$var wire 1 :% in [0] $end
-$var wire 1 ;% out [15] $end
-$var wire 1 <% out [14] $end
-$var wire 1 =% out [13] $end
-$var wire 1 >% out [12] $end
-$var wire 1 ?% out [11] $end
-$var wire 1 @% out [10] $end
-$var wire 1 A% out [9] $end
-$var wire 1 B% out [8] $end
-$var wire 1 C% out [7] $end
-$var wire 1 D% out [6] $end
-$var wire 1 E% out [5] $end
-$var wire 1 F% out [4] $end
-$var wire 1 G% out [3] $end
-$var wire 1 H% out [2] $end
-$var wire 1 I% out [1] $end
-$var wire 1 J% out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 J% q $end
-$var wire 1 :% d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 I% q $end
 $var wire 1 9% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_1 $end
-=======
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 H% q $end
 $var wire 1 8% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_2 $end
-=======
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 G% q $end
 $var wire 1 7% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_3 $end
-=======
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 F% q $end
 $var wire 1 6% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_4 $end
-=======
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 E% q $end
 $var wire 1 5% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_5 $end
-=======
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 D% q $end
 $var wire 1 4% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_6 $end
-=======
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 C% q $end
 $var wire 1 3% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_7 $end
-=======
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 B% q $end
 $var wire 1 2% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_8 $end
-=======
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 A% q $end
 $var wire 1 1% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_9 $end
-=======
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 @% q $end
 $var wire 1 0% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_10 $end
-=======
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ?% q $end
 $var wire 1 /% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_11 $end
-=======
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 >% q $end
 $var wire 1 .% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_12 $end
-=======
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 =% q $end
 $var wire 1 -% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_13 $end
-=======
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 <% q $end
 $var wire 1 ,% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_14 $end
-=======
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ;% q $end
 $var wire 1 +% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-<<<<<<< HEAD
 
 $scope module dff_15 $end
 $var wire 1 :% q $end
@@ -5909,18 +3453,12 @@ $var wire 1 *% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-=======
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module in_6 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 M" en $end
-=======
-$var wire 1 N" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -5937,7 +3475,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 r! Q [15] $end
 $var wire 1 s! Q [14] $end
 $var wire 1 t! Q [13] $end
@@ -5988,225 +3525,109 @@ $var wire 1 x% out [1] $end
 $var wire 1 y% out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 s! Q [15] $end
-$var wire 1 t! Q [14] $end
-$var wire 1 u! Q [13] $end
-$var wire 1 v! Q [12] $end
-$var wire 1 w! Q [11] $end
-$var wire 1 x! Q [10] $end
-$var wire 1 y! Q [9] $end
-$var wire 1 z! Q [8] $end
-$var wire 1 {! Q [7] $end
-$var wire 1 |! Q [6] $end
-$var wire 1 }! Q [5] $end
-$var wire 1 ~! Q [4] $end
-$var wire 1 !" Q [3] $end
-$var wire 1 "" Q [2] $end
-$var wire 1 #" Q [1] $end
-$var wire 1 $" Q [0] $end
-$var wire 1 [% in [15] $end
-$var wire 1 \% in [14] $end
-$var wire 1 ]% in [13] $end
-$var wire 1 ^% in [12] $end
-$var wire 1 _% in [11] $end
-$var wire 1 `% in [10] $end
-$var wire 1 a% in [9] $end
-$var wire 1 b% in [8] $end
-$var wire 1 c% in [7] $end
-$var wire 1 d% in [6] $end
-$var wire 1 e% in [5] $end
-$var wire 1 f% in [4] $end
-$var wire 1 g% in [3] $end
-$var wire 1 h% in [2] $end
-$var wire 1 i% in [1] $end
-$var wire 1 j% in [0] $end
-$var wire 1 k% out [15] $end
-$var wire 1 l% out [14] $end
-$var wire 1 m% out [13] $end
-$var wire 1 n% out [12] $end
-$var wire 1 o% out [11] $end
-$var wire 1 p% out [10] $end
-$var wire 1 q% out [9] $end
-$var wire 1 r% out [8] $end
-$var wire 1 s% out [7] $end
-$var wire 1 t% out [6] $end
-$var wire 1 u% out [5] $end
-$var wire 1 v% out [4] $end
-$var wire 1 w% out [3] $end
-$var wire 1 x% out [2] $end
-$var wire 1 y% out [1] $end
-$var wire 1 z% out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 z% q $end
-$var wire 1 j% d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 y% q $end
 $var wire 1 i% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_1 $end
-=======
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 x% q $end
 $var wire 1 h% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_2 $end
-=======
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 w% q $end
 $var wire 1 g% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_3 $end
-=======
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 v% q $end
 $var wire 1 f% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_4 $end
-=======
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 u% q $end
 $var wire 1 e% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_5 $end
-=======
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 t% q $end
 $var wire 1 d% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_6 $end
-=======
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 s% q $end
 $var wire 1 c% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_7 $end
-=======
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 r% q $end
 $var wire 1 b% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_8 $end
-=======
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 q% q $end
 $var wire 1 a% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_9 $end
-=======
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 p% q $end
 $var wire 1 `% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_10 $end
-=======
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 o% q $end
 $var wire 1 _% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_11 $end
-=======
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 n% q $end
 $var wire 1 ^% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_12 $end
-=======
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 m% q $end
 $var wire 1 ]% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_13 $end
-=======
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 l% q $end
 $var wire 1 \% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_14 $end
-=======
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 k% q $end
 $var wire 1 [% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-<<<<<<< HEAD
 
 $scope module dff_15 $end
 $var wire 1 j% q $end
@@ -6214,18 +3635,12 @@ $var wire 1 Z% d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-=======
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module in_7 $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
-<<<<<<< HEAD
 $var wire 1 L" en $end
-=======
-$var wire 1 M" en $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 U D [15] $end
 $var wire 1 V D [14] $end
 $var wire 1 W D [13] $end
@@ -6242,7 +3657,6 @@ $var wire 1 a D [3] $end
 $var wire 1 b D [2] $end
 $var wire 1 c D [1] $end
 $var wire 1 d D [0] $end
-<<<<<<< HEAD
 $var wire 1 $" Q [15] $end
 $var wire 1 %" Q [14] $end
 $var wire 1 &" Q [13] $end
@@ -6293,225 +3707,109 @@ $var wire 1 J& out [1] $end
 $var wire 1 K& out [0] $end
 
 $scope module dff_0 $end
-=======
-$var wire 1 %" Q [15] $end
-$var wire 1 &" Q [14] $end
-$var wire 1 '" Q [13] $end
-$var wire 1 (" Q [12] $end
-$var wire 1 )" Q [11] $end
-$var wire 1 *" Q [10] $end
-$var wire 1 +" Q [9] $end
-$var wire 1 ," Q [8] $end
-$var wire 1 -" Q [7] $end
-$var wire 1 ." Q [6] $end
-$var wire 1 /" Q [5] $end
-$var wire 1 0" Q [4] $end
-$var wire 1 1" Q [3] $end
-$var wire 1 2" Q [2] $end
-$var wire 1 3" Q [1] $end
-$var wire 1 4" Q [0] $end
-$var wire 1 -& in [15] $end
-$var wire 1 .& in [14] $end
-$var wire 1 /& in [13] $end
-$var wire 1 0& in [12] $end
-$var wire 1 1& in [11] $end
-$var wire 1 2& in [10] $end
-$var wire 1 3& in [9] $end
-$var wire 1 4& in [8] $end
-$var wire 1 5& in [7] $end
-$var wire 1 6& in [6] $end
-$var wire 1 7& in [5] $end
-$var wire 1 8& in [4] $end
-$var wire 1 9& in [3] $end
-$var wire 1 :& in [2] $end
-$var wire 1 ;& in [1] $end
-$var wire 1 <& in [0] $end
-$var wire 1 =& out [15] $end
-$var wire 1 >& out [14] $end
-$var wire 1 ?& out [13] $end
-$var wire 1 @& out [12] $end
-$var wire 1 A& out [11] $end
-$var wire 1 B& out [10] $end
-$var wire 1 C& out [9] $end
-$var wire 1 D& out [8] $end
-$var wire 1 E& out [7] $end
-$var wire 1 F& out [6] $end
-$var wire 1 G& out [5] $end
-$var wire 1 H& out [4] $end
-$var wire 1 I& out [3] $end
-$var wire 1 J& out [2] $end
-$var wire 1 K& out [1] $end
-$var wire 1 L& out [0] $end
-
-$scope module dff_0 $end
-$var wire 1 L& q $end
-$var wire 1 <& d $end
-$var wire 1 f clk $end
-$var wire 1 g rst $end
-$upscope $end
-
-$scope module dff_1 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 K& q $end
 $var wire 1 ;& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_1 $end
-=======
-$scope module dff_2 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 J& q $end
 $var wire 1 :& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_2 $end
-=======
-$scope module dff_3 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 I& q $end
 $var wire 1 9& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_3 $end
-=======
-$scope module dff_4 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 H& q $end
 $var wire 1 8& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_4 $end
-=======
-$scope module dff_5 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 G& q $end
 $var wire 1 7& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_5 $end
-=======
-$scope module dff_6 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 F& q $end
 $var wire 1 6& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_6 $end
-=======
-$scope module dff_7 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 E& q $end
 $var wire 1 5& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_7 $end
-=======
-$scope module dff_8 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 D& q $end
 $var wire 1 4& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_8 $end
-=======
-$scope module dff_9 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 C& q $end
 $var wire 1 3& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_9 $end
-=======
-$scope module dff_10 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 B& q $end
 $var wire 1 2& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_10 $end
-=======
-$scope module dff_11 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 A& q $end
 $var wire 1 1& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_11 $end
-=======
-$scope module dff_12 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 @& q $end
 $var wire 1 0& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_12 $end
-=======
-$scope module dff_13 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 ?& q $end
 $var wire 1 /& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_13 $end
-=======
-$scope module dff_14 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 >& q $end
 $var wire 1 .& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
 
-<<<<<<< HEAD
 $scope module dff_14 $end
-=======
-$scope module dff_15 $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $var wire 1 =& q $end
 $var wire 1 -& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-<<<<<<< HEAD
 
 $scope module dff_15 $end
 $var wire 1 <& q $end
@@ -6519,15 +3817,12 @@ $var wire 1 ,& d $end
 $var wire 1 f clk $end
 $var wire 1 g rst $end
 $upscope $end
-=======
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module decode_read1 $end
 $var wire 1 L in [2] $end
 $var wire 1 M in [1] $end
 $var wire 1 N in [0] $end
-<<<<<<< HEAD
 $var wire 1 4" out [7] $end
 $var wire 1 5" out [6] $end
 $var wire 1 6" out [5] $end
@@ -6536,23 +3831,12 @@ $var wire 1 8" out [3] $end
 $var wire 1 9" out [2] $end
 $var wire 1 :" out [1] $end
 $var wire 1 ;" out [0] $end
-=======
-$var wire 1 5" out [7] $end
-$var wire 1 6" out [6] $end
-$var wire 1 7" out [5] $end
-$var wire 1 8" out [4] $end
-$var wire 1 9" out [3] $end
-$var wire 1 :" out [2] $end
-$var wire 1 ;" out [1] $end
-$var wire 1 <" out [0] $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module decode_read2 $end
 $var wire 1 O in [2] $end
 $var wire 1 P in [1] $end
 $var wire 1 Q in [0] $end
-<<<<<<< HEAD
 $var wire 1 <" out [7] $end
 $var wire 1 =" out [6] $end
 $var wire 1 >" out [5] $end
@@ -6561,23 +3845,12 @@ $var wire 1 @" out [3] $end
 $var wire 1 A" out [2] $end
 $var wire 1 B" out [1] $end
 $var wire 1 C" out [0] $end
-=======
-$var wire 1 =" out [7] $end
-$var wire 1 >" out [6] $end
-$var wire 1 ?" out [5] $end
-$var wire 1 @" out [4] $end
-$var wire 1 A" out [3] $end
-$var wire 1 B" out [2] $end
-$var wire 1 C" out [1] $end
-$var wire 1 D" out [0] $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 
 $scope module decode_out1 $end
 $var wire 1 R in [2] $end
 $var wire 1 S in [1] $end
 $var wire 1 T in [0] $end
-<<<<<<< HEAD
 $var wire 1 D" out [7] $end
 $var wire 1 E" out [6] $end
 $var wire 1 F" out [5] $end
@@ -6586,16 +3859,6 @@ $var wire 1 H" out [3] $end
 $var wire 1 I" out [2] $end
 $var wire 1 J" out [1] $end
 $var wire 1 K" out [0] $end
-=======
-$var wire 1 E" out [7] $end
-$var wire 1 F" out [6] $end
-$var wire 1 G" out [5] $end
-$var wire 1 H" out [4] $end
-$var wire 1 I" out [3] $end
-$var wire 1 J" out [2] $end
-$var wire 1 K" out [1] $end
-$var wire 1 L" out [0] $end
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 $upscope $end
 $upscope $end
 $upscope $end
@@ -6612,16 +3875,10 @@ b11 E
 0I
 1i
 1j
-<<<<<<< HEAD
 bx m
 bx n
 0o
 0t"
-=======
-bx n
-bx o
-0p
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0u"
 0v"
 0w"
@@ -6637,11 +3894,7 @@ bx o
 0##
 0$#
 0%#
-<<<<<<< HEAD
 0F#
-=======
-0&#
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0G#
 0H#
 0I#
@@ -6657,11 +3910,7 @@ bx o
 0S#
 0T#
 0U#
-<<<<<<< HEAD
 0v#
-=======
-0V#
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0w#
 0x#
 0y#
@@ -6677,11 +3926,7 @@ bx o
 0%$
 0&$
 0'$
-<<<<<<< HEAD
 0H$
-=======
-0($
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0I$
 0J$
 0K$
@@ -6697,11 +3942,7 @@ bx o
 0U$
 0V$
 0W$
-<<<<<<< HEAD
 0x$
-=======
-0X$
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0y$
 0z$
 0{$
@@ -6717,11 +3958,7 @@ bx o
 0'%
 0(%
 0)%
-<<<<<<< HEAD
 0J%
-=======
-0*%
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0K%
 0L%
 0M%
@@ -6737,11 +3974,7 @@ bx o
 0W%
 0X%
 0Y%
-<<<<<<< HEAD
 0z%
-=======
-0Z%
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0{%
 0|%
 0}%
@@ -6757,11 +3990,7 @@ bx o
 0)&
 0*&
 0+&
-<<<<<<< HEAD
 0L&
-=======
-0,&
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0M&
 0N&
 0O&
@@ -6777,16 +4006,9 @@ bx o
 0Y&
 0Z&
 0[&
-<<<<<<< HEAD
 b0 J
 b0 K
 b10000 l
-=======
-0\&
-b0 J
-b0 K
-b10000 m
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 b0 F
 b1 k
 x0
@@ -6826,11 +4048,6 @@ x1
 1f
 1g
 0h
-<<<<<<< HEAD
-=======
-zl
-x"!
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 x!!
 x~
 x}
@@ -6846,11 +4063,7 @@ xt
 xs
 xr
 xq
-<<<<<<< HEAD
 xp
-=======
-x2!
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 x1!
 x0!
 x/!
@@ -6866,11 +4079,7 @@ x&!
 x%!
 x$!
 x#!
-<<<<<<< HEAD
 x"!
-=======
-xB!
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xA!
 x@!
 x?!
@@ -6886,11 +4095,7 @@ x6!
 x5!
 x4!
 x3!
-<<<<<<< HEAD
 x2!
-=======
-xR!
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xQ!
 xP!
 xO!
@@ -6906,11 +4111,7 @@ xF!
 xE!
 xD!
 xC!
-<<<<<<< HEAD
 xB!
-=======
-xb!
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xa!
 x`!
 x_!
@@ -6926,11 +4127,7 @@ xV!
 xU!
 xT!
 xS!
-<<<<<<< HEAD
 xR!
-=======
-xr!
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xq!
 xp!
 xo!
@@ -6946,11 +4143,7 @@ xf!
 xe!
 xd!
 xc!
-<<<<<<< HEAD
 xb!
-=======
-x$"
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 x#"
 x""
 x!"
@@ -6966,11 +4159,7 @@ xv!
 xu!
 xt!
 xs!
-<<<<<<< HEAD
 xr!
-=======
-x4"
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 x3"
 x2"
 x1"
@@ -6986,7 +4175,6 @@ x("
 x'"
 x&"
 x%"
-<<<<<<< HEAD
 x$"
 0;"
 0:"
@@ -6998,25 +4186,11 @@ x$"
 04"
 0C"
 1B"
-=======
-0<"
-0;"
-0:"
-09"
-18"
-07"
-06"
-05"
-0D"
-1C"
-0B"
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0A"
 0@"
 0?"
 0>"
 0="
-<<<<<<< HEAD
 0<"
 0K"
 0J"
@@ -7034,25 +4208,6 @@ x$"
 0N"
 0M"
 0L"
-=======
-0L"
-0K"
-0J"
-1I"
-0H"
-0G"
-0F"
-0E"
-0T"
-0S"
-0R"
-xQ"
-0P"
-0O"
-0N"
-0M"
-xd"
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xc"
 xb"
 xa"
@@ -7068,11 +4223,7 @@ xX"
 xW"
 xV"
 xU"
-<<<<<<< HEAD
 xT"
-=======
-xt"
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xs"
 xr"
 xq"
@@ -7088,11 +4239,7 @@ xh"
 xg"
 xf"
 xe"
-<<<<<<< HEAD
 xd"
-=======
-x6#
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 x5#
 x4#
 x3#
@@ -7108,11 +4255,7 @@ x*#
 x)#
 x(#
 x'#
-<<<<<<< HEAD
 x&#
-=======
-xF#
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xE#
 xD#
 xC#
@@ -7128,11 +4271,7 @@ x:#
 x9#
 x8#
 x7#
-<<<<<<< HEAD
 x6#
-=======
-xf#
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xe#
 xd#
 xc#
@@ -7148,11 +4287,7 @@ xZ#
 xY#
 xX#
 xW#
-<<<<<<< HEAD
 xV#
-=======
-xv#
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xu#
 xt#
 xs#
@@ -7168,7 +4303,6 @@ xj#
 xi#
 xh#
 xg#
-<<<<<<< HEAD
 xf#
 17$
 06$
@@ -7186,25 +4320,6 @@ xf#
 0*$
 1)$
 1($
-=======
-x8$
-x7$
-x6$
-x5$
-x4$
-x3$
-x2$
-x1$
-x0$
-x/$
-x.$
-x-$
-x,$
-x+$
-x*$
-x)$
-xH$
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xG$
 xF$
 xE$
@@ -7220,11 +4335,7 @@ x<$
 x;$
 x:$
 x9$
-<<<<<<< HEAD
 x8$
-=======
-xh$
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xg$
 xf$
 xe$
@@ -7240,11 +4351,7 @@ x\$
 x[$
 xZ$
 xY$
-<<<<<<< HEAD
 xX$
-=======
-xx$
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xw$
 xv$
 xu$
@@ -7260,11 +4367,7 @@ xl$
 xk$
 xj$
 xi$
-<<<<<<< HEAD
 xh$
-=======
-x:%
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 x9%
 x8%
 x7%
@@ -7280,11 +4383,7 @@ x.%
 x-%
 x,%
 x+%
-<<<<<<< HEAD
 x*%
-=======
-xJ%
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xI%
 xH%
 xG%
@@ -7300,11 +4399,7 @@ x>%
 x=%
 x<%
 x;%
-<<<<<<< HEAD
 x:%
-=======
-xj%
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xi%
 xh%
 xg%
@@ -7320,11 +4415,7 @@ x^%
 x]%
 x\%
 x[%
-<<<<<<< HEAD
 xZ%
-=======
-xz%
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xy%
 xx%
 xw%
@@ -7340,11 +4431,7 @@ xn%
 xm%
 xl%
 xk%
-<<<<<<< HEAD
 xj%
-=======
-x<&
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 x;&
 x:&
 x9&
@@ -7360,11 +4447,7 @@ x0&
 x/&
 x.&
 x-&
-<<<<<<< HEAD
 x,&
-=======
-xL&
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 xK&
 xJ&
 xI&
@@ -7380,10 +4463,7 @@ x@&
 x?&
 x>&
 x=&
-<<<<<<< HEAD
 x<&
-=======
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 1e
 1d
 0c
@@ -7412,10 +4492,7 @@ x<&
 1L
 $end
 #1
-<<<<<<< HEAD
 0<&
-=======
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0=&
 0>&
 0?&
@@ -7431,11 +4508,7 @@ $end
 0I&
 0J&
 0K&
-<<<<<<< HEAD
 0j%
-=======
-0L&
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0k%
 0l%
 0m%
@@ -7451,11 +4524,7 @@ $end
 0w%
 0x%
 0y%
-<<<<<<< HEAD
 0:%
-=======
-0z%
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0;%
 0<%
 0=%
@@ -7471,11 +4540,7 @@ $end
 0G%
 0H%
 0I%
-<<<<<<< HEAD
 0h$
-=======
-0J%
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0i$
 0j$
 0k$
@@ -7491,11 +4556,7 @@ $end
 0u$
 0v$
 0w$
-<<<<<<< HEAD
 08$
-=======
-0x$
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 09$
 0:$
 0;$
@@ -7511,11 +4572,7 @@ $end
 0E$
 0F$
 0G$
-<<<<<<< HEAD
 0f#
-=======
-0H$
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0g#
 0h#
 0i#
@@ -7531,11 +4588,7 @@ $end
 0s#
 0t#
 0u#
-<<<<<<< HEAD
 06#
-=======
-0v#
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 07#
 08#
 09#
@@ -7551,11 +4604,7 @@ $end
 0C#
 0D#
 0E#
-<<<<<<< HEAD
 0d"
-=======
-0F#
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0e"
 0f"
 0g"
@@ -7571,11 +4620,6 @@ $end
 0q"
 0r"
 0s"
-<<<<<<< HEAD
-=======
-0t"
-0d"
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0c"
 0b"
 0a"
@@ -7591,27 +4635,7 @@ $end
 0W"
 0V"
 0U"
-<<<<<<< HEAD
 0T"
-=======
-0"!
-0!!
-0~
-0}
-0|
-0{
-0z
-0y
-0x
-0w
-0v
-0u
-0t
-0s
-0r
-0q
-06#
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 05#
 04#
 03#
@@ -7627,27 +4651,7 @@ $end
 0)#
 0(#
 0'#
-<<<<<<< HEAD
 0&#
-=======
-02!
-01!
-00!
-0/!
-0.!
-0-!
-0,!
-0+!
-0*!
-0)!
-0(!
-0'!
-0&!
-0%!
-0$!
-0#!
-0f#
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0e#
 0d#
 0c#
@@ -7663,7 +4667,6 @@ $end
 0Y#
 0X#
 0W#
-<<<<<<< HEAD
 0V#
 0g$
 0f$
@@ -7761,9 +4764,6 @@ $end
 0$!
 0#!
 0"!
-=======
-0B!
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0A!
 0@!
 0?!
@@ -7779,20 +4779,7 @@ $end
 05!
 04!
 03!
-<<<<<<< HEAD
 02!
-=======
-07$
-06$
-04$
-03$
-02$
-01$
-00$
-0-$
-0+$
-0R!
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0Q!
 0P!
 0O!
@@ -7808,27 +4795,7 @@ $end
 0E!
 0D!
 0C!
-<<<<<<< HEAD
 0B!
-=======
-0h$
-0g$
-0f$
-0e$
-0d$
-0c$
-0b$
-0a$
-0`$
-0_$
-0^$
-0]$
-0\$
-0[$
-0Z$
-0Y$
-0b!
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0a!
 0`!
 0_!
@@ -7844,27 +4811,7 @@ $end
 0U!
 0T!
 0S!
-<<<<<<< HEAD
 0R!
-=======
-0:%
-09%
-08%
-07%
-06%
-05%
-04%
-03%
-02%
-01%
-00%
-0/%
-0.%
-0-%
-0,%
-0+%
-0r!
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0q!
 0p!
 0o!
@@ -7880,27 +4827,7 @@ $end
 0e!
 0d!
 0c!
-<<<<<<< HEAD
 0b!
-=======
-0j%
-0i%
-0h%
-0g%
-0f%
-0e%
-0d%
-0c%
-0b%
-0a%
-0`%
-0_%
-0^%
-0]%
-0\%
-0[%
-0$"
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0#"
 0""
 0!"
@@ -7916,27 +4843,7 @@ $end
 0u!
 0t!
 0s!
-<<<<<<< HEAD
 0r!
-=======
-0<&
-0;&
-0:&
-09&
-08&
-07&
-06&
-05&
-04&
-03&
-02&
-01&
-00&
-0/&
-0.&
-0-&
-04"
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 03"
 02"
 01"
@@ -7952,62 +4859,9 @@ $end
 0'"
 0&"
 0%"
-<<<<<<< HEAD
 0$"
 b0 m
 b0 n
-=======
-#10
-b1 F
-#50
-0i
-0G
-0f
-#100
-1i
-1G
-1f
-b101 A
-b101 B
-b101001000010010 D
-b1 E
-b10 k
-0S
-0d
-1c
-0a
-1`
-0Z
-0U
-1O
-1N
-1K"
-0I"
-xS"
-0Q"
-08$
-x7$
-05$
-x4$
-0.$
-0)$
-07$
-04$
-0/$
-0,$
-0*$
-x5#
-x2#
-x-#
-x*#
-x(#
-1?"
-0C"
-17"
-08"
-b0 n
-b0 o
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 0@
 0?
 0>
@@ -8040,7 +4894,6 @@ b0 o
 0#
 0"
 0!
-<<<<<<< HEAD
 #10
 b1 F
 #50
@@ -8089,8 +4942,6 @@ b10 k
 0B"
 16"
 07"
-=======
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 #110
 b10 F
 #150
@@ -8119,7 +4970,6 @@ b11 k
 1Z
 0N
 1M
-<<<<<<< HEAD
 1G"
 0J"
 0R"
@@ -8148,54 +4998,16 @@ b11 k
 05#
 03#
 02#
-=======
-1H"
-0K"
-0S"
-xP"
-x6#
-05#
-x4#
-x3#
-02#
-x1#
-x0#
-x/#
-x.#
-x,#
-xh$
-xf$
-xe$
-xc$
-xb$
-xa$
-x`$
-x_$
-x^$
-x\$
-xZ$
-06#
-04#
-03#
-01#
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 00#
 0/#
 0.#
 0-#
 0,#
-<<<<<<< HEAD
 0+#
 0)#
 0'#
 06"
 15"
-=======
-0*#
-0(#
-07"
-16"
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 #201
 0j
 0H
@@ -8210,7 +5022,6 @@ b11 F
 1i
 1G
 1f
-<<<<<<< HEAD
 1x$
 1z$
 1{$
@@ -8222,19 +5033,6 @@ b11 F
 1$%
 1&%
 1(%
-=======
-xy$
-x{$
-x|$
-x~$
-x!%
-x"%
-x#%
-x$%
-x%%
-x'%
-x)%
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
 b1101001010101010 D
 b101 E
 b100 k
@@ -8246,7 +5044,6 @@ b100 k
 0\
 0Z
 1U
-<<<<<<< HEAD
 0G"
 1F"
 0O"
@@ -11540,33 +8337,567 @@ b101100 F
 1f
 b10 A
 b101 B
-b1
-=======
+b1111111110011110 D
+b0 E
+1C
+b1010110111011100 J
+b101100111110101 K
+b101101 k
+0T
+0S
+0R
+1a
+1`
+0_
+0^
+1\
+1Y
+1X
+1U
+1Q
+0P
+0N
+1M
+1e
+1K"
+0D"
+1S"
+1_"
+0]"
+1\"
+1Z"
+1Y"
+1X"
+1V"
+0="
+1>"
+0:"
+19"
+b1010110111011100 m
+b101100111110101 n
+1@
+0?
+1>
+1;
+1:
+19
+07
+01
+00
+0/
+1.
+1,
+1*
+1)
+1(
+0'
+1&
+0$
+1#
+#4410
+b101101 F
+#4450
+0i
+0G
+0f
+#4500
+1i
+1G
+1f
+1x"
+0z"
+1{"
+1}"
+1~"
+1!#
+1##
+b0 A
+b10 B
+b100000100010011 D
+b11 E
+b1111111110011110 J
+b1010110111011100 K
+b101110 k
+1T
+1S
+1d
+0b
+0a
+0]
+0[
+0Z
+0Y
+0X
+0W
+0U
+0Q
+1P
+0O
+0M
+1H"
+0K"
+0S"
+1P"
+1c"
+0a"
+0`"
+0\"
+0Z"
+0Y"
+0X"
+0W"
+0V"
+0T"
+17$
+16$
+04$
+00$
+1/$
+0-$
+0+$
+0*$
+1)$
+0($
+0c"
+1a"
+1`"
+0_"
+1]"
+1W"
+1T"
+0>"
+1A"
+09"
+1;"
+b1101000101001110 m
+b1010110111011100 n
+0@
+1=
+0;
+16
+04
+13
+02
+11
+1/
+0,
+0)
+0&
+0%
+1$
+0#
+1"
+#4501
+1f"
+1h"
+1i"
+1j"
+1l"
+0m"
+1o"
+1_"
+0]"
+1\"
+1Z"
+1Y"
+1X"
+1V"
+1{
+0y
+1x
+1v
+1u
+1t
+1r
+b1111111110011110 m
+1,
+0*
+1)
+1'
+1&
+1%
+1#
+#4510
+b101110 F
+#4550
+0i
+0G
+0f
+#4600
+1i
+1G
+1f
+1H$
+1I$
+0K$
+0O$
+1P$
+0R$
+0T$
+0U$
+1V$
+0W$
+b110 A
+b1010101111000100 D
+b1 E
+0C
+b1101101100010010 J
+b101111 k
+0S
+0d
+0c
+1b
+0`
+1^
+1]
+1[
+1Y
+1W
+0V
+1U
+1M
+1L
+0e
+1J"
 0H"
-1G"
 0P"
-xO"
-0h$
-xg$
-0f$
-0b$
-0`$
-0^$
-xY$
-x9%
-x7%
-x5%
-x3%
-x1%
-x.%
-x,%
-x+%
-0g$
-0e$
-0c$
-0a$
-0_$
-0\$
-0Z$
-0Y$
->>>>>>> 5e8dc857074f187244d0e4edd31f9b4d56a95136
+07$
+06$
+15$
+03$
+11$
+10$
+1.$
+1,$
+1*$
+0)$
+1($
+05$
+14$
+13$
+01$
+0/$
+0.$
+1-$
+0,$
+1+$
+0;"
+15"
+b1101101100010010 m
+0.
+0-
+0)
+0&
+0#
+#4601
+08$
+19$
+0:$
+0;$
+0=$
+1?$
+0@$
+0D$
+1F$
+1G$
+17$
+16$
+04$
+00$
+1/$
+0-$
+0+$
+0*$
+1)$
+0($
+1Q!
+1P!
+0N!
+0J!
+1I!
+0G!
+0E!
+0D!
+1C!
+0B!
+#4610
+b101111 F
+#4650
+0i
+0G
+0f
+#4700
+1i
+1G
+1f
+b100 A
+b111 B
+b1001000010000110 D
+b10 E
+b11101100010 J
+b1110111001100001 K
+b110000 k
+0T
+1S
+1c
+0^
+0\
+0[
+0Y
+1X
+0W
+1Q
+1O
+0M
+1I"
+0J"
+0A"
+1<"
+05"
+17"
+b11101100010 m
+b1110111001100001 n
+1@
+0>
+0=
+0<
+1;
+09
+08
+17
+12
+0,
+1+
+1*
+1&
+0%
+0$
+0"
+0!
+#4710
+b110000 F
+#4750
+0i
+0G
+0f
+#4800
+1i
+1G
+1f
+b10 A
+b101 B
+b1100110110000100 D
+b100 E
+b1010110111011100 J
+b101100111110101 K
+b110001 k
+0S
+1R
+0c
+1\
+1Z
+1Y
+0X
+1V
+0P
+1M
+0L
+1G"
+0I"
+0<"
+1>"
+07"
+19"
+b1010110111011100 m
+b101100111110101 n
+1>
+1<
+19
+18
+07
+06
+14
+03
+01
+0/
+1.
+1-
+1,
+0+
+1)
+0'
+1%
+1#
+1!
+#4810
+b110001 F
+#4850
+0i
+0G
+0f
+#4900
+1i
+1G
+1f
+b1 A
+b1 B
+b1010100110001110 D
+b11 E
+1C
+b1001101000001011 J
+b1001101000001011 K
+b110010 k
+1T
+1S
+0R
+1c
+1a
+0Z
+1W
+0V
+0O
+1N
+0M
+1e
+1H"
+0G"
+1P"
+07$
+15$
+14$
+03$
+10$
+1,$
+1*$
+0)$
+1($
+0>"
+1B"
+09"
+1:"
+b1001101000001011 m
+b1001101000001011 n
+1?
+0>
+1=
+0<
+0;
+0:
+09
+08
+17
+02
+11
+10
+1/
+0.
+0,
+0*
+0)
+0(
+1'
+0&
+1$
+0#
+#4910
+b110010 F
+#4950
+0i
+0G
+0f
+#5000
+1i
+1G
+1f
+0H$
+1J$
+1K$
+0L$
+1O$
+1S$
+1U$
+0V$
+1W$
+b111 A
+b1110010100110110 D
+b101 E
+b1110111001100001 J
+b110011 k
+0S
+1R
+0a
+1`
+1_
+0]
+1Z
+0Y
+1V
+1M
+1L
+1F"
+0H"
+0P"
+1N"
+04$
+13$
+12$
+00$
+1-$
+0,$
+1)$
+09%
+18%
+03%
+02%
+1/%
+0.%
+0-%
+1,%
+1*%
+17$
+05$
+02$
+0-$
+0*$
+0($
+0:"
+14"
+b1110111001100001 m
+0/
+0-
+1+
+1*
+1&
+0$
+1#
+1"
+#5001
+18$
+09$
+1:$
+1<$
+1@$
+0C$
+1D$
+1E$
+0G$
+07$
+15$
+14$
+03$
+10$
+1,$
+1*$
+0)$
+1($
+0Q!
+1O!
+1N!
+0M!
+1J!
+1F!
+1D!
+0C!
+1B!
+#5010
+b110011 F

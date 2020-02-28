@@ -5,6 +5,13 @@ Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	clkrst
 
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/reg16_bench.sv {1 {vlog -work work -sv -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/reg16_bench.sv
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module reg16_bench
+
+Top level modules:
+	reg16_bench
+
 } {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/dff.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/dff.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling module dff
@@ -12,12 +19,12 @@ Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	dff
 
-} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/reg16.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/reg16.v
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/mux8_16.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/mux8_16.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module reg16
+-- Compiling module mux8_16
 
 Top level modules:
-	reg16
+	mux8_16
 
 } {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/regFile_hier.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/regFile_hier.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -26,12 +33,19 @@ Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	regFile_hier
 
-} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/regFile.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/regFile.v
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/reg16.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/reg16.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module regFile
+-- Compiling module reg16
 
 Top level modules:
-	regFile
+	reg16
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/dec3to8.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/dec3to8.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module dec3to8
+
+Top level modules:
+	dec3to8
 
 } {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/tb_regFile_hier.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/tb_regFile_hier.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -40,11 +54,11 @@ Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	tb_regFile_hier
 
-} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/dec3to8.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/dec3to8.v
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/regFile.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_1/regFile.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module dec3to8
+-- Compiling module regFile
 
 Top level modules:
-	dec3to8
+	regFile
 
 } {} {}}
