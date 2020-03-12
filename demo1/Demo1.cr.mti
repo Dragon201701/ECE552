@@ -26,19 +26,19 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	nand2
 
-} {} {}} D:/ECE552/demo1/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/execute.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module execute
-
-Top level modules:
-	execute
-
 } {} {}} D:/ECE552/demo1/clkrst.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/clkrst.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module clkrst
 
 Top level modules:
 	clkrst
+
+} {} {}} D:/ECE552/demo1/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/execute.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module execute
+
+Top level modules:
+	execute
 
 } {} {}} D:/ECE552/demo1/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/xor3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -47,19 +47,19 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	xor3
 
-} {} {}} D:/ECE552/demo1/proc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc
-
-Top level modules:
-	proc
-
 } {} {}} D:/ECE552/demo1/nand3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nand3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module nand3
 
 Top level modules:
 	nand3
+
+} {} {}} D:/ECE552/demo1/proc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module proc
+
+Top level modules:
+	proc
 
 } {} {}} D:/ECE552/demo1/decode.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/decode.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -75,14 +75,14 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	shifter
 
-} {} {}} D:/ECE552/demo1/memory2c.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.syn.v
+} {} {}} D:/ECE552/demo1/memory2c.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module memory2c
 
 Top level modules:
 	memory2c
 
-} {} {}} D:/ECE552/demo1/memory2c.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.v
+} {} {}} D:/ECE552/demo1/memory2c.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.syn.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module memory2c
 
@@ -110,12 +110,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	dff
 
-} {} {}} D:/ECE552/demo1/control.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/control.v
+} {} {}} D:/ECE552/demo1/wb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/wb.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module control
+-- Compiling module wb
 
 Top level modules:
-	control
+	wb
 
 } {} {}} D:/ECE552/demo1/nor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nor2.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -124,17 +124,37 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	nor2
 
-} {} {}} D:/ECE552/demo1/wb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/wb.v
+} {} {}} D:/ECE552/demo1/control.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/control.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module wb
+-- Compiling module control
 
 Top level modules:
-	wb
+	control
 
-} {} {}} D:/ECE552/demo1/alu.v {2 {vlog -work work -vopt -stats=none D:/ECE552/demo1/alu.v
+} {} {}} D:/ECE552/demo1/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/not1.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module not1
+
+Top level modules:
+	not1
+
+} {} {}} D:/ECE552/demo1/nor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nor3.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module nor3
+
+Top level modules:
+	nor3
+
+} {} {}} D:/ECE552/demo1/proc_hier_bench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc_hier_bench.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module proc_hier_bench
+
+Top level modules:
+	proc_hier_bench
+
+} {} {}} D:/ECE552/demo1/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/alu.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module alu
-** Warning: D:/ECE552/demo1/alu.v(54): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 
 Top level modules:
 	alu
@@ -146,26 +166,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	dec3to8
 
-} {} {}} D:/ECE552/demo1/nor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nor3.v
+} {} {}} D:/ECE552/demo1/reg16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/reg16.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module nor3
+-- Compiling module reg16
 
 Top level modules:
-	nor3
-
-} {} {}} D:/ECE552/demo1/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/not1.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module not1
-
-Top level modules:
-	not1
-
-} {} {}} D:/ECE552/demo1/cla_4b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/cla_4b.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module cla_4b
-
-Top level modules:
-	cla_4b
+	reg16
 
 } {} {}} D:/ECE552/demo1/fullAdder_1b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/fullAdder_1b.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -174,12 +180,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	fullAdder_1b
 
-} {} {}} D:/ECE552/demo1/reg16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/reg16.v
+} {} {}} D:/ECE552/demo1/cla_4b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/cla_4b.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module reg16
+-- Compiling module cla_4b
 
 Top level modules:
-	reg16
+	cla_4b
 
 } {} {}} D:/ECE552/demo1/regFile.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/regFile.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018

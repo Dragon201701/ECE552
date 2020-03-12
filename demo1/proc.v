@@ -61,7 +61,7 @@ module proc (/*AUTOARG*/
    memory memoryStage(.aluOut(Out), .wrData(wrData), .memRead(memRead), .memWrite(memWrite), .memToReg(memToReg), .clk(clk), .rst(rst), .memoryOut(memoryOut), .halt(halt));
 
    // Wb
-   wb wbStage(.memToReg(memToReg), .memData(memoryOut), .aluOut(aluOut), .lbi(lbi), .immVal(signedImmVal), .writeData(writeData));
+   wb wbStage(.memToReg(memToReg), .memData(memoryOut), .aluOut(Out), .lbi(lbi), .immVal(signedImmVal), .writeData(writeData));
 
    assign err = Ofl | decode_err;
 
