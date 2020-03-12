@@ -33,7 +33,7 @@ module proc (/*AUTOARG*/
    reg [15:0] pc;
 
    // Reset PC on rst signal
-   always @ (clk)
+   always @ (posedge clk)
    begin
 	   if (rst)
 		   pc <= 16'h0000;
