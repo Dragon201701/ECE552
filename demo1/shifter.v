@@ -17,51 +17,26 @@ module shifter (In, Cnt, Op, Out);
    input [N-1:0]   In;
    input [C-1:0]   Cnt;
    input [O-1:0]   Op;
-   output[N-1:0]  Out;
+   output [N-1:0]  Out;
 
+   /* YOUR CODE HERE */
+   /*
+    Opcode - Operation
+    00  Rotate Left
+    01  Shift Left
+    10  Shift right arithmetic
+    11  Shift right logical
+	  */
 
-   wire [N-1:0] shft_left, log_right;
-   reg [N-1:0] rot_left;
-   wire signed [N-1:0] int_arith_right, arith_right;
-// Start
-
-   // OP CODES
-   // 00 - Rotate left 
-   // 01 - Shift left
-   // 10 - Shift right arith
-   // 11 - Shift right log
-
-always @ (*)
- begin
-   // Just be explicit
-   case (Cnt[C-1:0])
-	4'b0000: rot_left[N-1:0] = In[N-1:0];
-	4'b0001: rot_left[N-1:0] = {In[N-1-1:0], In[N-1]};	
-	4'b0010: rot_left[N-1:0] = {In[N-1-2:0], In[N-1:14]};
-	4'b0011: rot_left[N-1:0] = {In[N-1-3:0], In[N-1:13]};
-	4'b0100: rot_left[N-1:0] = {In[N-1-4:0], In[N-1:12]};
-	4'b0101: rot_left[N-1:0] = {In[N-1-5:0], In[N-1:11]};
-	4'b0110: rot_left[N-1:0] = {In[N-1-6:0], In[N-1:10]};
-	4'b0111: rot_left[N-1:0] = {In[N-1-7:0], In[N-1:9]};
-	4'b1000: rot_left[N-1:0] = {In[N-1-8:0], In[N-1:8]};
-	4'b1001: rot_left[N-1:0] = {In[N-1-9:0], In[N-1:7]};
-	4'b1010: rot_left[N-1:0] = {In[N-1-10:0], In[N-1:6]};
-	4'b1011: rot_left[N-1:0] = {In[N-1-11:0],In[N-1:5]};
-	4'b1100: rot_left[N-1:0] = {In[N-1-12:0],In[N-1:4]};
-	4'b1101: rot_left[N-1:0] = {In[N-1-13:0],In[N-1:3]};
-	4'b1110: rot_left[N-1:0] = {In[N-1-14:0],In[N-1:2]};
-	4'b1111: rot_left[N-1:0] = {In[0],In[N-1:1]};
-   endcase
-end
-
-   // Have to assign to a signed variable before the shift
-   assign int_arith_right = In;
-
-   assign shft_left[N-1:0] = In <<< Cnt;
-   assign arith_right[N-1:0] = int_arith_right >>> Cnt;
-   assign log_right[N-1:0] = In >> Cnt;
-
-   assign Out[N-1:0] = Op[1] ? (Op[0] ? (log_right[N-1:0]) : (arith_right[N-1:0]) ) : (Op[0] ? (shft_left[N-1:0]) : (rot_left[N-1:0]) );
-
-
+    wire [N-1:0] out_stage1, out_stage2, out_stage3;
+    assign out_stage1 = (Cnt[0] == 1)? (Op[1] == 0)? {In[N-2:0], (Op[0] == 0)? In[N-1]:1'b0}:
+                                                     {(Op[0] == 0)? In[N-1]:0, In[N-1:1]}:In;
+    assign out_stage2 = (Cnt[1] == 1)? (Op[1] == 0)? {out_stage1[N-3:0], (Op[0] == 0)? out_stage1[N-1:N-2]:2'b0}: 
+                                                     {(Op[0] == 0)? {out_stage1[N-1], out_stage1[N-1]}:2'b00, out_stage1[N-1:2]}:out_stage1;
+    assign out_stage3 = (Cnt[2] == 1)? (Op[1] == 0)? {out_stage2[N-5:0], (Op[0] == 0)? out_stage2[N-1:N-4]:4'b0}: 
+                                                     {(Op[0] == 0)? {out_stage2[N-1], out_stage2[N-1], out_stage2[N-1], out_stage2[N-1]}:4'b0000, out_stage2[N-1:4]}:out_stage2;
+    assign Out = (Cnt[3] == 1)? (Op[1] == 0)? {out_stage3[7:0], (Op[0] == 0)? out_stage3[N-1:N-8]:8'b0}: 
+                                              {(Op[0] == 0)? {out_stage3[N-1], out_stage3[N-1], out_stage3[N-1], out_stage3[N-1],out_stage3[N-1], out_stage3[N-1], out_stage3[N-1], out_stage3[N-1]}:
+                                                             8'b0, out_stage3[N-1:8]}:out_stage3;
 endmodule
+                              

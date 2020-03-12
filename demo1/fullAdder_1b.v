@@ -4,39 +4,35 @@
     
     a 1-bit full adder
 */
-module fullAdder_1b(A, B, C_in, S, C_out);
+module fullAdder_1b(A, B, C_in, p, g, S, C_out);
     input  A, B;
     input  C_in;
+    output p;
+    output g;
     output S;
     output C_out;
+    // only use NOT, NAND, NOR, and XOR
+    // YOUR CODE HERE
+    wire g_bar, p_bar, nand2_1_out, nand2_2_out, nand2_3_out;
 
-	// nd means nand
-	// n means not
-	// x means xor
-    wire axb, a_nd_b, C_nd_axb, n_C_nd_axb, fin;
+    // g = A AND B = NOT(NAND(A,B))
+    nand2 nand2_0(.in1(A), .in2(B), .out(g_bar));
+    not1 not1_0(.in1(g_bar), .out(g));
 
-    
-    // Level 1
-    // Get output for S
-    xor2 a_b(.in1(A), .in2(B), .out(axb));
-    xor2 a_b_c(.in1(C_in), .in2(axb), .out(S));
-    // Nand A and B for Cout
-    // Rest is for Cout
-    nand2 nd1(.in1(A), .in2(B), .out(a_nd_b));
+    // p = A OR B = NOT(NOR(A,B))
+    nor2 nor2_0(.in1(A), .in2(B), .out(p_bar));
+    not1 not1_1(.in1(p_bar), .out(p));
 
-    // Level 2
-    nand2 nd2(.in1(C_in), .in2(axb), .out(C_nd_axb));
+    // C_out = NAND(NAND(A,B), NAND(A,C), NAND(A,C))
+    nand2 nand2_1(.in1(A), .in2(B), .out(nand2_1_out));
+    nand2 nand2_2(.in1(A), .in2(C_in), .out(nand2_2_out));
+    nand2 nand2_3(.in1(B), .in2(C_in), .out(nand2_3_out));
+    nand3 nand3_0(.in1(nand2_1_out), .in2(nand2_2_out), 
+    	.in3(nand2_3_out), .out(C_out));
 
-    // Level 3
-    not1 n1(.in1(C_nd_axb), .out(n_C_nd_axb));
-    not1 n2(.in1(a_nd_b), .out(n_a_nd_b));
+    // S = XOR(A,B,C_in)
+    xor3 xor3_0(.in1(A), .in2(B), .in3(C_in), .out(S));
 
-    // Level 4
-    nor2 nor_1(.in1(n_a_nd_b), .in2(n_C_nd_axb), .out(fin));
 
-    // Final level
-    not1 n3(.in1(fin), .out(C_out));
-
-    
 
 endmodule

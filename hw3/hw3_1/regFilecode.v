@@ -1,4 +1,4 @@
-module mux8_16 (clk, rst, wr_en, read1_sel, read2_sel, write1_sel, data_in, read1_out, read2_out, err);
+module regFilecode (clk, rst, wr_en, read1_sel, read2_sel, write1_sel, data_in, read1_out, read2_out, err);
 
 	// TODO: Probably want to do this param in regFile.v
 	parameter N = 16;
