@@ -9,614 +9,614 @@ z2
 cModel Technology
 d/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/hw3/hw3_2
 valu
-!s110 1583973559
+Z0 !s110 1584029544
 !i10b 1
 !s100 oEQzYA@A7;jiAeR:e[SkC2
-IYOA[TIzS4WbE1lbSajUmV0
-Z0 VDg1SIo80bB@j0V0VzS_@n1
-Z1 dD:/ECE552/demo1
-Z2 w1583973340
-8D:/ECE552/demo1/alu.v
-FD:/ECE552/demo1/alu.v
-Z3 L0 12
-Z4 OL;L;10.6d;65
+IVSok6GDDmiQHQ>d4g8d;N1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1
+Z3 w1584028300
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/alu.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/alu.v
+Z4 L0 12
+Z5 OP;L;10.4a;61
 r1
 !s85 0
 31
-!s108 1583973559.000000
-!s107 D:/ECE552/demo1/alu.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/alu.v|
-!i113 0
-Z5 o-work work
-Z6 tCvgOpt 0
+Z6 !s108 1584029544.000000
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/alu.v|
+!s101 -O0
+!i113 1
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 vcla_16b
-!s110 1583973561
+Z8 !s110 1584029545
 !i10b 1
 !s100 1<SK1E6h;I:0R6;n>>90N1
-INNS5Q^0[ES0[j19ni;ZKG1
-R0
+Id=8Z9OgY0]^8SVU`94_mH0
 R1
 R2
-8D:/ECE552/demo1/cla_16b.v
-FD:/ECE552/demo1/cla_16b.v
+R3
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_16b.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_16b.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973561.000000
-!s107 D:/ECE552/demo1/cla_16b.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/cla_16b.v|
-!i113 0
-R5
-R6
+Z9 !s108 1584029545.000000
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_16b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_16b.v|
+!s101 -O0
+!i113 1
+R7
 vcla_4b
-!s110 1583973560
+R0
 !i10b 1
 !s100 DG>688T85_k100=3ozNKl1
-In07XLZFMWO>OLzHl=0jO<3
-R0
+IR[@9SAgfKOXl7a]2m@A[E3
 R1
 R2
-8D:/ECE552/demo1/cla_4b.v
-FD:/ECE552/demo1/cla_4b.v
+Z10 w1584028301
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_4b.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_4b.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973560.000000
-!s107 D:/ECE552/demo1/cla_4b.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/cla_4b.v|
-!i113 0
-R5
 R6
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_4b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_4b.v|
+!s101 -O0
+!i113 1
+R7
 vclkrst
-!s110 1583973562
+R8
 !i10b 1
 !s100 d1=HFa9@5T7JH2L8mb3gE1
-I^[<NZ06z?h0j@jL55z@Ah2
-R0
+IPAC4Tc6U[<VSWX7_R?]^V2
 R1
 R2
-8D:/ECE552/demo1/clkrst.v
-FD:/ECE552/demo1/clkrst.v
-R3
+R10
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/clkrst.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/clkrst.v
 R4
+R5
 r1
 !s85 0
 31
-!s108 1583973562.000000
-!s107 D:/ECE552/demo1/clkrst.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/clkrst.v|
-!i113 0
-R5
-R6
+R9
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/clkrst.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/clkrst.v|
+!s101 -O0
+!i113 1
+R7
 vcontrol
-!s110 1583973563
+R8
 !i10b 1
-!s100 PXPIgnf4PE5_886CfTcA^1
-IQAa480m^[5YHLed:n2S4g1
-R0
+!s100 b3LMZ[_ZBdbNTY41ZUU4F3
+I>7JH?YaSIMmfe]b:z=H?_2
 R1
 R2
-8D:/ECE552/demo1/control.v
-FD:/ECE552/demo1/control.v
+w1584029540
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/control.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/control.v
 L0 2
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973563.000000
-!s107 D:/ECE552/demo1/control.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/control.v|
-!i113 0
-R5
-R6
+R9
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/control.v|
+!s101 -O0
+!i113 1
+R7
 vdec3to8
-!s110 1583973564
+R8
 !i10b 1
 !s100 V5@7H??h`_lTzOVG4]G^33
-I:oF07@SD=CdVG;Yiz^45m0
-R0
+IgO]^::=i;6QVO6F<fkHHR1
 R1
 R2
-8D:/ECE552/demo1/dec3to8.v
-FD:/ECE552/demo1/dec3to8.v
+R10
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dec3to8.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dec3to8.v
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973564.000000
-!s107 D:/ECE552/demo1/dec3to8.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/dec3to8.v|
-!i113 0
-R5
-R6
+R9
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dec3to8.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dec3to8.v|
+!s101 -O0
+!i113 1
+R7
 vdecode
-!s110 1583973565
+R8
 !i10b 1
 !s100 f^LCEEF_IL5JHH=a<L[_30
-I>a=lVLHX^I>KKn0TC1moB1
-R0
+I0]fkk8BhmS2LQBc_>M54]3
 R1
 R2
-8D:/ECE552/demo1/decode.v
-FD:/ECE552/demo1/decode.v
+R10
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/decode.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/decode.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973565.000000
-!s107 D:/ECE552/demo1/decode.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/decode.v|
-!i113 0
-R5
-R6
+R9
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/decode.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/decode.v|
+!s101 -O0
+!i113 1
+R7
 vdff
-!s110 1583973566
+R8
 !i10b 1
 !s100 ocZMMJaQcW@V^7b`LBG;g2
-I7KRzMT@[6=H@;_M11eS7A2
-R0
+IdY9T1@V4ZYn<_O`BXc[OH1
 R1
 R2
-8D:/ECE552/demo1/dff.v
-FD:/ECE552/demo1/dff.v
+R10
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dff.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dff.v
 L0 6
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973566.000000
-!s107 D:/ECE552/demo1/dff.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/dff.v|
-!i113 0
-R5
-R6
+R9
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dff.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dff.v|
+!s101 -O0
+!i113 1
+R7
 vexecute
-!s110 1583973567
+R8
 !i10b 1
 !s100 Y[Gl?]7P1GG0Jgjd7Y?7f0
-IelQDV5cG@VmEFW4Bc00RR0
-R0
+IM;eZ6AVL928dHe;UYfjMn1
 R1
 R2
-8D:/ECE552/demo1/execute.v
-FD:/ECE552/demo1/execute.v
+R10
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/execute.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/execute.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973567.000000
-!s107 D:/ECE552/demo1/execute.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/execute.v|
-!i113 0
-R5
-R6
+R9
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/execute.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/execute.v|
+!s101 -O0
+!i113 1
+R7
 vfetch
-!s110 1583973568
+Z11 !s110 1584029546
 !i10b 1
 !s100 :a0?k:?MLc2ClXF:63nEE1
-IgSVZ=[`SdoIGA=nE>mYG11
-R0
+INA]=3gLjI@QC92GPBQe]c2
 R1
 R2
-8D:/ECE552/demo1/fetch.v
-FD:/ECE552/demo1/fetch.v
+R10
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fetch.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fetch.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973568.000000
-!s107 D:/ECE552/demo1/fetch.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/fetch.v|
-!i113 0
-R5
-R6
+Z12 !s108 1584029546.000000
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fetch.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fetch.v|
+!s101 -O0
+!i113 1
+R7
 vfullAdder_1b
-!s110 1583973569
+R11
 !i10b 1
 !s100 SUCe@IiUhUMAm:?_;4zXS0
-IDn4AE]Xnm2IM<hLWNM0Mf2
-R0
+I=m24SJcCDDh?biH?EJZ[H0
 R1
 R2
-8D:/ECE552/demo1/fullAdder_1b.v
-FD:/ECE552/demo1/fullAdder_1b.v
+R10
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fullAdder_1b.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fullAdder_1b.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973569.000000
-!s107 D:/ECE552/demo1/fullAdder_1b.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/fullAdder_1b.v|
-!i113 0
-R5
-R6
+R12
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fullAdder_1b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fullAdder_1b.v|
+!s101 -O0
+!i113 1
+R7
 nfull@adder_1b
 vmemory
-!s110 1583973570
+R11
 !i10b 1
 !s100 >hV:U[IWXEk^3XN<`b;M:0
-I^EZ[0JSD0og@QEUFFS9LC1
-R0
+IX0E9GQ:0LFOfPI?^Ego<G2
 R1
 R2
-8D:/ECE552/demo1/memory.v
-FD:/ECE552/demo1/memory.v
+Z13 w1584028302
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory.v
 L0 8
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973570.000000
-!s107 D:/ECE552/demo1/memory.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/memory.v|
-!i113 0
-R5
-R6
+R12
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory.v|
+!s101 -O0
+!i113 1
+R7
 vmemory2c
-!s110 1583973572
+R11
 !i10b 1
 !s100 WTd=;7@^ER:WM8oX2<F2d1
-IfV<iC>oG@a5bA0LKY8jdE2
-R0
+IdV4KDlnMMNYP7?FS=hakS0
 R1
 R2
-8D:/ECE552/demo1/memory2c.v
-FD:/ECE552/demo1/memory2c.v
+R13
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory2c.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory2c.v
 L0 35
-R4
+R5
 r1
 !s85 0
 31
-Z7 !s108 1583973572.000000
-!s107 D:/ECE552/demo1/memory2c.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/memory2c.v|
-!i113 0
-R5
-R6
+R12
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory2c.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory2c.v|
+!s101 -O0
+!i113 1
+R7
 vmux8_16
-!s110 1583973573
+R11
 !i10b 1
-!s100 9>=SP8WI]g9KozW5nGTm:2
-I=Ge<^[05<57A;kQ<Z6bJ22
-R0
+!s100 gEDS:M]`_A`B=aNUGQfFi2
+I4Z<ICdJAboH[[Q0AgJB4B1
 R1
 R2
-8D:/ECE552/demo1/mux8_16.v
-FD:/ECE552/demo1/mux8_16.v
+R13
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/mux8_16.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/mux8_16.v
 L0 1
-R4
+R5
 r1
 !s85 0
 31
+R12
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/mux8_16.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/mux8_16.v|
+!s101 -O0
+!i113 1
 R7
-!s107 D:/ECE552/demo1/mux8_16.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/mux8_16.v|
-!i113 0
-R5
-R6
 vnand2
-!s110 1583973574
+R11
 !i10b 1
 !s100 @JLnM_lV[dSoG<b5oFSbC0
-I0hV4RToMG`Oj8Rd5PRn>_0
-R0
+IOm<;bj?_IUYbV6m?SS>1@3
 R1
 R2
-8D:/ECE552/demo1/nand2.v
-FD:/ECE552/demo1/nand2.v
+R13
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand2.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand2.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-Z8 !s108 1583973574.000000
-!s107 D:/ECE552/demo1/nand2.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/nand2.v|
-!i113 0
-R5
-R6
+R12
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand2.v|
+!s101 -O0
+!i113 1
+R7
 vnand3
-!s110 1583973575
+Z14 !s110 1584029547
 !i10b 1
 !s100 74U72gSXNGQC9QQ_6Vl@m3
-IaJ5BNhUE`b[3;<D4CJCjz0
-R0
+I?cmma^T9aBOfDTE_^A<RN0
 R1
 R2
-8D:/ECE552/demo1/nand3.v
-FD:/ECE552/demo1/nand3.v
+R13
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand3.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand3.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-R8
-!s107 D:/ECE552/demo1/nand3.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/nand3.v|
-!i113 0
-R5
-R6
+R12
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand3.v|
+!s101 -O0
+!i113 1
+R7
 vnor2
-!s110 1583973576
+R14
 !i10b 1
 !s100 zLY;3kAfYGCBXK2?=fzNd1
-IgGm>=7OGZKi@gAdQj:8LY2
-R0
+IJ`cfP_NkIcjYkZ1XFoD@B2
 R1
 R2
-8D:/ECE552/demo1/nor2.v
-FD:/ECE552/demo1/nor2.v
+R13
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor2.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor2.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973575.000000
-!s107 D:/ECE552/demo1/nor2.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/nor2.v|
-!i113 0
-R5
-R6
+Z15 !s108 1584029547.000000
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor2.v|
+!s101 -O0
+!i113 1
+R7
 vnor3
-!s110 1583973577
+R14
 !i10b 1
 !s100 M15<fJBSa=`jENU]=JkSO2
-IUL@k=[H:LkBEc2`S;cDW32
-R0
+I:hMSJhj4[lhKm8Eo9m7o@3
 R1
 R2
-8D:/ECE552/demo1/nor3.v
-FD:/ECE552/demo1/nor3.v
+R13
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor3.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor3.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973576.000000
-!s107 D:/ECE552/demo1/nor3.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/nor3.v|
-!i113 0
-R5
-R6
+R15
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor3.v|
+!s101 -O0
+!i113 1
+R7
 vnot1
-!s110 1583973578
+R14
 !i10b 1
 !s100 E;?=8[YGePDM35<9b7^jF3
-ID]e@K^Xem9H6`A[KbV50A0
-R0
+IbnPG4;B@=n<;jgi8ojJ;i3
 R1
 R2
-8D:/ECE552/demo1/not1.v
-FD:/ECE552/demo1/not1.v
+Z16 w1584028303
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/not1.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/not1.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973578.000000
-!s107 D:/ECE552/demo1/not1.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/not1.v|
-!i113 0
-R5
-R6
+R15
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/not1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/not1.v|
+!s101 -O0
+!i113 1
+R7
 vproc
-!s110 1583973579
+R14
 !i10b 1
 !s100 ]b@jgRnDR2=>NnhkRGTd]1
-IlaXMNfbU;h5V<;V_9_oFO0
-R0
+IQfU:nAz8CXTQ7@][VJWC20
 R1
 R2
-8D:/ECE552/demo1/proc.v
-FD:/ECE552/demo1/proc.v
+R16
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc.v
 L0 4
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973579.000000
-!s107 D:/ECE552/demo1/proc.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/proc.v|
-!i113 0
-R5
-R6
+R15
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc.v|
+!s101 -O0
+!i113 1
+R7
 vproc_hier
-!s110 1583973580
+R14
 !i10b 1
 !s100 =I`13V[kAYPY]19f0imSo2
-I1A;7VOn>hH[Tf_2YUcam`1
-R0
+IBZDL7Kk`R93gfL7YkJcYo3
 R1
 R2
-8D:/ECE552/demo1/proc_hier.v
-FD:/ECE552/demo1/proc_hier.v
+R16
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier.v
 L0 6
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973580.000000
-!s107 D:/ECE552/demo1/proc_hier.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/proc_hier.v|
-!i113 0
-R5
-R6
+R15
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier.v|
+!s101 -O0
+!i113 1
+R7
 vproc_hier_bench
-!s110 1583973581
+R14
 !i10b 1
 !s100 [gVZhEcUlA]>;hE8KXjmS1
-IOEX9^O>:eLNFFFU?;]YOR1
-R0
+IfhiPS7ViQAz?@7;2ZXCC51
 R1
 R2
-8D:/ECE552/demo1/proc_hier_bench.v
-FD:/ECE552/demo1/proc_hier_bench.v
+R16
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier_bench.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier_bench.v
 L0 4
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973581.000000
-!s107 D:/ECE552/demo1/proc_hier_bench.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/proc_hier_bench.v|
-!i113 0
-R5
-R6
+R15
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier_bench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier_bench.v|
+!s101 -O0
+!i113 1
+R7
 vreg16
-!s110 1583973582
+R14
 !i10b 1
 !s100 g^XR<mM=[cCgoASRXg=dN1
-IHEgP3Z3kQ=CliJCROE6ch2
-R0
+I]8n4c>RE?nT[cQCKR9Z_G2
 R1
 R2
-8D:/ECE552/demo1/reg16.v
-FD:/ECE552/demo1/reg16.v
+R16
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/reg16.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/reg16.v
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973582.000000
-!s107 D:/ECE552/demo1/reg16.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/reg16.v|
-!i113 0
-R5
-R6
+R15
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/reg16.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/reg16.v|
+!s101 -O0
+!i113 1
+R7
 vregFile
-!s110 1583973583
+Z17 !s110 1584029548
 !i10b 1
-!s100 a1P@:Oh2dejM4A_zjngP21
-I9;PYN5fBSO`m@eN7jV6I=2
-R0
+!s100 J6`Z2_K_ITg3lV?3=94n43
+I4SL6mHCzTb@32QQHb?3KO1
 R1
 R2
-8D:/ECE552/demo1/regFile.v
-FD:/ECE552/demo1/regFile.v
-Z9 L0 10
-R4
+R16
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile.v
+Z18 L0 10
+R5
 r1
 !s85 0
 31
-!s108 1583973583.000000
-!s107 D:/ECE552/demo1/regFile.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/regFile.v|
-!i113 0
-R5
-R6
+Z19 !s108 1584029548.000000
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile.v|
+!s101 -O0
+!i113 1
+R7
 nreg@file
 vregFile_bypass
-!s110 1583973584
+R17
 !i10b 1
 !s100 n6YHGM0I0jlSze1Ab@ead2
-Im@7T?kcE5beDbIF1T9V>G2
-R0
+IXLMNb>RaBSM=N<YOjTEHV0
 R1
 R2
-8D:/ECE552/demo1/regFile_bypass.v
-FD:/ECE552/demo1/regFile_bypass.v
+R16
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile_bypass.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile_bypass.v
 L0 8
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973584.000000
-!s107 D:/ECE552/demo1/regFile_bypass.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/regFile_bypass.v|
-!i113 0
-R5
-R6
+R19
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile_bypass.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile_bypass.v|
+!s101 -O0
+!i113 1
+R7
 nreg@file_bypass
 vshifter
-!s110 1583973585
+R17
 !i10b 1
 !s100 LX_O?SYQI>ILPJMi8PU2X1
-IkX^Q6MR?R>aia2;S=E_4h1
-R0
+I[GP94aI]I898FiU_Yd`M]2
 R1
 R2
-8D:/ECE552/demo1/shifter.v
-FD:/ECE552/demo1/shifter.v
-R9
-R4
+R16
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/shifter.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/shifter.v
+R18
+R5
 r1
 !s85 0
 31
-!s108 1583973585.000000
-!s107 D:/ECE552/demo1/shifter.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/shifter.v|
-!i113 0
-R5
-R6
+R19
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/shifter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/shifter.v|
+!s101 -O0
+!i113 1
+R7
 vwb
-!s110 1583973586
+R17
 !i10b 1
 !s100 ?l02RIK98JGChJa56_5@Q2
-I0mCL1NFEd7DWA;;5bd5J62
-R0
+Ion=Dm2_2k^VBR?[6<o0c;0
 R1
 R2
-8D:/ECE552/demo1/wb.v
-FD:/ECE552/demo1/wb.v
+R16
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/wb.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/wb.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973586.000000
-!s107 D:/ECE552/demo1/wb.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/wb.v|
-!i113 0
-R5
-R6
+R19
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/wb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/wb.v|
+!s101 -O0
+!i113 1
+R7
 vxor2
-!s110 1583973587
+R17
 !i10b 1
 !s100 14Q51T:af@fHNQedg1F<m0
-IN1dIKieVHnCZ=>O=>6_b<1
-R0
+IJRElhfnbKRSnUSUQC]UnO2
 R1
 R2
-8D:/ECE552/demo1/xor2.v
-FD:/ECE552/demo1/xor2.v
+R16
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor2.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor2.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973587.000000
-!s107 D:/ECE552/demo1/xor2.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/xor2.v|
-!i113 0
-R5
-R6
+R19
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor2.v|
+!s101 -O0
+!i113 1
+R7
 vxor3
-!s110 1583973588
+R0
 !i10b 1
 !s100 `n11P3H6:oWD]59JZPJ[m2
-I_[^b[b0_Sjh0zVkR0Z6lK2
-R0
+I<GRTf7U[eC8W==l01MGAz0
 R1
 R2
-8D:/ECE552/demo1/xor3.v
-FD:/ECE552/demo1/xor3.v
+R16
+8C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor3.v
+FC:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor3.v
 L0 7
-R4
+R5
 r1
 !s85 0
 31
-!s108 1583973588.000000
-!s107 D:/ECE552/demo1/xor3.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/xor3.v|
-!i113 0
-R5
 R6
+!s107 C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor3.v|
+!s101 -O0
+!i113 1
+R7

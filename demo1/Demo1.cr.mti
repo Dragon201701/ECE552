@@ -1,32 +1,4 @@
-D:/ECE552/demo1/fetch.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/fetch.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module fetch
-
-Top level modules:
-	fetch
-
-} {} {}} D:/ECE552/demo1/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/xor2.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module xor2
-
-Top level modules:
-	xor2
-
-} {} {}} D:/ECE552/demo1/proc_hier.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc_hier.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc_hier
-
-Top level modules:
-	proc_hier
-
-} {} {}} D:/ECE552/demo1/nand2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nand2.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module nand2
-
-Top level modules:
-	nand2
-
-} {} {}} D:/ECE552/demo1/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/execute.v
+D:/ECE552/demo1/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/execute.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module execute
 
@@ -39,27 +11,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	clkrst
-
-} {} {}} D:/ECE552/demo1/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/xor3.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module xor3
-
-Top level modules:
-	xor3
-
-} {} {}} D:/ECE552/demo1/proc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc
-
-Top level modules:
-	proc
-
-} {} {}} D:/ECE552/demo1/nand3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nand3.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module nand3
-
-Top level modules:
-	nand3
 
 } {} {}} D:/ECE552/demo1/decode.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/decode.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -75,13 +26,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	shifter
 
-} {} {}} D:/ECE552/demo1/memory2c.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module memory2c
-
-Top level modules:
-	memory2c
-
 } {} {}} D:/ECE552/demo1/memory2c.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.syn.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module memory2c
@@ -89,40 +33,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	memory2c
 
-} {} {}} D:/ECE552/demo1/regFile_bypass.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/regFile_bypass.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module regFile_bypass
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module memory
 
 Top level modules:
-	regFile_bypass
-
-} {} {}} D:/ECE552/demo1/dff.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/dff.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module dff
-
-Top level modules:
-	dff
-
-} {} {}} D:/ECE552/demo1/cla_16b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/cla_16b.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module cla_16b
-
-Top level modules:
-	cla_16b
-
-} {} {}} D:/ECE552/demo1/wb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/wb.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module wb
-
-Top level modules:
-	wb
-
-} {} {}} D:/ECE552/demo1/nor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nor2.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module nor2
-
-Top level modules:
-	nor2
+	memory
 
 } {} {}} D:/ECE552/demo1/control.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/control.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -131,19 +47,75 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	control
 
-} {} {}} D:/ECE552/demo1/proc_hier_bench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc_hier_bench.v
+} {} {}} D:/ECE552/demo1/nor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nor2.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc_hier_bench
+-- Compiling module nor2
 
 Top level modules:
-	proc_hier_bench
+	nor2
 
-} {} {}} D:/ECE552/demo1/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/not1.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module not1
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand2.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand2.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module nand2
 
 Top level modules:
-	not1
+	nand2
+
+} {} {}} D:/ECE552/demo1/memory.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dec3to8.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dec3to8.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dec3to8
+
+Top level modules:
+	dec3to8
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor3.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor3.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module nor3
+
+Top level modules:
+	nor3
+
+} {} {}} D:/ECE552/demo1/nand2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nand2.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module nand2
+
+Top level modules:
+	nand2
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/reg16.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/reg16.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module reg16
+
+Top level modules:
+	reg16
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_4b.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_4b.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module cla_4b
+
+Top level modules:
+	cla_4b
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fullAdder_1b.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fullAdder_1b.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fullAdder_1b
+
+Top level modules:
+	fullAdder_1b
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/mux8_16.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/mux8_16.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux8_16
+
+Top level modules:
+	mux8_16
 
 } {} {}} D:/ECE552/demo1/nor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nor3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -159,13 +131,19 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	dec3to8
 
-} {} {}} D:/ECE552/demo1/alu.v {2 {vlog -work work -vopt -stats=none D:/ECE552/demo1/alu.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module alu
-** Warning: D:/ECE552/demo1/alu.v(54): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor2.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor2.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module xor2
 
 Top level modules:
-	alu
+	xor2
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand3.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nand3.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module nand3
+
+Top level modules:
+	nand3
 
 } {} {}} D:/ECE552/demo1/reg16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/reg16.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -188,6 +166,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	cla_4b
 
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile_bypass.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile_bypass.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module regFile_bypass
+
+Top level modules:
+	regFile_bypass
+
 } {} {}} D:/ECE552/demo1/mux8_16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/mux8_16.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module mux8_16
@@ -195,11 +180,231 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	mux8_16
 
-} {} {}} D:/ECE552/demo1/memory.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module memory
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_16b.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/cla_16b.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module cla_16b
 
 Top level modules:
-	memory
+	cla_16b
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/wb.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/wb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module wb
+
+Top level modules:
+	wb
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/not1.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/not1.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module not1
+
+Top level modules:
+	not1
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/alu.v {2 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/alu.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module alu
+** Warning: C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/alu.v(54): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+
+Top level modules:
+	alu
+
+} {} {}} D:/ECE552/demo1/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/xor2.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module xor2
+
+Top level modules:
+	xor2
+
+} {} {}} D:/ECE552/demo1/nand3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nand3.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module nand3
+
+Top level modules:
+	nand3
+
+} {} {}} D:/ECE552/demo1/regFile_bypass.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/regFile_bypass.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module regFile_bypass
+
+Top level modules:
+	regFile_bypass
+
+} {} {}} D:/ECE552/demo1/cla_16b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/cla_16b.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module cla_16b
+
+Top level modules:
+	cla_16b
+
+} {} {}} D:/ECE552/demo1/wb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/wb.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module wb
+
+Top level modules:
+	wb
+
+} {} {}} D:/ECE552/demo1/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/not1.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module not1
+
+Top level modules:
+	not1
+
+} {} {}} D:/ECE552/demo1/alu.v {2 {vlog -work work -vopt -stats=none D:/ECE552/demo1/alu.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module alu
+** Warning: D:/ECE552/demo1/alu.v(54): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	alu
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fetch.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/fetch.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fetch
+
+Top level modules:
+	fetch
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module proc_hier
+
+Top level modules:
+	proc_hier
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module proc
+
+Top level modules:
+	proc
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor3.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/xor3.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module xor3
+
+Top level modules:
+	xor3
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory2c.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory2c.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module memory2c
+
+Top level modules:
+	memory2c
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dff.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/dff.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier_bench.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/proc_hier_bench.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module proc_hier_bench
+
+Top level modules:
+	proc_hier_bench
+
+} {} {}} D:/ECE552/demo1/fetch.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/fetch.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module fetch
+
+Top level modules:
+	fetch
+
+} {} {}} D:/ECE552/demo1/proc_hier.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc_hier.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module proc_hier
+
+Top level modules:
+	proc_hier
+
+} {} {}} D:/ECE552/demo1/proc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module proc
+
+Top level modules:
+	proc
+
+} {} {}} D:/ECE552/demo1/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/xor3.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module xor3
+
+Top level modules:
+	xor3
+
+} {} {}} D:/ECE552/demo1/memory2c.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module memory2c
+
+Top level modules:
+	memory2c
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/regFile.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module regFile
+
+Top level modules:
+	regFile
+
+} {} {}} D:/ECE552/demo1/dff.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/dff.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}} D:/ECE552/demo1/proc_hier_bench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc_hier_bench.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module proc_hier_bench
+
+Top level modules:
+	proc_hier_bench
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/execute.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/execute.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module execute
+
+Top level modules:
+	execute
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/clkrst.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/clkrst.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/decode.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/decode.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module decode
+
+Top level modules:
+	decode
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/shifter.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/shifter.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory2c.syn.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/memory2c.syn.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module memory2c
+
+Top level modules:
+	memory2c
+
+} {} {}} C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor2.v {1 {vlog -work work -stats=none C:/Users/Storm/Downloads/ECE552-master/ECE552-master/demo1/nor2.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module nor2
+
+Top level modules:
+	nor2
 
 } {} {}}
