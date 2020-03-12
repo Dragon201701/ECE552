@@ -22,8 +22,9 @@ module fetch (pc, wr, enable, clk, rst, lbi, halt, noOp, stu, immPres,  immCtl, 
   // If lbi asserted, store into Rs.
   // If immPres, have to use higher bits for Rd
   // Else do lower bits
-  assign writeReg1 = immPres ? instr[7:5] : lbi ? instr[10:8] : instr[4:2];
-
+  //  OLD: assign writeReg1 = immPres ? instr[7:5] : lbi ? instr[10:8] : instr[4:2];
+  assign writeReg1 = immPres ? immCtl ? instr[10:8] : instr[7:5] : instr[4:2];
+  
   assign immVal = immCtl ? instr[7:0] : instr[4:0];
 
   assign branch = instr[15:0];
