@@ -5,6 +5,20 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	regFile_hier
 
+} {} {}} D:/ECE552/hw3/hw3_1/regFile.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw3/hw3_1/regFile.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module regFile
+
+Top level modules:
+	regFile
+
+} {} {}} D:/ECE552/hw3/hw3_1/dec3to8.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw3/hw3_1/dec3to8.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module dec3to8
+
+Top level modules:
+	dec3to8
+
 } {} {}} D:/ECE552/hw3/hw3_1/tb_regFile_hier.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw3/hw3_1/tb_regFile_hier.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module tb_regFile_hier
@@ -12,12 +26,26 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	tb_regFile_hier
 
+} {} {}} D:/ECE552/hw3/mux8_16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw3/mux8_16.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mux8_16
+
+Top level modules:
+	mux8_16
+
 } {} {}} D:/ECE552/hw3/hw3_1/clkrst.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw3/hw3_1/clkrst.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module clkrst
 
 Top level modules:
 	clkrst
+
+} {} {}} D:/ECE552/hw3/reg16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw3/reg16.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module reg16
+
+Top level modules:
+	reg16
 
 } {} {}} D:/ECE552/hw3/hw3_1/dff.v {1 {vlog -work work -vopt -stats=none D:/ECE552/hw3/hw3_1/dff.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
