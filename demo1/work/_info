@@ -92,13 +92,13 @@ r1
 R5
 R6
 vcontrol
-!s110 1584141876
+!s110 1584142226
 !i10b 1
-!s100 hYGTKnn@bWIV592PHdZ<Q0
-IeoT=zzVUa?nfjLIeW?PzG2
+!s100 FX<YSKLcU_FkmJ18@n>Bg0
+I9l=9E`9zkAND`cQoF?VJ90
 R1
 R0
-R2
+w1584142221
 8D:/ECE552/demo1/control.v
 FD:/ECE552/demo1/control.v
 L0 2
@@ -106,7 +106,7 @@ R4
 r1
 !s85 0
 31
-!s108 1584141876.000000
+!s108 1584142226.000000
 !s107 D:/ECE552/demo1/control.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/control.v|
 !i113 0
@@ -176,13 +176,13 @@ r1
 R5
 R6
 vexecute
-!s110 1584141873
+!s110 1584142125
 !i10b 1
-!s100 3j88N>gC;24j=dCHUk=:81
-IeeEPCdgY6VAJ@iH==;]X?2
+!s100 <n;8<]>n>Q`SQaNBbG=6e1
+I3lQkLzAn0k[DS[K9K]D2:3
 R1
 R0
-w1584140887
+w1584142068
 8D:/ECE552/demo1/execute.v
 FD:/ECE552/demo1/execute.v
 L0 7
@@ -190,20 +190,20 @@ R4
 r1
 !s85 0
 31
-!s108 1584141873.000000
+!s108 1584142125.000000
 !s107 D:/ECE552/demo1/execute.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/execute.v|
 !i113 0
 R5
 R6
 vfetch
-!s110 1584141946
+!s110 1584142225
 !i10b 1
-!s100 C3VeVHjGfb@IX:4[D39X53
-I[b55QCWLZ3OQjabm?@FTF0
+!s100 jcV8:4C>]V?e0hY3M]cg=1
+IWNQ[9L:L5ZM9O>FNXU^Gg3
 R1
 R0
-w1584141943
+w1584142160
 8D:/ECE552/demo1/fetch.v
 FD:/ECE552/demo1/fetch.v
 L0 7
@@ -211,7 +211,7 @@ R4
 r1
 !s85 0
 31
-!s108 1584141946.000000
+!s108 1584142225.000000
 !s107 D:/ECE552/demo1/fetch.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/fetch.v|
 !i113 0

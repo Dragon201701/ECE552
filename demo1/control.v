@@ -20,7 +20,12 @@ begin
 	sl <= 0;
 	seq <= 0;
    case (instr[15:11])
-        5'b00000: halt <= 1;// HALT, Don't Cares
+        5'b00000: begin
+        	halt <= 1;// HALT, Don't Cares
+        	regWrite <= 0; aluSrc <= 0; memWrite <= 0; memRead <= 0; memToReg <= 0; branchCtl <= 0; jumpCtl <= 0;
+            invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 0; slbi <= 0; immPres <= 0; lbi <= 0;	  
+            aluCtl <= 0;
+        end
         5'b00001: begin noOp <= 1;// NOP, Don't Cares
 		  regWrite <= 0; aluSrc <= 0; memWrite <= 0; memRead <= 0; memToReg <= 0; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 0; slbi <= 0; immPres <= 0; lbi <= 0;	  

@@ -16,7 +16,7 @@ module fetch (pc, wr, enable, clk, rst, lbi, halt, noOp, stu, immPres,  immCtl, 
   // Initialize memory
   // TODO: Change memory back to syn type
    memory2c instr_mem(.data_out(instr), .data_in(pc), .addr(pc), .enable(enable), .wr(wr), .createdump(clk), .clk(clk), .rst(rst) );
-   cla_16 incPC(.A(pc), .B(16'h0002), .C_in(0), .S(pc_inc), .C_out());
+   cla_16b incPC(.A(pc), .B(16'h0002), .C_in(0), .S(pc_inc), .C_out());
    
   assign readReg1 = instr[10:8];
   assign readReg2 = instr[7:5];
