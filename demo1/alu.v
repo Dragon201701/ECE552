@@ -9,7 +9,7 @@
     of the operation, as well as output a Zero bit and an Overflow
     (OFL) bit.
 */
-module alu (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
+module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
 
    // declare constant for size of inputs, outputs (N),
    // and operations (O)
@@ -23,6 +23,7 @@ module alu (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
    input         invA;// active high A invert indicator
    input         invB;// active high B invert indicator
    input         sign;// Sign(active high) or Unsigned indicator
+   input	 slbi;
    output [N-1:0] Out;
    output         Ofl;// High if Overflow occurs
    output         Zero;// High if result == 0
@@ -51,7 +52,8 @@ module alu (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
   assign OR_RESULT = A | B;
   assign XOR_RESULT = A ^ B;
   assign SUB_RESULT = B - A;
-  assign LOGIC_RESULT = (Op == 3'b100)? ADD_RESULT: 
+  assign LOGIC_RESULT = slbi ? OR_RESULT:
+			(Op == 3'b100)? ADD_RESULT: 
                         (Op == 3'b101)? SUB_RESULT: 
                         (Op == 3'b110)? XOR_RESULT:
                         AND_RESULT;

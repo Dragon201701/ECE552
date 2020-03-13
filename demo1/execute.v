@@ -29,7 +29,7 @@ module execute (immPres, slbi, aluSrc, regData1, regData2, immVal, immCtl, jump,
 
    assign sign = (regData1[15] | regData2[15]);
 
-   alu executeALU(.InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(Out), .Zero(Zero), .Ofl(Ofl));  
+   alu executeALU(.slbi(slbi), .InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(Out), .Zero(Zero), .Ofl(Ofl));  
 
    assign immValShifted = immVal << 1;
 
