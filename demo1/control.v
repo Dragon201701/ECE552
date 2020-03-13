@@ -1,9 +1,10 @@
 // Control Logic signals for our processor
-module control(instr, clk, rst, regWrite, aluSrc, aluCtl, memWrite, memRead, memToReg, branchCtl, jumpCtl, invA, invB, halt, noOp, immCtl, stu, slbi, immPres, lbi, btr);
+module control(instr, clk, rst, sl, sco, seq, regWrite, aluSrc, aluCtl, memWrite, memRead, memToReg, branchCtl, jumpCtl, invA, invB, halt, noOp, immCtl, stu, slbi, immPres, lbi, btr);
 
    input clk, rst;
    input [15:0] instr;
    output reg regWrite, aluSrc, btr, memWrite, memRead, memToReg, branchCtl, jumpCtl, invA, invB, halt, noOp, immCtl, stu, slbi, immPres, lbi;
+   output reg seq, sl, sco;
    output reg [1:0] aluCtl;
 
 
@@ -15,6 +16,9 @@ begin
 	halt <= 0;
 	noOp <= 0;
 	btr <= 0;
+	sco <= 0;
+	sl <= 0;
+	seq <= 0;
    case (instr[15:11])
         5'b00000: halt <= 1;// HALT, Don't Cares
         5'b00001: begin noOp <= 1;// NOP, Don't Cares
@@ -112,24 +116,28 @@ begin
 		  regWrite <= 1; aluSrc <= 0; memWrite <= 0; memRead <= 0; memToReg <= 0; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 0; slbi <= 0; immPres <= 0; lbi <= 0;
                   aluCtl <= 0;
+		  seq <= 1;
 	  end
         // Slt
 	5'b11101: begin
 		  regWrite <= 1; aluSrc <= 0; memWrite <= 0; memRead <= 0; memToReg <= 0; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 0; slbi <= 0; immPres <= 0; lbi <= 0;
                   aluCtl <= 0;
+		  sl <= 1;
 	  end
 	// Sle
 	5'b11110: begin
 		  regWrite <= 1; aluSrc <= 0; memWrite <= 0; memRead <= 0; memToReg <= 0; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 0; slbi <= 0; immPres <= 0; lbi <= 0;
                   aluCtl <= 0;
+		  sl <= 1;
 	  end
 	// Sco
 	5'b11111: begin
 		  regWrite <= 1; aluSrc <= 0; memWrite <= 0; memRead <= 0; memToReg <= 0; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 0; slbi <= 0; immPres <= 0; lbi <= 0;
                   aluCtl <= 0;
+		  sco <= 1;
 	  end
 	// Beqz
 	5'b11111: begin
