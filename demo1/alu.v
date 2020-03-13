@@ -39,7 +39,7 @@ module alu (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
   111 XOR A XOR B
   */
   wire [N-1:0] shifter_out;
-  wire [N-1:0] AND_RESULT, OR_RESULT, XOR_RESULT, ADD_RESULT, LOGIC_RESULT;
+  wire [N-1:0] AND_RESULT, OR_RESULT, XOR_RESULT, ADD_RESULT, LOGIC_RESULT, SUB_RESULT;
   wire [N-1:0] A, B;
   wire Overflow;
   assign A = (invA==1'b1)? ~InA : InA;
@@ -50,10 +50,11 @@ module alu (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
   assign AND_RESULT = A & B;
   assign OR_RESULT = A | B;
   assign XOR_RESULT = A ^ B;
+  assign SUB_RESULT = A - B;
   assign LOGIC_RESULT = (Op == 3'b100)? ADD_RESULT: 
-                        (Op == 3'b101)? AND_RESULT: 
-                        (Op == 3'b110)? OR_RESULT:
-                        XOR_RESULT;
+                        (Op == 3'b101)? SUB_RESULT: 
+                        (Op == 3'b110)? XOR_RESULT:
+                        AND_RESULT;
   assign Zero = (LOGIC_RESULT == 16'b0)?1:(shifter_out == 16'b00)?1:0;
   assign Out = (Op[2] == 1)? LOGIC_RESULT:shifter_out;
 endmodule
