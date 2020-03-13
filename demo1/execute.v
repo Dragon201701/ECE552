@@ -9,7 +9,7 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regData2, im
    input sl, sco, seq;
    input slbi, jump, branch, immCtl, invA, invB, aluSrc, immPres, btr;
    input [15:0] regData1, regData2, immVal, branchVal, jumpVal, instr, pc;
-   wire [15:0] InA, InB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut, almost_newPc, newPc;
+   wire [15:0] InA, InB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut;
    wire [2:0] opCode;
    wire sign, setOutput, cout;
 
