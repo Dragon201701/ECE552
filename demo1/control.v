@@ -1,9 +1,9 @@
 // Control Logic signals for our processor
-module control(instr, clk, rst, regWrite, aluSrc, aluCtl, memWrite, memRead, memToReg, branchCtl, jumpCtl, invA, invB, halt, noOp, immCtl, stu, slbi, immPres, lbi);
+module control(instr, clk, rst, regWrite, aluSrc, aluCtl, memWrite, memRead, memToReg, branchCtl, jumpCtl, invA, invB, halt, noOp, immCtl, stu, slbi, immPres, lbi, btr);
 
    input clk, rst;
    input [15:0] instr;
-   output reg regWrite, aluSrc, memWrite, memRead, memToReg, branchCtl, jumpCtl, invA, invB, halt, noOp, immCtl, stu, slbi, immPres, lbi;
+   output reg regWrite, aluSrc, btr, memWrite, memRead, memToReg, branchCtl, jumpCtl, invA, invB, halt, noOp, immCtl, stu, slbi, immPres, lbi;
    output reg [1:0] aluCtl;
 
 
@@ -14,6 +14,7 @@ begin
 	// Default have halt and noOp deasserted
 	halt <= 0;
 	noOp <= 0;
+	btr <= 0;
    case (instr[15:11])
         5'b00000: halt <= 1;// HALT, Don't Cares
         5'b00001: begin noOp <= 1;// NOP, Don't Cares
@@ -92,6 +93,7 @@ begin
 	          regWrite <= 1; aluSrc <= 0; memWrite <= 0; memRead <= 0; memToReg <= 0; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 0; slbi <= 0; immPres <= 0; lbi <= 0;
                   aluCtl <= 0;
+		  btr <= 1;
 	  end
 	// Add, Sub, Xor, Andn  TODO: Set invB for andn
 	5'b11011: begin 
