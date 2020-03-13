@@ -52,7 +52,7 @@ module proc (/*AUTOARG*/
    fetch fetchStage(.pc(pc), .wr(1'b0), .enable(1'b1), .clk(clk), .rst(rst), .lbi(lbi), .halt(halt), .noOp(noOp), .stu(stu), .immPres(immPres), .immCtl(immCtl), .readReg1(readReg1), .readReg2(readReg2), .writeReg1(writeReg1), .immVal(immVal), .branch(branch), .jump(jump), .new_pc(new_pc), .instr(currInstr));
 
    // Deode
-   decode decodeStage(.writeEn(regWrite), .writeData(writeData), .writeRegSel(writeReg1), .read2RegSel(readReg2), .read1RegSel(readReg1), .immCtl(immCtl), .immVal(immVal), .rst(rst), .clk(clk), .jump(jumpCtl), .regRs(regRs), .read1Data(read1Data), .read2Data(read2Data), .signedImmVal(signedImmVal), .err(decode_err));
+   decode decodeStage(.slbi(slbi), .writeEn(regWrite), .writeData(writeData), .writeRegSel(writeReg1), .read2RegSel(readReg2), .read1RegSel(readReg1), .immCtl(immCtl), .immVal(immVal), .rst(rst), .clk(clk), .jump(jumpCtl), .regRs(regRs), .read1Data(read1Data), .read2Data(read2Data), .signedImmVal(signedImmVal), .err(decode_err));
 
    // Execute
    execute executeStage(.immPres(immPres), .slbi(slbi), .aluSrc(aluSrc), .regData1(read1Data), .regData2(read2Data), .immVal(signedImmVal), .immCtl(immCtl), .jump(jumpCtl), .branch(branchCtl), .jumpVal(jump), .branchVal(branch), .pc(new_pc), .instr(currInstr), .invA(invA), .invB(invB), .next_pc(next_pc), .Out(Out), .wrData(wrData), .Zero(Zero), .Ofl(Ofl));

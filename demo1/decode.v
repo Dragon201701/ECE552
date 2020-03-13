@@ -4,9 +4,9 @@
    Filename        : decode.v
    Description     : This is the module for the overall decode stage of the processor.
 */
-module decode (writeEn, writeData, writeRegSel, read2RegSel, read1RegSel, immCtl, immVal, rst, clk, jump, regRs, read1Data, read2Data, signedImmVal, err);
+module decode (slbi, writeEn, writeData, writeRegSel, read2RegSel, read1RegSel, immCtl, immVal, rst, clk, jump, regRs, read1Data, read2Data, signedImmVal, err);
 
-    input writeEn, jump, immCtl, clk, rst;
+    input writeEn, jump, immCtl, clk, rst, slbi;
     input [2:0] writeRegSel, read1RegSel, read2RegSel;
     input [15:0] writeData;
     input [15:0] immVal;
@@ -32,7 +32,7 @@ module decode (writeEn, writeData, writeRegSel, read2RegSel, read1RegSel, immCtl
 
 
     // Sign extension of immediate occurs here
-    assign signedImmVal = immCtl ? { {8{immVal[7]}}, immVal[7:0]} : { {11{immVal[4]}} , immVal[4:0]};
+    assign signedImmVal = slbi ? immVal : immCtl ? { {8{immVal[7]}}, immVal[7:0]} : { {11{immVal[4]}} , immVal[4:0]};
 
 
 endmodule
