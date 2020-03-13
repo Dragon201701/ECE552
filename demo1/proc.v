@@ -63,7 +63,7 @@ module proc (/*AUTOARG*/
    // Wb
    wb wbStage(.memToReg(memToReg), .memData(memoryOut), .aluOut(Out), .lbi(lbi), .immVal(signedImmVal), .writeData(writeData));
 
-   assign err = Ofl | decode_err;
+   assign err = 1'b0; //Ofl | decode_err;
 
 endmodule // proc
 // DUMMY LINE FOR REV CONTROL :0:
