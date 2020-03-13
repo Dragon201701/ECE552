@@ -11,15 +11,13 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regData2, im
    input [15:0] regData1, regData2, immVal, branchVal, jumpVal, instr, pc;
    wire [15:0] InA, InB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut;
    wire [2:0] opCode;
-   wire sign, setOutput;
+   wire sign, setOutput, cout;
 
    output [15:0] next_pc, Out, wrData;
    output Zero, Ofl;
 
    // slt and sle for last parts
-   assign setOutput = sco ? Ofl : seq ? (InA == InB) : (sl & instr[11]) ? ($signed(InA) < $signed(InB)) : ($signed(InA) <= $signed(InB));
-
-
+   assign setOutput = sco ? cout : seq ? (InA == InB) : (sl & instr[11]) ? ($signed(InA) < $signed(InB)) : ($signed(InA) <= $signed(InB));
 
    // Top wire connecting to alu
    assign InA = slbi ? (regData1 << 8) : regData1;
@@ -34,7 +32,7 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regData2, im
 
    assign sign = (regData1[15] | regData2[15]);
 
-   alu executeALU(.slbi(slbi), .InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl));  
+   alu executeALU(.slbi(slbi), .InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl), .cout(cout));  
 
    assign Out = (sl | seq | sco) ? setOutput : btr ? {InA[0],InA[1],InA[2],InA[3],InA[4],InA[5],InA[6],InA[7],InA[8],InA[9],InA[10],InA[11],InA[12],InA[13],InA[14],InA[15]} : aluOut;
 
