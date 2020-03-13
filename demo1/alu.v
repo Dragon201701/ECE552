@@ -50,7 +50,7 @@ module alu (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
   assign AND_RESULT = A & B;
   assign OR_RESULT = A | B;
   assign XOR_RESULT = A ^ B;
-  assign SUB_RESULT = A - B;
+  assign SUB_RESULT = B - A;
   assign LOGIC_RESULT = (Op == 3'b100)? ADD_RESULT: 
                         (Op == 3'b101)? SUB_RESULT: 
                         (Op == 3'b110)? XOR_RESULT:
