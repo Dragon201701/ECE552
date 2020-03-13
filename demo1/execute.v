@@ -17,7 +17,7 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regData2, im
    output Zero, Ofl;
 
    // slt and sle for last parts
-   assign setOutput = sco ? Ofl : seq ? (InA == InB) : (sl & instr[11]) ? (InA < InB) : (InA <= InB);
+   assign setOutput = sco ? Ofl : seq ? (InA == InB) : (sl & instr[11]) ? ($signed(InA) < $signed(InB)) : ($signed(InA) <= $signed(InB));
 
 
 
