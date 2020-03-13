@@ -14,9 +14,7 @@ module wb (memToReg, memData, aluOut, lbi, immVal, writeData);
 
    assign inter_writeData = memToReg ? memData : aluOut;  
 
-
    // Lbi implementation
    assign writeData = lbi ? immVal : inter_writeData;
-
 
 endmodule
