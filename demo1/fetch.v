@@ -12,10 +12,11 @@ module fetch (pc, wr, enable, clk, rst, lbi, halt, noOp, stu, immPres,  immCtl, 
    output [2:0] readReg1, readReg2, writeReg1;
    output [15:0] immVal, branch, jump, new_pc, instr;
 
+   wire   [15:0]  pc_inc;
   // Initialize memory
   // TODO: Change memory back to syn type
    memory2c instr_mem(.data_out(instr), .data_in(pc), .addr(pc), .enable(enable), .wr(wr), .createdump(clk), .clk(clk), .rst(rst) );
-
+   cla_16 incPC(.A(pc), .B(16'h0002), .C_in(0), .S(pc_inc), .C_out());
    
   assign readReg1 = instr[10:8];
   assign readReg2 = instr[7:5];
@@ -31,6 +32,6 @@ module fetch (pc, wr, enable, clk, rst, lbi, halt, noOp, stu, immPres,  immCtl, 
   assign jump = instr[15:0];
 
   // TODO: EPC, noOp
-  assign new_pc = halt ? pc : pc + 2;
+  assign new_pc = halt ? pc : pc_inc;
 
 endmodule
