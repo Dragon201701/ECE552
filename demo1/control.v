@@ -42,7 +42,7 @@ begin
 	// Andi
 	5'b01011: begin
 		  regWrite <= 1; aluSrc <= 1; memWrite <= 0; memRead <= 0; memToReg <= 0; branchCtl <= 0; jumpCtl <= 0;
-                  invA <= 0; invB <= 1; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 0; slbi <= 0; immPres <= 1; lbi <= 0;
+                  invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 0; slbi <= 0; immPres <= 1; lbi <= 0;
                   aluCtl <= 0;
 	  end
 	// Roli
