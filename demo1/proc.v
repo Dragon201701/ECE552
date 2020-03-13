@@ -55,7 +55,7 @@ module proc (/*AUTOARG*/
    decode decodeStage(.writeEn(regWrite), .writeData(writeData), .writeRegSel(writeReg1), .read2RegSel(readReg2), .read1RegSel(readReg1), .immCtl(immCtl), .immVal(immVal), .rst(rst), .clk(clk), .jump(jumpCtl), .regRs(regRs), .read1Data(read1Data), .read2Data(read2Data), .signedImmVal(signedImmVal), .err(decode_err));
 
    // Execute
-   execute executeStage(.slbi(slbi), .aluSrc(aluSrc), .regData1(read1Data), .regData2(read2Data), .immVal(signedImmVal), .immCtl(immCtl), .jump(jumpCtl), .branch(branchCtl), .jumpVal(jump), .branchVal(branch), .pc(new_pc), .instr(currInstr), .invA(invA), .invB(invB), .next_pc(next_pc), .Out(Out), .wrData(wrData), .Zero(Zero), .Ofl(Ofl));
+   execute executeStage(.immPres(immPres), .slbi(slbi), .aluSrc(aluSrc), .regData1(read1Data), .regData2(read2Data), .immVal(signedImmVal), .immCtl(immCtl), .jump(jumpCtl), .branch(branchCtl), .jumpVal(jump), .branchVal(branch), .pc(new_pc), .instr(currInstr), .invA(invA), .invB(invB), .next_pc(next_pc), .Out(Out), .wrData(wrData), .Zero(Zero), .Ofl(Ofl));
 
    // Memory
    memory memoryStage(.aluOut(Out), .wrData(wrData), .memRead(memRead), .memWrite(memWrite), .memToReg(memToReg), .clk(clk), .rst(rst), .memoryOut(memoryOut), .halt(halt));

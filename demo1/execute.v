@@ -4,10 +4,10 @@
    Filename        : execute.v
    Description     : This is the overall module for the execute stage of the processor.
 */
-module execute (slbi, aluSrc, regData1, regData2, immVal, immCtl, jump, branch, jumpVal, branchVal, pc, instr, invA, invB, next_pc, Out, wrData, Zero, Ofl);
+module execute (immPres, slbi, aluSrc, regData1, regData2, immVal, immCtl, jump, branch, jumpVal, branchVal, pc, instr, invA, invB, next_pc, Out, wrData, Zero, Ofl);
 
 
-   input slbi, jump, branch, immCtl, invA, invB, aluSrc;
+   input slbi, jump, branch, immCtl, invA, invB, aluSrc, immPres;
    input [15:0] regData1, regData2, immVal, branchVal, jumpVal, instr, pc;
    wire [15:0] InA, InB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs;
    wire [2:0] opCode;
@@ -23,7 +23,10 @@ module execute (slbi, aluSrc, regData1, regData2, immVal, immCtl, jump, branch, 
    assign InB = aluSrc ? immVal : regData2;
 
    // What operation is it
-   assign opCode = {instr[11],instr[1:0]};
+   // If an immediate is present, will have to use
+   // Different bit numbers to represent
+   assign opCode = immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]};
+
    assign sign = (regData1[15] | regData2[15]);
 
    alu executeALU(.InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(Out), .Zero(Zero), .Ofl(Ofl));  
