@@ -51,7 +51,9 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
 
    // 2-bit mux for resolving the next instruction
    assign almost_newPc = jump ? jumpValSigned : branch ? branchValSigned : immVal;
-   assign newPc = almost_newPc + pc_or_rs;
+   
+   cla_16b new_Pc(.A(almost_newPc), .B(pc_or_rs), .C_in(0), .S(newPc), .C_out());
+   //assign newPc = almost_newPc + pc_or_rs;
 
  
    // Resolve branches
