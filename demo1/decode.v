@@ -4,35 +4,39 @@
    Filename        : decode.v
    Description     : This is the module for the overall decode stage of the processor.
 */
-module decode (slbi, writeEn, writeData, writeRegSel, read2RegSel, read1RegSel, immCtl, immVal, rst, clk, jump, regRs, read1Data, read2Data, signedImmVal, err);
+module decode (instr, writeEn, immCtl, exCtl, jumpCTL, rst, clk, read1Data, read2Data, exImmVaL, err);
 
-    input writeEn, jump, immCtl, clk, rst, slbi;
-    input [2:0] writeRegSel, read1RegSel, read2RegSel;
-    input [15:0] writeData;
-    input [15:0] immVal;
+    input writeEn, immCtl, exCtl, clk, rst;
+    input [15:0] instr; // instruction
 
     output err;
     output [15:0]  read1Data, read2Data;
-    output [2:0] regRs;
-    output [15:0] signedImmVal;
+    output [15:0] exImmVaL;
 
+    wire   [15:0]   writeData;
+    wire   [2:0]    Rs, R1, R2; // R1 is either Rd or Rt, R2 is Rd. 
     // Instatiate register file
+    wire   [15:0]   sign5to16, sign8to16, zero8to16, sign11to16, zero5to16;
+
+    assign Rs = instr[10:8];
+    assign R1 = instr[7:5];
+    assign R2 = instr[4:2];
+
     regFile decodeRegisters(
                 // Outputs
                 .read1Data(read1Data), .read2Data(read2Data), .err(err),
                 // Inputs
-                .clk(clk), .rst(rst), .read1RegSel(read1RegSel), .read2RegSel(read2RegSel), .writeRegSel(writeRegSel), .writeData(writeData), .writeEn(writeEn)
+                .clk(clk), .rst(rst), .read1RegSel(Rs), .read2RegSel(R1), .writeRegSel(R2), .writeData(writeData), .writeEn(writeEn)
                 );
 
     // TODO EPC...
 
     // Assuming Rs is the first read register
     // TODO: Check
-    assign regRs = read1RegSel;
-
+    extension extension(.instr(instr), .immCTL(immCTL), .exCTL(exCTL), .jumpCTL(jumpCTL), .extVal(exImmVaL));
 
     // Sign extension of immediate occurs here
-    assign signedImmVal = slbi ? immVal : immCtl ? { {8{immVal[7]}}, immVal[7:0]} : { {11{immVal[4]}} , immVal[4:0]};
+    //assign signedImmVal = slbi ? immVal : immCtl ? { {8{immVal[7]}}, immVal[7:0]} : { {11{immVal[4]}} , immVal[4:0]};
 
 
 endmodule

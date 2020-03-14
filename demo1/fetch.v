@@ -4,13 +4,12 @@
    Filename        : fetch.v
    Description     : This is the module for the overall fetch stage of the processor.
 */
-module fetch (jumpCtl, pc, wr, enable, clk, rst, lbi, halt, noOp, stu, immPres,  immCtl, readReg1, readReg2, writeReg1, immVal, branch, jump, new_pc, instr);
+module fetch (pc, wr, enable, clk, rst, lbi, halt, noOp, stu,  new_pc, instr);
 
-   input wr, enable, clk, rst, halt, noOp, stu, immPres, immCtl, lbi, jumpCtl;
+   input wr, enable, clk, rst, halt, noOp, stu, immPres, immCtl, lbi;
    input [15:0] pc;
 
-   output [2:0] readReg1, readReg2, writeReg1;
-   output [15:0] immVal, branch, jump, new_pc, instr;
+   output [15:0] new_pc, instr;
 
    wire   [15:0]  pc_inc;
   // Initialize memory
@@ -19,18 +18,16 @@ module fetch (jumpCtl, pc, wr, enable, clk, rst, lbi, halt, noOp, stu, immPres, 
    
   cla_16b incPC(.A(pc), .B(16'h0002), .C_in(0), .S(pc_inc), .C_out());
    
-  assign readReg1 = instr[10:8];
-  assign readReg2 = instr[7:5];
+  //assign readReg1 = instr[10:8];
+  //assign readReg2 = instr[7:5];
   // If lbi asserted, store into Rs.
   // If immPres, have to use higher bits for Rd
   // Else do lower bits
-  //  OLD: assign writeReg1 = immPres ? instr[7:5] : lbi ? instr[10:8] : instr[4:2];
-  assign writeReg1 = jumpCtl ? 3'b111 : (immPres ? immCtl ? instr[10:8] : instr[7:5] : instr[4:2]);
+  //assign writeReg1 = immPres ? instr[7:5] : lbi ? instr[10:8] : instr[4:2];
+  //assign writeReg1 = jumpCtl ? 3'b111 : (immPres ? immCtl ? instr[10:8] : instr[7:5] : instr[4:2]);
   
-  assign immVal = immCtl ? instr[7:0] : instr[4:0];
+  assign immVal = immCtl ? {{8{0}},instr[7:0]} : {{11{0}},instr[4:0]};
 
-  assign branch = instr[15:0];
-  assign jump = instr[15:0];
 
   // TODO: EPC, noOp
   assign new_pc = halt ? pc : pc_inc;
