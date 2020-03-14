@@ -4,11 +4,11 @@
    Filename        : decode.v
    Description     : This is the module for the overall decode stage of the processor.
 */
-module decode (slbi, writeEn, writeData, writeRegSel, read2RegSel, read1RegSel, immCtl, immVal, rst, clk, jump, regRs, read1Data, read2Data, signedImmVal, err);
+module decode (slbi, stu, aluOut, writeEn, writeData, writeRegSel, read2RegSel, read1RegSel, immCtl, immVal, rst, clk, jump, regRs, read1Data, read2Data, signedImmVal, err);
 
-    input writeEn, jump, immCtl, clk, rst, slbi;
+    input writeEn, jump, immCtl, clk, rst, slbi, stu;
     input [2:0] writeRegSel, read1RegSel, read2RegSel;
-    input [15:0] writeData;
+    input [15:0] writeData, aluOut;
     input [15:0] immVal;
 
     output err;
@@ -16,12 +16,15 @@ module decode (slbi, writeEn, writeData, writeRegSel, read2RegSel, read1RegSel, 
     output [2:0] regRs;
     output [15:0] signedImmVal;
 
+    wire [15:0] write = stu ? aluOut : writeData;
+    wire [15:0] writeReg = stu ? read1RegSel : writeRegSel; 
+
     // Instatiate register file
     regFile decodeRegisters(
                 // Outputs
                 .read1Data(read1Data), .read2Data(read2Data), .err(err),
                 // Inputs
-                .clk(clk), .rst(rst), .read1RegSel(read1RegSel), .read2RegSel(read2RegSel), .writeRegSel(writeRegSel), .writeData(writeData), .writeEn(writeEn)
+                .clk(clk), .rst(rst), .read1RegSel(read1RegSel), .read2RegSel(read2RegSel), .writeRegSel(writeReg), .writeData(write), .writeEn(writeEn)
                 );
 
     // TODO EPC...
