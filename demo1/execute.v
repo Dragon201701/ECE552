@@ -16,8 +16,21 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    output [15:0] next_pc, Out, wrData;
    output Zero, Ofl;
 
+   wire [15:0] InAminusInB, InAminusInBsgned;
+   wire InAlessInB;
+
+   // InA - InB
+   // One for signed and unsigned
+   cla_16b InA_minus_InB_Signed(.A(InA), .B(InB), .C_in(0), .S(InAminusInBsgned), .C_out());
+   cla_16b InA_minus_InB(.A(InA), .B(~InB), .C_in(0), .S(InAminusInB), .C_out());
+   
+   assign InAlessInB = (InA[15] == 1'b1 & InB[15] == 1'b0) ? 1'b1 : 
+	   (InA[15] == 1'b0 & InB[15] == 1'b1) ? 1'b0 :
+	   (InA[15] == 1'b1 & InB[15] == 1'b1) ? InAminusInBsgned[15] : InAminusInB[15];
+
    // slt and sle for last parts
-   assign setOutput = sco ? cout : seq ? (InA == InB) : (sl & instr[11]) ? ($signed(InA) < $signed(InB)) : ($signed(InA) <= $signed(InB));
+   
+   assign setOutput = sco ? cout : seq ? (InA == InB) : (sl & instr[11]) ? InAlessInB : (InAlessInB | (InA == InB));
 
    // Top wire connecting to alu
    assign InA = slbi ? (regData1 << 8) : regData1;
