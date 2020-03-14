@@ -1,0 +1,200 @@
+          // easyTest - this should never need to stall.
+          // This is just "firstTest" with a lot of nops.
+          //
+          // Easiest test program for WISC-SP06 architecture
+          // for the pipelined implementation.
+          //
+          // CS/ECE 552, Spring 2006
+          // Andy Phelps  7 April 2006
+          //
+          
+          // Start with a few simple tests:
+          
+0000 0800 nop
+0002 c103 lbi r1, 3          // r1 = 3
+0004 0800 nop
+0006 c204 lbi r2, 4          // r2 = 4
+0008 0800 nop
+000a 0800 nop
+000c 0800 nop
+000e 0800 nop
+0010 0800 nop
+0012 da2c add r3, r2, r1     // r3 = 7
+0014 0800 nop
+          
+0016 c455 lbi r4, 0x55       // r4 = 0x0055
+0018 0800 nop
+001a c5aa lbi r5, 0xaa       // r5 = 0xffaa
+001c 0800 nop
+001e 0800 nop
+0020 0800 nop
+0022 0800 nop
+0024 0800 nop
+0026 dcb8 add r6, r4, r5     // r6 = 0xffff
+0028 0800 nop
+002a 0800 nop
+002c 0800 nop
+002e 0800 nop
+0030 0800 nop
+0032 46e1 addi r7, r6, 1     // r7 = 0
+0034 0800 nop
+          
+0036 c040 lbi r0, 0x40       // r0 = 0x0040
+0038 0800 nop
+003a c201 lbi r2, 0x1        // r2 = 0x0001
+003c 0800 nop
+003e 0800 nop
+0040 0800 nop
+0042 0800 nop
+0044 0800 nop
+0046 da11 sub r4, r2, r0     // r4 = 0x003f
+0048 0800 nop
+004a c1e8 lbi r1, 0xe8       // r1 = 0xffe8
+004c 0800 nop
+004e 0800 nop
+0050 0800 nop
+0052 0800 nop
+0054 0800 nop
+0056 49c8 subi r6, r1, 8     // r6 = 0x0020
+0058 0800 nop
+005a 0800 nop
+005c 0800 nop
+005e 0800 nop
+0060 0800 nop
+0062 dcd5 sub r5, r4, r6     // r5 = 0xffe1
+0064 0800 nop
+          
+0066 90f0 slbi r0, 0xf0      // r0 = 0x40f0
+0068 0800 nop
+006a 0800 nop
+006c 0800 nop
+006e 0800 nop
+0070 0800 nop
+0072 900f slbi r0, 0x0f      // r0 = 0xf00f
+0074 0800 nop
+0076 c155 lbi r1, 0x55       // r1 = 0x0055
+0078 0800 nop
+007a 0800 nop
+007c 0800 nop
+007e 0800 nop
+0080 0800 nop
+0082 91aa slbi r1, 0xaa      // r1 = 0x55aa
+0084 0800 nop
+0086 0800 nop
+0088 0800 nop
+008a 0800 nop
+008c 0800 nop
+008e d82a xor r2, r0, r1     // r2 = 0xa5a5
+0090 0800 nop
+0092 0800 nop
+0094 0800 nop
+0096 0800 nop
+0098 0800 nop
+009a 52c3 xori r6, r2, 3     // r6 = 0xa5a6
+009c 0800 nop
+009e d82b andn r2, r0, r1    // r2 = 0xa005
+00a0 0800 nop
+00a2 0800 nop
+00a4 0800 nop
+00a6 0800 nop
+00a8 0800 nop
+00aa 5a21 andni r1, r2, 1    // r1 = 0xa004
+00ac 0800 nop
+00ae 0800 nop
+00b0 0800 nop
+00b2 0800 nop
+00b4 0800 nop
+          
+          // Final checksum on the above answers:
+00b6 db2c add r3, r3, r1     // r3 = 0xa00b
+00b8 0800 nop
+00ba 0800 nop
+00bc 0800 nop
+00be 0800 nop
+00c0 0800 nop
+00c2 df6c add r3, r7, r3     // r3 = 0xa00b
+00c4 0800 nop
+00c6 0800 nop
+00c8 0800 nop
+00ca 0800 nop
+00cc 0800 nop
+00ce dbac add r3, r3, r5     // r3 = 0x9fec
+00d0 0800 nop
+00d2 0800 nop
+00d4 0800 nop
+00d6 0800 nop
+00d8 0800 nop
+00da dbdc add r7, r3, r6     // r7 = 0x4592
+00dc 0800 nop
+00de 0800 nop
+00e0 0800 nop
+00e2 0800 nop
+00e4 0800 nop
+          
+          // Some more adder tests
+          
+00e6 c012 lbi r0, 0x12       //
+00e8 0800 nop
+00ea 0800 nop
+00ec 0800 nop
+00ee 0800 nop
+00f0 0800 nop
+00f2 9034 slbi r0, 0x34      // r0 = 0x1234
+00f4 0800 nop
+00f6 c156 lbi r1, 0x56       //
+00f8 0800 nop
+00fa 0800 nop
+00fc 0800 nop
+00fe 0800 nop
+0100 0800 nop
+0102 9178 slbi r1, 0x78      // r1 = 0x5678
+0104 0800 nop
+0106 c2ab lbi r2, 0xab       //
+0108 0800 nop
+010a 0800 nop
+010c 0800 nop
+010e 0800 nop
+0110 0800 nop
+0112 92cd slbi r2, 0xcd      // r2 = 0xabcd
+0114 0800 nop
+0116 d82c add r3, r0, r1     // r3 = 0x68ac
+0118 0800 nop
+011a 0800 nop
+011c 0800 nop
+011e d850 add r4, r0, r2     // r4 = 0xbe01
+0120 0800 nop
+0122 d954 add r5, r1, r2     // r5 = 0x0245
+0124 0800 nop
+0126 db58 add r6, r3, r2     // r6 = 0x1479
+0128 0800 nop
+012a dc28 add r2, r4, r1     // r2 = 0x1479
+012c 0800 nop
+012e dd04 add r1, r5, r0     // r1 = 0x1479
+0130 0800 nop
+0132 0800 nop
+0134 0800 nop
+0136 0800 nop
+0138 0800 nop
+013a d940 add r0, r1, r2     // r0 = 0x28f2
+013c 0800 nop
+013e 0800 nop
+0140 0800 nop
+0142 0800 nop
+0144 0800 nop
+0146 d8c0 add r0, r0, r6     // r0 = 0x3d6b
+0148 0800 nop
+014a 0800 nop
+014c 0800 nop
+014e 0800 nop
+0150 0800 nop
+0152 d8fc add r7, r0, r7     // r7 = 0x82fd
+0154 0800 nop
+0156 0800 nop
+0158 0800 nop
+015a 0800 nop
+015c 0800 nop
+          
+015e 0000 halt
+0160 0000 halt
+0162 0000 halt
+          
