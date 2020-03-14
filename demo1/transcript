@@ -1,5 +1,5 @@
 # vsim -c proc_hier_bench -lib __work 
-# Start time: 12:55:23 on Mar 14,2020
+# Start time: 13:16:19 on Mar 14,2020
 # //  ModelSim DE 10.7c Aug 17 2018Linux 4.15.0-88-generic
 # //
 # //  Copyright 1991-2018 Mentor Graphics Corporation
@@ -46,5 +46,5 @@ run -all
 # See verilogsim.log and verilogsim.trace for output
 # ** Note: $finish    : proc_hier_bench.v(96)
 #    Time: 3600 ns  Iteration: 1  Instance: /proc_hier_bench
-# End time: 12:55:23 on Mar 14,2020, Elapsed time: 0:00:00
+# End time: 13:16:19 on Mar 14,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1

@@ -1,10 +1,10 @@
 // Control Logic signals for our processor
-module control(instr, clk, rst, sl, sco, seq, regWrite, aluSrc, aluCtl, memWrite, memRead, memToReg, branchCtl, jumpCtl, invA, invB, halt, noOp, immCtl, stu, slbi, immPres, lbi, btr);
+module control(instr, clk, rst, ldOrSt, sl, sco, seq, regWrite, aluSrc, aluCtl, memWrite, memRead, memToReg, branchCtl, jumpCtl, invA, invB, halt, noOp, immCtl, stu, slbi, immPres, lbi, btr);
 
    input clk, rst;
    input [15:0] instr;
    output reg regWrite, aluSrc, btr, memWrite, memRead, memToReg, branchCtl, jumpCtl, invA, invB, halt, noOp, immCtl, stu, slbi, immPres, lbi;
-   output reg seq, sl, sco;
+   output reg seq, sl, sco, ldOrSt;
    output reg [1:0] aluCtl;
 
 
@@ -15,6 +15,7 @@ begin
 	// Default have halt and noOp deasserted
 	halt <= 0;
 	noOp <= 0;
+	ldOrSt <= 0;
 	btr <= 0;
 	sco <= 0;
 	sl <= 0;
@@ -93,21 +94,21 @@ begin
 		
 		  regWrite <= 0; aluSrc <= 1; memWrite <= 1; memRead <= 0; memToReg <= 1; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 0; slbi <= 0; immPres <= 1; lbi <= 0;
-                  aluCtl <= 0;
+                  aluCtl <= 0; ldOrSt <= 1;
 	  end
         // Ld
 	5'b10001: begin
 		
 		  regWrite <= 1; aluSrc <= 1; memWrite <= 0; memRead <= 1; memToReg <= 1; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 0; slbi <= 0; immPres <= 1; lbi <= 0;
-                  aluCtl <= 0;
+                  aluCtl <= 0; ldOrSt <= 1;
 	  end
         // Stu
 	5'b10011: begin
 		
 		  regWrite <= 1; aluSrc <= 1; memWrite <= 1; memRead <= 0; memToReg <= 1; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; stu <= 1; slbi <= 0; immPres <= 1; lbi <= 0;
-                  aluCtl <= 0;
+                  aluCtl <= 0; ldOrSt <= 1;
 	  end
 	// Btr
 	5'b11001: begin 
