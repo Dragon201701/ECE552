@@ -35,10 +35,11 @@ module proc (/*AUTOARG*/
    // Reset PC on rst signal
    always @ (posedge clk)
    begin
-	   if (rst)
-		   pc <= 16'h0000;
-	   else
-		   pc <= next_pc;
+	   case(rst)
+		  1'b1: pc <= 16'h0000;
+	  	  1'b0: pc <= next_pc;
+		  default pc <= 16'h0000;
+	  endcase
    end
 
 
