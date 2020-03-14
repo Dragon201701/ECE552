@@ -10,7 +10,7 @@ module proc_hier_bench();
    // End of automatics
    
 
-   wire [15:0] PC;
+   wire [15:0] PC, next_PC;
    wire [15:0] Inst;           /* This should be the 15 bits of the FF that
                                   stores instructions fetched from instruction memory
                                */
@@ -154,6 +154,7 @@ module proc_hier_bench();
    
    /* Add anything else you want here */
    assign Rs = DUT.p0.regRs;
+   assign next_PC = DUT.p0.next_pc;
    
 endmodule
 
