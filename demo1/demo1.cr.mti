@@ -75,6 +75,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	shifter
 
+} {} {}} D:/ECE552/demo1/memory2c.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module memory2c
+
+Top level modules:
+	memory2c
+
 } {} {}} D:/ECE552/demo1/regFile_bypass.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/regFile_bypass.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module regFile_bypass
@@ -179,15 +186,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	reg16
-
-} {} {}} D:/ECE552/demo1/extension.v {2 {vlog -work work -vopt -stats=none D:/ECE552/demo1/extension.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module extension
-** Warning: (vlog-2121) D:/ECE552/demo1/extension.v(7): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
-** Warning: (vlog-2121) D:/ECE552/demo1/extension.v(9): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
-
-Top level modules:
-	extension
 
 } {} {}} D:/ECE552/demo1/regFile.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/regFile.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018

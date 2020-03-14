@@ -16,7 +16,6 @@ module decode (instr, writeEn, writeData, immCtl, extCtl, immPres, jumpCtl, link
     
     wire   [2:0]    Rs, R1, R2; // R1 is either Rd or Rt, R2 is Rd. 
     // Instatiate register file
-    wire   [15:0]   sign5to16, sign8to16, zero8to16, sign11to16, zero5to16;
 
     assign Rs = instr[10:8];
     assign R1 = instr[7:5];

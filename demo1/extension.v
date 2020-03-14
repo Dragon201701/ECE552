@@ -2,7 +2,7 @@ module extension (instr, immCTL, extCTL, jumpCTL, extVal);
 	input	[15:0]	instr;
 	input	immCTL, extCTL, jumpCTL;
 	output	[15:0]	extVal;
-	wire	[15:0]	jumpimm;
+	wire	[15:0]	jumpimm, sign5to16, zero5to16, sign8to16, zero8to16, sign11to16;
 	assign sign5to16 = {{11{instr[4]}},instr[4:0]};
     assign zero5to16 = {{11{0}},instr[4:0]};
     assign sign8to16 = {{8{instr[7]}}, instr[7:0]};

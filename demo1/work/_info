@@ -133,15 +133,15 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 FcJ]JZF56lNPX1=b4ni]j1
-IiWXEYRo8BPB19A_POBAD^3
+!s100 gXl]@R^bbQE<SoBFian;l0
+I;8A>;J7hNn[J8iDBICof93
 R0
-w1584214295
+w1584216872
 8D:/ECE552/demo1/decode.v
 FD:/ECE552/demo1/decode.v
 L0 7
 R3
-Z7 !s108 1584214504.000000
+!s108 1584216878.000000
 !s107 D:/ECE552/demo1/decode.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/decode.v|
 !i113 0
@@ -193,15 +193,15 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 g^3Y@:M0@AzX>XWC[iGz[2
-IT1^7<8Yf<8bFlEUakFSnY0
+!s100 b]>4f:a51;HMIi;lhkYNm1
+IjEk]?n;=YocgiRW_8]J@I2
 R0
-w1584209847
+w1584217111
 8D:/ECE552/demo1/extension.v
 FD:/ECE552/demo1/extension.v
 L0 1
 R3
-!s108 1584209960.000000
+!s108 1584217114.000000
 !s107 D:/ECE552/demo1/extension.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/extension.v|
 !i113 0
@@ -241,7 +241,7 @@ w1581563779
 FD:/ECE552/demo1/fullAdder_1b.v
 L0 7
 R3
-Z8 !s108 1584146443.000000
+Z7 !s108 1584146443.000000
 !s107 D:/ECE552/demo1/fullAdder_1b.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/fullAdder_1b.v|
 !i113 0
@@ -382,7 +382,7 @@ R6
 FD:/ECE552/demo1/nor2.v
 L0 7
 R3
-Z9 !s108 1584146435.000000
+Z8 !s108 1584146435.000000
 !s107 D:/ECE552/demo1/nor2.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/nor2.v|
 !i113 0
@@ -403,7 +403,7 @@ R3
 r1
 !s85 0
 31
-R9
+R8
 !s107 D:/ECE552/demo1/nor3.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/nor3.v|
 !i113 0
@@ -443,7 +443,7 @@ w1584214498
 FD:/ECE552/demo1/proc.v
 L0 4
 R3
-R7
+!s108 1584214504.000000
 !s107 D:/ECE552/demo1/proc.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/proc.v|
 !i113 0
@@ -521,7 +521,7 @@ R0
 w1583978119
 8D:/ECE552/demo1/regFile.v
 FD:/ECE552/demo1/regFile.v
-Z10 L0 10
+Z9 L0 10
 R3
 !s108 1584146427.000000
 !s107 D:/ECE552/demo1/regFile.v|
@@ -585,9 +585,9 @@ R0
 w1582149880
 8D:/ECE552/demo1/shifter.v
 FD:/ECE552/demo1/shifter.v
-R10
+R9
 R3
-R8
+R7
 !s107 D:/ECE552/demo1/shifter.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/shifter.v|
 !i113 0
