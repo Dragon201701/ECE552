@@ -41,7 +41,7 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    assign immValShifted = immVal << 1;
 
    // Sign extend the branch and jump values
-   assign jumpValSigned = instr[11] ? {{8{jumpVal[10]}}, jumpVal[7:0]} : {{4{jumpVal[10]}}, jumpVal[10:0]};
+   assign jumpValSigned = instr[11] ? {{8{jumpVal[10]}}, jumpVal[7:0]} : {{5{jumpVal[10]}}, jumpVal[10:0]};
    assign branchValSigned = { {8{branchVal[7]}}, branchVal[7:0]};
 
 
