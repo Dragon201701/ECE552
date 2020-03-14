@@ -1,5 +1,5 @@
 # vsim -c proc_hier_bench -lib __work 
-# Start time: 18:51:33 on Mar 13,2020
+# Start time: 15:19:58 on Mar 14,2020
 # //  ModelSim DE 10.7c Aug 17 2018Linux 4.15.0-88-generic
 # //
 # //  Copyright 1991-2018 Mentor Graphics Corporation
@@ -34,20 +34,21 @@
 # Loading __work.dff
 # Loading __work.dec3to8
 # Loading __work.mux8_16
+# Loading __work.extension
+# Loading __work.mux4_16
 # Loading __work.execute
 # Loading __work.alu
 # Loading __work.shifter
 # Loading __work.memory
 # Loading __work.wb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'C_in'. The port definition is at: cla_16b.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/fetchStage/incPC File: fetch.v Line: 18
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'C_in'. The port definition is at: cla_16b.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/fetchStage/incPC File: fetch.v Line: 20
+#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/jb_pc_add File: execute.v Line: 41
 run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.trace for output
-# Break key hit
-# Break in Module memory2c at memory2c.v line 82
-# Stopped at memory2c.v line 82
-# 
-# <EOF>
-# End time: 18:51:34 on Mar 13,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 1
+# ** Note: $finish    : proc_hier_bench.v(96)
+#    Time: 1100 ns  Iteration: 1  Instance: /proc_hier_bench
+# End time: 15:19:58 on Mar 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
