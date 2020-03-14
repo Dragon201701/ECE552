@@ -4,9 +4,9 @@
    Filename        : fetch.v
    Description     : This is the module for the overall fetch stage of the processor.
 */
-module fetch (jumpCtl, pc, wr, enable, clk, rst, lbi, halt, noOp, stu, immPres,  immCtl, readReg1, readReg2, writeReg1, immVal, branch, jump, new_pc, instr);
+module fetch (jumpCtl, pc, wr, enable, clk, rst, lbi, halt, noOp, immPres,  immCtl, readReg1, readReg2, writeReg1, immVal, branch, jump, new_pc, instr);
 
-   input wr, enable, clk, rst, halt, noOp, stu, immPres, immCtl, lbi, jumpCtl;
+   input wr, enable, clk, rst, halt, noOp, immPres, immCtl, lbi, jumpCtl;
    input [15:0] pc;
 
    output [2:0] readReg1, readReg2, writeReg1;
