@@ -40,6 +40,8 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   110 OR  A OR B
   111 XOR A XOR B
   */
+  wire [15:0] rotate;
+  reg [31:0] tmp;
   wire [N-1:0] shifter_out, ror_check;
   wire [N-1:0] AND_RESULT, OR_RESULT, XOR_RESULT, ADD_RESULT, LOGIC_RESULT, SUB_RESULT;
   wire [N-1:0] A, B;
@@ -61,16 +63,14 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
                         AND_RESULT;
   assign Zero = (LOGIC_RESULT == 16'b0)?1:(shifter_out == 16'b00)?1:0;
 
-  assign ror_check = (Op[1:0] == 2'b10) ? rotate(A, B[3:0]) : shifter_out;
+  assign ror_check = (Op[1:0] == 2'b10) ? rotate : shifter_out;
   assign Out = (Op[2] == 1)? LOGIC_RESULT:ror_check;
 
-
-function [15:0] rotate (input [15:0] data, input [3:0] shift);
-reg [31:0] tmp;
-begin
-  tmp = {data, data} >> shift;
-  rotate = tmp[15:0];
-end
-endfunction
+  // Rotate 
+  always @ (*)
+  begin
+  tmp <= {A, A} >> B[3:0];
+  end
+  assign rotate = tmp[15:0];
 
 endmodule
