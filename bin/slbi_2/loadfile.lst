@@ -1,0 +1,7 @@
+          // Test provided by Karu 
+          //test for SLBI instruction
+          // case: Rs and immediate fields are random values. Check if the LSB of Rs is 
+          // shifted to MSB in the result
+0000 c193 lbi r1, 147
+0002 915c slbi r1, 92
+0004 0000 halt

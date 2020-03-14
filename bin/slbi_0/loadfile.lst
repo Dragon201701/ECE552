@@ -1,0 +1,6 @@
+          // Test provided by Karu 
+          //test for SLBI instruction
+          //case: when immediate field is zero
+0000 c1ff lbi r1, 255
+0002 9100 slbi r1, 0
+0004 0000 halt
