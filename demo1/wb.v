@@ -15,6 +15,6 @@ module wb (pc, jumpCtl, memToReg, memData, aluOut, lbi, immVal, writeData);
    assign inter_writeData = memToReg ? memData : aluOut;  
 
    // Lbi implementation
-   assign writeData = jumpCtl ? pc + 2 : (lbi ? immVal : inter_writeData);
+   assign writeData = jumpCtl ? pc : (lbi ? immVal : inter_writeData);
 
 endmodule
