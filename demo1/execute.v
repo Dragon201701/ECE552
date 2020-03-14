@@ -25,6 +25,8 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regData2, im
    // Bottom wire connecting to alu
    assign InB = aluSrc ? immVal : regData2;
 
+   assign wrData = regData2;
+
    // What operation is it
    // If an immediate is present, will have to use
    // Different bit numbers to represent
