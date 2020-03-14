@@ -1,4 +1,11 @@
-D:/ECE552/demo1/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/execute.v
+D:/ECE552/demo1/fetch.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/fetch.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module fetch
+
+Top level modules:
+	fetch
+
+} {} {}} D:/ECE552/demo1/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/execute.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module execute
 
@@ -68,14 +75,14 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	shifter
 
-} {} {}} D:/ECE552/demo1/memory2c.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.syn.v
+} {} {}} D:/ECE552/demo1/memory2c.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module memory2c
 
 Top level modules:
 	memory2c
 
-} {} {}} D:/ECE552/demo1/memory2c.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.v
+} {} {}} D:/ECE552/demo1/memory2c.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.syn.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module memory2c
 
