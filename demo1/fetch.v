@@ -29,8 +29,10 @@ module fetch (jumpCtl, pc, wr, enable, clk, rst, lbi, halt, noOp, stu, immPres, 
   
   assign immVal = immCtl ? instr[7:0] : instr[4:0];
 
-  assign branch = instr[15:0];
-  assign jump = instr[15:0];
+
+  // Immediate values
+  assign branch = instr[7:0];
+  assign jump = instr[11] ? instr[7:0] : instr[10:0];
 
   // TODO: EPC, noOp
   assign new_pc = halt ? pc : pc_inc;

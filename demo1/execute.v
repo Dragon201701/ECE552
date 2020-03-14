@@ -11,7 +11,7 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regData2, im
    input [15:0] regData1, regData2, immVal, branchVal, jumpVal, instr, pc;
    wire [15:0] almost_newPc, newPc, InA, InB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut;
    wire [2:0] opCode;
-   wire sign, setOutput, cout;
+   wire sign, setOutput, cout, doWeBranch;
 
    output [15:0] next_pc, Out, wrData;
    output Zero, Ofl;
@@ -51,8 +51,15 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regData2, im
    assign almost_newPc = jump ? jumpValSigned : branch ? branchValSigned : immVal;
    assign newPc = almost_newPc + pc_or_rs;
 
+ 
+   // Resolve branches
+   assign doWeBranch = (instr[12:11] == 2'b00 & branch) ? (regData1[15:0] == 0) :
+	   (instr[12:11] == 2'b01 & branch) ? (regData1[15:0] != 0):
+	   (instr[12:11] == 2'b10 & branch) ? (regData1[15]) :
+	   (instr[12:11] == 2'b11 & branch) ? (~regData1[15]): 1'b0;
+
    // Either new PC or old PC
-   assign next_pc = (jump | branch) ? newPc : pc;
+   assign next_pc = (jump | doWeBranch) ? newPc : pc;
 
    // TODO: Probably add logic for Zero and Ofl
 

@@ -164,14 +164,14 @@ begin
 		  sco <= 1;
 	  end
 	// Beqz
-	5'b11111: begin
+	5'b01100: begin
 		
 		  regWrite <= 0; aluSrc <= 1; memWrite <= 0; memRead <= 0; memToReg <= 0; branchCtl <= 1; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 1; stu <= 0; slbi <= 0; immPres <= 0; lbi <= 0;
                   aluCtl <= 0;
 	  end
         // Bnez
-	5'b01100: begin
+	5'b01101: begin
 		
 		  regWrite <= 0; aluSrc <= 1; memWrite <= 0; memRead <= 0; memToReg <= 0; branchCtl <= 1; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 1; stu <= 0; slbi <= 0; immPres <= 0; lbi <= 0;

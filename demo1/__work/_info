@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/u/k/e/keyser/cs552/hw3/ECE552/demo1
 valu
-Z1 !s110 1584204566
+Z1 !s110 1584208286
 !i10b 1
 !s100 [7NE;^Sch1j6@X9id9mL43
 IF]Jd:Ug::7M8T[49H96h:3
@@ -23,7 +23,7 @@ Z4 OP;L;10.7c;67
 r1
 !s85 0
 31
-Z5 !s108 1584204566.000000
+Z5 !s108 1584208286.000000
 !s107 xor3.v|xor2.v|wb.v|shifter.v|sext5_16.v|regFile.v|regFile_bypass.v|reg16.v|proc.v|proc_hier.v|proc_hier_bench.v|not1.v|nor3.v|nor2.v|nand3.v|nand2.v|mux8_16.v|memory.v|memory2c.v|fullAdder_1b.v|fetch.v|execute.v|dff.v|decode.v|dec3to8.v|control.v|clkrst.v|cla_4b.v|cla_16b.v|alu.v|
 Z6 !s90 +define+RANDSEED=3|-work|__work|alu.v|cla_16b.v|cla_4b.v|clkrst.v|control.v|dec3to8.v|decode.v|dff.v|execute.v|fetch.v|fullAdder_1b.v|memory2c.v|memory.v|mux8_16.v|nand2.v|nand3.v|nor2.v|nor3.v|not1.v|proc_hier_bench.v|proc_hier.v|proc.v|reg16.v|regFile_bypass.v|regFile.v|sext5_16.v|shifter.v|wb.v|xor2.v|xor3.v|
 !i113 1
@@ -99,11 +99,11 @@ R9
 vcontrol
 R1
 !i10b 1
-!s100 8[KBLjhkf;8:^^Vj__V?43
-IoITJgZNNB6A4^mSCK[X<M2
+!s100 oVS^8JgF6llchU9Pbl[=71
+I?Ao<@TlMie2Oh5UNaE^Gd0
 R2
 R0
-R10
+w1584208284
 8control.v
 Fcontrol.v
 L0 2
@@ -187,11 +187,11 @@ R9
 vexecute
 R1
 !i10b 1
-!s100 >`gdmg]naRjPeV5JjS^Ia0
-IMUi>D9N43d6k1Y<Si@NL?0
+!s100 EUFEfH^7KVe20jkiPTYO]0
+I63VzGb]On0@_@M]jfo6OT2
 R2
 R0
-w1584147870
+w1584208248
 8execute.v
 Fexecute.v
 L0 7
@@ -209,11 +209,11 @@ R9
 vfetch
 R1
 !i10b 1
-!s100 =Do_iM67ABc_QUFHkYMUi3
-IEfD:<PBUI>o27^:=B`9nU1
+!s100 64zPLAkKd987V5ZJ[H2Qn1
+IU9b6V@YHaTh5U;4W=[79A0
 R2
 R0
-R10
+w1584207890
 8fetch.v
 Ffetch.v
 L0 7
