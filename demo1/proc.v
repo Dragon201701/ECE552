@@ -52,7 +52,7 @@ module proc (/*AUTOARG*/
    //fetch fetchStage(.pc(pc), .wr(1'b0), .enable(1'b1), .clk(clk), .rst(rst), .halt(halt), .writeReg1(writeReg1), .immVal(immVal), .branch(branch), .jump(jump), .new_pc(next_pc), .instr(currInstr));
    fetch fetchStage(.pc(pc), .clk(clk), .rst(rst), .halt(halt), .pc_inc(inc_pc), .instr(instr));
    // Deode
-   decode decodeStage(.instr(instr), .writeEn(regWrite), .writeData(writeData), .immCtl(immCtl), .extCtl(extCtl), .exImmVaL(exImmVaL), .rst(rst), .clk(clk), .jumpCtl(jumpCtl), .read1Data(read1Data), .read2Data(read2Data), .err(decode_err));
+   decode decodeStage(.instr(instr), .writeEn(regWrite), .writeData(writeData), .immCtl(immCtl), .extCtl(extCtl), .exImmVaL(exImmVaL), .rst(rst), .clk(clk), .jumpCtl(jumpCtl), .read1Data(read1Data), .read2Data(read2Data), .err(decode_err), .immPres(immPres), .linkCtl(linkCtl));
 
    // Execute
    execute executeStage(.sl(sl), .sco(sco), .seq(seq), .jumpCtl(jumpCtl), .jrCtl(jrCtl), .branchCtl(branchCtl),.immPres(immPres), .btr(btr), .slbi(slbi), .aluSrc(aluSrc), .regData1(read1Data), .regData2(read2Data), .immVal(exImmVaL), .inc_pc(inc_pc), .instr(instr), .invA(invA), .invB(invB), .new_pc(next_pc), .Out(Out), .Zero(Zero), .Ofl(Ofl));

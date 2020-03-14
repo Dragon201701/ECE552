@@ -136,12 +136,12 @@ r1
 !s100 FcJ]JZF56lNPX1=b4ni]j1
 IiWXEYRo8BPB19A_POBAD^3
 R0
-w1584210476
+w1584214295
 8D:/ECE552/demo1/decode.v
 FD:/ECE552/demo1/decode.v
 L0 7
 R3
-!s108 1584210479.000000
+Z7 !s108 1584214504.000000
 !s107 D:/ECE552/demo1/decode.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/decode.v|
 !i113 0
@@ -241,7 +241,7 @@ w1581563779
 FD:/ECE552/demo1/fullAdder_1b.v
 L0 7
 R3
-Z7 !s108 1584146443.000000
+Z8 !s108 1584146443.000000
 !s107 D:/ECE552/demo1/fullAdder_1b.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/fullAdder_1b.v|
 !i113 0
@@ -274,15 +274,15 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 WTd=;7@^ER:WM8oX2<F2d1
-I=RRJJ22H?kfUD@VVIagL33
+!s100 nc=[PeMJY[ibUChenY=Um2
+I`3Fjdm[ZB09_6<cMzk>hM0
 R0
-w1584212202
+w1584214833
 8D:/ECE552/demo1/memory2c.v
 FD:/ECE552/demo1/memory2c.v
 L0 35
 R3
-!s108 1584212234.000000
+!s108 1584214841.000000
 !s107 D:/ECE552/demo1/memory2c.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/memory2c.v|
 !i113 0
@@ -382,7 +382,7 @@ R6
 FD:/ECE552/demo1/nor2.v
 L0 7
 R3
-Z8 !s108 1584146435.000000
+Z9 !s108 1584146435.000000
 !s107 D:/ECE552/demo1/nor2.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/nor2.v|
 !i113 0
@@ -403,7 +403,7 @@ R3
 r1
 !s85 0
 31
-R8
+R9
 !s107 D:/ECE552/demo1/nor3.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/nor3.v|
 !i113 0
@@ -435,15 +435,15 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 =JaTdR?X0eX`AF;G@>nSN3
-IXFkJ:@6BY7^31<c_kKC7@1
+!s100 =6nUjB>i:630`JUF9^:1Z2
+IQ]02?UT]`f`nFeASz[d^D1
 R0
-w1584214028
+w1584214498
 8D:/ECE552/demo1/proc.v
 FD:/ECE552/demo1/proc.v
 L0 4
 R3
-!s108 1584214036.000000
+R7
 !s107 D:/ECE552/demo1/proc.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/proc.v|
 !i113 0
@@ -475,15 +475,15 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 Mg2VzG0N_UjUlHBaH@?6K3
-IaS`BWQin=_On;<EzZHn<V1
+!s100 =YHY8el=`h[ilmed6Jf?X2
+IcKm4]YYjSg:4YoH:Z>A6L0
 R0
-w1584213114
+w1584214565
 8D:/ECE552/demo1/proc_hier_bench.v
 FD:/ECE552/demo1/proc_hier_bench.v
 L0 4
 R3
-!s108 1584213120.000000
+!s108 1584214692.000000
 !s107 D:/ECE552/demo1/proc_hier_bench.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/proc_hier_bench.v|
 !i113 0
@@ -521,7 +521,7 @@ R0
 w1583978119
 8D:/ECE552/demo1/regFile.v
 FD:/ECE552/demo1/regFile.v
-Z9 L0 10
+Z10 L0 10
 R3
 !s108 1584146427.000000
 !s107 D:/ECE552/demo1/regFile.v|
@@ -585,9 +585,9 @@ R0
 w1582149880
 8D:/ECE552/demo1/shifter.v
 FD:/ECE552/demo1/shifter.v
-R9
+R10
 R3
-R7
+R8
 !s107 D:/ECE552/demo1/shifter.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/demo1/shifter.v|
 !i113 0

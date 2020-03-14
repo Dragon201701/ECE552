@@ -153,7 +153,6 @@ module proc_hier_bench();
    // Is processor halted (1 bit signal)
    
    /* Add anything else you want here */
-   assign Rs = DUT.p0.regRs;
    assign next_PC = DUT.p0.next_pc;
    
 endmodule
