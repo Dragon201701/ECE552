@@ -1,0 +1,6 @@
+          // Test provided by Karu 
+          //test for SLBI instruction
+          //case: when Rs is zero
+0000 c200 lbi r2, 0
+0002 92ff slbi r2, 255
+0004 0000 halt
