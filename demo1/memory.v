@@ -15,7 +15,7 @@ module memory (aluOut, wrData, memRead, memWrite, memToReg, clk, rst, memoryOut,
    // Memory segment
    // Initialize memory
    // TODO: Change memory back to syn type 
-   memory2c data_mem(.data_out(memoryOut), .data_in(wrData), .addr(aluOut), .enable(memRead), .wr(memWrite), .createdump(clk), .clk(clk), .rst(rst) );
+   memory2c data_mem(.data_out(memoryOut), .data_in(wrData), .addr(aluOut), .enable(1'b1), .wr(memWrite), .createdump(clk), .clk(clk), .rst(rst) );
 
 
 endmodule
