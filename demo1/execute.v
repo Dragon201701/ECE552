@@ -23,7 +23,7 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    // InA - InB
    // One for signed and unsigned
    cla_16b InA_minus_InB_Signed(.A(InA), .B(InB_positive), .C_in(0), .S(InAminusInBsgned), .C_out());
-   cla_16b InA_minus_InB(.A(InA), .B(~InB), .C_in(0), .S(InAminusInB), .C_out());
+	cla_16b InA_minus_InB(.A(InA), .B(InB_positive), .C_in(0), .S(InAminusInB), .C_out());
 
    assign InAlessInB = (InA[15] == 1'b1 & InB[15] == 1'b0) ? 1'b1 : 
 	   (InA[15] == 1'b0 & InB[15] == 1'b1) ? 1'b0 :
