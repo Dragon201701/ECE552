@@ -9,13 +9,13 @@
     of the operation, as well as output a Zero bit and an Overflow
     (OFL) bit.
 */
-module alu3 (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
+module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
 
    // declare constant for size of inputs, outputs (N),
    // and operations (O)
    parameter    N = 16;
    parameter    O = 3;
-   
+   input         slbi;
    input [N-1:0] InA; // Data Input
    input [N-1:0] InB; // Data Input
    input         Cin; // Carry-in
@@ -42,6 +42,7 @@ module alu3 (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
   wire [N-1:0] AND_RESULT, OR_RESULT, XOR_RESULT, ADD_RESULT, LOGIC_RESULT;
   wire [N-1:0] A, B;
   wire Overflow;
+  assign cout = Overflow;
   assign A = (invA==1'b1)? ~InA : InA;
   assign B = (invB==1'b1)? ~InB : InB;
   shifter shift(.In(A), .Cnt(B[3:0]), .Op(Op[1:0]), .Out(shifter_out));
@@ -50,7 +51,8 @@ module alu3 (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
   assign AND_RESULT = A & B;
   assign OR_RESULT = A | B;
   assign XOR_RESULT = A ^ B;
-  assign LOGIC_RESULT = (Op == 3'b100)? ADD_RESULT: 
+  assign LOGIC_RESULT = slbi? OR_RESULT;
+                        (Op == 3'b100)? ADD_RESULT: 
                         (Op == 3'b101)? AND_RESULT: 
                         (Op == 3'b110)? OR_RESULT:
                         XOR_RESULT;

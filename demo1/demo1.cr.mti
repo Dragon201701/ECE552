@@ -33,12 +33,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	clkrst
 
-} {} {}} D:/ECE552/demo1/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/execute.v
+} {} {}} D:/ECE552/demo1/proc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module execute
+-- Compiling module proc
 
 Top level modules:
-	execute
+	proc
 
 } {} {}} D:/ECE552/demo1/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/xor3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -124,6 +124,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	control
 
+} {} {}} D:/ECE552/demo1/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/alu.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module alu
+
+Top level modules:
+	alu
+
 } {} {}} D:/ECE552/demo1/dec3to8.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/dec3to8.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module dec3to8
@@ -151,13 +158,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	proc_hier_bench
-
-} {} {}} D:/ECE552/demo1/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/alu.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module alu
-
-Top level modules:
-	alu
 
 } {} {}} D:/ECE552/demo1/mux4_16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/mux4_16.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -195,13 +195,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	extension
-
-} {} {}} D:/ECE552/demo1/alu3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/alu3.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module alu3
-
-Top level modules:
-	alu3
 
 } {} {}} D:/ECE552/demo1/regFile.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/regFile.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018

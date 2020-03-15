@@ -2,8 +2,8 @@ onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /proc_hier_bench/PC
 add wave -noupdate /proc_hier_bench/Inst
-add wave -noupdate /proc_hier_bench/Halt
 add wave -noupdate /proc_hier_bench/inst_count
+add wave -noupdate /proc_hier_bench/PC
 add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/decodeRegisters/R0_out
 add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/decodeRegisters/R1_out
 add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/decodeRegisters/R2_out
@@ -13,25 +13,7 @@ add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/
 add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/decodeRegisters/R6_out
 add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/decodeRegisters/R7_out
 add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/writeEn
-add wave -noupdate -divider extension
-add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/exImmVaL
-add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/extension/jumpimm
-add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/extension/extVal
-add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/extension/immCTL
-add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/extension/extCTL
-add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/extension/jumpCTL
 add wave -noupdate -divider Execution
-add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/InA
-add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/InB
-add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/aluOut
-add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/jrCtl
-add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/aluSrc
-add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/inc_pc
-add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/immVal
-add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/beqz
-add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/bnez
-add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/bltz
-add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/bgez
 add wave -noupdate -group {Control Signals} /proc_hier_bench/DUT/p0/ctlSignals/regWrite
 add wave -noupdate -group {Control Signals} /proc_hier_bench/DUT/p0/ctlSignals/aluSrc
 add wave -noupdate -group {Control Signals} /proc_hier_bench/DUT/p0/ctlSignals/btr
@@ -58,14 +40,17 @@ add wave -noupdate -group {Control Signals} /proc_hier_bench/DUT/p0/ctlSignals/s
 add wave -noupdate -group {Control Signals} /proc_hier_bench/DUT/p0/ctlSignals/aluCtl
 add wave -noupdate -group {Control Signals} /proc_hier_bench/DUT/p0/executeStage/executeALU/sign
 add wave -noupdate -group {Control Signals} /proc_hier_bench/DUT/p0/executeStage/executeALU/Zero
-add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/addr
-add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/clk
-add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/data_in
-add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/data_out
-add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/enable
-add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/wr
+add wave -noupdate -divider ALU
+add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/executeALU/Cin
+add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/executeALU/InA
+add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/executeALU/InB
+add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/executeALU/invA
+add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/executeALU/invB
+add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/inB
+add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/subCtl
+add wave -noupdate /proc_hier_bench/DUT/p0/executeStage/rotatebits
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {2133 ns} 0}
+WaveRestoreCursors {{Cursor 1} {1158 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 388
 configure wave -valuecolwidth 100
@@ -81,4 +66,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {2253 ns} {3199 ns}
+WaveRestoreZoom {9293 ns} {11633 ns}

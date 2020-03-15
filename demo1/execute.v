@@ -9,30 +9,33 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCt
    input sl, sco, seq;
    input slbi, invA, invB, aluSrc, immPres, btr, jumpCtl, jrCtl, linkCtl, branchCtl, memRead, memWrite;
    input [15:0] regData1, regData2, immVal, instr, inc_pc;
-   wire [15:0] jb_pc, InA, InB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut;
+   wire [15:0] jb_pc, InA, inA, InB, inB, rotatebits, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut;
    wire [2:0] opCode;
-   wire sign, setOutput, cout;
+   wire sign, setOutput, cout, subCtl, Cin;
    output [15:0] Out, new_pc;
    output Zero, Ofl;
    wire  [15:0] jump_pc, branch_pc;
    wire beqz, bnez, bltz, bgez;
    // slt and sle for last parts
    assign setOutput = sco ? cout : seq ? (InA == InB) : (sl & instr[11]) ? ($signed(InA) < $signed(InB)) : ($signed(InA) <= $signed(InB));
-
+   assign subCtl = (instr[15:11]==5'b01001)|((instr[15:11]==5'b11011)&(instr[1:0]==2'b01));
    // Top wire connecting to alu
-   assign InA = slbi ? (regData1 << 8) : regData1;
+   assign inA = slbi ? (regData1 << 8) : regData1;
 
    // Bottom wire connecting to alu
-   assign InB = branchCtl? 16'h0000 : aluSrc ? immVal :  regData2;
-
+   assign inB = branchCtl? 16'h0000 : aluSrc ? immVal :  regData2;
+   assign InA = subCtl?~inA:inA;
+   assign Cin = subCtl?1:0;
+   cla_16b rightrotatebits(.A(16'h0010), .B(~inB), .C_in (1'b1), .S(rotatebits), .C_out());
    // What operation is it
    // If an immediate is present, will have to use
    // Different bit numbers to represent
+   assign InB = (instr[15:11] == 5'b10110)? rotatebits : inB;
    assign opCode = ((jumpCtl & jrCtl)|memRead|memWrite)? 3'b100 : immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]};
 
    assign sign = (regData1[15] | regData2[15]);
 
-   alu executeALU(.slbi(slbi), .InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl), .cout(cout));  
+   alu executeALU(.slbi(slbi), .InA(InA), .InB(InB), .Cin(Cin), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl), .cout(cout));  
 
    assign Out = (sl | seq | sco) ? setOutput : btr ? {InA[0],InA[1],InA[2],InA[3],InA[4],InA[5],InA[6],InA[7],InA[8],InA[9],InA[10],InA[11],InA[12],InA[13],InA[14],InA[15]} : aluOut;
 
