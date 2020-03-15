@@ -103,6 +103,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	memory2csync
 
+} {} {}} D:/ECE552/demo1/control.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/control.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module control
+
+Top level modules:
+	control
+
 } {} {}} D:/ECE552/demo1/nor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nor2.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module nor2
@@ -116,13 +123,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	wb
-
-} {} {}} D:/ECE552/demo1/control.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/control.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module control
-
-Top level modules:
-	control
 
 } {} {}} D:/ECE552/demo1/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/alu.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
