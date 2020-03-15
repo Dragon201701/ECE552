@@ -1,0 +1,46 @@
+Program 0 /u/s/i/sinclair/public/html/courses/cs552/spring2020/handouts/testprograms/public/inst_tests/lbi_0.asm
+-------------------------------------------------
+Step: 1
+Compiling /u/s/i/sinclair/public/html/courses/cs552/spring2020/handouts/testprograms/public/inst_tests/lbi_0.asm
+Full name to pass to Assemble.java: /u/s/i/sinclair/public/html/courses/cs552/spring2020/handouts/testprograms/public/inst_tests/lbi_0.asm
+Created the following files
+loadfile_0.img
+loadfile_1.img
+loadfile_2.img
+loadfile_3.img
+loadfile_all.img
+loadfile.lst
+-------------------------------------------------
+Step: 2
+Compiling the following verilog files: *.v 
+Top module: proc_hier_bench
+Compilation log in wsrun.log
+rm: cannot remove 'wsrun.log': No such file or directory
+Executing rm -rf __work dump.wlf dump.vcd diff.trace diff.ptrace archsim.trace archsim.ptrace verilogsim.trace verilogsim.ptrace
+Executing vlib __work
+Executing vlog +define+RANDSEED=3 -work __work *.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 11:29:18 on Mar 15,2020
+vlog "+define+RANDSEED=3" -work __work *.v 
+** Error: (vlog-7) Failed to open design unit file "*.v" in read mode.
+No such file or directory. (errno = ENOENT)
+End time: 11:29:18 on Mar 15,2020, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+-------------------------------------------------
+Step: 3
+Running Verilog simulation...details in wsrun.log
+Reading pref.tcl
+
+# 10.7c
+
+# vsim -c proc_hier_bench -lib __work 
+# Start time: 11:29:19 on Mar 15,2020
+# ** Error: (vsim-3170) Could not find 'proc_hier_bench'.
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/l/aliu/ECE552/temp/__work
+# Error loading design
+Error loading design
+# End time: 11:29:19 on Mar 15,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+ERROR: failed to open VCD file "dump.vcd" for reading
+Did not create a dump file...something went wrong.  Did you remember to include $dumpfile("dump.vcd") in your testbench?
