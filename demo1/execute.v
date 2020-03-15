@@ -9,7 +9,7 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCt
    input sl, sco, seq;
    input slbi, invA, invB, aluSrc, immPres, btr, jumpCtl, jrCtl, linkCtl, branchCtl, memRead, memWrite;
    input [15:0] regData1, regData2, immVal, instr, inc_pc;
-   wire [15:0] jb_pc, InA, inA, InB, inB, rotatebits, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut, setOut;
+   wire [15:0] jb_pc, InA, inA, InB, inB, rotatebits, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut, setOut, sltresult, sleresult;
    wire [2:0] opCode;
    wire sign, setOutput, cout, subCtl, Cin;
    output [15:0] Out, new_pc;
@@ -38,7 +38,9 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCt
 
    assign Out = (sl | seq | sco) ? setOut : btr ? {InA[0],InA[1],InA[2],InA[3],InA[4],InA[5],InA[6],InA[7],InA[8],InA[9],InA[10],InA[11],InA[12],InA[13],InA[14],InA[15]} : aluOut;
 
-   assign setOutput = (sl&seq)? ~aluOut[15] : (seq&~sl)? Zero:(sl&~seq)? ~Zero&~aluOut[15] : sco? cout : 0;
+   assign sltresult = (InA[15]&InB[15])&(~InA[15]&~InB[15])?aluOut[15]:(InA[15]&~InB[15]);
+   assign sleresult = sltresult | Zero;
+   assign setOutput = (sl&seq)? sleresult : (seq&~sl)? Zero:(sl&~seq)? sltresult : sco? cout : 0;
 
    assign setOut = setOutput?16'h0001:16'h0000;
    //assign immValShifted = immVal << 1;
