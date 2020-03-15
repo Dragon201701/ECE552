@@ -9,7 +9,7 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    input sl, sco, seq, ldOrSt;
    input slbi, jump, branch, immCtl, invA, invB, aluSrc, immPres, btr;
    input [15:0] regData1, regData2, immVal, branchVal, jumpVal, instr, pc;
-   wire [15:0] almost_newPc, newPc, InA, InB, inB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut, rotate_bits;
+   wire [15:0] almost_newPc, newPc, InA, InB, inB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut, rotate_bits, out1;
    wire [2:0] opCode;
    wire sign, setOutput, cout, doWeBranch;
 
@@ -49,8 +49,8 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
 
    alu executeALU(.slbi(slbi), .InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl), .cout(cout));  
 
-   assign Out = (sl | seq | sco) ? setOutput : btr ? {InA[0],InA[1],InA[2],InA[3],InA[4],InA[5],InA[6],InA[7],InA[8],InA[9],InA[10],InA[11],InA[12],InA[13],InA[14],InA[15]} : aluOut;
-
+   assign out1 = (sl | seq | sco) ? setOutput : btr ? {InA[0],InA[1],InA[2],InA[3],InA[4],InA[5],InA[6],InA[7],InA[8],InA[9],InA[10],InA[11],InA[12],InA[13],InA[14],InA[15]} : aluOut;
+   assign Out = ((instr[15:11]==5'b11101)&InAlessInB)?16'h0001:out1;
    assign immValShifted = immVal << 1;
 
    // Sign extend the branch and jump values
