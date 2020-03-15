@@ -23,7 +23,7 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    // One for signed and unsigned
    cla_16b InA_minus_InB_Signed(.A(InA), .B(InB), .C_in(0), .S(InAminusInBsgned), .C_out());
    cla_16b InA_minus_InB(.A(InA), .B(~InB), .C_in(0), .S(InAminusInB), .C_out());
-   cla_16b rotate(.A(16'h0010), .B(~inB), .C_in(0), .S(rotate_bits), .C_out());
+   cla_16b rotate(.A(16'h0010), .B(~inB), .C_in(1'b1), .S(rotate_bits), .C_out());
    assign InAlessInB = (InA[15] == 1'b1 & InB[15] == 1'b0) ? 1'b1 : 
 	   (InA[15] == 1'b0 & InB[15] == 1'b1) ? 1'b0 :
 	   (InA[15] == 1'b1 & InB[15] == 1'b1) ? InAminusInBsgned[15] : InAminusInB[15];
@@ -37,13 +37,13 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
 
    // Bottom wire connecting to alu
    assign inB = aluSrc ? immVal : regData2;
-   assign InB = (instr[15:11] == 11010)? rotate_bits : inB;
+   assign InB = (instr[15:11] == 5'b10110)? rotate_bits : inB;
    assign wrData = regData2;
 
    // What operation is it
    // If an immediate is present, will have to use
    // Different bit numbers to represent
-   assign opCode = ldOrSt ? instr[15:13] : (immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]});
+   assign opCode = (instr[15:11]==5'b10110)? 3'b000:ldOrSt ? instr[15:13] : (immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]});
 
    assign sign = (regData1[15] | regData2[15]);
 
