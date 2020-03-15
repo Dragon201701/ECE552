@@ -31,7 +31,7 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCt
    // If an immediate is present, will have to use
    // Different bit numbers to represent
    assign InB = (instr[15:11] == 5'b10110)? rotatebits : inB;
-   assign opCode = ((jumpCtl & jrCtl)|memRead|memWrite|sl|seq|sco)? 3'b100 : immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]};
+   assign opCode = (instr[15:11] == 5'b10110)? 3'b000:((jumpCtl & jrCtl)|memRead|memWrite|sl|seq|sco)? 3'b100 : immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]};
    assign sign = (regData1[15] | regData2[15]);
 
    alu executeALU(.slbi(slbi), .InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl), .cout(cout));  
