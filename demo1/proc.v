@@ -30,7 +30,7 @@ module proc (/*AUTOARG*/
    wire [15:0] instr, next_pc, exImmVaL, branch, jump, Out, wrData;
    wire [15:0] regData1, regData2, read1Data, read2Data, aluOut, writeData, memoryOut;
    wire [15:0] inc_pc;
-   reg [15:0] pc;
+   wire [15:0] pc, nextpc;
 
    // Reset PC on rst signal
    /*always @ (posedge clk)
