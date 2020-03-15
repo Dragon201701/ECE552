@@ -52,12 +52,12 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   cla_16b adder(.A(A), .B(B), .C_in(Cin), .S(ADD_RESULT), .C_out(Overflow));
   assign cout = Overflow;
   assign Ofl = (sign==1'b1)? (~A[15]&~B[15]&ADD_RESULT[15])|(A[15]&B[15]&~ADD_RESULT[15]):Overflow;
-  //cla_16b BminusA(.A(B), .B(~A), .C_in(0), .S(SUB_RESULT), .C_out());
+  cla_16b BminusA(.A(B), .B(~A), .C_in(1'b1), .S(SUB_RESULT), .C_out());
 
   assign AND_RESULT = A & ~B;
   assign OR_RESULT = A | B;
   assign XOR_RESULT = A ^ B;
-  assign SUB_RESULT = B - A;
+  //assign SUB_RESULT = B - A;
   assign LOGIC_RESULT = slbi ? OR_RESULT:
 			(Op == 3'b100)? ADD_RESULT: 
                         (Op == 3'b101)? SUB_RESULT: 
@@ -76,7 +76,8 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   assign rotate = tmp3[15:0];
   */
   // Rotate
-   
+  
+ 
   always @ (*)
   begin
 	  case (Op[1:0])
@@ -85,6 +86,5 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
 	  endcase
   end 
   assign rotate = tmp[15:0];
-  
 
 endmodule
