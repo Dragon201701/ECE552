@@ -40,7 +40,7 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   111 XOR A XOR B
   */
   wire [N-1:0] shifter_out;
-  wire [N-1:0] AND_RESULT, OR_RESULT, XOR_RESULT, ADD_RESULT, LOGIC_RESULT;
+  wire [N-1:0] AND_RESULT, OR_RESULT, XOR_RESULT, ADD_RESULT, LOGIC_RESULT, ANDN_RESULT, SUB_RESULT;
   wire [N-1:0] A, B;
   wire Overflow;
   assign cout = Overflow;
@@ -48,15 +48,17 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   assign B = (invB==1'b1)? ~InB : InB;
   shifter shift(.In(A), .Cnt(B[3:0]), .Op(Op[1:0]), .Out(shifter_out));
   cla_16b adder(.A(A), .B(B), .C_in(Cin), .S(ADD_RESULT), .C_out(Overflow));
+  cla_16b subtracter(.A(~A), .B(B), .C_in(1'b1), .S(SUB_RESULT), .C_out());
   assign Ofl = (sign==1'b1)? (~A[15]&~B[15]&ADD_RESULT[15])|(A[15]&B[15]&~ADD_RESULT[15]):Overflow;
   assign AND_RESULT = A & B;
   assign OR_RESULT = A | B;
   assign XOR_RESULT = A ^ B;
+  assign ANDN_RESULT = A & ~B;
   assign LOGIC_RESULT = slbi? OR_RESULT:
                         (Op == 3'b100)? ADD_RESULT: 
-                        (Op == 3'b101)? AND_RESULT: 
-                        (Op == 3'b110)? OR_RESULT:
-                        XOR_RESULT;
+                        (Op == 3'b101)? SUB_RESULT: 
+                        (Op == 3'b110)? XOR_RESULT:
+                        ANDN_RESULT;
   assign Zero = (LOGIC_RESULT == 16'b0)?1:(shifter_out == 16'b00)?1:0;
   assign Out = (Op[2] == 1)? LOGIC_RESULT:shifter_out;
 endmodule

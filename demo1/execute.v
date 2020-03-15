@@ -20,12 +20,12 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCt
    assign setOutput = sco ? cout : seq ? (InA == InB) : (sl & instr[11]) ? ($signed(InA) < $signed(InB)) : ($signed(InA) <= $signed(InB));
    assign subCtl = (instr[15:11]==5'b01001)|((instr[15:11]==5'b11011)&(instr[1:0]==2'b01));
    // Top wire connecting to alu
-   assign inA = slbi ? (regData1 << 8) : regData1;
+   assign InA = slbi ? (regData1 << 8) : regData1;
 
    // Bottom wire connecting to alu
    assign inB = branchCtl? 16'h0000 : aluSrc ? immVal :  regData2;
-   assign InA = subCtl?~inA:inA;
-   assign Cin = subCtl?1:0;
+   //assign InA = subCtl?~inA:inA;
+   //assign Cin = subCtl?1:0;
    cla_16b rightrotatebits(.A(16'h0010), .B(~inB), .C_in (1'b1), .S(rotatebits), .C_out());
    // What operation is it
    // If an immediate is present, will have to use
@@ -35,7 +35,7 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCt
 
    assign sign = (regData1[15] | regData2[15]);
 
-   alu executeALU(.slbi(slbi), .InA(InA), .InB(InB), .Cin(Cin), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl), .cout(cout));  
+   alu executeALU(.slbi(slbi), .InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl), .cout(cout));  
 
    assign Out = (sl | seq | sco) ? setOutput : btr ? {InA[0],InA[1],InA[2],InA[3],InA[4],InA[5],InA[6],InA[7],InA[8],InA[9],InA[10],InA[11],InA[12],InA[13],InA[14],InA[15]} : aluOut;
 
