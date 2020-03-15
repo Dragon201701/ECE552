@@ -37,7 +37,9 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCt
    alu executeALU(.slbi(slbi), .InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl), .cout(cout));  
 
    assign Out = (sl | seq | sco) ? setOut : btr ? {InA[0],InA[1],InA[2],InA[3],InA[4],InA[5],InA[6],InA[7],InA[8],InA[9],InA[10],InA[11],InA[12],InA[13],InA[14],InA[15]} : aluOut;
-   assign setOutput = seq? Zero:(sl&~seq)? ~Zero&~aluOut[15] : (sl&seq)? ~aluOut[15] : sco? cout : 0;
+
+   assign setOutput = (sl&seq)? ~aluOut[15] : (seq&~sl)? Zero:(sl&~seq)? ~Zero&~aluOut[15] : sco? cout : 0;
+
    assign setOut = setOutput?16'h0001:16'h0000;
    //assign immValShifted = immVal << 1;
    //cla_16b next_pc_add(.A(pc), .B(2), .C_in(0), .S(next_pc), .C_out());
