@@ -41,7 +41,7 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   111 XOR A XOR B
   */
   wire [15:0] rotate;
-  reg [31:0] tmp;
+  reg [31:0] tmp, tmp2, tmp3;
   wire [N-1:0] shifter_out, ror_check;
   wire [N-1:0] AND_RESULT, OR_RESULT, XOR_RESULT, ADD_RESULT, LOGIC_RESULT, SUB_RESULT;
   wire [N-1:0] A, B;
@@ -50,13 +50,14 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   assign B = (invB==1'b1)? ~InB : InB;
   shifter shift(.In(A), .Cnt(B[3:0]), .Op(Op[1:0]), .Out(shifter_out));
   cla_16b adder(.A(A), .B(B), .C_in(Cin), .S(ADD_RESULT), .C_out(Overflow));
-  cla_16b subtracer(.A(~A), .B(B), .C_in(16'h0001), .S(SUB_RESULT), .C_out());
   assign cout = Overflow;
   assign Ofl = (sign==1'b1)? (~A[15]&~B[15]&ADD_RESULT[15])|(A[15]&B[15]&~ADD_RESULT[15]):Overflow;
+  //cla_16b BminusA(.A(B), .B(~A), .C_in(0), .S(SUB_RESULT), .C_out());
+
   assign AND_RESULT = A & ~B;
   assign OR_RESULT = A | B;
   assign XOR_RESULT = A ^ B;
-  //assign SUB_RESULT = B - A;
+  assign SUB_RESULT = B - A;
   assign LOGIC_RESULT = slbi ? OR_RESULT:
 			(Op == 3'b100)? ADD_RESULT: 
                         (Op == 3'b101)? SUB_RESULT: 
@@ -64,14 +65,26 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
                         AND_RESULT;
   assign Zero = (LOGIC_RESULT == 16'b0)?1:(shifter_out == 16'b00)?1:0;
 
-  //assign ror_check = (Op[1:0] == 2'b10) ? rotate : shifter_out;
-  //assign Out = (Op[2] == 1)? LOGIC_RESULT:ror_check;
-  assign Out = (Op[2] == 1)? LOGIC_RESULT:shifter_out;
-  // Rotate 
-  /*always @ (*)
+  assign ror_check = (Op[1:0] == 2'b10) ? rotate : shifter_out;
+  assign Out = (Op[2] == 1)? LOGIC_RESULT:ror_check;
+
+  // Shift left, or with A, shift right  and then take lower bits
+  /*shifter32 left_shift(.In(A), .Cnt(16), .Op(2'b01), .Out(tmp));
+  assign tmp2 = A | tmp;
+  shifter32 right_shift(.In(tmp2), .Cnt(B[3:0]), .Op(2'b10), .Out(tmp3));
+
+  assign rotate = tmp3[15:0];
+  */
+  // Rotate
+   
+  always @ (*)
   begin
-  tmp <= {A, A} >> B[3:0];
-  end
-  assign rotate = tmp[15:0];*/
+	  case (Op[1:0])
+		  2'b10: tmp <= {A, A} >> B[3:0];
+		  default tmp <= 16'h0000;
+	  endcase
+  end 
+  assign rotate = tmp[15:0];
+  
 
 endmodule

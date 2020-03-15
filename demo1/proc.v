@@ -35,15 +35,15 @@ module proc (/*AUTOARG*/
    // Reset PC on rst signal
    /*always @ (posedge clk)
    begin
-	   case(rst)
-		  1'b1: pc <= 16'h0000;
-	  	  1'b0: pc <= next_pc;
-		  default pc <= 16'h0000;
-	  endcase
-   end*/
-   assign nextpc = rst? 16'h0000:next_pc;
-   reg16 pcreg(.clk(clk),.rst(rst),.en(1'b1),.D(nextpc), .Q(pc));
-   //PC myPC(.next_pc(next_pc), .clk(clk), .rst(rst), .pc(pc));
+       case(rst)
+	       1'b1: pc <= 16'h0000;
+	       1'b0: pc <= next_pc;
+	       default pc <= 16'h0000;
+       endcase
+   end */
+
+  assign nextpc = rst ? 16'h0000 : next_pc;
+  reg16 pcreg(.clk(clk), .rst(rst), .en(1'b1), .D(nextpc), .Q(pc));
 
    /* your code here -- should include instantiations of fetch, decode, execute, mem and wb modules */
 
