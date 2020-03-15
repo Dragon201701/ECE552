@@ -41,7 +41,7 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   111 XOR A XOR B
   */
   wire [15:0] rotate;
-  reg [31:0] tmp, tmp2, tmp3;
+  wire [31:0] tmp, tmp2, tmp3;
   wire [N-1:0] shifter_out, ror_check;
   wire [N-1:0] AND_RESULT, OR_RESULT, XOR_RESULT, ADD_RESULT, LOGIC_RESULT, SUB_RESULT;
   wire [N-1:0] A, B;
@@ -68,16 +68,16 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   assign ror_check = (Op[1:0] == 2'b10) ? rotate : shifter_out;
   assign Out = (Op[2] == 1)? LOGIC_RESULT:ror_check;
 
+  wire [4:0] leftShiftAmount;
+  assign leftShiftAmount = 5'b10000;
   // Shift left, or with A, shift right  and then take lower bits
-  /*shifter32 left_shift(.In(A), .Cnt(16), .Op(2'b01), .Out(tmp));
-  assign tmp2 = A | tmp;
-  shifter32 right_shift(.In(tmp2), .Cnt(B[3:0]), .Op(2'b10), .Out(tmp3));
-
+  shifter32 left_shift(.In({{16{A[15]}}, A[15:0]}), .Cnt(leftShiftAmount), .shft_left(tmp), .log_right() );
+  shifter32 right_shift(.In({tmp[31:16], A[15:0]}), .Cnt({1'b0, B[3:0]}), .shft_left(), .log_right(tmp3));
   assign rotate = tmp3[15:0];
-  */
+  
   // Rotate
   
- 
+/* 
   always @ (*)
   begin
 	  case (Op[1:0])
@@ -86,5 +86,5 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
 	  endcase
   end 
   assign rotate = tmp[15:0];
-
+*/
 endmodule

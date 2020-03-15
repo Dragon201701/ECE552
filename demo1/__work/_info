@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 d/u/k/e/keyser/cs552/hw3/ECE552/demo1
 valu
-Z1 !s110 1584298989
+Z1 !s110 1584307037
 !i10b 1
-!s100 3VIXCzm9hEMVFYfQGNIST1
-IQ<NH060LJAEjc3eI[`ZNK3
+!s100 i6iLf]NW09`e67nJXzE;e3
+IMbh;V^?6hPT6BdA>3jSS;3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1584298979
+w1584306955
 8alu.v
 Falu.v
 Z3 L0 12
@@ -23,7 +23,7 @@ Z4 OP;L;10.7c;67
 r1
 !s85 0
 31
-Z5 !s108 1584298989.000000
+Z5 !s108 1584307037.000000
 !s107 xor3.v|xor2.v|wb.v|shifter.v|shifter32.v|sext5_16.v|regFile.v|regFile_bypass.v|reg16.v|proc.v|proc_hier.v|proc_hier_bench.v|PC.v|pc.v|not1.v|nor3.v|nor2.v|nand3.v|nand2.v|mux8_16.v|memory.v|memory2c.v|fullAdder_1b.v|fetch.v|execute.v|dff.v|decode.v|dec3to8.v|control.v|clkrst.v|cla_4b.v|cla_16b.v|alu.v|
 Z6 !s90 +define+RANDSEED=3|-work|__work|alu.v|cla_16b.v|cla_4b.v|clkrst.v|control.v|dec3to8.v|decode.v|dff.v|execute.v|fetch.v|fullAdder_1b.v|memory2c.v|memory.v|mux8_16.v|nand2.v|nand3.v|nor2.v|nor3.v|not1.v|pc.v|PC.v|proc_hier_bench.v|proc_hier.v|proc.v|reg16.v|regFile_bypass.v|regFile.v|sext5_16.v|shifter32.v|shifter.v|wb.v|xor2.v|xor3.v|
 !i113 1
@@ -37,7 +37,7 @@ R1
 IV;I:mEMb36efL@N<2aKl_2
 R2
 R0
-Z10 w1584213114
+Z10 w1584299328
 8cla_16b.v
 Fcla_16b.v
 L0 7
@@ -103,7 +103,7 @@ R1
 I6CT_<Vnn[W]^8j2jjcAJ61
 R2
 R0
-R10
+Z12 w1584299851
 8control.v
 Fcontrol.v
 L0 2
@@ -147,7 +147,7 @@ R1
 Io1DXPh@d6RQMked6S=L>Z1
 R2
 R0
-R10
+R12
 8decode.v
 Fdecode.v
 L0 7
@@ -191,7 +191,7 @@ R1
 I3C`zBdV]M1@jO`gkgNJ4W0
 R2
 R0
-Z12 w1584298127
+R12
 8execute.v
 Fexecute.v
 L0 7
@@ -213,7 +213,7 @@ R1
 I;cmWWWcc3;^iGac<kX9ok0
 R2
 R0
-R10
+R12
 8fetch.v
 Ffetch.v
 L0 7
@@ -258,7 +258,7 @@ R1
 I22ZMTSZd2XGcjaJ9G8^:k2
 R2
 R0
-R10
+R12
 8memory.v
 Fmemory.v
 L0 8
@@ -501,7 +501,7 @@ R1
 IP99CfWVO4TPj`nffWWKFV3
 R2
 R0
-R10
+R12
 8proc_hier_bench.v
 Fproc_hier_bench.v
 L0 4
@@ -631,11 +631,11 @@ R9
 vshifter32
 R1
 !i10b 1
-!s100 3m7j74;ggh^NRDilfUe<b0
-I_XbkG5a1iK?himHfjn_GD2
+!s100 o?kKlz`U^XH@S6PVJmdm82
+I6UM089>h;a;ZSDL6RoURI1
 R2
 R0
-w1584298789
+w1584306635
 8shifter32.v
 Fshifter32.v
 R13
@@ -657,7 +657,7 @@ R1
 I5K5bQQ1EZcA0[nc>GHK`;3
 R2
 R0
-w1584293009
+w1584299852
 8wb.v
 Fwb.v
 L0 7
