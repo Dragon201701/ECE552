@@ -1,5 +1,5 @@
 # vsim -c proc_hier_bench -lib __work 
-# Start time: 13:57:11 on Mar 15,2020
+# Start time: 16:25:20 on Mar 15,2020
 # //  ModelSim DE 10.7c Aug 17 2018Linux 4.15.0-88-generic
 # //
 # //  Copyright 1991-2018 Mentor Graphics Corporation
@@ -44,11 +44,11 @@
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (16) for port 'C_in'. The port definition is at: cla_16b.v(7).
 #    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/fetchStage/incPC File: fetch.v Line: 18
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'C_in'. The port definition is at: cla_16b.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/jb_pc_add File: execute.v Line: 44
+#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/jb_pc_add File: execute.v Line: 49
 run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.trace for output
 # ** Note: $finish    : proc_hier_bench.v(96)
 #    Time: 300 ns  Iteration: 1  Instance: /proc_hier_bench
-# End time: 13:57:11 on Mar 15,2020, Elapsed time: 0:00:00
+# End time: 16:25:21 on Mar 15,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 2

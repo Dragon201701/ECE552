@@ -34,8 +34,8 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   001 sll Shift left logical
   010 sra Shift right arithmetic
   011 srl Shift right logical
-  100 ADD A+B
-  101 AND A AND B
+  100 ADD A + B
+  101 SUB B - A
   110 OR  A OR B
   111 XOR A XOR B
   */
@@ -59,6 +59,6 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
                         (Op == 3'b101)? SUB_RESULT: 
                         (Op == 3'b110)? XOR_RESULT:
                         ANDN_RESULT;
-  assign Zero = (LOGIC_RESULT == 16'b0)?1:(shifter_out == 16'b00)?1:0;
+  assign Zero = (LOGIC_RESULT == 16'b0)?1:((shifter_out == 16'b00) & ~Op[2])?1:0;
   assign Out = (Op[2] == 1)? LOGIC_RESULT:shifter_out;
 endmodule

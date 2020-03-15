@@ -1,8 +1,8 @@
 # vsim -c proc_hier_bench -lib __work 
-# Start time: 14:10:33 on Mar 15,2020
+# Start time: 16:28:51 on Mar 15,2020
 # ** Error: (vsim-3170) Could not find 'proc_hier_bench'.
 #         Searched libraries:
 #             /afs/cs.wisc.edu/u/a/l/aliu/ECE552/temp/__work
 # Error loading design
-# End time: 14:10:33 on Mar 15,2020, Elapsed time: 0:00:00
+# End time: 16:28:51 on Mar 15,2020, Elapsed time: 0:00:00
 # Errors: 1, Warnings: 0
