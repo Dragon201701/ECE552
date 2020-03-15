@@ -1,11 +1,4 @@
-D:/ECE552/demo1/fetch.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/fetch.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module fetch
-
-Top level modules:
-	fetch
-
-} {} {}} D:/ECE552/demo1/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/xor2.v
+D:/ECE552/demo1/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/xor2.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module xor2
 
@@ -32,13 +25,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	clkrst
-
-} {} {}} D:/ECE552/demo1/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/execute.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module execute
-
-Top level modules:
-	execute
 
 } {} {}} D:/ECE552/demo1/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/xor3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -89,26 +75,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	dff
 
-} {} {}} D:/ECE552/demo1/memory2csyn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2csyn.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module memory2csync
-
-Top level modules:
-	memory2csync
-
 } {} {}} D:/ECE552/demo1/nor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/nor2.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module nor2
 
 Top level modules:
 	nor2
-
-} {} {}} D:/ECE552/demo1/wb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/wb.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module wb
-
-Top level modules:
-	wb
 
 } {} {}} D:/ECE552/demo1/dec3to8.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/dec3to8.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -131,27 +103,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	nor3
 
-} {} {}} D:/ECE552/demo1/proc_hier_bench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc_hier_bench.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc_hier_bench
-
-Top level modules:
-	proc_hier_bench
-
-} {} {}} D:/ECE552/demo1/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/alu.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module alu
-
-Top level modules:
-	alu
-
-} {} {}} D:/ECE552/demo1/mux4_16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/mux4_16.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module mux4_16
-
-Top level modules:
-	mux4_16
-
 } {} {}} D:/ECE552/demo1/cla_4b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/cla_4b.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module cla_4b
@@ -173,22 +124,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	reg16
 
-} {} {}} D:/ECE552/demo1/extension.v {2 {vlog -work work -vopt -stats=none D:/ECE552/demo1/extension.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module extension
-** Warning: (vlog-2121) D:/ECE552/demo1/extension.v(7): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
-** Warning: (vlog-2121) D:/ECE552/demo1/extension.v(9): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
-
-Top level modules:
-	extension
-
-} {} {}} D:/ECE552/demo1/alu3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/alu3.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module alu3
-
-Top level modules:
-	alu3
-
 } {} {}} D:/ECE552/demo1/regFile.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/regFile.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module regFile
@@ -209,12 +144,5 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	mux8_16
-
-} {} {}} D:/ECE552/demo1/memory.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module memory
-
-Top level modules:
-	memory
 
 } {} {}}

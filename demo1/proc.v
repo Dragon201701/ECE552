@@ -33,15 +33,16 @@ module proc (/*AUTOARG*/
    reg [15:0] pc;
 
    // Reset PC on rst signal
-   always @ (posedge clk)
+   /*always @ (posedge clk)
    begin
 	   if (rst)
 		   pc <= 16'h0000;
 	   else
 		   pc <= next_pc;
-   end
+   end*/
 
-
+   assign nextpc = rst? 16'h0000:next_pc;
+   reg16 pcreg(.clk(clk),.rst(rst),.en(1'b1),.D(nextpc), .Q(pc));
    /* your code here -- should include instantiations of fetch, decode, execute, mem and wb modules */
 
    // Setup Control signals with control module
