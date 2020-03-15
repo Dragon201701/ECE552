@@ -1,9 +1,9 @@
 // Control Logic signals for our processor
-module control(instr, clk, rst, sl, sco, seq, regWrite, aluSrc, aluCtl, memWrite, memRead, memToReg, branchCtl, jumpCtl, jrCtl, linkCtl, invA, invB, halt, noOp, immCtl, extCtl, stu, slbi, immPres, lbi, btr);
+module control(instr, clk, rst, sl, sco, seq, regWrite, aluSrc, aluCtl, memWrite, memRead, memToReg, branchCtl, stuCtl, jumpCtl, jrCtl, linkCtl, invA, invB, halt, noOp, immCtl, extCtl, stu, slbi, immPres, lbi, btr);
 
    input clk, rst;
    input [15:0] instr;
-   output reg regWrite, aluSrc, btr, memWrite, memRead, memToReg, branchCtl, jumpCtl, jrCtl, linkCtl, invA, invB, halt, noOp, immCtl, extCtl, stu, slbi, immPres, lbi;
+   output reg regWrite, aluSrc, btr, memWrite, memRead, memToReg, branchCtl, jumpCtl, stuCtl, jrCtl, linkCtl, invA, invB, halt, noOp, immCtl, extCtl, stu, slbi, immPres, lbi;
    output reg seq, sl, sco;
    output reg [1:0] aluCtl;
 
@@ -21,6 +21,7 @@ begin
 	seq <= 0;
 	linkCtl <= 0;
 	jrCtl <= 0;
+	stuCtl <= 0;
 	case (instr[15:11])
         5'b00000: begin
         	// HALT, Don't Cares
@@ -107,9 +108,9 @@ begin
         // Stu
 	5'b10011: begin
 		
-		  regWrite <= 1; aluSrc <= 1; memWrite <= 1; memRead <= 0; memToReg <= 1; branchCtl <= 0; jumpCtl <= 0;
+		  regWrite <= 1; aluSrc <= 1; memWrite <= 1; memRead <= 0; memToReg <= 0; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; extCtl <= 1; stu <= 1; slbi <= 0; immPres <= 1; lbi <= 0;
-                  aluCtl <= 0;
+                  aluCtl <= 0; stuCtl <= 1;
 	  end
 	// Btr
 	5'b11001: begin 

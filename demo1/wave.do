@@ -1,7 +1,6 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /proc_hier_bench/PC
-add wave -noupdate /proc_hier_bench/next_PC
 add wave -noupdate /proc_hier_bench/Inst
 add wave -noupdate /proc_hier_bench/Halt
 add wave -noupdate /proc_hier_bench/inst_count
@@ -13,9 +12,9 @@ add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/
 add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/decodeRegisters/R5_out
 add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/decodeRegisters/R6_out
 add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/decodeRegisters/R7_out
+add wave -noupdate -expand -group Registers /proc_hier_bench/DUT/p0/decodeStage/writeEn
 add wave -noupdate -divider extension
 add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/exImmVaL
-add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/extension/instr
 add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/extension/jumpimm
 add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/extension/extVal
 add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/extension/immCTL
@@ -59,9 +58,14 @@ add wave -noupdate -group {Control Signals} /proc_hier_bench/DUT/p0/ctlSignals/s
 add wave -noupdate -group {Control Signals} /proc_hier_bench/DUT/p0/ctlSignals/aluCtl
 add wave -noupdate -group {Control Signals} /proc_hier_bench/DUT/p0/executeStage/executeALU/sign
 add wave -noupdate -group {Control Signals} /proc_hier_bench/DUT/p0/executeStage/executeALU/Zero
-add wave -noupdate /proc_hier_bench/DUT/p0/decodeStage/writeEn
+add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/addr
+add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/clk
+add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/data_in
+add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/data_out
+add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/enable
+add wave -noupdate -expand -group Memory /proc_hier_bench/DUT/p0/memoryStage/data_mem/wr
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {3161 ns} 0}
+WaveRestoreCursors {{Cursor 1} {2133 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 388
 configure wave -valuecolwidth 100
@@ -77,4 +81,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {2502 ns} {3448 ns}
+WaveRestoreZoom {2253 ns} {3199 ns}

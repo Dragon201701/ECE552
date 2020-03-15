@@ -4,9 +4,9 @@
    Filename        : decode.v
    Description     : This is the module for the overall decode stage of the processor.
 */
-module decode (instr, writeEn, writeData, immCtl, extCtl, immPres, jumpCtl, linkCtl, rst, clk, read1Data, read2Data, exImmVaL, err);
+module decode (instr, writeEn, writeData, immCtl, extCtl, immPres, jumpCtl, linkCtl, stuCtl, rst, clk, read1Data, read2Data, exImmVaL, err);
 
-    input   writeEn, immCtl, extCtl, clk, rst, immPres, jumpCtl, linkCtl;
+    input   writeEn, immCtl, extCtl, clk, rst, immPres, jumpCtl, linkCtl, stuCtl;
     input   [15:0]  instr; // instruction
     input   [15:0]  writeData;
     output err;
@@ -20,7 +20,7 @@ module decode (instr, writeEn, writeData, immCtl, extCtl, immPres, jumpCtl, link
     assign Rs = instr[10:8];
     assign R1 = instr[7:5];
     //assign R2 = instr[4:2];
-    assign R2 = (jumpCtl & linkCtl) ? 3'b111 : (immPres ? immCtl ? instr[10:8] : instr[7:5] : instr[4:2]);
+    assign R2 = (stuCtl)? instr[10:8]:(jumpCtl & linkCtl) ? 3'b111 : (immPres ? immCtl ? instr[10:8] : instr[7:5] : instr[4:2]);
     regFile decodeRegisters(
                 // Outputs
                 .read1Data(read1Data), .read2Data(read2Data), .err(err),
