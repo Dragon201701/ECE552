@@ -1,0 +1,2 @@
+Arch trace has a PC not defined in binary image. Panic.
+0000 INUM:        0 PC: 0x0000
