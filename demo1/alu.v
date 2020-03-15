@@ -34,8 +34,8 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   001 sll Shift left logical
   010 sra Shift right arithmetic
   011 srl Shift right logical
-  100 ADD A+B
-  101 AND A AND B
+  100 ADD A + B
+  101 SUB B - A
   110 OR  A OR B
   111 XOR A XOR B
   */
