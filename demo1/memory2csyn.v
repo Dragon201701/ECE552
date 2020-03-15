@@ -34,7 +34,7 @@
 //
 //////////////////////////////////////
 
-module memory2c (data_out, data_in, addr, enable, wr, createdump, clk, rst);
+module memory2csync (data_out, data_in, addr, enable, wr, createdump, clk, rst);
 
    output  [15:0] data_out;
    input [15:0]   data_in;

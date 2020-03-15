@@ -5,9 +5,9 @@
    Description     : This module contains all components in the Memory stage of the 
                      processor.
 */
-module memory (aluOut, wrData, memRead, memWrite, memToReg, clk, rst, memoryOut, halt);
+module memory (aluOut, wrData, memRead, memWrite, clk, rst, memoryOut, halt);
 
-   input memRead, memWrite, memToReg, clk, rst, halt;
+   input memRead, memWrite, clk, rst, halt;
   
    input [15:0] wrData, aluOut;
    output [15:0] memoryOut;

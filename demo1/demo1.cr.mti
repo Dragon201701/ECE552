@@ -75,12 +75,26 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	shifter
 
+} {} {}} D:/ECE552/demo1/memory2c.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2c.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module memory2c
+
+Top level modules:
+	memory2c
+
 } {} {}} D:/ECE552/demo1/regFile_bypass.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/regFile_bypass.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module regFile_bypass
 
 Top level modules:
 	regFile_bypass
+
+} {} {}} D:/ECE552/demo1/memory2csyn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/memory2csyn.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module memory2csync
+
+Top level modules:
+	memory2csync
 
 } {} {}} D:/ECE552/demo1/dff.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/dff.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -95,6 +109,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	cla_16b
+
+} {} {}} D:/ECE552/demo1/control.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/control.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module control
+
+Top level modules:
+	control
 
 } {} {}} D:/ECE552/demo1/wb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/wb.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018

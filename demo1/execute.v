@@ -4,10 +4,10 @@
    Filename        : execute.v
    Description     : This is the overall module for the execute stage of the processor.
 */
-module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCtl, branchCtl, regData1, regData2, immVal, inc_pc, instr, invA, invB, new_pc, Out, Zero, Ofl);
+module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCtl, branchCtl, regData1, regData2, immVal, inc_pc, instr, invA, invB, new_pc, Out, Zero, Ofl, memRead, memWrite);
 
    input sl, sco, seq;
-   input slbi, invA, invB, aluSrc, immPres, btr, jumpCtl, jrCtl, linkCtl, branchCtl;
+   input slbi, invA, invB, aluSrc, immPres, btr, jumpCtl, jrCtl, linkCtl, branchCtl, memRead, memWrite;
    input [15:0] regData1, regData2, immVal, instr, inc_pc;
    wire [15:0] jb_pc, InA, InB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut;
    wire [2:0] opCode;
@@ -28,7 +28,7 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCt
    // What operation is it
    // If an immediate is present, will have to use
    // Different bit numbers to represent
-   assign opCode = (jumpCtl & jrCtl)? 3'b100 : immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]};
+   assign opCode = ((jumpCtl & jrCtl)|memRead|memWrite)? 3'b100 : immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]};
 
    assign sign = (regData1[15] | regData2[15]);
 

@@ -93,14 +93,14 @@ begin
 	// St
 	5'b10000: begin
 		
-		  regWrite <= 0; aluSrc <= 1; memWrite <= 1; memRead <= 0; memToReg <= 1; branchCtl <= 0; jumpCtl <= 0;
+		  regWrite <= 0; aluSrc <= 1; memWrite <= 1'b1; memRead <= 0; memToReg <= 1; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; extCtl <= 1; stu <= 0; slbi <= 0; immPres <= 1; lbi <= 0;
                   aluCtl <= 0;
 	  end
         // Ld
 	5'b10001: begin
 		
-		  regWrite <= 1; aluSrc <= 1; memWrite <= 0; memRead <= 1; memToReg <= 1; branchCtl <= 0; jumpCtl <= 0;
+		  regWrite <= 1; aluSrc <= 1; memWrite <= 0; memRead <= 1'b1; memToReg <= 1; branchCtl <= 0; jumpCtl <= 0;
                   invA <= 0; invB <= 0; halt <= 0; noOp <= 0; immCtl <= 0; extCtl <= 1; stu <= 0; slbi <= 0; immPres <= 1; lbi <= 0;
                   aluCtl <= 0;
 	  end
