@@ -5,13 +5,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	clkrst
 
-} {} {}} D:/ECE552/demo1/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/execute.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module execute
-
-Top level modules:
-	execute
-
 } {} {}} D:/ECE552/demo1/decode.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/decode.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module decode
@@ -152,13 +145,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	wb
 
-} {} {}} D:/ECE552/demo1/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/alu.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module alu
-
-Top level modules:
-	alu
-
 } {} {}} D:/ECE552/demo1/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/not1.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module not1
@@ -179,6 +165,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	proc_hier
+
+} {} {}} D:/ECE552/demo1/proc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/proc.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module proc
+
+Top level modules:
+	proc
 
 } {} {}} D:/ECE552/demo1/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/demo1/xor3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018

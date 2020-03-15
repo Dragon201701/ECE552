@@ -9,7 +9,7 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    input sl, sco, seq, ldOrSt;
    input slbi, jump, branch, immCtl, invA, invB, aluSrc, immPres, btr;
    input [15:0] regData1, regData2, immVal, branchVal, jumpVal, instr, pc;
-   wire [15:0] almost_newPc, newPc, InA, InB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut;
+   wire [15:0] almost_newPc, newPc, InA, InB, inB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut, rotate_bits;
    wire [2:0] opCode;
    wire sign, setOutput, cout, doWeBranch;
 
@@ -23,7 +23,7 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    // One for signed and unsigned
    cla_16b InA_minus_InB_Signed(.A(InA), .B(InB), .C_in(0), .S(InAminusInBsgned), .C_out());
    cla_16b InA_minus_InB(.A(InA), .B(~InB), .C_in(0), .S(InAminusInB), .C_out());
-   
+   cla_16b rotate(.A(16'h0010), .B(~inB), .C_in(0), .S(rotate_bits), .C_out());
    assign InAlessInB = (InA[15] == 1'b1 & InB[15] == 1'b0) ? 1'b1 : 
 	   (InA[15] == 1'b0 & InB[15] == 1'b1) ? 1'b0 :
 	   (InA[15] == 1'b1 & InB[15] == 1'b1) ? InAminusInBsgned[15] : InAminusInB[15];
@@ -36,8 +36,8 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    assign InA = slbi ? (regData1 << 8) : regData1;
 
    // Bottom wire connecting to alu
-   assign InB = aluSrc ? immVal : regData2;
-
+   assign inB = aluSrc ? immVal : regData2;
+   assign InB = (instr[15:11] == 11010)? rotate_bits : inB;
    assign wrData = regData2;
 
    // What operation is it

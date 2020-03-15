@@ -63,14 +63,14 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
                         AND_RESULT;
   assign Zero = (LOGIC_RESULT == 16'b0)?1:(shifter_out == 16'b00)?1:0;
 
-  assign ror_check = (Op[1:0] == 2'b10) ? rotate : shifter_out;
-  assign Out = (Op[2] == 1)? LOGIC_RESULT:ror_check;
-
+  //assign ror_check = (Op[1:0] == 2'b10) ? rotate : shifter_out;
+  //assign Out = (Op[2] == 1)? LOGIC_RESULT:ror_check;
+  assign Out = (Op[2] == 1)? LOGIC_RESULT:shifter_out;
   // Rotate 
-  always @ (*)
+  /*always @ (*)
   begin
   tmp <= {A, A} >> B[3:0];
   end
-  assign rotate = tmp[15:0];
+  assign rotate = tmp[15:0];*/
 
 endmodule
