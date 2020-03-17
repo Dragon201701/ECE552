@@ -9,48 +9,53 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    input sl, sco, seq, ldOrSt;
    input slbi, jump, branch, immCtl, invA, invB, aluSrc, immPres, btr;
    input [15:0] regData1, regData2, immVal, branchVal, jumpVal, instr, pc;
-   wire [15:0] almost_newPc, newPc, InA, InB, inB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut, rotate_bits, out1;
+   wire [15:0] almost_newPc, newPc, InA, InB, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut;
    wire [2:0] opCode;
    wire sign, setOutput, cout, doWeBranch;
 
    output [15:0] next_pc, Out, wrData;
    output Zero, Ofl;
 
-   wire [15:0] InAminusInB, InAminusInBsgned;
+   wire [15:0] InAminusInB, InAminusInBsgned, InB_positive;
    wire InAlessInB;
 
+   cla_16b Twos_complementB(.A(~InB), .B(1), .C_in(0), .S(InB_positive), .C_out());
    // InA - InB
    // One for signed and unsigned
-   cla_16b InA_minus_InB_Signed(.A(InA), .B(InB), .C_in(0), .S(InAminusInBsgned), .C_out());
-   cla_16b InA_minus_InB(.A(InA), .B(~InB), .C_in(0), .S(InAminusInB), .C_out());
-   cla_16b rotate(.A(16'h0010), .B(~inB), .C_in(1'b1), .S(rotate_bits), .C_out());
+   cla_16b InA_minus_InB_Signed(.A(InA), .B(InB_positive), .C_in(0), .S(InAminusInBsgned), .C_out());
+	cla_16b InA_minus_InB(.A(InA), .B(InB_positive), .C_in(0), .S(InAminusInB), .C_out());
+
    assign InAlessInB = (InA[15] == 1'b1 & InB[15] == 1'b0) ? 1'b1 : 
 	   (InA[15] == 1'b0 & InB[15] == 1'b1) ? 1'b0 :
 	   (InA[15] == 1'b1 & InB[15] == 1'b1) ? InAminusInBsgned[15] : InAminusInB[15];
 
-   // slt and sle for last parts
-   
+
    assign setOutput = sco ? cout : seq ? (InA == InB) : (sl & instr[11]) ? InAlessInB : (InAlessInB | (InA == InB));
+
+
+
+   // slt and sle for last parts
+   //assign setOutput = sco ? cout : seq ? (InA == InB) : (sl & instr[11]) ? ($signed(InA) < $signed(InB)) : ($signed(InA) <= $signed(InB));
 
    // Top wire connecting to alu
    assign InA = slbi ? (regData1 << 8) : regData1;
 
    // Bottom wire connecting to alu
-   assign inB = aluSrc ? immVal : regData2;
-   assign InB = (instr[15:11] == 5'b10110)? rotate_bits : inB;
+   assign InB = aluSrc ? immVal : regData2;
+
    assign wrData = regData2;
 
    // What operation is it
    // If an immediate is present, will have to use
    // Different bit numbers to represent
-   assign opCode = (instr[15:11]==5'b10110)? 3'b000:ldOrSt ? instr[15:13] : (immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]});
+   assign opCode = ldOrSt ? instr[15:13] : (immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]});
 
    assign sign = (regData1[15] | regData2[15]);
 
    alu executeALU(.slbi(slbi), .InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl), .cout(cout));  
 
-   assign out1 = (sl | seq | sco) ? setOutput : btr ? {InA[0],InA[1],InA[2],InA[3],InA[4],InA[5],InA[6],InA[7],InA[8],InA[9],InA[10],InA[11],InA[12],InA[13],InA[14],InA[15]} : aluOut;
-   assign Out = ((instr[15:11]==5'b11101)&InAlessInB)?16'h0001:out1;
+   assign Out = (sl | seq | sco) ? setOutput : btr ? {InA[0],InA[1],InA[2],InA[3],InA[4],InA[5],InA[6],InA[7],InA[8],InA[9],InA[10],InA[11],InA[12],InA[13],InA[14],InA[15]} : aluOut;
+
    assign immValShifted = immVal << 1;
 
    // Sign extend the branch and jump values
@@ -65,9 +70,9 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    // 2-bit mux for resolving the next instruction
    assign almost_newPc = jump ? jumpValSigned : branch ? branchValSigned : immVal;
    
-   cla_16b new_Pc(.A(almost_newPc), .B(pc_or_rs), .C_in(0), .S(newPc), .C_out());
+   
    //assign newPc = almost_newPc + pc_or_rs;
-
+   cla_16b incPC(.A(almost_newPc), .B(pc_or_rs), .C_in(0), .S(newPc), .C_out());
  
    // Resolve branches
    assign doWeBranch = (instr[12:11] == 2'b00 & branch) ? (regData1[15:0] == 0) :

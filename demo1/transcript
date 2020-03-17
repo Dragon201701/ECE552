@@ -1,5 +1,5 @@
 # vsim -c proc_hier_bench -lib __work 
-# Start time: 22:32:20 on Mar 14,2020
+# Start time: 16:17:18 on Mar 15,2020
 # //  ModelSim DE 10.7c Aug 17 2018Linux 4.15.0-88-generic
 # //
 # //  Copyright 1991-2018 Mentor Graphics Corporation
@@ -37,24 +37,27 @@
 # Loading __work.execute
 # Loading __work.alu
 # Loading __work.shifter
+# Loading __work.shifter32
 # Loading __work.memory
 # Loading __work.wb
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'C_in'. The port definition is at: cla_16b.v(7).
 #    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/fetchStage/incPC File: fetch.v Line: 20
 # ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (16) for port 'writeRegSel'. The port definition is at: regFile.v(14).
 #    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/decodeStage/decodeRegisters File: decode.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B'. The port definition is at: cla_16b.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/Twos_complementB File: execute.v Line: 22
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'C_in'. The port definition is at: cla_16b.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/InA_minus_InB_Signed File: execute.v Line: 24
+#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/Twos_complementB File: execute.v Line: 22
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'C_in'. The port definition is at: cla_16b.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/InA_minus_InB File: execute.v Line: 25
+#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/InA_minus_InB_Signed File: execute.v Line: 25
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'C_in'. The port definition is at: cla_16b.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/rotate File: execute.v Line: 26
+#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/InA_minus_InB File: execute.v Line: 26
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'C_in'. The port definition is at: cla_16b.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/new_Pc File: execute.v Line: 68
+#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_bench/DUT/p0/executeStage/incPC File: execute.v Line: 75
 run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.trace for output
 # ** Note: $finish    : proc_hier_bench.v(96)
-#    Time: 10 us  Iteration: 1  Instance: /proc_hier_bench
-# End time: 22:32:21 on Mar 14,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 6
+#    Time: 17800 ns  Iteration: 1  Instance: /proc_hier_bench
+# End time: 16:17:19 on Mar 15,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 7
