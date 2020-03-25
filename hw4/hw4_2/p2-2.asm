@@ -16,13 +16,13 @@
 // ECE/CS552, Spring 2020
 // Yuanzhe Liu, 3/24/2020
 
-lbi r0, 10; //loop index
-lbi r1, 0; // sum result
+lbi r0, 10 //loop index
+lbi r1, 0 // sum result
 // lbi r3, 0; // compare result
 
 .Loop:
 	add r1, r1, r0
-	subi r0, r0, 1
+	addi r0, r0, -1
 	bnez r0, .Loop // if r0 != 0, continue.
 .Loop_Done:
 	halt
