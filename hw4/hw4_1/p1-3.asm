@@ -12,6 +12,6 @@ lbi r1, 5
 lbi r2, 0
 sub r2, r1, r0
 lbi r3, 1
-and r3, r3, r1
+andn r3, r3, r1
 add r4, r2, r0
 

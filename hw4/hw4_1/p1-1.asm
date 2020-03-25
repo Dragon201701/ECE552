@@ -7,9 +7,8 @@
 //
 // ECE/CS552, Spring 2020
 // Yuanzhe Liu, 3/24/2020
-
-lbi		r0, 8;
-lbi		r1, 16;
-lbi		r2, 32;
-ADD		r3, r0, r1; // R3 <= 24
-ADD		r4, r3, r2; // R4 <= 56
+lbi		r0, 8
+lbi		r1, 16
+lbi		r2, 32
+ADD		r3, r0, r1 // R3 <= 24
+ADD		r4, r3, r2 // R4 <= 56
