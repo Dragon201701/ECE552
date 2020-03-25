@@ -6,6 +6,15 @@
 // A for loop that sums 1 to 10 together (of course, get 55) 
 // for (i = 10; i > 0; i--)
 //	sum += i;
+// If I implement this way, at most of the time the branch is NOT taken.
+// This is equivalent to 
+// i = 10;
+// while(1){
+//  if(i==0) break;
+//  sum+=i;
+//  i--; 
+// }
+// 
 // ECE/CS552, Spring 2020
 // Yuanzhe Liu, 3/24/2020
 
