@@ -1,0 +1,31 @@
+Branch Prediction Programs Explained
+
+P2 b.)
+
+Both programs have similar underlying code whereby a value is incremented
+in a loop for around 10 loop iterations.
+
+p2-1.asm:
+
+In this program, the branch prediction algorithmn should predict not taken
+as the program will continue to loop for 10 iterations. If the branch prediction
+predicts a branch taken in this instance, we would be wasting clock cycles as we would have
+to flush out the instructions at the branching location. Predicting not taken allows the 
+program to perform optimally, only losing clock cycles when the program ultimately ends at
+the 10th iteration.
+
+p2-2.asm:
+
+This program is the opposite to p2-2.asm. In this program, we wish the branch prediction algorithmn to predict taken
+as the program utilizes the branching to complete it's 10 iterations. In a similar fashion to p2-1.asm, predicting that
+the branch is not taken would result in wasted clock cycles due to flushing. Because we are predicting that the branch is taken,
+we are only wasting clock cycles on the 10th iteration where the loop ultimately ends and the branch is indeed not taken.
+
+
+P2 c.)
+
+Assuming that the branch resolution occurs at the ID stage in the pipeline, then because every branch resolution is 
+fairly trivial (<, !=, >, ==) the cycle penality time will always be one cycle. This is a result in the case where the prediction
+is wrong and an instruction is loaded in the the Fetch stage of the pipeline. Because the instruction is wrong, then the instruction
+that is loaded into the fetch stage must be flushed out, essentially wasting one clock cycle.
+
