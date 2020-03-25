@@ -1,0 +1,35 @@
+Explanation of the programs
+
+p1-1.asm:
+-EX-EX forwarding Test
+
+The EX-EX forwarding is that the result of first instruction ALU operation can be
+directly feed into the next instructions's alu input.
+
+In this file instance, the forwarding must occur at instructions 4 and 5 on register r3.
+It must occur because without EX-EX forwarding, instruction 5 would fetch the old value of 
+register r3 (pre instruction 4) and therefore the program would behave unexpectedly.
+
+
+p1-2.asm:
+-MEM-EX forwarding Test
+
+When the next instruction requires data from a previous load instruction,
+the load-use data hazard arise. The MEM-EX forwarding will allow the data
+available at the end of memory stage of previous instruction available to feed
+into the next instruction execution stage. However, we still have to stall one cycle.
+
+In this file instance, the forwarding must occur at instructions 6 and 8 on register r3.
+Forwarding is required as otherwise the value fetch at instruction 8 would be the old value of
+register r3 (pre instruction 6) and therefore the program would behave unexpectedly.
+
+p1-3.asm:
+-Register by-passing Test
+
+The register by-passing allows the data to be write
+into the register and read out at the same time
+
+In this file instance, the register by-passing test occurs at instructions 1 and 4 on register r0.
+Register by-passing is required because it allows programs to save a cycle by having to stall the while
+waiting for the register to written to. With register by-passing, this can be accomplished on the same cycle.
+
