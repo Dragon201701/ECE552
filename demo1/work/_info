@@ -8,678 +8,741 @@ z2
 cModel Technology
 dD:/ECE552/demo1
 valu
-!s110 1584306830
+Z0 !s110 1585776649
 !i10b 1
-!s100 Qh9cYK2fRSVzF4habP0J>0
-I;b@Wg2HTJGmNP3lj^5WkG0
-Z0 VDg1SIo80bB@j0V0VzS_@n1
-Z1 d/u/k/e/keyser/cs552/hw3/ECE552/demo1
-w1584306809
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/alu.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/alu.v
-Z2 L0 12
-Z3 OP;L;10.7c;67
+!s100 i6iLf]NW09`e67nJXzE;e3
+I1jHI:@]zOHYh`TaNOQVMV0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1
+Z3 w1585759568
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/alu.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/alu.v
+Z4 L0 12
+Z5 OP;L;10.7c;67
 r1
 !s85 0
 31
-!s108 1584306830.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/alu.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/alu.v|
+Z6 !s108 1585776649.000000
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/alu.v|
 !i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
+Z7 o-work work
+Z8 tCvgOpt 0
 vcla_16b
-Z6 !s110 1584306831
+R0
 !i10b 1
 !s100 8BIzS`BC=:HnE1GE12Y[B1
-I7j[dmGKN0NCE^DJ]0>Coc1
-R0
+IJ]B3S=@FG=g^;jSAI0XT>2
 R1
-Z7 w1584299328
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/cla_16b.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/cla_16b.v
-L0 7
-R3
-r1
-!s85 0
-31
-Z8 !s108 1584306831.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/cla_16b.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/cla_16b.v|
-!i113 1
-R4
-R5
-vcla_4b
-R6
-!i10b 1
-!s100 RI3fLC3DR5AP2YEBMCN]L1
-IR1[FNUN^W]7g4NIfIMFaf0
-R0
-R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/cla_4b.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/cla_4b.v
-L0 7
-R3
-r1
-!s85 0
-31
-R8
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/cla_4b.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/cla_4b.v|
-!i113 1
-R4
-R5
-vclkrst
-R6
-!i10b 1
-!s100 ZzzHl;B1mbcM<UZQX`N5V1
-IVXDPkV`P;NR1QHhnGH1Xl2
-R0
-R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/clkrst.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/clkrst.v
 R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/cla_16b.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/cla_16b.v
+L0 7
+R5
 r1
 !s85 0
 31
-R8
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/clkrst.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/clkrst.v|
+R6
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/cla_16b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/cla_16b.v|
 !i113 1
+R7
+R8
+vcla_4b
+R0
+!i10b 1
+!s100 RI3fLC3DR5AP2YEBMCN]L1
+I1NleAb@ciB2VZ`=_g_R[e0
+R1
+R2
+R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/cla_4b.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/cla_4b.v
+L0 7
+R5
+r1
+!s85 0
+31
+R6
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/cla_4b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/cla_4b.v|
+!i113 1
+R7
+R8
+vclkrst
+R0
+!i10b 1
+!s100 ZzzHl;B1mbcM<UZQX`N5V1
+IC`kch4oZ8NHDnZ3Q=S6VS0
+R1
+R2
+R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/clkrst.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/clkrst.v
 R4
 R5
-vcontrol
+r1
+!s85 0
+31
 R6
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/clkrst.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/clkrst.v|
+!i113 1
+R7
+R8
+vcontrol
+R0
 !i10b 1
 !s100 ijW;I<ob`eG[jncQTgOm33
-I>@KjHL4_6Af2S=JQD2Kf?3
-R0
+ILQ2I`Jn[59Bi4A>UfZz>@1
 R1
-Z9 w1584299851
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/control.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/control.v
-L0 2
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/control.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/control.v
+L0 2
+R5
 r1
 !s85 0
 31
-R8
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/control.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/control.v|
+R6
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/control.v|
 !i113 1
-R4
-R5
+R7
+R8
 vdec3to8
-Z10 !s110 1584306832
+Z9 !s110 1585776650
 !i10b 1
 !s100 ?EmIC=Z=`HYfzQGFT[0[g2
-IzObUXNYkBfad:R_o=?aNF0
-R0
+I^<^XC0iJ@:YWS:i]lFb<U1
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/dec3to8.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/dec3to8.v
-L0 1
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/dec3to8.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/dec3to8.v
+L0 1
+R5
 r1
 !s85 0
 31
-Z11 !s108 1584306832.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/dec3to8.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/dec3to8.v|
+Z10 !s108 1585776650.000000
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/dec3to8.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/dec3to8.v|
 !i113 1
-R4
-R5
+R7
+R8
 vdecode
-R10
+R9
 !i10b 1
 !s100 A5IgKk@KlQO5YLg8=D2I70
-IkZdNULRl>YaZZV<XOhKeQ2
-R0
+I;mP7MQIiofMISJ6JF=do01
 R1
-R9
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/decode.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/decode.v
+R2
+w1585775599
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/decode.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/decode.v
 L0 7
-R3
+R5
 r1
 !s85 0
 31
-R11
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/decode.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/decode.v|
-!i113 1
-R4
-R5
-vdff
 R10
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/decode.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/decode.v|
+!i113 1
+R7
+R8
+vdff
+R9
 !i10b 1
 !s100 YVYPgX10jcD@:7eFEVS1<3
-INR>?cAJcaN4XYY1gIl1]^3
-R0
+IELCml1o8_RmfkZHk?MbDa2
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/dff.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/dff.v
+R2
+R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/dff.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/dff.v
 L0 6
-R3
+R5
 r1
 !s85 0
 31
-R11
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/dff.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/dff.v|
-!i113 1
-R4
-R5
-vexecute
 R10
-!i10b 1
-!s100 ilQ]`fPljA_dK6HJ8F[G]0
-I5TF<`R1QimZ]GkmNhmC0k0
-R0
-R1
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/dff.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/dff.v|
+!i113 1
+R7
+R8
+vexecute
 R9
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/execute.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/execute.v
+!i10b 1
+!s100 WUnI[M]<<2`;GH25]NA:@0
+I4E=>bOfCT4XL`X_@0UDjl0
+R1
+R2
+w1585769590
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/execute.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/execute.v
 L0 7
-R3
+R5
 r1
 !s85 0
 31
-R11
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/execute.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/execute.v|
+R10
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/execute.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/execute.v|
 !i113 1
-R4
-R5
+R7
+R8
 vfetch
-Z12 !s110 1584306833
+R9
 !i10b 1
 !s100 Fa22i^RI<A9;:[Kgz<`]`3
-IBhjY4Kn`neHV<84j:YKf<2
-R0
+I_BPWU[WRIYh05MED`P@Q>1
 R1
-R9
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/fetch.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/fetch.v
-L0 7
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fetch.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fetch.v
+L0 7
+R5
 r1
 !s85 0
 31
-Z13 !s108 1584306833.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/fetch.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/fetch.v|
+R10
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fetch.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fetch.v|
 !i113 1
-R4
-R5
+R7
+R8
 vfullAdder_1b
-R12
+R9
 !i10b 1
 !s100 MIH>VzNBX:il5J:6M1Cad2
-IQaLdE^TlTP^=`<46dEGN<0
-R0
+IGFJ<EIbIzLHZm>GJ_1`:@0
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/fullAdder_1b.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/fullAdder_1b.v
-L0 7
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fullAdder_1b.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fullAdder_1b.v
+L0 7
+R5
 r1
 !s85 0
 31
-R13
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/fullAdder_1b.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/fullAdder_1b.v|
+R10
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fullAdder_1b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fullAdder_1b.v|
 !i113 1
-R4
-R5
+R7
+R8
 nfull@adder_1b
 vmemory
-R12
+Z11 !s110 1585776651
 !i10b 1
 !s100 KGznR_=U39cz5SjzL4cGh2
-I9C<haV8e?l]fN9`kUiEN_0
-R0
+IXXC==QL9]a14[Ml:e`F9`3
 R1
-R9
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/memory.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/memory.v
-L0 8
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/memory.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/memory.v
+L0 8
+R5
 r1
 !s85 0
 31
-R13
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/memory.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/memory.v|
+R10
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/memory.v|
 !i113 1
-R4
-R5
+R7
+R8
 vmemory2c
-Z14 !s110 1584306834
+R11
 !i10b 1
 !s100 mBla:Z3FU]LZ9QoAFNKak1
-I17M91WdLKTE3P;KezO>W61
-R0
+IA8`d:k<8KgV?8Tomm6Z]z3
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/memory2c.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/memory2c.v
-L0 35
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/memory2c.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/memory2c.v
+L0 35
+R5
 r1
 !s85 0
 31
-Z15 !s108 1584306834.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/memory2c.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/memory2c.v|
+Z12 !s108 1585776651.000000
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/memory2c.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/memory2c.v|
 !i113 1
-R4
-R5
+R7
+R8
 vmux8_16
-R14
+R11
 !i10b 1
 !s100 W>@d5<2d_eB]:BjCYE[Qa2
-I3=9AMJEHh[7QZN@ON<>El1
-R0
+IACDC`1jFT8GbZ=WA10W4?2
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/mux8_16.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/mux8_16.v
-L0 1
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/mux8_16.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/mux8_16.v
+L0 1
+R5
 r1
 !s85 0
 31
-R15
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/mux8_16.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/mux8_16.v|
+R12
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/mux8_16.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/mux8_16.v|
 !i113 1
-R4
-R5
+R7
+R8
 vnand2
-Z16 !s110 1584306835
+R11
 !i10b 1
 !s100 Q>o694DW2Ab[kzXTIDbc<3
-I_AUIHHZnzLLg3ld;d4hDG1
-R0
+I:Y4Tlk@c=X[g5X<g<:;692
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nand2.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nand2.v
-L0 7
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nand2.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nand2.v
+L0 7
+R5
 r1
 !s85 0
 31
-R15
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nand2.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nand2.v|
+R12
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nand2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nand2.v|
 !i113 1
-R4
-R5
+R7
+R8
 vnand3
-R16
+R11
 !i10b 1
 !s100 zBE_]imGj0lgW3gk1<obB3
-ImfE^XgNA8OO=DJ2L7Zblc1
-R0
+IQ8MbK2W;HVa]U3f3_D[zR2
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nand3.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nand3.v
-L0 7
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nand3.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nand3.v
+L0 7
+R5
 r1
 !s85 0
 31
-!s108 1584306835.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nand3.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nand3.v|
+R12
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nand3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nand3.v|
 !i113 1
-R4
-R5
+R7
+R8
 vnor2
-Z17 !s110 1584306836
+R11
 !i10b 1
 !s100 WBP@[]hASV7`=AA:zYl?]1
-IWg]0G>b2@`?aoF:Xz]^gZ2
-R0
+IalHG@3JOCflO90ID4cAn20
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nor2.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nor2.v
-L0 7
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nor2.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nor2.v
+L0 7
+R5
 r1
 !s85 0
 31
-Z18 !s108 1584306836.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nor2.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nor2.v|
+R12
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nor2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nor2.v|
 !i113 1
-R4
-R5
+R7
+R8
 vnor3
-R17
+Z13 !s110 1585776652
 !i10b 1
 !s100 7gG>ZYV7g@NCSC@S:eFj:3
-I7ScViYHVUmF07EB?;IhNH3
-R0
+IHNinSk2@Fo:2BPT@^g<CI1
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nor3.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nor3.v
-L0 7
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nor3.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nor3.v
+L0 7
+R5
 r1
 !s85 0
 31
-R18
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nor3.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/nor3.v|
+Z14 !s108 1585776652.000000
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nor3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nor3.v|
 !i113 1
-R4
-R5
+R7
+R8
 vnot1
-!s110 1584306837
+R13
 !i10b 1
 !s100 b4KmB4Ek_bEURaRe6_AkX0
-IYmao_MI5_`]cg2=VRbXI^1
-R0
+I7N^Nj`^SzGXU@1m=GklL83
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/not1.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/not1.v
-L0 7
+R2
 R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/not1.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/not1.v
+L0 7
+R5
 r1
 !s85 0
 31
-!s108 1584306837.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/not1.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/not1.v|
+R14
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/not1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/not1.v|
 !i113 1
-R4
-R5
+R7
+R8
 vPC
-Z19 !s110 1584306838
+R13
 !i10b 1
 !s100 AAndOZ1CB:^`TA0W;FlO51
-ITlQ3_>hRge2MiJ;V@`cjK3
-R0
+Il_YhYSUj<HPnHK:BhmH2z0
 R1
-R9
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/pc.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/pc.v
+R2
+R3
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/pc.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/pc.v
 L0 1
-R3
+R5
 r1
 !s85 0
 31
-Z20 !s108 1584306838.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/pc.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/pc.v|
+R14
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/pc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/pc.v|
 !i113 1
-R4
-R5
+R7
+R8
 n@p@c
-vproc
-R19
+vpipeline_reg_ctl
+R13
 !i10b 1
-!s100 mnFR:[TmTIJ?V[U5OVzjk2
-IWml^K7?Kn2<c=cGXEA5Hz3
-R0
+!s100 S0CHecMB6B;D<ii15`j`Q1
+IGZ=<h_EYWXB:oT>O[IY`L0
 R1
-R9
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc.v
-L0 4
-R3
+R2
+w1585771040
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/pipeline_reg.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/pipeline_reg.v
+L0 1
+R5
 r1
 !s85 0
 31
-R20
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc.v|
+R14
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/pipeline_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/pipeline_reg.v|
 !i113 1
-R4
+R7
+R8
+vproc
+R13
+!i10b 1
+!s100 78mgIc6m=QgFYEA6VojXN2
+IcnQ9l^b[_;XPR1[8IChnE2
+R1
+R2
+w1585776372
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc.v
+L0 4
 R5
+r1
+!s85 0
+31
+R14
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc.v|
+!i113 1
+R7
+R8
 vproc_hier
-R19
+Z15 !s110 1585776653
 !i10b 1
 !s100 fCQ@9<WUiG_i1e@liDFCK3
-IZSW=:efQiL7l<E2hO]dJQ3
-R0
+IO?GM;@zU>4?K=>Tb>[M8j3
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc_hier.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc_hier.v
+R2
+Z16 w1585759569
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier.v
 L0 6
-R3
+R5
+r1
+!s85 0
+31
+Z17 !s108 1585776653.000000
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier.v|
+!i113 1
+R7
+R8
+vproc_hier_bench
+R15
+!i10b 1
+!s100 QzeK@QFY2<i[NSeAOn6PL0
+IF;=ReVF>?K8S95;o;C_PF2
+R1
+R2
+R16
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_bench.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_bench.v
+L0 4
+R5
+r1
+!s85 0
+31
+R17
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_bench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_bench.v|
+!i113 1
+R7
+R8
+vproc_hier_pbench
+R15
+!i10b 1
+!s100 ?JY[fJ@ZnX7BlXLEj[L9D2
+IIeS;KRecj2EX[bT9]`I>m0
+R1
+R2
+w1585771258
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_pbench.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_pbench.v
+L0 4
+R5
+r1
+!s85 0
+31
+R17
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_pbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_pbench.v|
+!i113 1
+R7
+R8
+vreg16
+R15
+!i10b 1
+!s100 Hf[Vf00]?4AXoYe`zO1?J0
+IjeT4c]>I[^Wh^2`1QCbGF3
+R1
+R2
+R16
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/reg16.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/reg16.v
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/reg16.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/reg16.v|
+!i113 1
+R7
+R8
+vreg3
+R15
+!i10b 1
+!s100 I<K1;<lAnTLQ:iAen0_TU0
+I?>GF0`5zX4^G^T:m:eF0J1
+R1
+R2
+w1585765349
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/reg3.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/reg3.v
+L0 1
+R5
+r1
+!s85 0
+31
+R17
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/reg3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/reg3.v|
+!i113 1
+R7
+R8
+vregFile
+R15
+!i10b 1
+!s100 V>AN3918[FT9;ZPkF@FnQ0
+IEPMP6<G=@CPlL]@M^VkJl2
+R1
+R2
+R16
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/regFile.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/regFile.v
+Z18 L0 10
+R5
+r1
+!s85 0
+31
+R17
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/regFile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/regFile.v|
+!i113 1
+R7
+R8
+nreg@file
+vregFile_bypass
+Z19 !s110 1585776654
+!i10b 1
+!s100 nj48mWY>1a04JoQjD7EWe1
+IKJFK?kb]OZhckUd^I@haI1
+R1
+R2
+R16
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/regFile_bypass.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/regFile_bypass.v
+L0 8
+R5
+r1
+!s85 0
+31
+Z20 !s108 1585776654.000000
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/regFile_bypass.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/regFile_bypass.v|
+!i113 1
+R7
+R8
+nreg@file_bypass
+vsext5_16
+R19
+!i10b 1
+!s100 l4G9`IS8P4C?>j4IhNflW3
+IZQmI`nz8D:F[4WDKSOCHU0
+R1
+R2
+R16
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/sext5_16.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/sext5_16.v
+L0 1
+R5
 r1
 !s85 0
 31
 R20
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc_hier.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc_hier.v|
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/sext5_16.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/sext5_16.v|
 !i113 1
-R4
-R5
-vproc_hier_bench
-Z21 !s110 1584306839
-!i10b 1
-!s100 QzeK@QFY2<i[NSeAOn6PL0
-Ihg0lQA4@T1iN;B2PY`WQf0
-R0
-R1
-R9
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc_hier_bench.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc_hier_bench.v
-L0 4
-R3
-r1
-!s85 0
-31
-Z22 !s108 1584306839.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc_hier_bench.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/proc_hier_bench.v|
-!i113 1
-R4
-R5
-vreg16
-R21
-!i10b 1
-!s100 Hf[Vf00]?4AXoYe`zO1?J0
-I_[:^AD22mUNI`ZGn>]R382
-R0
-R1
 R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/reg16.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/reg16.v
-L0 1
-R3
-r1
-!s85 0
-31
-R22
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/reg16.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/reg16.v|
-!i113 1
-R4
-R5
-vregFile
-R21
-!i10b 1
-!s100 V>AN3918[FT9;ZPkF@FnQ0
-Ilnm>g1AoOIYEPZD21fMLd0
-R0
-R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/regFile.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/regFile.v
-Z23 L0 10
-R3
-r1
-!s85 0
-31
-R22
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/regFile.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/regFile.v|
-!i113 1
-R4
-R5
-nreg@file
-vregFile_bypass
-Z24 !s110 1584306840
-!i10b 1
-!s100 nj48mWY>1a04JoQjD7EWe1
-IPVV9JXAKOSPl9H[E5^CLU1
-R0
-R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/regFile_bypass.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/regFile_bypass.v
-L0 8
-R3
-r1
-!s85 0
-31
-Z25 !s108 1584306840.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/regFile_bypass.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/regFile_bypass.v|
-!i113 1
-R4
-R5
-nreg@file_bypass
-vsext5_16
-R24
-!i10b 1
-!s100 l4G9`IS8P4C?>j4IhNflW3
-I<lG_NV1AZz3oSo94j;R593
-R0
-R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/sext5_16.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/sext5_16.v
-L0 1
-R3
-r1
-!s85 0
-31
-R25
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/sext5_16.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/sext5_16.v|
-!i113 1
-R4
-R5
+R8
 vshifter
-R24
+R19
 !i10b 1
 !s100 mA0bV<E0[;X6RQVn=AVG63
-I:Af4cg_6nETTT<J<2ga@:1
-R0
+IL^odLkH9gz?1JfjDC?eL92
 R1
-R9
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/shifter.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/shifter.v
-R23
-R3
+R2
+R16
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter.v
+R18
+R5
 r1
 !s85 0
 31
-R25
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/shifter.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/shifter.v|
+R20
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter.v|
 !i113 1
-R4
-R5
+R7
+R8
 vshifter32
-R24
+R19
 !i10b 1
 !s100 o?kKlz`U^XH@S6PVJmdm82
-I3iKfD8OFQoS3^eE<J[edN0
-R0
+I_XKU`A3DHolM];;eSM1dI0
 R1
-w1584306635
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/shifter32.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/shifter32.v
-R23
-R3
+R2
+R16
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter32.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter32.v
+R18
+R5
 r1
 !s85 0
 31
-R25
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/shifter32.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/shifter32.v|
+R20
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter32.v|
 !i113 1
-R4
-R5
+R7
+R8
 vwb
-Z26 !s110 1584306841
+R19
 !i10b 1
 !s100 l>Z@lBZ6YRkj?]EJjiEdU1
-I:Qc?QAS2GBSTWV@c@FnOM0
-R0
+IhFjL9cf2VXKLlWkjmRjXS0
 R1
-w1584299852
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/wb.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/wb.v
+R2
+R16
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/wb.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/wb.v
 L0 7
-R3
+R5
 r1
 !s85 0
 31
-Z27 !s108 1584306841.000000
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/wb.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/wb.v|
+R20
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/wb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/wb.v|
 !i113 1
-R4
-R5
+R7
+R8
 vxor2
-R26
+R19
 !i10b 1
 !s100 hi9UOjFnSE]?OOLLFnCZ`0
-IZNNmH`m>ThHl[iWXAVb1:0
-R0
+If;51E7`BAA0J2?_NY>e8;2
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/xor2.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/xor2.v
+R2
+R16
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor2.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor2.v
 L0 7
-R3
+R5
 r1
 !s85 0
 31
-R27
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/xor2.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/xor2.v|
+R20
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor2.v|
 !i113 1
-R4
-R5
+R7
+R8
 vxor3
-R26
+!s110 1585776655
 !i10b 1
 !s100 ^O9JJnzQB<?D0=N8Tn^?M2
-ICOiQPIMUodBQi;BnN^AzM0
-R0
+IZ;d2cfUiWf[ebbQ<=EO022
 R1
-R7
-8/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/xor3.v
-F/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/xor3.v
+R2
+R16
+8/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor3.v
+F/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor3.v
 L0 7
-R3
+R5
 r1
 !s85 0
 31
-R27
-!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/xor3.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/hw3/ECE552/demo1/xor3.v|
+R20
+!s107 /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor3.v|
 !i113 1
-R4
-R5
+R7
+R8

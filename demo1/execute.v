@@ -4,7 +4,7 @@
    Filename        : execute.v
    Description     : This is the overall module for the execute stage of the processor.
 */
-module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regData2, immVal, immCtl, jump, branch, jumpVal, branchVal, pc, instr, invA, invB, next_pc, Out, wrData, Zero, Ofl);
+module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regData2, immVal, immCtl, jump, branch, jumpVal, branchVal, pc, instr, invA, invB, next_pc, Out, wrData, Zero, Ofl, pc_modified);
 
    input sl, sco, seq, ldOrSt;
    input slbi, jump, branch, immCtl, invA, invB, aluSrc, immPres, btr;
@@ -14,7 +14,7 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    wire sign, setOutput, cout, doWeBranch;
 
    output [15:0] next_pc, Out, wrData;
-   output Zero, Ofl;
+   output Zero, Ofl, pc_modified;
 
    wire [15:0] InAminusInB, InAminusInBsgned, InB_positive;
    wire InAlessInB;
@@ -83,6 +83,7 @@ module execute (ldOrSt, sl, sco, seq, immPres, slbi, btr, aluSrc, regData1, regD
    // Either new PC or old PC
    assign next_pc = (jump | doWeBranch) ? newPc : pc;
 
+   assign pc_modified = (jump | doWeBranch);
    // TODO: Probably add logic for Zero and Ofl
 
 endmodule

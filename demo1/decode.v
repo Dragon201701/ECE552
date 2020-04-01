@@ -18,11 +18,12 @@ module decode (slbi, stu, aluOut, writeEn, writeData, writeRegSel, read2RegSel, 
 
     wire [15:0] write = stu ? aluOut : writeData;
     wire [15:0] writeReg = stu ? read1RegSel : writeRegSel; 
+    wire [15:0] read1Out, read2Out;
 
     // Instatiate register file
     regFile decodeRegisters(
                 // Outputs
-                .read1Data(read1Data), .read2Data(read2Data), .err(err),
+                .read1Data(read1Out), .read2Data(read2Out), .err(err),
                 // Inputs
                 .clk(clk), .rst(rst), .read1RegSel(read1RegSel), .read2RegSel(read2RegSel), .writeRegSel(writeReg), .writeData(write), .writeEn(writeEn)
                 );
@@ -36,6 +37,11 @@ module decode (slbi, stu, aluOut, writeEn, writeData, writeRegSel, read2RegSel, 
 
     // Sign extension of immediate occurs here
     assign signedImmVal = slbi ? immVal : immCtl ? { {8{immVal[7]}}, immVal[7:0]} : { {11{immVal[4]}} , immVal[4:0]};
+
+    // Bypass logic
+    assign read1Data = (writeEn & (read1RegSel == writeRegSel)) ? writeData : read1Out;
+    assign read2Data = (writeEn & (read2RegSel == writeRegSel)) ? writeData : read2Out;
+
 
 
 endmodule
