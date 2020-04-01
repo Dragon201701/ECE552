@@ -9,7 +9,7 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCt
    input sl, sco, seq;
    input slbi, invA, invB, aluSrc, immPres, btr, jumpCtl, jrCtl, linkCtl, branchCtl, memRead, memWrite;
    input [15:0] regData1, regData2, immVal, instr, inc_pc;
-   wire [15:0] jb_pc, InA, inA, InB, inB, rotatebits, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut, setOut;
+   wire [15:0] jb_pc, InA, inA, InB, inB, rotaterightbits, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut, setOut;
    wire [2:0] opCode;
    wire sign, setOutput, cout, subCtl, Cin, sltresult, sleresult;
    output [15:0] Out, new_pc;
@@ -26,12 +26,15 @@ module execute (sl, sco, seq, immPres, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCt
    assign inB = branchCtl? 16'h0000 : aluSrc ? immVal :  regData2;
    //assign InA = subCtl?~inA:inA;
    //assign Cin = subCtl?1:0;
-   cla_16b rightrotatebits(.A(16'h0010), .B(~inB), .C_in (1'b1), .S(rotatebits), .C_out());
+   cla_16b rightrotatebits(.A(16'h0010), .B(~inB), .C_in (1'b1), .S(rotaterightbits), .C_out());
    // What operation is it
    // If an immediate is present, will have to use
    // Different bit numbers to represent
-   assign InB = ((instr[15:11] == 5'b10110)|(instr[15:11]==5'b11010))? rotatebits : inB;
-   assign opCode = slbi?3'b110:(instr[15:11] == 5'b10101)?3'b001:((instr[15:11] == 5'b10110)|(instr[15:11]==5'b11010))? 3'b000:((jumpCtl & jrCtl)|memRead|memWrite)? 3'b100 : (sl|seq|sco)? 3'b101:immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]};
+   assign InB = ((instr[15:11] == 5'b10110)|(instr[15:11]==5'b11010))? rotaterightbits : inB;
+   assign opCode = slbi? 3'b110:
+                   (instr[15:11] == 5'b10101)? 3'b001:
+                   ((instr[15:11] == 5'b10110)|(instr[15:11]==5'b11010)|(instr[15:11] == 5'b11010 & instr[0] == 1'b0))? 3'b000:
+      ((jumpCtl & jrCtl)|memRead|memWrite)? 3'b100 : (sl|seq|sco)? 3'b101:immPres ? {~instr[13], instr[12:11]} : {instr[11],instr[1:0]};
    assign sign = (regData1[15] | regData2[15]);
 
    alu executeALU(.InA(InA), .InB(InB), .Cin(1'b0), .Op(opCode), .invA(invA), .invB(invB), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl), .cout(cout));  

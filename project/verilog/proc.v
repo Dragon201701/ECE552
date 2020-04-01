@@ -27,23 +27,15 @@ module proc (/*AUTOARG*/
 
    wire [2:0] regRs, readReg1, readReg2, writeReg1;
    wire [15:0] immVal;
-   wire [15:0] instr, next_pc, exImmVaL, branch, jump, Out, wrData;
+   wire [15:0] instr, fetch_instr, decode_instr, next_pc, exImmVaL, branch, jump, Out, wrData;
    wire [15:0] regData1, regData2, read1Data, read2Data, aluOut, writeData, memoryOut;
    wire [15:0] inc_pc;
    wire [15:0] pc, nextpc;
-
-   // Reset PC on rst signal
-   /*always @ (posedge clk)
-   begin
-	   if (rst)
-		   pc <= 16'h0000;
-	   else
-		   pc <= next_pc;
-   end*/
-
+   wire FD_flush;
+   assign FD_flush = 1'b0;
    assign nextpc = rst? 16'h0000:next_pc;
    reg16 pcreg(.clk(clk),.rst(rst),.en(1'b1),.D(nextpc), .Q(pc));
-   /* your code here -- should include instantiations of fetch, decode, execute, mem and wb modules */
+   /* your code here -- should include instantiation+-s of fetch, decode, execute, mem and wb modules */
 
    // Setup Control signals with control module
    control ctlSignals(.instr(instr), .clk(clk), .rst(rst), .regWrite(regWrite), .aluSrc(aluSrc), .aluCtl(aluCtl), .memWrite(memWrite), .memRead(memRead), .memToReg(memToReg), .branchCtl(branchCtl), 
@@ -52,7 +44,11 @@ module proc (/*AUTOARG*/
    // Fetch
    //fetch fetchStage(.pc(pc), .wr(1'b0), .enable(1'b1), .clk(clk), .rst(rst), .halt(halt), .writeReg1(writeReg1), .immVal(immVal), .branch(branch), .jump(jump), .new_pc(next_pc), .instr(currInstr));
    fetch fetchStage(.pc(pc), .clk(clk), .rst(rst), .halt(halt), .pc_inc(inc_pc), .instr(instr));
+
+   //reg16 FD_instr(.clk(clk), .rst(rst|FD_flush), .en(1'b1), .D(fetch_instr), .Q(decode_instr));
    // Deode
+   assign decode_instr = fetch_instr;
+
    decode decodeStage(.instr(instr), .writeEn(regWrite), .stuCtl(stuCtl), .writeData(writeData), .immCtl(immCtl), .extCtl(extCtl), .exImmVaL(exImmVaL), .rst(rst), .clk(clk), .jumpCtl(jumpCtl), .read1Data(read1Data), .read2Data(read2Data), .err(decode_err), .immPres(immPres), .linkCtl(linkCtl));
 
    // Execute
