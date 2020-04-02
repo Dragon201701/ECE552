@@ -9,7 +9,7 @@ module pipeline_reg_ctl (in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,in11,in12,in13
 	output out1,out2,out3,out4,out5,out6,out7,out8,out9,out10,out11,out12,out13,out14,out15,out16,out17,out18,out19,out20,out21;
 	output [1:0] out22; // ALU control
 
-        // TODO: ENABLE SIGNAL
+
         // TODO: SIMPLIFY LOGIC
 	
 	dff dff_0(.d(in1), .clk(clk), .rst(rst), .q(out1));

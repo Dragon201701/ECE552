@@ -33,12 +33,12 @@ Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	memory
 
-} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fetch.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fetch.v
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/hazard.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/hazard.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module fetch
+-- Compiling module hazard
 
 Top level modules:
-	fetch
+	hazard
 
 } {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter32.v {2 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter32.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -49,12 +49,12 @@ Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	shifter32
 
-} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/execute.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/execute.v
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fetch.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/fetch.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module execute
+-- Compiling module fetch
 
 Top level modules:
-	execute
+	fetch
 
 } {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor2.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor2.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -84,19 +84,12 @@ Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	clkrst
 
-} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc.v
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/execute.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/execute.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module proc
+-- Compiling module execute
 
 Top level modules:
-	proc
-
-} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/decode.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/decode.v
-Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module decode
-
-Top level modules:
-	decode
+	execute
 
 } {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor3.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/xor3.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -111,6 +104,13 @@ Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	nand3
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/decode.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/decode.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module decode
+
+Top level modules:
+	decode
 
 } {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/shifter.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -154,6 +154,13 @@ Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	dff
 
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/wb.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/wb.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module wb
+
+Top level modules:
+	wb
+
 } {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nor2.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/nor2.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 -- Compiling module nor2
@@ -168,12 +175,12 @@ Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 Top level modules:
 	control
 
-} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/wb.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/wb.v
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_pbench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_pbench.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module wb
+-- Compiling module proc_hier_pbench
 
 Top level modules:
-	wb
+	proc_hier_pbench
 
 } {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_bench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_bench.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
@@ -209,13 +216,6 @@ Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
 
 Top level modules:
 	dec3to8
-
-} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_pbench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/proc_hier_pbench.v
-Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
--- Compiling module proc_hier_pbench
-
-Top level modules:
-	proc_hier_pbench
 
 } {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/pipeline_reg.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/jeff_repo/ECE552/demo1/pipeline_reg.v
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018

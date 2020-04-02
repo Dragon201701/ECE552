@@ -7,7 +7,6 @@ module control(instr, clk, rst, ldOrSt, sl, sco, seq, regWrite, aluSrc, aluCtl, 
    output reg seq, sl, sco, ldOrSt;
    output reg [1:0] aluCtl;
 
-
 // Consult Excel Sheet for signal layout for each instruction
 always @ (*)
 begin

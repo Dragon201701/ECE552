@@ -1,5 +1,5 @@
 # vsim -c proc_hier_pbench -lib __work 
-# Start time: 22:29:46 on Apr 01,2020
+# Start time: 14:36:25 on Apr 02,2020
 # //  ModelSim DE 10.7c Aug 17 2018Linux 4.15.0-91-generic
 # //
 # //  Copyright 1991-2018 Mentor Graphics Corporation
@@ -28,6 +28,7 @@
 # Loading __work.fullAdder_1b
 # Loading __work.xor3
 # Loading __work.control
+# Loading __work.hazard
 # Loading __work.fetch
 # Loading __work.memory2c
 # Loading __work.pipeline_reg_ctl
@@ -43,9 +44,9 @@
 # Loading __work.memory
 # Loading __work.wb
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B'. The port definition is at: cla_16b.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_pbench/DUT/p0/inc_PC File: proc.v Line: 69
+#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_pbench/DUT/p0/inc_PC File: proc.v Line: 71
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'C_in'. The port definition is at: cla_16b.v(7).
-#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_pbench/DUT/p0/inc_PC File: proc.v Line: 69
+#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_pbench/DUT/p0/inc_PC File: proc.v Line: 71
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'C_in'. The port definition is at: cla_16b.v(7).
 #    Time: 0 ns  Iteration: 0  Instance: /proc_hier_pbench/DUT/p0/fetchStage/incPC File: fetch.v Line: 20
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B'. The port definition is at: cla_16b.v(7).
@@ -58,12 +59,10 @@
 #    Time: 0 ns  Iteration: 0  Instance: /proc_hier_pbench/DUT/p0/executeStage/InA_minus_InB File: execute.v Line: 26
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'C_in'. The port definition is at: cla_16b.v(7).
 #    Time: 0 ns  Iteration: 0  Instance: /proc_hier_pbench/DUT/p0/executeStage/incPC File: execute.v Line: 75
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'en'. The port definition is at: reg3.v(1).
-#    Time: 0 ns  Iteration: 0  Instance: /proc_hier_pbench/DUT/p0/readReg1_mem_wb File: proc.v Line: 152
 run -all
 # Hello world...simulation starting
 # See verilogsim.log and verilogsim.ptrace for output
 # ** Note: $finish    : proc_hier_pbench.v(115)
-#    Time: 2205 ns  Iteration: 0  Instance: /proc_hier_pbench
-# End time: 22:29:46 on Apr 01,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 9
+#    Time: 1305 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 14:36:26 on Apr 02,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 8

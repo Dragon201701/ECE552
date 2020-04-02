@@ -12,7 +12,7 @@ module fetch (jumpCtl, pc, wr, enable, clk, rst, lbi, halt, noOp, immPres,  immC
    output [2:0] readReg1, readReg2, writeReg1;
    output [15:0] immVal, branch, jump, new_pc, instr;
 
-   wire   [15:0]  pc_inc;
+   wire   [15:0]  pc_inc, noOp_or_inc;
   // Initialize memory
   // TODO: Change memory back to syn type
    memory2c instr_mem(.data_out(instr), .data_in(pc), .addr(pc), .enable(enable), .wr(wr), .createdump(clk), .clk(clk), .rst(rst) );
@@ -29,12 +29,13 @@ module fetch (jumpCtl, pc, wr, enable, clk, rst, lbi, halt, noOp, immPres,  immC
   
   assign immVal = immCtl ? instr[7:0] : instr[4:0];
 
+  assign noOp_or_inc = noOp ? pc : pc_inc;
 
   // Immediate values
   assign branch = instr[7:0];
   assign jump = instr[11] ? instr[7:0] : instr[10:0];
 
   // TODO: EPC, noOp
-  assign new_pc = halt ? pc : pc_inc;
+  assign new_pc = halt ? pc : noOp_or_inc;
 
 endmodule
