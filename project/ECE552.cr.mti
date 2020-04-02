@@ -40,13 +40,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	clkrst
 
-} {} {}} D:/ECE552/project/verilog/proc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/proc.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc
-
-Top level modules:
-	proc
-
 } {} {}} D:/ECE552/project/verilog/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/xor3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module xor3
