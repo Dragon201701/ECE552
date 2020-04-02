@@ -137,7 +137,7 @@ module proc_hier_pbench();
    assign RegWrite = DUT.p0.decodeStage.decodeRegisters.writeEn;
    // Is register being written, one bit signal (1 means yes, 0 means no)
 
-   assign WriteRegister = DUT.p0.decodeStage.decodeRegisters.writeRegSel;
+   assign WriteRegister = DUT.p0.decodeStage.writeRegSel;
    // The name of the register being written to. (3 bit signal)
 
    assign WriteData = DUT.p0.decodeStage.decodeRegisters.writeData;
@@ -153,10 +153,12 @@ module proc_hier_pbench();
    assign MemAddress = DUT.p0.memoryStage.aluOut;
    // Address to access memory with (for both reads and writes to memory, 16 bits)
 
-   assign MemData = DUT.p0.memoryStage.wrData;
+   assign MemDataIn = DUT.p0.memoryStage.wrData;
    // Data to be written to memory for memory writes (16 bits)
+   
+   assign MemDataOut = DUT.p0.memoryStage.memoryOut;
 
-   assign Halt = DUT.p0.memoryStage.halt;
+   assign Halt = DUT.p0.halt_mw;
    // Is processor halted (1 bit signal)
 
 

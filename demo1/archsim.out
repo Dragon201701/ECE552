@@ -5,8 +5,8 @@ Type "help" for more information
 
 Loading program...
 Executing...
-slbi r1, 0
-INUM:        0 PC: 0x0000 REG: 1 VALUE: 0x0000
+slbi r1, 4
+INUM:        0 PC: 0x0000 REG: 1 VALUE: 0x0004
 slbi r2, 1
 INUM:        1 PC: 0x0002 REG: 2 VALUE: 0x0001
 slbi r3, 2
@@ -17,13 +17,25 @@ slbi r5, 4
 INUM:        4 PC: 0x0008 REG: 5 VALUE: 0x0004
 slbi r6, 5
 INUM:        5 PC: 0x000a REG: 6 VALUE: 0x0005
-st r1, r1, 1
-INUM:        6 PC: 0x000c ADDR: 0x0001 VALUE: 0x0000
-st r2, r2, 2
-INUM:        7 PC: 0x000e ADDR: 0x0003 VALUE: 0x0001
-st r3, r3, 3
-INUM:        8 PC: 0x0010 ADDR: 0x0005 VALUE: 0x0002
+stu r1, r1, -1
+INUM:        6 PC: 0x000c REG: 1 VALUE: 0x0003 ADDR: 0x0003 VALUE: 0x0004
+stu r2, r2, 1
+INUM:        7 PC: 0x000e REG: 2 VALUE: 0x0002 ADDR: 0x0002 VALUE: 0x0001
+stu r3, r3, 1
+INUM:        8 PC: 0x0010 REG: 3 VALUE: 0x0003 ADDR: 0x0003 VALUE: 0x0002
+nop
+INUM:        9 PC: 0x0012
+nop
+INUM:       10 PC: 0x0014
+nop
+INUM:       11 PC: 0x0016
+nop
+INUM:       12 PC: 0x0018
+nop
+INUM:       13 PC: 0x001a
+nop
+INUM:       14 PC: 0x001c
 halt
 program halted
-INUM:        9 PC: 0x0012
+INUM:       15 PC: 0x001e
 Program Finished

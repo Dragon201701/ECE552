@@ -13,6 +13,7 @@ always @ (*)
 begin
 
 	// Default have halt and noOp deasserted
+	stu <= 0;
 	halt <= 0;
 	noOp <= 0;
 	ldOrSt <= 0;

@@ -1,12 +1,18 @@
           //Test of loading a register with addi
-0000 9100 slbi r1, 0x0
+0000 9104 slbi r1, 0x4
 0002 9201 slbi r2, 0x1
 0004 9302 slbi r3, 0x2
 0006 9403 slbi r4, 0x3
 0008 9504 slbi r5, 0x4
 000a 9605 slbi r6, 0x5
-000c 8121 st r1, r1, 1
-000e 8242 st r2, r2, 2
-0010 8363 st r3, r3, 3
-0012 0000 halt
+000c 993f stu r1, r1, -1
+000e 9a41 stu r2, r2, 1
+0010 9b61 stu r3, r3, 1
+0012 0800 nop
+0014 0800 nop
+0016 0800 nop
+0018 0800 nop
+001a 0800 nop
+001c 0800 nop
+001e 0000 halt
           

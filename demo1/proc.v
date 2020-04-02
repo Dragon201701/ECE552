@@ -25,7 +25,7 @@ module proc (/*AUTOARG*/
    wire decode_err, sl, sco, seq, ldOrSt;
    wire [1:0] aluCtl;
 
-   wire [2:0] regRs, readReg1, readReg2, writeReg1;
+   wire [2:0] regRs, readReg1, readReg2, writeReg1, writeRegSel;
    wire [15:0] immVal;
    wire [15:0] currInstr, next_pc, signedImmVal, branch, jump, new_pc, Out, wrData;
    wire [15:0] regData1, regData2, read1Data, read2Data, aluOut, writeData, memoryOut;
@@ -43,21 +43,21 @@ module proc (/*AUTOARG*/
            sco_dx, seq_dx;
    wire [1:0] aluCtl_dx;
    wire [15:0] read1Data_dx, read2Data_dx, signedImmVal_dx, branch_dx, jump_dx, new_pc_dx, currInstr_dx;
-   wire [2:0] regRs_dx, writeReg1_dx;
+   wire [2:0] regRs_dx, writeReg1_dx, readReg1_dx;
 
    // EX/MEM
    wire regWrite_xm, aluSrc_xm, memWrite_xm, memRead_xm, memToReg_xm, branchCtl_xm, ldOrSt_xm, jumpCtl_xm, invA_xm, invB_xm, halt_xm, noOp_xm, immCtl_xm, stu_xm, slbi_xm, immPres_xm, lbi_xm, btr_xm, sl_xm,
            sco_xm, seq_xm;
    wire [1:0] aluCtl_xm;
-   wire [15:0] Out_xm, wrData_xm, new_pc_xm, signedImmVal_xm;
-   wire [2:0] writeReg1_xm;
+   wire [15:0] Out_xm, wrData_xm, new_pc_xm, signedImmVal_xm, currInstr_xm;
+   wire [2:0] writeReg1_xm, readReg1_xm;
 
    // MEM/WB
    wire regWrite_mw, aluSrc_mw, memWrite_mw, memRead_mw, memToReg_mw, branchCtl_mw, ldOrSt_mw, jumpCtl_mw, invA_mw, invB_mw, halt_mw, noOp_mw, immCtl_mw, stu_mw, slbi_mw, immPres_mw, lbi_mw, btr_mw, sl_mw,
            sco_mw, seq_mw;
    wire [1:0] aluCtl_mw;
-   wire [15:0] memoryOut_mw, Out_mw, new_pc_mw, signedImmVal_mw;
-   wire [2:0] writeReg1_mw;
+   wire [15:0] memoryOut_mw, Out_mw, new_pc_mw, signedImmVal_mw, currInstr_mw;
+   wire [2:0] writeReg1_mw, readReg1_mw;
 
    wire pc_modified;
    wire [15:0] nextpc, pc, inc_pc, incpc;
@@ -94,8 +94,9 @@ module proc (/*AUTOARG*/
    reg3  writeReg1_if_id(.D(writeReg1), .clk(clk), .rst(rst), .en(1'b1), .Q(writeReg1_fd)); // X
 
    // Deode
+   // NOTE stu comes from wb stage
    // TODO: Check Out
-   decode decodeStage(.slbi(slbi_fd), .writeEn(regWrite_mw), .writeData(writeData), .writeRegSel(writeReg1_mw), .read2RegSel(readReg2_fd), .read1RegSel(readReg1_fd), .stu(stu_fd), .aluOut(Out), .immCtl(immCtl_fd), .immVal(immVal_fd), .rst(rst), .clk(clk), .jump(jumpCtl), .regRs(regRs), .read1Data(read1Data), .read2Data(read2Data), .signedImmVal(signedImmVal), .err(decode_err));
+   decode decodeStage(.slbi(slbi_fd), .writeEn(regWrite_mw), .writeData(writeData), .writeRegSel(writeRegSel), .read2RegSel(readReg2_fd), .read1RegSel(readReg1_fd), .stu(stu_fd), .aluOut(Out), .immCtl(immCtl_fd), .immVal(immVal_fd), .rst(rst), .clk(clk), .jump(jumpCtl), .regRs(regRs), .read1Data(read1Data), .read2Data(read2Data), .signedImmVal(signedImmVal), .err(decode_err));
 
    // ID/EX - Pipeline register for control signals
    pipeline_reg_ctl id_ex(.in1(regWrite_fd),.in2(aluSrc_fd),.in3(memWrite_fd),.in4(memRead_fd),.in5(memToReg_fd),.in6(branchCtl_fd),.in7(ldOrSt_fd),.in8(jumpCtl_fd),.in9(invA_fd),.in10(invB_fd),.in11(halt_fd),.in12(noOp_fd),.in13(immCtl_fd),.in14(stu_fd),.in15(slbi_fd),.in16(immPres_fd),.in17(lbi_fd),.in18(btr_fd),.in19(sl_fd),.in20(sco_fd),.in21(seq_fd), .in22(aluCtl_fd),
@@ -108,7 +109,7 @@ module proc (/*AUTOARG*/
    reg16 new_pc_id_ex(.D(new_pc_fd), .clk(clk), .rst(rst), .en(1'b1), .Q(new_pc_dx)); // X
    reg16 currInstr_id_ex(.D(currInstr_fd), .clk(clk), .rst(rst), .en(1'b1), .Q(currInstr_dx)); // X
    reg3  writeReg1_id_ex(.D(writeReg1_fd), .clk(clk), .rst(rst), .en(1'b1), .Q(writeReg1_dx)); // X
-
+   reg3  readReg1_id_ex(.D(readReg1_fd), .clk(clk), .rst(rst), .en(1'b1), .Q(readReg1_dx));
 
    reg16 read1Data_id_ex(.D(read1Data), .clk(clk), .rst(rst), .en(1'b1), .Q(read1Data_dx)); // X
    reg16 read2Data_id_ex(.D(read2Data), .clk(clk), .rst(rst), .en(1'b1), .Q(read2Data_dx)); // X
@@ -129,6 +130,8 @@ module proc (/*AUTOARG*/
    reg16 new_pc_ex_mem(.D(new_pc_dx), .clk(clk), .rst(rst), .en(1'b1), .Q(new_pc_xm)); // X
    reg16 signedImmVal_ex_mem(.D(signedImmVal_dx), .clk(clk), .rst(rst), .en(1'b1), .Q(signedImmVal_xm)); // X
    reg3  writeReg1_ex_mem(.D(writeReg1_dx), .clk(clk), .rst(rst), .en(1'b1), .Q(writeReg1_xm)); // X
+   reg3  readReg1_ex_mem(.D(readReg1_dx), .clk(clk), .rst(rst), .en(1'b1), .Q(readReg1_xm));
+   reg16 currInstr_ex_mem(.D(currInstr_dx), .clk(clk), .rst(rst), .en(1'b1), .Q(currInstr_xm));
 
    reg16 Out_ex_mem(.D(Out), .clk(clk), .rst(rst), .en(1'b1), .Q(Out_xm)); // X
    reg16 wrData_ex_mem(.D(wrData), .clk(clk), .rst(rst), .en(1'b1), .Q(wrData_xm)); // X
@@ -146,12 +149,14 @@ module proc (/*AUTOARG*/
    reg16 new_pc_mem_wb(.D(new_pc_xm), .clk(clk), .rst(rst), .en(1'b1), .Q(new_pc_mw)); // X
    reg16 signedImmVal_mem_wb(.D(signedImmVal_xm), .clk(clk), .rst(rst), .en(1'b1), .Q(signedImmVal_mw)); // X
    reg3  writeReg1_mem_wb(.D(writeReg1_xm), .clk(clk), .rst(rst), .en(1'b1), .Q(writeReg1_mw)); // X
+   reg3  readReg1_mem_wb(.D(readReg1_xm), .clk(clk), .rst(rst), .en(2'b1), .Q(readReg1_mw));
+   reg16 currInstr_mem_wb(.D(currInstr_xm), .clk(clk), .rst(rst), .en(1'b1), .Q(currInstr_mw));
 
    reg16 memoryOut_mem_wb(.D(memoryOut), .clk(clk), .rst(rst), .en(1'b1), .Q(memoryOut_mw)); // X
    reg16 Out_mem_wb(.D(Out_xm), .clk(clk), .rst(rst), .en(1'b1), .Q(Out_mw)); // X
 
    // Wb
-   wb wbStage(.pc(new_pc_nw), .jumpCtl(jumpCtl_mw), .memToReg(memToReg_mw), .memData(memoryOut_mw), .aluOut(Out_mw), .lbi(lbi_mw), .immVal(signedImmVal_mw), .writeData(writeData));
+   wb wbStage(.currInstr(currInstr_mw), .writeReg1(writeReg1_mw), .readReg1(readReg1_mw), .stu(stu_mw), .pc(new_pc_mw), .jumpCtl(jumpCtl_mw), .memToReg(memToReg_mw), .memData(memoryOut_mw), .aluOut(Out_mw), .lbi(lbi_mw), .immVal(signedImmVal_mw), .writeData(writeData), .writeRegSel(writeRegSel));
 
    assign err = 1'b0; //Ofl | decode_err;
 

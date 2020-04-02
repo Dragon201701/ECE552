@@ -16,8 +16,8 @@ module decode (slbi, stu, aluOut, writeEn, writeData, writeRegSel, read2RegSel, 
     output [2:0] regRs;
     output [15:0] signedImmVal;
 
-    wire [15:0] write = stu ? aluOut : writeData;
-    wire [15:0] writeReg = stu ? read1RegSel : writeRegSel; 
+    //wire [15:0] write = stu ? aluOut : writeData;
+    //wire [15:0] writeReg = stu ? read1RegSel : writeRegSel; 
     wire [15:0] read1Out, read2Out;
 
     // Instatiate register file
@@ -25,7 +25,7 @@ module decode (slbi, stu, aluOut, writeEn, writeData, writeRegSel, read2RegSel, 
                 // Outputs
                 .read1Data(read1Out), .read2Data(read2Out), .err(err),
                 // Inputs
-                .clk(clk), .rst(rst), .read1RegSel(read1RegSel), .read2RegSel(read2RegSel), .writeRegSel(writeReg), .writeData(write), .writeEn(writeEn)
+                .clk(clk), .rst(rst), .read1RegSel(read1RegSel), .read2RegSel(read2RegSel), .writeRegSel(writeRegSel), .writeData(writeData), .writeEn(writeEn)
                 );
 
     // TODO EPC...
