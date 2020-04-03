@@ -22,7 +22,7 @@ module decode (instr, writeData, jumpCtl, linkCtl, rst, clk, read1Data, read2Dat
     assign Rs = instr[10:8];
     assign Rt = instr[7:5];
     //assign R2 = instr[4:2];
-    assign Rd = (instr[15:14] == 2'b11)?instr[4:2]:instr[7:5];
+    assign Rd = (lbi|slbi)? instr[10:8]:(instr[15:14] == 2'b11)?instr[4:2]:instr[7:5];
     regFile decodeRegisters(
                 // Outputs
                 .read1Data(read1Data), .read2Data(read2Data), .err(err),
