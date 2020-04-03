@@ -124,19 +124,19 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	nor2
 
-} {} {}} D:/ECE552/project/verilog/proc_hier_bench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/proc_hier_bench.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc_hier_bench
-
-Top level modules:
-	proc_hier_bench
-
 } {} {}} D:/ECE552/project/verilog/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/alu.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module alu
 
 Top level modules:
 	alu
+
+} {} {}} D:/ECE552/project/verilog/proc_hier_bench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/proc_hier_bench.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module proc_hier_bench
+
+Top level modules:
+	proc_hier_bench
 
 } {} {}} D:/ECE552/project/verilog/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/not1.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018

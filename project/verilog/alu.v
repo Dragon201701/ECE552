@@ -56,8 +56,8 @@ module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   assign ANDN_RESULT = A & ~B;
   assign LOGIC_RESULT = (Op == 3'b100)? ADD_RESULT: 
                         (Op == 3'b101)? SUB_RESULT: 
-                        (Op == 3'b110)? (slbi? OR_RESULT:XOR_RESULT):
+                        (Op == 3'b110)? XOR_RESULT:
                         ANDN_RESULT;
   assign Zero = (LOGIC_RESULT == 16'b0)?1:((shifter_out == 16'b0) & ~Op[2])?1:0;
-  assign Out = (Op[2] == 1)? LOGIC_RESULT:shifter_out;
+  assign Out = slbi? OR_RESULT:(Op[2] == 1)? LOGIC_RESULT:shifter_out;
 endmodule
