@@ -5,13 +5,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	fetch
 
-} {} {}} D:/ECE552/project/verilog/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/execute.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module execute
-
-Top level modules:
-	execute
-
 } {} {}} D:/ECE552/project/verilog/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/xor2.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module xor2

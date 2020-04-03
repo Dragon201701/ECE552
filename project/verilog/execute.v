@@ -30,7 +30,7 @@ module execute (aluOp, sl, sco, seq, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCtl,
    // What operation is it
    // If an immediate is present, will have to use
    // Different bit numbers to represent
-   assign InB = ((instr[15:11] == 5'b10110)|((instr[15:11]==5'b11010)&~instr[0]))? rotaterightbits : inB;
+   assign InB = ((instr[15:11] == 5'b10110)|((instr[15:11]==5'b11010)&instr[1:0]==2'b10))? rotaterightbits : inB;
    /* opCode = slbi? 3'b110:
                    (instr[15:11] == 5'b10101)? 3'b001:
                    ((instr[15:11] == 5'b10110)|(instr[15:11]==5'b11010)|(instr[15:11] == 5'b11010 & instr[0] == 1'b0))? 3'b000:
