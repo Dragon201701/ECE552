@@ -9,12 +9,13 @@
     of the operation, as well as output a Zero bit and an Overflow
     (OFL) bit.
 */
-module alu (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
+module alu (slbi, InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
 
    // declare constant for size of inputs, outputs (N),
    // and operations (O)
    parameter    N = 16;
    parameter    O = 3;
+   input slbi;
    input [N-1:0] InA; // Data Input
    input [N-1:0] InB; // Data Input
    input         Cin; // Carry-in
@@ -35,8 +36,8 @@ module alu (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   011 srl Shift right logical
   100 ADD A + B
   101 SUB B - A
-  110 OR  A OR B
-  111 XOR A XOR B
+  110 XOR  A XOR B
+  111 ANDNI A ANDNI B
   */
   wire [N-1:0] shifter_out;
   wire [N-1:0] AND_RESULT, OR_RESULT, XOR_RESULT, ADD_RESULT, LOGIC_RESULT, ANDN_RESULT, SUB_RESULT;
@@ -55,7 +56,7 @@ module alu (InA, InB, Cin, Op, invA, invB, sign, Out, Zero, Ofl, cout);
   assign ANDN_RESULT = A & ~B;
   assign LOGIC_RESULT = (Op == 3'b100)? ADD_RESULT: 
                         (Op == 3'b101)? SUB_RESULT: 
-                        (Op == 3'b110)? XOR_RESULT:
+                        (Op == 3'b110)? (slbi? OR_RESULT:XOR_RESULT):
                         ANDN_RESULT;
   assign Zero = (LOGIC_RESULT == 16'b0)?1:((shifter_out == 16'b0) & ~Op[2])?1:0;
   assign Out = (Op[2] == 1)? LOGIC_RESULT:shifter_out;

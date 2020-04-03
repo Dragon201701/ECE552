@@ -4,10 +4,10 @@
    Filename        : decode.v
    Description     : This is the module for the overall decode stage of the processor.
 */
-module decode (instr, writeData, jumpCtl, linkCtl, rst, clk, read1Data, read2Data, exImmVaL, err, aluOp, regWrite, aluSrc, btr, 
-    memWrite, memRead, memToReg, branchCtl, jumpCtl, jrCtl, linkCtl, halt, noOp, stu, slbi, lbi, seq, sl, sco);
+module decode (instr, writeEn, writeData, jumpCtl, linkCtl, rst, clk, read1Data, read2Data, exImmVaL, err, aluOp, regWrite, aluSrc, btr, 
+    memWrite, memRead, memToReg, branchCtl, jumpCtl, jrCtl, linkCtl. halt, noOp, stu, slbi, lbi, seq, sl, sco);
 
-    input   clk, rst;
+    input   writeEn, clk, rst;
     input   [15:0]  instr; // instruction
     input   [15:0]  writeData;
     output err;
@@ -16,7 +16,7 @@ module decode (instr, writeData, jumpCtl, linkCtl, rst, clk, read1Data, read2Dat
     output [2:0] aluOp;
     output regWrite, aluSrc, btr, memWrite, memRead, memToReg, branchCtl, jumpCtl, jrCtl, linkCtl, halt, noOp, stu, slbi, lbi, seq, sl, sco;
     
-    wire   [2:0]    Rs, Rt, Rd, regWrite; // R1 is either Rd or Rt, R2 is Rd. 
+    wire   [2:0]    Rs, Rt, Rd; // R1 is either Rd or Rt, R2 is Rd. 
     // Instatiate register file
 
     assign Rs = instr[10:8];
@@ -27,7 +27,7 @@ module decode (instr, writeData, jumpCtl, linkCtl, rst, clk, read1Data, read2Dat
                 // Outputs
                 .read1Data(read1Data), .read2Data(read2Data), .err(err),
                 // Inputs
-                .clk(clk), .rst(rst), .read1RegSel(Rs), .read2RegSel(Rt), .writeRegSel(Rd), .writeData(writeData), .writeEn(regWrite)
+                .clk(clk), .rst(rst), .read1RegSel(Rs), .read2RegSel(Rt), .writeRegSel(Rd), .writeData(writeData), .writeEn(writeEn)
                 );
 
     // TODO EPC...
@@ -41,6 +41,6 @@ module decode (instr, writeData, jumpCtl, linkCtl, rst, clk, read1Data, read2Dat
 
     control controlUnit(.aluOp(aluOp), .clk(clk), .rst(rst), .instr(instr), .regWrite(regWrite), .aluSrc(aluSrc), .btr(btr), .memWrite(memWrite), 
         .memRead(memRead), .memToReg(memToReg), .branchCtl(branchCtl), .jumpCtl  (jumpCtl), .jrCtl(jrCtl), .linkCtl(linkCtl), .invA(), .invB(), .halt(halt),
-        .noOp(noOp), .immCtl(), .extCtl(), .stu(stu), .slbi(slbi), .immPres(), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco), .aluCtl());
+        .noOp(noOp), .immCtl(), .extCtl(), .stu(stu), .slbi(slbi), .immPres(), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco), .aluCtl())
 
 endmodule

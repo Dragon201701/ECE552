@@ -25,7 +25,7 @@ module proc (/*AUTOARG*/
    wire decode_err, sl, sco, seq;
    //wire [1:0] aluCtl;
 
-   wire [2:0] regRs, readReg1, readReg2, writeReg1;
+   wire [2:0] regRs, readReg1, readReg2, writeReg1, aluOp;
    wire [15:0] immVal;
    wire [15:0] instr, fetch_instr, decode_instr, next_pc, exImmVaL, branch, jump, Out, wrData;
    wire [15:0] regData1, regData2, read1Data, read2Data, aluOut, writeData, memoryOut;
@@ -38,8 +38,8 @@ module proc (/*AUTOARG*/
    /* your code here -- should include instantiation+-s of fetch, decode, execute, mem and wb modules */
 
    // Setup Control signals with control module
-   control ctlSignals(.instr(instr), .clk(clk), .rst(rst), .regWrite(regWrite), .aluSrc(aluSrc), .aluCtl(), .memWrite(memWrite), .memRead(memRead), .memToReg(memToReg), .branchCtl(branchCtl), 
-	   .jumpCtl(jumpCtl), .jrCtl(jrCtl), .stuCtl(stuCtl), .linkCtl(linkCtl), .halt(halt), .noOp(noOp), .stu(stu), .slbi(slbi), .immPres(immPres), .lbi(lbi), .btr(btr), .sl(sl), .sco(sco), .seq(seq));
+   //control ctlSignals(.instr(instr), .clk(clk), .aluOp(aluOp), .rst(rst), .regWrite(regWrite), .aluSrc(aluSrc), .aluCtl(), .memWrite(memWrite), .memRead(memRead), .memToReg(memToReg), .branchCtl(branchCtl), 
+	//  .jumpCtl(jumpCtl), .jrCtl(jrCtl), .stuCtl(stuCtl), .linkCtl(linkCtl), .halt(halt), .noOp(noOp), .stu(stu), .slbi(slbi), .immPres(immPres), .lbi(lbi), .btr(btr), .sl(sl), .sco(sco), .seq(seq));
 
    // Fetch
    //fetch fetchStage(.pc(pc), .wr(1'b0), .enable(1'b1), .clk(clk), .rst(rst), .halt(halt), .writeReg1(writeReg1), .immVal(immVal), .branch(branch), .jump(jump), .new_pc(next_pc), .instr(currInstr));
@@ -49,10 +49,17 @@ module proc (/*AUTOARG*/
    // Deode
    assign decode_instr = fetch_instr;
 
-   decode decodeStage(.instr(instr), .writeEn(regWrite), .stuCtl(stuCtl), .writeData(writeData), .exImmVaL(exImmVaL), .rst(rst), .clk(clk), .jumpCtl(jumpCtl), .read1Data(read1Data), .read2Data(read2Data), .err(decode_err), .immPres(immPres), .linkCtl(linkCtl));
+   //decode decodeStage(.instr(instr), .writeEn(regWrite), .stuCtl(stuCtl), .writeData(writeData), .exImmVaL(exImmVaL), .rst(rst), .clk(clk), .jumpCtl(jumpCtl), 
+   //   .read1Data(read1Data), .read2Data(read2Data), .err(decode_err), .immPres(immPres), .linkCtl(linkCtl)))
+   decode decodeStage(.clk(clk), .rst(rst), .instr(instr), .writeData(writeData), .err(err), .read1Data(read1Data), .read2Data(read2Data), 
+      .exImmVaL(exImmVaL), .aluOp(aluOp), .regWrite(regWrite), .aluSrc(aluSrc), .btr(btr), .memWrite(memWrite), .memRead(memRead), .memToReg(memToReg), .branchCtl(branchCtl), 
+      .jumpCtl(jumpCtl), .jrCtl(jrCtl), .linkCtl(linkCtl), .halt(halt), .noOp(noOp), .stu(stu), .slbi(slbi), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco));
+
 
    // Execute
-   execute executeStage(.sl(sl), .sco(sco), .seq(seq), .jumpCtl(jumpCtl), .jrCtl(jrCtl), .linkCtl(linkCtl), .branchCtl(branchCtl),.immPres(immPres), .btr(btr), .slbi(slbi), .aluSrc(aluSrc), .regData1(read1Data), .regData2(read2Data), .immVal(exImmVaL), .inc_pc(inc_pc), .instr(instr), .invA(invA), .invB(invB), .new_pc(next_pc), .Out(Out), .Zero(Zero), .Ofl(Ofl), .memRead(memRead), .memWrite(memWrite));
+   execute executeStage(.aluOp(aluOp), .sl(sl), .sco(sco), .seq(seq), .jumpCtl(jumpCtl), .jrCtl(jrCtl), .linkCtl(linkCtl), .branchCtl(branchCtl),
+      .btr(btr), .slbi(slbi), .aluSrc(aluSrc), .regData1(read1Data), .regData2(read2Data), .immVal(exImmVaL), .inc_pc(inc_pc), .instr(instr), 
+      .invA(invA), .invB(invB), .new_pc(next_pc), .Out(Out), .Zero(Zero), .Ofl(Ofl), .memRead(memRead), .memWrite(memWrite));
 
    // Memory
    memory memoryStage(.aluOut(Out), .wrData(read2Data), .memRead(memRead), .memWrite(memWrite), .clk(clk), .rst(rst), .memoryOut(memoryOut), .halt(halt));
