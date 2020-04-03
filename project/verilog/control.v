@@ -25,6 +25,7 @@ begin
 	stu <= 0;
 	aluOp <= 3'b000;
 	slbi <= 0;
+	
 	case (instr[15:11])
         5'b00000: begin
         	// HALT, Don't Cares
