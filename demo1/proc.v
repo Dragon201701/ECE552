@@ -78,7 +78,7 @@ module proc (/*AUTOARG*/
 	   .ldOrSt(ldOrSt), .jumpCtl(jumpCtl), .invA(invA), .invB(invB), .halt(halt), .noOp(noOp), .immCtl(immCtl), .stu(stu), .slbi(slbi), .immPres(immPres), .lbi(lbi), .btr(btr), .sl(sl), .sco(sco), .seq(seq));
 
    // Control Hazard logic
-   hazard ctlHazard(.regWrite_fd(regWrite_fd), .regWrite_dx(regWrite_dx), .regWrite_xm(regWrite_xm), .readReg1(readReg1), .readReg2(readReg2), .writeReg1(writeReg1), .readReg1_fd(readReg1_fd), .readReg1_dx(readReg1_dx), .readReg1_xm(readReg1_xm), .readReg2_fd(readReg2_fd), .readReg2_dx(readReg2_dx), .readReg2_xm(readReg2_xm), .writeReg1_fd(writeReg1_fd), .writeReg1_dx(writeReg1_dx), .writeReg1_xm(writeReg1_xm), .ex_hazard(ex_hazard), .no_Op(no_Op));
+   hazard ctlHazard(.branchCtl_fd(branchCtl_fd), .branchCtl_dx(branchCtl_dx), .stu_fd(stu_fd), .stu_dx(stu_dx), .stu_xm(stu_xm), .jumpCtl_fd(jumpCtl_fd), .jumpCtl_dx(jumpCtl_dx), .regWrite_fd(regWrite_fd), .regWrite_dx(regWrite_dx), .regWrite_xm(regWrite_xm), .readReg1(readReg1), .readReg2(readReg2), .writeReg1(writeReg1), .readReg1_fd(readReg1_fd), .readReg1_dx(readReg1_dx), .readReg1_xm(readReg1_xm), .readReg2_fd(readReg2_fd), .readReg2_dx(readReg2_dx), .readReg2_xm(readReg2_xm), .writeReg1_fd(writeReg1_fd), .writeReg1_dx(writeReg1_dx), .writeReg1_xm(writeReg1_xm), .ex_hazard(ex_hazard), .no_Op(no_Op));
 
    assign en = no_Op | rst; 
 
