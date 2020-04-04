@@ -4,18 +4,26 @@
    Filename        : fetch.v
    Description     : This is the module for the overall fetch stage of the processor.
 */
-module fetch (pc, clk, rst, halt, pc_inc, instr);
+module fetch (clk, rst, PCsrc, PC_new, PC_inc, instr);
 
-   input clk, rst, halt;
-   input [15:0] pc;
+   input clk, rst, PCsrc;
+   input [15:0] PC_new;
 
-   output [15:0] pc_inc, instr;
-   wire   [15:0] pc_add;
+   output [15:0] PC_inc, instr;
+   wire   [15:0] PC_next, PC;
+   wire halt, noOp;
+   assign halt = (instr[15:11] == 5'b00000)?1:0;
+   assign noOp = (instr[15:11] == 5'b00001)?1:0;
+  assign PC_next = rst? 16'h0000 :
+                   halt? PC :
+                   noOp? PC_inc :
+                   PCsrc? PC_new : PC_inc;
+  reg16 pcreg(.clk(clk),.rst(rst),.en(1'b1),.D(PC_next), .Q(PC));
   // Initialize memory
   // TODO: Change memory back to syn type
-   memory2c instr_mem(.data_out(instr), .data_in(pc), .addr(pc), .enable(1'b1), .wr(1'b0), .createdump(clk), .clk(clk), .rst(rst) );
+   memory2c instr_mem(.data_out(instr), .data_in(PC), .addr(PC), .enable(1'b1), .wr(1'b0), .createdump(clk), .clk(clk), .rst(rst) );
    
-  cla_16b incPC(.A(pc), .B(16'h0002), .C_in(1'b0), .S(pc_add), .C_out());
+  cla_16b incPC(.A(PC), .B(16'h0002), .C_in(1'b0), .S(PC_inc), .C_out());
    
   //assign readReg1 = instr[10:8];
   //assign readReg2 = instr[7:5];
@@ -29,6 +37,6 @@ module fetch (pc, clk, rst, halt, pc_inc, instr);
 
 
   // TODO: EPC, noOp
-  assign pc_inc = halt ? pc : pc_add;
+  //assign pc_inc = halt ? pc : pc_next;
   //assign pc_inc = pc_add;
 endmodule

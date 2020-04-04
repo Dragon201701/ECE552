@@ -4,18 +4,18 @@
    Filename        : execute.v
    Description     : This is the overall module for the execute stage of the processor.
 */
-module execute (aluOp, sl, sco, seq, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCtl, branchCtl, regData1, regData2, immVal, inc_pc, instr, invA, invB, new_pc, Out, Zero, Ofl, memRead, memWrite);
+module execute (aluOp, sl, sco, seq, slbi, btr, aluSrc, jumpCtl, branchCtl, regData1, regData2, immVal, inc_pc, instr, invA, invB, new_pc, Out, Zero, Ofl, memRead, memWrite, PCsrc);
 
    input sl, sco, seq;
-   input slbi, invA, invB, aluSrc, btr, jumpCtl, jrCtl, linkCtl, branchCtl, memRead, memWrite;
+   input slbi, invA, invB, aluSrc, btr, memRead, memWrite;
    input [15:0] regData1, regData2, immVal, instr, inc_pc;
-   input [2:0] aluOp;
-   wire [15:0] jb_pc, InA, inA, InB, inB, rotaterightbits, immValShifted, jumpValSigned, branchValSigned, pc_or_rs, aluOut, setOut;
+   input [2:0] aluOp, jumpCtl, branchCtl;
+   wire [15:0] pc_add, InA, inA, InB, inB, rotaterightbits, immValShifted, jumpValSigned, branchValSigned, aluOut, setOut;
    wire [2:0] opCode;
-   wire sign, setOutput, cout, Cin, sltresult, sleresult;
+   wire sign, setOutput, cout, Cin, sltresult, sleresult, branch;
    output [15:0] Out, new_pc;
-   output Zero, Ofl;
-   wire  [15:0] jump_pc, branch_pc;
+   output Zero, Ofl, PCsrc;
+   //wire  [15:0] jump_pc, branch_pc;
    wire beqz, bnez, bltz, bgez;
    // slt and sle for last parts
    //assign setOutput = sco ? cout : seq ? (InA == InB) : (sl & instr[11]) ? ($signed(InA) < $signed(InB)) : ($signed(InA) <= $signed(InB));
@@ -24,7 +24,7 @@ module execute (aluOp, sl, sco, seq, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCtl,
    assign InA = slbi ? (regData1 << 8) : regData1;
 
    // Bottom wire connecting to alu
-   assign inB = branchCtl? 16'h0000 : aluSrc ? immVal :  regData2;
+   assign inB = aluSrc ? immVal :  regData2;
 
    cla_16b rightrotatebits(.A(16'h0010), .B(~inB), .C_in (1'b1), .S(rotaterightbits), .C_out());
    // What operation is it
@@ -50,19 +50,25 @@ module execute (aluOp, sl, sco, seq, slbi, btr, aluSrc, jumpCtl, jrCtl, linkCtl,
    //assign immValShifted = immVal << 1;
    //cla_16b next_pc_add(.A(pc), .B(2), .C_in(0), .S(next_pc), .C_out());
 
-   cla_16b jb_pc_add(.A(inc_pc), .B(immVal), .C_in(0), .S(jb_pc), .C_out());
+   cla_16b jb_pc_add(.A(inc_pc), .B(immVal), .C_in(0), .S(pc_add), .C_out());
+
+
+   branchctlunit branchunit(.regData1(regData1), .branchCtl(branchCtl), .branch(branch));
+   assign PCsrc = branch&jumpCtl[2];
+   assign new_pc = jumpCtl[0]?aluOut:pc_add;
+
 
    // Sign extend the branch and jump values
    //assign jumpValSigned = instr[11] ? {{8{jumpVal[10]}}, jumpVal[7:0]} : {{4{jumpVal[10]}}, jumpVal[10:0]};
    //assign branchValSigned = { {8{branchVal[7]}}, branchVal[7:0]};
 
-   assign jump_pc = jrCtl? aluOut:jb_pc;
-   assign beqz = (instr[15:11] == 5'b01100)? 1:0;
+   //assign jump_pc = jrCtl? aluOut:jb_pc;
+   /*assign beqz = (instr[15:11] == 5'b01100)? 1:0;
    assign bnez = (instr[15:11] == 5'b01101)? 1:0;
    assign bltz = (instr[15:11] == 5'b01110)? 1:0;
-   assign bgez = (instr[15:11] == 5'b01111)? 1:0;
-   assign branch_pc = ((beqz&Zero)|(bnez&~Zero)|(bltz&aluOut[15])|(bgez&~aluOut[15]))?jb_pc:inc_pc;
-   assign new_pc = jumpCtl?jump_pc:branch_pc;
+   assign bgez = (instr[15:11] == 5'b01111)? 1:0;*/
+   //assign branch_pc = ((beqz&Zero)|(bnez&~Zero)|(bltz&aluOut[15])|(bgez&~aluOut[15]))?jb_pc:inc_pc;
+   //assign new_pc = jumpCtl?jump_pc:branch_pc;
 
 
 

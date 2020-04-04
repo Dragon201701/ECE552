@@ -21,20 +21,18 @@ module proc (/*AUTOARG*/
    // As desribed in the homeworks, use the err signal to trap corner
    // cases that you think are illegal in your statemachines
    
-   wire regWrite, btr, aluSrc, memWrite, memRead, memToReg, branchCtl, jumpCtl, jrCtl, linkCtl, halt, noOp, stu, slbi, immPres, lbi, stuCtl;
+   wire regWrite, btr, aluSrc, memWrite, memRead, memToReg, halt, noOp, stu, slbi, immPres, lbi, stuCtl, PCsrc;
    wire decode_err, sl, sco, seq;
    //wire [1:0] aluCtl;
-
-   wire [2:0] regRs, readReg1, readReg2, writeReg1, aluOp;
+   wire [2:0] regRs, readReg1, readReg2, writeReg1, aluOp, branchCtl, jumpCtl;
    wire [15:0] immVal;
    wire [15:0] instr, fetch_instr, decode_instr, next_pc, exImmVaL, branch, jump, Out, wrData;
    wire [15:0] regData1, regData2, read1Data, read2Data, aluOut, writeData, memoryOut;
-   wire [15:0] inc_pc;
-   wire [15:0] pc, nextpc;
+   wire [15:0] PC_inc, PC, PC_new;
+   //wire [15:0] pc, nextpc;
    wire FD_flush;
    assign FD_flush = 1'b0;
-   assign nextpc = rst? 16'h0000:next_pc;
-   reg16 pcreg(.clk(clk),.rst(rst),.en(1'b1),.D(nextpc), .Q(pc));
+
    /* your code here -- should include instantiation+-s of fetch, decode, execute, mem and wb modules */
 
    // Setup Control signals with control module
@@ -43,7 +41,7 @@ module proc (/*AUTOARG*/
 
    // Fetch
    //fetch fetchStage(.pc(pc), .wr(1'b0), .enable(1'b1), .clk(clk), .rst(rst), .halt(halt), .writeReg1(writeReg1), .immVal(immVal), .branch(branch), .jump(jump), .new_pc(next_pc), .instr(currInstr));
-   fetch fetchStage(.pc(pc), .clk(clk), .rst(rst), .halt(halt), .pc_inc(inc_pc), .instr(instr));
+   fetch fetchStage(.clk(clk), .rst(rst), .PC_inc(PC_inc), .instr(instr), .PCsrc(PCsrc), .PC_new(PC_new));
 
    //reg16 FD_instr(.clk(clk), .rst(rst|FD_flush), .en(1'b1), .D(fetch_instr), .Q(decode_instr));
    // Deode
@@ -53,13 +51,13 @@ module proc (/*AUTOARG*/
    //   .read1Data(read1Data), .read2Data(read2Data), .err(decode_err), .immPres(immPres), .linkCtl(linkCtl)))
    decode decodeStage(.clk(clk), .rst(rst), .instr(instr), .writeData(writeData), .err(err), .read1Data(read1Data), .read2Data(read2Data), 
       .exImmVaL(exImmVaL), .aluOp(aluOp), .regWrite(regWrite), .aluSrc(aluSrc), .btr(btr), .memWrite(memWrite), .memRead(memRead), .memToReg(memToReg), .branchCtl(branchCtl), 
-      .jumpCtl(jumpCtl), .jrCtl(jrCtl), .linkCtl(linkCtl), .halt(halt), .noOp(noOp), .stu(stu), .slbi(slbi), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco));
+      .jumpCtl(jumpCtl), .halt(), .noOp(), .stu(stu), .slbi(slbi), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco));
 
 
    // Execute
-   execute executeStage(.aluOp(aluOp), .sl(sl), .sco(sco), .seq(seq), .jumpCtl(jumpCtl), .jrCtl(jrCtl), .linkCtl(linkCtl), .branchCtl(branchCtl),
-      .btr(btr), .slbi(slbi), .aluSrc(aluSrc), .regData1(read1Data), .regData2(read2Data), .immVal(exImmVaL), .inc_pc(inc_pc), .instr(instr), 
-      .invA(invA), .invB(invB), .new_pc(next_pc), .Out(Out), .Zero(Zero), .Ofl(Ofl), .memRead(memRead), .memWrite(memWrite));
+   execute executeStage(.aluOp(aluOp), .sl(sl), .sco(sco), .seq(seq), .jumpCtl(jumpCtl), .branchCtl(branchCtl),
+      .btr(btr), .slbi(slbi), .aluSrc(aluSrc), .regData1(read1Data), .regData2(read2Data), .immVal(exImmVaL), .inc_pc(PC_inc), .instr(instr), 
+       .new_pc(PC_new), .Out(Out), .Zero(Zero), .Ofl(Ofl), .memRead(memRead), .memWrite(memWrite), .PCsrc(PCsrc));
 
    // Memory
    memory memoryStage(.aluOut(Out), .wrData(read2Data), .memRead(memRead), .memWrite(memWrite), .clk(clk), .rst(rst), .memoryOut(memoryOut), .halt(halt));
