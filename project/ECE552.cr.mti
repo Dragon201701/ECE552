@@ -5,13 +5,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	fetch
 
-} {} {}} D:/ECE552/project/verilog/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/execute.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module execute
-
-Top level modules:
-	execute
-
 } {} {}} D:/ECE552/project/verilog/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/xor2.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module xor2
@@ -40,20 +33,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	clkrst
 
-} {} {}} D:/ECE552/project/verilog/proc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/proc.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc
-
-Top level modules:
-	proc
-
-} {} {}} D:/ECE552/project/verilog/decode.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/decode.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module decode
-
-Top level modules:
-	decode
-
 } {} {}} D:/ECE552/project/verilog/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/xor3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module xor3
@@ -74,6 +53,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	shifter
+
+} {} {}} D:/ECE552/project/verilog/memory2c.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/memory2c.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module memory2c
+
+Top level modules:
+	memory2c
 
 } {} {}} D:/ECE552/project/verilog/regFile_bypass.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/regFile_bypass.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018

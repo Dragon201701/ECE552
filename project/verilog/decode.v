@@ -5,7 +5,7 @@
    Description     : This is the module for the overall decode stage of the processor.
 */
 module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVaL, err, aluOp, regWrite, aluSrc, btr, 
-    memWrite, memRead, memToReg, branchCtl, jumpCtl, halt, noOp, slbi, lbi, seq, sl, sco, ror);
+    memWrite, memRead, memToReg, branchCtl, jumpCtl, halt, noOp, slbi, lbi, seq, sl, sco, ror, Rs, Rt, Rd);
 
     input   clk, rst;
     input   [15:0]  instr; // instruction
@@ -13,11 +13,11 @@ module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVaL, err, 
     output err;
     output [15:0]  read1Data, read2Data;
     output [15:0] exImmVaL;
-    output [2:0] aluOp, jumpCtl, branchCtl;
+    output [2:0] aluOp, jumpCtl, branchCtl, Rs, Rt, Rd;
     output regWrite, aluSrc, btr, memWrite, memRead, memToReg, halt, noOp, slbi, lbi, seq, sl, sco, ror;
     wire stu;
     
-    wire   [2:0]    Rs, Rt, Rd, regWrite; // R1 is either Rd or Rt, R2 is Rd. 
+    //wire   [2:0]    Rs, Rt, Rd, regWrite; // R1 is either Rd or Rt, R2 is Rd. 
     // Instatiate register file
 
     assign Rs = instr[10:8];
