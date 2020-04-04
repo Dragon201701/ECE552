@@ -1,18 +1,4 @@
-D:/ECE552/project/verilog/fetch.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/fetch.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module fetch
-
-Top level modules:
-	fetch
-
-} {} {}} D:/ECE552/project/verilog/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/execute.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module execute
-
-Top level modules:
-	execute
-
-} {} {}} D:/ECE552/project/verilog/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/xor2.v
+D:/ECE552/project/verilog/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/xor2.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module xor2
 
@@ -46,13 +32,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	proc
-
-} {} {}} D:/ECE552/project/verilog/decode.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/decode.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module decode
-
-Top level modules:
-	decode
 
 } {} {}} D:/ECE552/project/verilog/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/xor3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -114,13 +93,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	branchctlunit
-
-} {} {}} D:/ECE552/project/verilog/control.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/control.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module control
-
-Top level modules:
-	control
 
 } {} {}} D:/ECE552/project/verilog/wb.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/wb.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
