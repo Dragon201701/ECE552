@@ -4,9 +4,9 @@
    Filename        : execute.v
    Description     : This is the overall module for the execute stage of the processor.
 */
-module execute (aluOp, sl, sco, seq, lbi, slbi, btr, aluSrc, jumpCtl, branchCtl, regData1, regData2, immVal, inc_pc, instr, invA, invB, new_pc, Out, Zero, Ofl, memRead, memWrite, PCsrc);
+module execute (aluOp, sl, sco, seq, lbi, slbi, btr, ror, aluSrc, jumpCtl, branchCtl, regData1, regData2, immVal, inc_pc, instr, invA, invB, new_pc, Out, Zero, Ofl, memRead, memWrite, PCsrc);
 
-   input sl, sco, seq;
+   input sl, sco, seq, ror;
    input lbi, slbi, invA, invB, aluSrc, btr, memRead, memWrite;
    input [15:0] regData1, regData2, immVal, instr, inc_pc;
    input [2:0] aluOp, jumpCtl, branchCtl;
@@ -30,7 +30,7 @@ module execute (aluOp, sl, sco, seq, lbi, slbi, btr, aluSrc, jumpCtl, branchCtl,
    // What operation is it
    // If an immediate is present, will have to use
    // Different bit numbers to represent
-   assign InB = ((instr[15:11] == 5'b10110)|((instr[15:11]==5'b11010)&instr[1:0]==2'b10))? rotaterightbits : inB;
+   assign InB = ror? rotaterightbits : inB;
    /* opCode = slbi? 3'b110:
                    (instr[15:11] == 5'b10101)? 3'b001:
                    ((instr[15:11] == 5'b10110)|(instr[15:11]==5'b11010)|(instr[15:11] == 5'b11010 & instr[0] == 1'b0))? 3'b000:

@@ -5,7 +5,7 @@
    Description     : This is the module for the overall decode stage of the processor.
 */
 module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVaL, err, aluOp, regWrite, aluSrc, btr, 
-    memWrite, memRead, memToReg, branchCtl, jumpCtl, halt, noOp, stu, slbi, lbi, seq, sl, sco);
+    memWrite, memRead, memToReg, branchCtl, jumpCtl, halt, noOp, slbi, lbi, seq, sl, sco, ror);
 
     input   clk, rst;
     input   [15:0]  instr; // instruction
@@ -14,7 +14,8 @@ module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVaL, err, 
     output [15:0]  read1Data, read2Data;
     output [15:0] exImmVaL;
     output [2:0] aluOp, jumpCtl, branchCtl;
-    output regWrite, aluSrc, btr, memWrite, memRead, memToReg, halt, noOp, stu, slbi, lbi, seq, sl, sco;
+    output regWrite, aluSrc, btr, memWrite, memRead, memToReg, halt, noOp, slbi, lbi, seq, sl, sco, ror;
+    wire stu;
     
     wire   [2:0]    Rs, Rt, Rd, regWrite; // R1 is either Rd or Rt, R2 is Rd. 
     // Instatiate register file
@@ -41,6 +42,6 @@ module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVaL, err, 
 
     control controlUnit(.aluOp(aluOp), .clk(clk), .rst(rst), .instr(instr), .regWrite(regWrite), .aluSrc(aluSrc), .btr(btr), .memWrite(memWrite), 
         .memRead(memRead), .memToReg(memToReg), .branchCtl(branchCtl), .jumpCtl(jumpCtl), .halt(halt),
-        .noOp(noOp), .immCtl(), .extCtl(), .stu(stu), .slbi(slbi), .immPres(), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco));
+        .noOp(noOp), .immCtl(), .extCtl(), .stu(stu), .slbi(slbi), .immPres(), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco), .ror(ror));
 
 endmodule

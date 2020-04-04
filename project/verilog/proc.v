@@ -21,8 +21,8 @@ module proc (/*AUTOARG*/
    // As desribed in the homeworks, use the err signal to trap corner
    // cases that you think are illegal in your statemachines
    
-   wire regWrite, btr, aluSrc, memWrite, memRead, memToReg, halt, noOp, stu, slbi, immPres, lbi, stuCtl, PCsrc;
-   wire decode_err, sl, sco, seq;
+   wire regWrite, btr, aluSrc, memWrite, memRead, memToReg, halt, noOp, slbi, immPres, lbi, stuCtl, PCsrc;
+   wire decode_err, sl, sco, seq, ror;
    //wire [1:0] aluCtl;
    wire [2:0] regRs, readReg1, readReg2, writeReg1, aluOp, branchCtl, jumpCtl;
    wire [15:0] immVal;
@@ -51,11 +51,11 @@ module proc (/*AUTOARG*/
    //   .read1Data(read1Data), .read2Data(read2Data), .err(decode_err), .immPres(immPres), .linkCtl(linkCtl)))
    decode decodeStage(.clk(clk), .rst(rst), .instr(instr), .writeData(writeData), .err(err), .read1Data(read1Data), .read2Data(read2Data), 
       .exImmVaL(exImmVaL), .aluOp(aluOp), .regWrite(regWrite), .aluSrc(aluSrc), .btr(btr), .memWrite(memWrite), .memRead(memRead), .memToReg(memToReg), .branchCtl(branchCtl), 
-      .jumpCtl(jumpCtl), .halt(), .noOp(), .stu(stu), .slbi(slbi), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco));
+      .jumpCtl(jumpCtl), .halt(), .noOp(), .slbi(slbi), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco), .ror(ror));
 
 
    // Execute
-   execute executeStage(.aluOp(aluOp), .sl(sl), .sco(sco), .seq(seq), .jumpCtl(jumpCtl), .branchCtl(branchCtl),
+   execute executeStage(.aluOp(aluOp), .sl(sl), .sco(sco), .seq(seq), .ror(ror), .jumpCtl(jumpCtl), .branchCtl(branchCtl),
       .btr(btr), .lbi(lbi), .slbi(slbi), .aluSrc(aluSrc), .regData1(read1Data), .regData2(read2Data), .immVal(exImmVaL), .inc_pc(PC_inc), .instr(instr), 
        .new_pc(PC_new), .Out(Out), .Zero(Zero), .Ofl(Ofl), .memRead(memRead), .memWrite(memWrite), .PCsrc(PCsrc));
 
