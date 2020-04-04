@@ -1,7 +1,7 @@
 module branchctlunit (regData1, branchCtl, branch);
 	// TODO: Need Optimization.
 	input	[15:0]	regData1;
-	input	[3:0]	branchCtl;
+	input	[2:0]	branchCtl;
 	output	reg		branch;
 	always @(*) begin
 		case (branchCtl)

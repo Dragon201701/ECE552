@@ -56,14 +56,14 @@ module proc (/*AUTOARG*/
 
    // Execute
    execute executeStage(.aluOp(aluOp), .sl(sl), .sco(sco), .seq(seq), .jumpCtl(jumpCtl), .branchCtl(branchCtl),
-      .btr(btr), .slbi(slbi), .aluSrc(aluSrc), .regData1(read1Data), .regData2(read2Data), .immVal(exImmVaL), .inc_pc(PC_inc), .instr(instr), 
+      .btr(btr), .lbi(lbi), .slbi(slbi), .aluSrc(aluSrc), .regData1(read1Data), .regData2(read2Data), .immVal(exImmVaL), .inc_pc(PC_inc), .instr(instr), 
        .new_pc(PC_new), .Out(Out), .Zero(Zero), .Ofl(Ofl), .memRead(memRead), .memWrite(memWrite), .PCsrc(PCsrc));
 
    // Memory
    memory memoryStage(.aluOut(Out), .wrData(read2Data), .memRead(memRead), .memWrite(memWrite), .clk(clk), .rst(rst), .memoryOut(memoryOut), .halt(halt));
 
    // Wb
-   wb wbStage(.pc(pc), .jumpCtl(jumpCtl), .memToReg(memToReg), .memData(memoryOut), .aluOut(Out), .lbi(lbi), .immVal(exImmVaL), .writeData(writeData));
+   wb wbStage(.PC_inc(PC_inc), .jumpCtl(jumpCtl), .memToReg(memToReg), .memData(memoryOut), .aluOut(Out), .immVal(exImmVaL), .writeData(writeData));
 
    assign err = 1'b0; //Ofl | decode_err;
 

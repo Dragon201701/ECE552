@@ -43,7 +43,7 @@
 002e c040 lbi r0, 0x40       // r0 = 0x0040
 0030 9050 slbi r0, 0x50      // r0 = 0x4050
 0032 b021 rori r1, r0, 1     // r1 = 0x2028
-0034 b145 rori r2, r1, 5     // r2 = 0x0101
+0034 b145 rori r2, r1, 5     // r2 = 0x4101
 0036 a16c roli r3, r1, 12    // r3 = 0x8202
 0038 db2c add r3, r3, r1     // r3 = 0xa22a
 003a b381 rori r4, r3, 1     // r4 = 0xd115

@@ -41,6 +41,6 @@ module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVaL, err, 
 
     control controlUnit(.aluOp(aluOp), .clk(clk), .rst(rst), .instr(instr), .regWrite(regWrite), .aluSrc(aluSrc), .btr(btr), .memWrite(memWrite), 
         .memRead(memRead), .memToReg(memToReg), .branchCtl(branchCtl), .jumpCtl(jumpCtl), .halt(halt),
-        .noOp(noOp), .immCtl(), .extCtl(), .stu(stu), .slbi(slbi), .immPres(), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco), .aluCtl());
+        .noOp(noOp), .immCtl(), .extCtl(), .stu(stu), .slbi(slbi), .immPres(), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco));
 
 endmodule

@@ -4,10 +4,10 @@
    Filename        : execute.v
    Description     : This is the overall module for the execute stage of the processor.
 */
-module execute (aluOp, sl, sco, seq, slbi, btr, aluSrc, jumpCtl, branchCtl, regData1, regData2, immVal, inc_pc, instr, invA, invB, new_pc, Out, Zero, Ofl, memRead, memWrite, PCsrc);
+module execute (aluOp, sl, sco, seq, lbi, slbi, btr, aluSrc, jumpCtl, branchCtl, regData1, regData2, immVal, inc_pc, instr, invA, invB, new_pc, Out, Zero, Ofl, memRead, memWrite, PCsrc);
 
    input sl, sco, seq;
-   input slbi, invA, invB, aluSrc, btr, memRead, memWrite;
+   input lbi, slbi, invA, invB, aluSrc, btr, memRead, memWrite;
    input [15:0] regData1, regData2, immVal, instr, inc_pc;
    input [2:0] aluOp, jumpCtl, branchCtl;
    wire [15:0] pc_add, InA, inA, InB, inB, rotaterightbits, immValShifted, jumpValSigned, branchValSigned, aluOut, setOut;
@@ -40,7 +40,7 @@ module execute (aluOp, sl, sco, seq, slbi, btr, aluSrc, jumpCtl, branchCtl, regD
 
    alu executeALU(.slbi(slbi),.InA(InA), .InB(InB), .Cin(1'b0), .Op(aluOp), .invA(1'b0), .invB(1'b0), .sign(sign), .Out(aluOut), .Zero(Zero), .Ofl(Ofl), .cout(cout));  
 
-   assign Out = (sl | seq | sco) ? setOut : btr ? {InA[0],InA[1],InA[2],InA[3],InA[4],InA[5],InA[6],InA[7],InA[8],InA[9],InA[10],InA[11],InA[12],InA[13],InA[14],InA[15]} : aluOut;
+   assign Out = lbi? immVal : (sl | seq | sco) ? setOut : btr ? {InA[0],InA[1],InA[2],InA[3],InA[4],InA[5],InA[6],InA[7],InA[8],InA[9],InA[10],InA[11],InA[12],InA[13],InA[14],InA[15]} : aluOut;
 
    assign sltresult = (InA[15]&InB[15])|(~InA[15]&~InB[15])?~aluOut[15]&~Zero:(InA[15]&~InB[15]);
    assign sleresult = sltresult | Zero;
@@ -54,7 +54,7 @@ module execute (aluOp, sl, sco, seq, slbi, btr, aluSrc, jumpCtl, branchCtl, regD
 
 
    branchctlunit branchunit(.regData1(regData1), .branchCtl(branchCtl), .branch(branch));
-   assign PCsrc = branch&jumpCtl[2];
+   assign PCsrc = branch|jumpCtl[2];
    assign new_pc = jumpCtl[0]?aluOut:pc_add;
 
 
