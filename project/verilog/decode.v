@@ -4,8 +4,8 @@
    Filename        : decode.v
    Description     : This is the module for the overall decode stage of the processor.
 */
-module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVaL, err, aluOp, regWriteIn, regWriteOut, aluSrc, btr, 
-    memWrite, memRead, memToReg, branchCtl, jumpCtl, halt, noOp, slbi, lbi, seq, sl, sco, ror, Rs, Rt, RdIn, RdOut);
+module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVal, err, aluOp, regWriteIn, regWriteOut, aluSrc, btr, 
+    memWrite, memRead, MemToReg, branchCtl, jumpCtl, halt, noOp, slbi, lbi, seq, sl, sco, ror, Rs, Rt, RdIn, RdOut);
 
     input   clk, rst, regWriteIn;
     input   [15:0]  instr; // instruction
@@ -13,9 +13,9 @@ module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVaL, err, 
     input   [2:0]   RdIn;
     output err;
     output [15:0]  read1Data, read2Data;
-    output [15:0] exImmVaL;
+    output [15:0] exImmVal;
     output [2:0] aluOp, jumpCtl, branchCtl, Rs, Rt, RdOut;
-    output regWriteOut, aluSrc, btr, memWrite, memRead, memToReg, halt, noOp, slbi, lbi, seq, sl, sco, ror;
+    output regWriteOut, aluSrc, btr, memWrite, memRead, MemToReg, halt, noOp, slbi, lbi, seq, sl, sco, ror;
     wire stu;
     
     //wire   [2:0]    Rs, Rt, Rd, regWrite; // R1 is either Rd or Rt, R2 is Rd. 
@@ -36,13 +36,13 @@ module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVaL, err, 
 
     // Assuming Rs is the first read register
     // TODO: Check
-    extension extension(.instr(instr), .extVal(exImmVaL));
+    extension extension(.instr(instr), .extVal(exImmVal));
 
     // Sign extension of immediate occurs here
     //assign signedImmVal = slbi ? immVal : immCtl ? { {8{immVal[7]}}, immVal[7:0]} : { {11{immVal[4]}} , immVal[4:0]};
 
     control controlUnit(.aluOp(aluOp), .clk(clk), .rst(rst), .instr(instr), .regWrite(regWriteOut), .aluSrc(aluSrc), .btr(btr), .memWrite(memWrite), 
-        .memRead(memRead), .memToReg(memToReg), .branchCtl(branchCtl), .jumpCtl(jumpCtl), .halt(halt),
+        .memRead(memRead), .MemToReg(MemToReg), .branchCtl(branchCtl), .jumpCtl(jumpCtl), .halt(halt),
         .noOp(noOp), .immCtl(), .extCtl(), .stu(stu), .slbi(slbi), .immPres(), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco), .ror(ror));
 
 endmodule
