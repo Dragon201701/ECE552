@@ -49,7 +49,7 @@ module proc (/*AUTOARG*/
 
    wire           flush, stall;
 
-   pipeline Pipeline_Control(.flush(flush), .stall(stall));
+   pipeline Pipeline_Control(.clk(clk), .rst(rst), .IDEX_Rs(IDEX_Rs), .IDEX_Rt(IDEX_Rt), .IDEX_Rd(IDEX_Rd), .EXMEM_Rs(EXMEM_Rs), .EXMEM_Rt(EXMEM_Rt), .EXMEM_Rd(EXMEM_Rd), .MEMWB_Rs(MEMWB_Rs), .MEMWB_Rt(MEMWB_Rt), .MEMWB_Rd(MEMWB_Rd), .flush(flush), .stall(stall));
 
    // Fetch
    fetch fetchStage(.clk(clk), .rst(rst), .PC_inc(PC_inc), .instr(instr), .PCsrc(PCsrc), .PC_new(PC_new), .PC(PC));
