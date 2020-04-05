@@ -4,13 +4,13 @@
    Filename        : fetch.v
    Description     : This is the module for the overall fetch stage of the processor.
 */
-module fetch (clk, rst, PCsrc, PC_new, PC_inc, instr);
+module fetch (clk, rst, PCsrc, PC_new, PC_inc, PC, instr);
 
    input clk, rst, PCsrc;
    input [15:0] PC_new;
 
-   output [15:0] PC_inc, instr;
-   wire   [15:0] PC_next, PC;
+   output [15:0] PC_inc, instr, PC;
+   wire   [15:0] PC_next;
    wire halt, noOp;
    assign halt = (instr[15:11] == 5'b00000)?1:0;
    assign noOp = (instr[15:11] == 5'b00001)?1:0;
