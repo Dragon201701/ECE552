@@ -4,9 +4,9 @@
    Filename        : fetch.v
    Description     : This is the module for the overall fetch stage of the processor.
 */
-module fetch (clk, rst, PCsrc, PC_new, PC_inc, PC, instr);
+module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr);
 
-   input clk, rst, PCsrc;
+   input clk, rst, PCsrc, stall;
    input [15:0] PC_new;
 
    output [15:0] PC_inc, instr, PC;
@@ -15,10 +15,10 @@ module fetch (clk, rst, PCsrc, PC_new, PC_inc, PC, instr);
    assign halt = (instr[15:11] == 5'b00000)?1:0;
    assign noOp = (instr[15:11] == 5'b00001)?1:0;
   assign PC_next = rst? 16'h0000 :
-                   halt? PC :
+                   halt ? PC :
                    noOp? PC_inc :
                    PCsrc? PC_new : PC_inc;
-  reg16 pcreg(.clk(clk),.rst(rst),.en(1'b1),.D(PC_next), .Q(PC));
+  reg16 pcreg(.clk(clk), .rst(rst), .en(~stall), .D(PC_next), .Q(PC));
   // Initialize memory
   // TODO: Change memory back to syn type
    memory2c instr_mem(.data_out(instr), .data_in(PC), .addr(PC), .enable(1'b1), .wr(1'b0), .createdump(clk), .clk(clk), .rst(rst) );

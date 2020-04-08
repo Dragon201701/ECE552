@@ -1,4 +1,4 @@
-module MEMWBreg (clk, rst, memoryOut, PC_inc, PC, jumpCtl, MemToReg, ALUOut, regWrite, Rs, Rt, Rd, lbi, slbi,
+module MEMWBreg (clk, rst, memoryOut, PC_inc, PC, jumpCtl, MemToReg, ALUOut, regWrite, Rs, Rt, Rd, lbi, slbi
 		MEMWB_memoryOut, MEMWB_PC_inc, MEMWB_PC, MEMWB_jumpCtl, MEMWB_ALUout, MEMWB_MemToReg, MEMWB_regWrite, MEMWB_Rs, MEMWB_Rt, MEMWB_Rd, MEMWB_lbi, MEMWB_slbi);
 	input clk, rst;
 	input 	[15:0]	memoryOut, PC_inc, ALUOut, PC;

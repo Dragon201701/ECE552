@@ -1,4 +1,4 @@
-module EXMEMreg (clk, rst, Rs, Rt, Rd, jumpCtl, memAddr, writeData, memRead, memWrite, PCsrc, PC_inc, PC_new, regWrite, MemToReg, PC, lbi, slbi,
+module EXMEMreg (clk, rst, Rs, Rt, Rd, jumpCtl, memAddr, writeData, memRead, memWrite, PCsrc, PC_inc, PC_new, regWrite, MemToReg, PC, lbi, slbi
 	EXMEM_Rs, EXMEM_Rt, EXMEM_Rd, EXMEM_jumpCtl, EXMEM_memAddr, EXMEM_writeData, EXMEM_memRead, EXMEM_memWrite, EXMEM_PCsrc, EXMEM_PC_inc, EXMEM_PC_new, EXMEM_PC, EXMEM_regWrite, EXMEM_MemToReg, EXMEM_lbi, EXMEM_slbi);
 	input clk, rst;
 	input	[2:0]	Rs, Rt, Rd, jumpCtl;

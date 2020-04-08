@@ -4,10 +4,10 @@
    Filename        : execute.v
    Description     : This is the overall module for the execute stage of the processor.
 */
-module execute (aluOp, sl, sco, seq, lbi, slbi, btr, ror, aluSrc, jumpCtl, branchCtl, regData1, regData2, immVal, inc_pc, invA, invB, new_pc, Out, Zero, Ofl, PCsrc);
+module execute (aluOp, sl, sco, seq, lbi, slbi, btr, ror, aluSrc, jumpCtl, branchCtl, regData1, regData2, immVal, inc_pc, new_pc, Out, Zero, Ofl, PCsrc);
 
    input sl, sco, seq, ror;
-   input lbi, slbi, invA, invB, aluSrc, btr;
+   input lbi, slbi, aluSrc, btr;
    input [15:0] regData1, regData2, immVal, inc_pc;
    input [2:0] aluOp, jumpCtl, branchCtl;
    wire [15:0] pc_add, InA, inA, InB, inB, rotaterightbits, immValShifted, jumpValSigned, branchValSigned, aluOut, setOut;
