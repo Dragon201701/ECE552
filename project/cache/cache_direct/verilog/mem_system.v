@@ -30,7 +30,7 @@ module mem_system(/*AUTOARG*/
    wire   [2:0] offset;
    reg    [15:0]  mem_addr;
    reg   [2:0] state, next_state;
-   reg   cache_compare, cache_write,  memory_read, memory_write, cache_done, cache_en, input_reg, cache_status_en;
+   reg   cache_compare, cache_write,  memory_read, memory_write, cache_done, cache_en, input_reg, cache_status_en, sys_stall;
    wire   [2:0] mystate, mystate_n;
 
    reg   [3:0] mem_read_cout;
@@ -82,14 +82,14 @@ module mem_system(/*AUTOARG*/
    // your code here
 
    
-  parameter  IDLE = 3'b000, COMP_READ = 3'b001, MEM_READ = 3'b010, MEM_READ_STALL = 3'b011, ACCESS_WRITE = 3'b100, COMP_WRITE = 3'b101, MEM_WRITE = 3'b110, MEM_WRITE_STALL = 3'b111;
+  parameter  COMP_READ = 3'b000, MEM_READ = 3'b001, MEM_READ_STALL = 3'b010, ACCESS_WRITE = 3'b011, COMP_WRITE = 3'b100, MEM_WRITE = 3'b101, MEM_WRITE_STALL = 3'b110;
    assign tag = Addr[15:11];
    assign index = Addr[10:3];
    assign offset = Addr[2:0];
-   assign mystate = state;
+   //assign mystate = state;
    assign mystate_n = next_state;
    assign CacheHit = cache_hit;
-   assign Stall = mem_stall;
+   assign Stall = sys_stall;
    assign Done = cache_done;
    assign complete = (mem_read_cout == 4'h3)?1:0;
    reg1 write_reg(.clk(clk), .rst(rst), .en(input_reg), .D(Wr), .Q(write));
@@ -97,45 +97,46 @@ module mem_system(/*AUTOARG*/
    reg1 cachehitreg(.clk(clk), .rst(rst), .en(cache_status_en), .D(cache_hit), .Q(cache_hit_signal));
    reg3 state_reg(.clk(clk), .rst(rst), .en(1'b1), .D(mystate_n), .Q(mystate));
    reg16 mem_data_reg(.clk(clk), .rst(rst), .en(mem_data_available), .D(mem_data), .Q(mem_data_out));
-   always @(*) begin 
+   always @(*) begin
+    state = mystate; 
     cache_compare = 0;
     cache_write = 0;
     memory_read = 0;
     memory_write = 0;
     cache_status_en = 0;
-    cache_en = 1;
+    cache_en = 0;
     mem_addr = Addr;
+    sys_stall = 1;
+    input_reg = 0;
     case(state)
-      IDLE: begin 
-         next_state = Rd? COMP_READ : Wr? COMP_WRITE : IDLE;
-         cache_done = 0;
-         cache_en = 0;
-      end
       COMP_READ: begin 
+        cache_en = Rd;
         cache_compare = 1;
         cache_write = 0;
-        next_state = (cache_hit&valid)? IDLE : MEM_READ; //TODO: valid?
-        cache_done = (cache_hit&valid)? 1:0;
+        next_state = ((Rd&~cache_hit)|(Rd&cache_hit&~valid))? MEM_READ : Wr? COMP_WRITE : COMP_READ;
+        cache_done = (Rd&cache_hit&valid)? 1:0;
         mem_read_cout = 4'h0;
         cache_status_en = 1;
+        sys_stall = 0;
+        input_reg = 1;
       end
       MEM_READ: begin 
         mem_addr = {Addr[15:2], mem_read_cout[1:0]};
         memory_read = 1;
-        cache_en = 0;
         next_state = MEM_READ_STALL;
       end
       MEM_READ_STALL: begin
         next_state = mem_stall? MEM_READ_STALL : ACCESS_WRITE;
-        cache_en = 0;
       end
       ACCESS_WRITE: begin 
+        cache_en = 1;
         cache_write = 1;
         mem_read_cout = mem_read_cout_add;
         cache_done = 1;
-        next_state = (complete | (write&cache_hit_signal))?IDLE:MEM_READ;
+        next_state = (complete | (write&cache_hit_signal))?COMP_READ:MEM_READ;
       end
       COMP_WRITE: begin 
+        cache_en = 1;
         cache_write = 1;
         cache_compare = 1;
         next_state = MEM_WRITE;
@@ -147,9 +148,9 @@ module mem_system(/*AUTOARG*/
       end
       MEM_WRITE_STALL: begin 
         next_state = mem_stall? MEM_WRITE_STALL : (write&cache_hit_signal)?ACCESS_WRITE:MEM_READ;
-        cache_done = 1;
+        //cache_done = 1;
       end
-      default: next_state = IDLE;
+      default: next_state = COMP_READ;
     endcase // state
   end
    
