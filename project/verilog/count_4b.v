@@ -1,4 +1,4 @@
-module count(clk, rst, en, clear, cnt_o);
+module count_4b(clk, rst, en, clear, cnt_o);
 
     // declare constant for size of inputs, outputs (N)
     parameter   N = 4;
