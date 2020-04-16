@@ -24,17 +24,17 @@ module mem_system(/*AUTOARG*/
    output err;
 
 
-   wire   [15:0]  mem_data, mem_data_out, cache_data, cache_data_reg_out;
+   wire   [15:0]  mem_data, mem_data_out, cache_data, cache_data_reg_out, data_out_reg_in, data_out_reg_out;
    wire   [4:0] tag, tag_out;
    wire   [10:3]  index;
    wire   [2:0] offset;
-   reg    [15:0]  mem_addr, DataOut_reg;
+   reg    [15:0]  mem_addr, DataOut_reg, cache_addr;
    reg   [3:0] state, next_state;
    reg   cache_compare, cache_write,  memory_read, memory_write, cache_done, cache_en, input_reg, cache_status_en, sys_stall, mem_data_available, cache_data_en;
    wire   [3:0] mystate, mystate_n;
 
    wire   [3:0] mem_read_count;
-   reg         mem_read_count_en, mem_read_count_clear;
+   reg         mem_read_count_en, mem_read_count_clear, data_out_reg_en;
    count_4b mem_read_counter(.clk(clk), .rst(rst), .en(mem_read_count_en), .clear(mem_read_count_clear), .cnt_o(mem_read_count));
    wire   valid, dirty, cache_hit, stall, cache_err, mem_err, mem_busy, mem_stall, complete;
    wire   write, read, cache_hit_signal;
@@ -72,7 +72,7 @@ module mem_system(/*AUTOARG*/
                      .clk               (clk),
                      .rst               (rst),
                      .createdump        (createdump),
-                     .addr              (Addr),
+                     .addr              (mem_addr),
                      .data_in           (DataIn),
                      .wr                (memory_write),
                      .rd                (memory_read));
@@ -82,9 +82,9 @@ module mem_system(/*AUTOARG*/
 
    
   parameter  IDLE = 4'h0, COMP_READ = 4'h1, MEM_READ = 4'h2, MEM_READ_STALL = 4'h3, ACCESS_WRITE = 4'h4, COMP_WRITE = 4'h5, MEM_WRITE_0 = 4'h6, MEM_WRITE_1 = 4'h7, MEM_WRITE_2 = 4'h8, MEM_WRITE_3 = 4'h9;
-   assign tag = Addr[15:11];
-   assign index = Addr[10:3];
-   assign offset = Addr[2:0];
+   assign tag = cache_addr[15:11];
+   assign index = cache_addr[10:3];
+   assign offset = cache_addr[2:0];
    //assign mystate = state;
    assign mystate_n = next_state;
    assign CacheHit = cache_hit & state == COMP_READ;
@@ -92,6 +92,7 @@ module mem_system(/*AUTOARG*/
    assign Done = cache_done;
    assign complete = (mem_read_count == 4'h4)?1:0;
    assign DataOut = DataOut_reg;
+   assign data_out_reg_in = DataOut_reg;
    assign err = cache_err | mem_err;
    reg1 write_reg(.clk(clk), .rst(rst), .en(input_reg), .D(Wr), .Q(write));
    reg1 read_reg(.clk(clk), .rst(rst), .en(input_reg), .D(Rd), .Q(read));
@@ -99,6 +100,7 @@ module mem_system(/*AUTOARG*/
    reg4 state_reg(.clk(clk), .rst(rst), .en(1'b1), .D(mystate_n), .Q(mystate));
    reg16 mem_data_reg(.clk(clk), .rst(rst), .en(mem_data_available), .D(mem_data), .Q(mem_data_out));
    reg16 cache_data_reg(.clk(clk), .rst(rst), .en (cache_data_en), .D  (cache_data), .Q  (cache_data_reg_out));
+   reg16 data_out_reg(.clk(clk), .rst(rst), .en (data_out_reg_en), .D  (DataOut_reg), .Q  (data_out_reg_out));
    always @(*) begin
     state = mystate; 
     cache_compare = 0;
@@ -108,21 +110,26 @@ module mem_system(/*AUTOARG*/
     cache_status_en = 0;
     cache_en = 0;
     cache_done = 0;
-    mem_addr = Addr;
+    //mem_addr = Addr;
     sys_stall = 1;
     input_reg = 0;
     mem_read_count_en = 0;
     mem_read_count_clear = 0;
+    mem_data_available = 0;
     cache_data_en = 0;
-    DataOut_reg = 16'h0;
+    data_out_reg_en = 0;
+    //cache_addr = 16'h0000;
     case(state)
       IDLE: begin
         sys_stall = 0;
         input_reg = 1;
         next_state = Rd? COMP_READ : Wr? COMP_WRITE : IDLE;
-        DataOut_reg = cache_data_reg_out;
+        mem_read_count_clear = 1;
+        //DataOut_reg = cache_data_reg_out;
+        DataOut_reg = data_out_reg_out;
       end
       COMP_READ: begin 
+        cache_addr = Addr;
         mem_read_count_clear = 1;
         cache_en = 1;
         cache_compare = 1;
@@ -132,12 +139,14 @@ module mem_system(/*AUTOARG*/
         cache_done = (cache_hit&valid)? 1:0;
         cache_status_en = 1;
         mem_data_available = 0;
-        cache_data_en = 1;
-        DataOut_reg = cache_data;
+        //cache_data_en = 1;
+        data_out_reg_en = 1;
+        DataOut_reg = (cache_hit&valid)? cache_data : 16'h0000;
       end
       MEM_READ: begin 
         
-        mem_addr = {Addr[15:2], mem_read_count[1:0]};
+        mem_addr = {Addr[15:3], mem_read_count[1:0], 1'b0};
+        cache_addr = mem_addr;
         memory_read = 1;
         next_state = MEM_READ_STALL;
       end
@@ -148,17 +157,25 @@ module mem_system(/*AUTOARG*/
       ACCESS_WRITE: begin 
         cache_en = 1;
         cache_write = 1;
+        cache_addr = (write&cache_hit_signal)?Addr:cache_addr;
         cache_done = complete | (write&cache_hit_signal);
         next_state = (complete | (write&cache_hit_signal))?IDLE:MEM_READ;
+        //mem_data_available = (read&Addr == mem_addr)?1:0;
+        data_out_reg_en = (read& (Addr == mem_addr))?1:0;
+        DataOut_reg = (read& (Addr == mem_addr))?mem_data:data_out_reg_out;
+
       end
       COMP_WRITE: begin 
+        cache_addr = Addr;
         cache_en = 1;
         cache_write = 1;
         cache_compare = 1;
         next_state = MEM_WRITE_0;
         cache_status_en = 1;
+        mem_addr = Addr;
       end
       MEM_WRITE_0: begin 
+
         memory_write = 1;
         next_state = MEM_WRITE_1;
       end
