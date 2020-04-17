@@ -143,12 +143,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	four_bank_mem
 
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/count_4b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/count_4b.v
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module count_4b
+-- Compiling module mem_system_randbench
 
 Top level modules:
-	count_4b
+	mem_system_randbench
 
 } {} {}} D:/ECE552/project/cache/cache_assoc/verilog/dff.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/dff.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018

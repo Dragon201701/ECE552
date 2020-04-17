@@ -5,17 +5,7 @@ module count_4b(clk, rst, en, clear, cnt_o);
 
     input               clk, rst, en, clear;
     output [N-1:0]   cnt_o;
-/*
-    always @ (posedge clk or posedge rst)
-        if (rst)
-            cnt_o <=0;
-        else
-            if(en)
-                if(clear)
-                    cnt_o<=0;
-                else
-                    cnt_o <= cnt_o + 1;
-*/
+
     wire [3:0]	   d, q;	
 
 	dff dff_0(.d(d[0]), .clk(clk), .rst(rst), .q(q[0]));	
