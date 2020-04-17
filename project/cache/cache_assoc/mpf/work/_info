@@ -252,21 +252,20 @@ Z10 !s108 1587149860.000000
 R5
 R6
 vmem_system_randbench
-!s110 1587149860
+R0
+r1
+!s85 0
+31
 !i10b 1
 !s100 JTg<TWUma[ROVRKRZ6iIH1
 I1HXz_eE6a<GNHMlPPA4]g3
-R0
 R1
-R2
+w1587158623
 8D:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v
 FD:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v
 L0 5
 R3
-r1
-!s85 0
-31
-R10
+!s108 1587158664.000000
 !s107 D:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v|
 !i113 0

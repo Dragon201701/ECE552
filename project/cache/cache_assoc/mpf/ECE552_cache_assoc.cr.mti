@@ -87,6 +87,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	reg4
 
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/mem_system.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/mem_system.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mem_system
+
+Top level modules:
+	mem_system
+
 } {} {}} D:/ECE552/project/cache/cache_assoc/verilog/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/xor2.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module xor2
@@ -142,13 +149,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	count_4b
-
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module mem_system_randbench
-
-Top level modules:
-	mem_system_randbench
 
 } {} {}} D:/ECE552/project/cache/cache_assoc/verilog/dff.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/dff.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
