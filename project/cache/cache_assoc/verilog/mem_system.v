@@ -65,7 +65,7 @@ module mem_system(/*AUTOARG*/
                           .hit                  (c1_hit),
                           .dirty                (c1_dirty),
                           .valid                (c1_valid_out),
-                          .err                  (c0_err),
+                          .err                  (c1_err),
                           // Inputs
                           .enable               (c1_en),
                           .clk                  (clk),
@@ -75,7 +75,7 @@ module mem_system(/*AUTOARG*/
                           .index                (c1_index),
                           .offset               (c1_offset),
                           .data_in              (c1_data_in),
-                          .comp                 (c1_ompare),
+                          .comp                 (c1_compare),
                           .write                (c1_write),
                           .valid_in             (c1_valid_in));
 

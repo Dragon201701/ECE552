@@ -233,8 +233,8 @@ module controller (
 	        //mem_data_available = (read&Addr == mem_addr)?1:0;
 	        data_out_reg_en = (read& (Addr == mem_addr))?1:0;
 	        DataOut_reg = (read& (Addr == mem_addr))?mem_data_out:data_out_reg_out;
-	        c0_valid_in_reg = complete&~victim;
-	        c1_valid_in_reg = complete&victim;
+	        c0_valid_in_reg = complete&~cache_way;
+	        c1_valid_in_reg = complete&cache_way;
 	      end
 
 	      COMP_WRITE: begin 
