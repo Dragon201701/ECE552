@@ -1,0 +1,582 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ECE552/project/cache/cache_direct/mpf
+vcache
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 W_PXLV=SljHgf@G;jY>5Z0
+Ik^N78BiK@XBdZoCnA20lY3
+Z1 dD:/ECE552/project/cache/cache_assoc/mpf
+Z2 w1581299029
+8D:/ECE552/project/cache/cache_assoc/verilog/cache.v
+FD:/ECE552/project/cache/cache_assoc/verilog/cache.v
+L0 17
+Z3 OL;L;10.6d;65
+Z4 !s108 1587149857.000000
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/cache.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/cache.v|
+!i113 0
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 tCvgOpt 0
+vcla_4b
+!s110 1587149857
+!i10b 1
+!s100 Zc:mYC2^T]TB^L`PXODm@3
+IAKKFzbQHln1LMXQ5=3]4<2
+R0
+R1
+w1581563773
+8D:/ECE552/project/cache/cache_assoc/verilog/cla_4b.v
+FD:/ECE552/project/cache/cache_assoc/verilog/cla_4b.v
+L0 7
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/cla_4b.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/cla_4b.v|
+!i113 0
+R5
+R6
+vclkrst
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 J=T_dJkmXDbD=BKIo?=kn2
+I9ZF4J:0?Vo`=Wm?LNV5M_1
+R1
+w1585938531
+8D:/ECE552/project/cache/cache_assoc/verilog/clkrst.v
+FD:/ECE552/project/cache/cache_assoc/verilog/clkrst.v
+L0 13
+R3
+R4
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/clkrst.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/clkrst.v|
+!i113 0
+R5
+R6
+vcontroller
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 c3iU`PSnF>XO7>zXiVMXV1
+IS?R=9X]JVQ?>Q4S;<j;NT1
+R1
+w1587150474
+8D:/ECE552/project/cache/cache_assoc/verilog/controller.v
+FD:/ECE552/project/cache/cache_assoc/verilog/controller.v
+L0 1
+R3
+!s108 1587150480.000000
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/controller.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/controller.v|
+!i113 0
+R5
+R6
+vcount_4b
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 _[NMIO`h3]I;HFL4`=>I<0
+IkGYB0F=Lmb;d_WOR[e3To0
+R1
+w1586842445
+8D:/ECE552/project/cache/cache_assoc/verilog/count_4b.v
+FD:/ECE552/project/cache/cache_assoc/verilog/count_4b.v
+L0 1
+R3
+Z7 !s108 1587149858.000000
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/count_4b.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/count_4b.v|
+!i113 0
+R5
+R6
+vdff
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 ocZMMJaQcW@V^7b`LBG;g2
+I9]V6RdaM3_g=c8^THUd[i3
+R1
+Z8 w1583973340
+8D:/ECE552/project/cache/cache_assoc/verilog/dff.v
+FD:/ECE552/project/cache/cache_assoc/verilog/dff.v
+L0 6
+R3
+R7
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/dff.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/dff.v|
+!i113 0
+R5
+R6
+vfinal_memory
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 PLMOmQHM?<Ma`Fi94[[4P2
+IQF;9Z<Z;WBlCYWYQMXRK12
+R1
+R2
+8D:/ECE552/project/cache/cache_assoc/verilog/final_memory.v
+FD:/ECE552/project/cache/cache_assoc/verilog/final_memory.v
+L0 54
+R3
+R7
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/final_memory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/final_memory.v|
+!i113 0
+R5
+R6
+vfour_bank_mem
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 fFjCM1aIGh`TZz:`^Id=i1
+Ii;6;PSmU=7IJLoS24J22>3
+R1
+R2
+8D:/ECE552/project/cache/cache_assoc/verilog/four_bank_mem.v
+FD:/ECE552/project/cache/cache_assoc/verilog/four_bank_mem.v
+L0 65
+R3
+Z9 !s108 1587149859.000000
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/four_bank_mem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/four_bank_mem.v|
+!i113 0
+R5
+R6
+vfullAdder_1b
+!s110 1587149859
+!i10b 1
+!s100 `K5Q0643<IlOaWohUVOGe2
+I:SOJ2W5I<9aAa<hhEDdlG3
+R0
+R1
+w1581563779
+8D:/ECE552/project/cache/cache_assoc/verilog/fullAdder_1b.v
+FD:/ECE552/project/cache/cache_assoc/verilog/fullAdder_1b.v
+L0 7
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/fullAdder_1b.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/fullAdder_1b.v|
+!i113 0
+R5
+R6
+nfull@adder_1b
+vmem_system
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 >nRTc[M_=FJDLJ?k4=SbA2
+IFX92^RPaRbF^5WiBeo4>70
+R1
+w1587151720
+8D:/ECE552/project/cache/cache_assoc/verilog/mem_system.v
+FD:/ECE552/project/cache/cache_assoc/verilog/mem_system.v
+L0 5
+R3
+!s108 1587151754.000000
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/mem_system.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/mem_system.v|
+!i113 0
+R5
+R6
+vmem_system_hier
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 SV]J3`f:TzOChGc>mObJS0
+IT]]8@NAMZQANK9`ePdQaZ2
+R1
+R2
+8D:/ECE552/project/cache/cache_assoc/verilog/mem_system_hier.v
+FD:/ECE552/project/cache/cache_assoc/verilog/mem_system_hier.v
+L0 5
+R3
+R9
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/mem_system_hier.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/mem_system_hier.v|
+!i113 0
+R5
+R6
+vmem_system_perfbench
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 BgGPg8VUBb=NTc]48Fg9J0
+IVAIWgIdNjd8gh]<Gn_eo70
+R1
+R2
+8D:/ECE552/project/cache/cache_assoc/verilog/mem_system_perfbench.v
+FD:/ECE552/project/cache/cache_assoc/verilog/mem_system_perfbench.v
+L0 7
+R3
+Z10 !s108 1587149860.000000
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/mem_system_perfbench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/mem_system_perfbench.v|
+!i113 0
+R5
+R6
+vmem_system_randbench
+!s110 1587149860
+!i10b 1
+!s100 JTg<TWUma[ROVRKRZ6iIH1
+I1HXz_eE6a<GNHMlPPA4]g3
+R0
+R1
+R2
+8D:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v
+FD:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v
+L0 5
+R3
+r1
+!s85 0
+31
+R10
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v|
+!i113 0
+R5
+R6
+vmem_system_ref
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 AeC5@czA[UGMTfdTRob<V0
+I0[gk6B=zilJoY2^[;A;5:2
+R1
+R2
+8D:/ECE552/project/cache/cache_assoc/verilog/mem_system_ref.v
+FD:/ECE552/project/cache/cache_assoc/verilog/mem_system_ref.v
+L0 5
+R3
+R10
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/mem_system_ref.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/mem_system_ref.v|
+!i113 0
+R5
+R6
+vmemc
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 COYIdHdN=bZYYldo0lGTO1
+IEd@ZcI;lOkFf__91JKblZ1
+R1
+R2
+8D:/ECE552/project/cache/cache_assoc/verilog/memc.v
+FD:/ECE552/project/cache/cache_assoc/verilog/memc.v
+L0 6
+R3
+Z11 !s108 1587149861.000000
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/memc.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/memc.v|
+!i113 0
+R5
+R6
+vmemv
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 RPJlHojEBDMk>>f^Wz9KU0
+I]XXZFZ1Lm2;ZB:<kSUk<P2
+R1
+R2
+8D:/ECE552/project/cache/cache_assoc/verilog/memv.v
+FD:/ECE552/project/cache/cache_assoc/verilog/memv.v
+L0 6
+R3
+R11
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/memv.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/memv.v|
+!i113 0
+R5
+R6
+vnand2
+Z12 !s110 1587149862
+!i10b 1
+!s100 @JLnM_lV[dSoG<b5oFSbC0
+I><^g9IWkRhVC0n0MhXlzZ0
+R0
+R1
+R8
+8D:/ECE552/project/cache/cache_assoc/verilog/nand2.v
+FD:/ECE552/project/cache/cache_assoc/verilog/nand2.v
+L0 7
+R3
+r1
+!s85 0
+31
+R11
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/nand2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/nand2.v|
+!i113 0
+R5
+R6
+vnand3
+R12
+!i10b 1
+!s100 74U72gSXNGQC9QQ_6Vl@m3
+I9WkhU?8PILHaPb>h?I]6g0
+R0
+R1
+R8
+8D:/ECE552/project/cache/cache_assoc/verilog/nand3.v
+FD:/ECE552/project/cache/cache_assoc/verilog/nand3.v
+L0 7
+R3
+r1
+!s85 0
+31
+Z13 !s108 1587149862.000000
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/nand3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/nand3.v|
+!i113 0
+R5
+R6
+vnor2
+R12
+!i10b 1
+!s100 zLY;3kAfYGCBXK2?=fzNd1
+I<]2B4H;Pdf2D4IHC@K8Gi2
+R0
+R1
+R8
+8D:/ECE552/project/cache/cache_assoc/verilog/nor2.v
+FD:/ECE552/project/cache/cache_assoc/verilog/nor2.v
+L0 7
+R3
+r1
+!s85 0
+31
+R13
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/nor2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/nor2.v|
+!i113 0
+R5
+R6
+vnor3
+R12
+!i10b 1
+!s100 M15<fJBSa=`jENU]=JkSO2
+I4fj1`mHTEa4Vb212^7PHF0
+R0
+R1
+R8
+8D:/ECE552/project/cache/cache_assoc/verilog/nor3.v
+FD:/ECE552/project/cache/cache_assoc/verilog/nor3.v
+L0 7
+R3
+r1
+!s85 0
+31
+R13
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/nor3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/nor3.v|
+!i113 0
+R5
+R6
+vnot1
+R12
+!i10b 1
+!s100 E;?=8[YGePDM35<9b7^jF3
+I08^XnR^z0f@NInYG^<l^J1
+R0
+R1
+R8
+8D:/ECE552/project/cache/cache_assoc/verilog/not1.v
+FD:/ECE552/project/cache/cache_assoc/verilog/not1.v
+L0 7
+R3
+r1
+!s85 0
+31
+R13
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/not1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/not1.v|
+!i113 0
+R5
+R6
+vreg1
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 jKLWCYz0IgeDF]_:e;W5:1
+I7gMSFNRRmCM4z=NEiUBZI3
+R1
+w1585970052
+8D:/ECE552/project/cache/cache_assoc/verilog/reg1.v
+FD:/ECE552/project/cache/cache_assoc/verilog/reg1.v
+L0 1
+R3
+Z14 !s108 1587149863.000000
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/reg1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/reg1.v|
+!i113 0
+R5
+R6
+vreg16
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 g^XR<mM=[cCgoASRXg=dN1
+IVYOJz4eMNlS1^S=^F]e4G3
+R1
+R8
+8D:/ECE552/project/cache/cache_assoc/verilog/reg16.v
+FD:/ECE552/project/cache/cache_assoc/verilog/reg16.v
+L0 1
+R3
+R14
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/reg16.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/reg16.v|
+!i113 0
+R5
+R6
+vreg3
+!s110 1587149863
+!i10b 1
+!s100 MLZ3bb=;d?j;nQZXcM]Gh1
+IeU7XR1@ad^DKai0=:@jD63
+R0
+R1
+w1585969740
+8D:/ECE552/project/cache/cache_assoc/verilog/reg3.v
+FD:/ECE552/project/cache/cache_assoc/verilog/reg3.v
+L0 1
+R3
+r1
+!s85 0
+31
+R14
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/reg3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/reg3.v|
+!i113 0
+R5
+R6
+vreg4
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 OHKSN]3>PlA@Te^V5:XG52
+I=@3b[Km91iA>=7c8a_L>o1
+R1
+w1586093126
+8D:/ECE552/project/cache/cache_assoc/verilog/reg4.v
+FD:/ECE552/project/cache/cache_assoc/verilog/reg4.v
+L0 1
+R3
+R14
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/reg4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/reg4.v|
+!i113 0
+R5
+R6
+vvictimway
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 3UNnU]Bg[aR<P5oO?6c572
+IiP>l?o<Shf0IBYNiR=];T3
+R1
+w1587146869
+8D:/ECE552/project/cache/cache_assoc/verilog/victimway.v
+FD:/ECE552/project/cache/cache_assoc/verilog/victimway.v
+L0 1
+R3
+!s108 1587150961.000000
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/victimway.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/victimway.v|
+!i113 0
+R5
+R6
+vxor2
+Z15 !s110 1587149864
+!i10b 1
+!s100 14Q51T:af@fHNQedg1F<m0
+IF1nfD^5gHBUJhdjCVDl:C0
+R0
+R1
+w1580934824
+8D:/ECE552/project/cache/cache_assoc/verilog/xor2.v
+FD:/ECE552/project/cache/cache_assoc/verilog/xor2.v
+L0 7
+R3
+r1
+!s85 0
+31
+R14
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/xor2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/xor2.v|
+!i113 0
+R5
+R6
+vxor3
+R15
+!i10b 1
+!s100 `n11P3H6:oWD]59JZPJ[m2
+IPMa[_UZVd[WYV7;QdzV:D2
+R0
+R1
+w1580934771
+8D:/ECE552/project/cache/cache_assoc/verilog/xor3.v
+FD:/ECE552/project/cache/cache_assoc/verilog/xor3.v
+L0 7
+R3
+r1
+!s85 0
+31
+!s108 1587149864.000000
+!s107 D:/ECE552/project/cache/cache_assoc/verilog/xor3.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/cache/cache_assoc/verilog/xor3.v|
+!i113 0
+R5
+R6
