@@ -23,48 +23,43 @@ module mem_system(/*AUTOARG*/
    output CacheHit;
    output err;
 
+   wire   cache_err, mem_err;
 
-   wire   [15:0]  mem_data, mem_data_out, cache_data, cache_data_reg_out, data_out_reg_in, data_out_reg_out;
-   wire   [4:0] tag, tag_out;
-   wire   [10:3]  index;
-   wire   [2:0] offset;
-   reg    [15:0]  mem_addr, DataOut_reg, cache_addr;
-   reg   [3:0] state, next_state;
-   reg   cache_compare, cache_write,  memory_read, memory_write, cache_done, cache_en, input_reg, cache_status_en, sys_stall, mem_data_available, cache_data_en;
-   wire   [3:0] mystate, mystate_n;
+   wire   [15:0]  cache_data_in, cache_data_out;
+   wire   [4:0]   tag_out, tag_in;
+   wire   [10:3]  cache_index;
+   wire   [2:0]   cache_offset;
+   wire           cache_hit, cache_dirty, cache_valid_in, cache_en, cache_compare, cache_write, cache_valid_out;
 
-   wire   [3:0] mem_read_count;
-   reg         mem_read_count_en, mem_read_count_clear, data_out_reg_en;
-   count_4b mem_read_counter(.clk(clk), .rst(rst), .en(mem_read_count_en), .clear(mem_read_count_clear), .cnt_o(mem_read_count));
-   wire   valid, dirty, cache_hit, stall, cache_err, mem_err, mem_busy, mem_stall, complete;
-   wire   write, read, cache_hit_signal;
-
+   wire   [15:0]  mem_data_in, mem_data_out, mem_addr;
+   wire           mem_stall, mem_read, mem_write;
+   wire   [3:0]   mem_busy;
 
    /* data_mem = 1, inst_mem = 0 *
     * needed for cache parameter */
    parameter memtype = 0;
    cache #(0 + memtype) c0(// Outputs
-                          .tag_out              (),
-                          .data_out             (cache_data),
+                          .tag_out              (tag_out),
+                          .data_out             (cache_data_out),
                           .hit                  (cache_hit),
-                          .dirty                (dirty),
-                          .valid                (valid),
+                          .dirty                (cache_dirty),
+                          .valid                (cache_valid_out),
                           .err                  (cache_err),
                           // Inputs
                           .enable               (cache_en),
                           .clk                  (clk),
                           .rst                  (rst),
                           .createdump           (createdump),
-                          .tag_in               (tag),
-                          .index                (index),
-                          .offset               (offset),
-                          .data_in              ((cache_write & ~cache_compare&(mem_read_count != 4'h0))?mem_data:DataIn),
+                          .tag_in               (tag_in),
+                          .index                (cache_index),
+                          .offset               (cache_offset),
+                          .data_in              (cache_data_in),
                           .comp                 (cache_compare),
                           .write                (cache_write),
-                          .valid_in             (1'b1));
+                          .valid_in             (cache_valid_in));
 
    four_bank_mem mem(// Outputs
-                     .data_out          (mem_data),
+                     .data_out          (mem_data_out),
                      .stall             (mem_stall),
                      .busy              (mem_busy),
                      .err               (mem_err),
@@ -73,130 +68,34 @@ module mem_system(/*AUTOARG*/
                      .rst               (rst),
                      .createdump        (createdump),
                      .addr              (mem_addr),
-                     .data_in           (DataIn),
-                     .wr                (memory_write),
-                     .rd                (memory_read));
+                     .data_in           (mem_data_in),
+                     .wr                (mem_write),
+                     .rd                (mem_read));
 
    
    // your code here
+   controller control(.Addr(Addr), .DataIn(DataIn), .Rd(Rd), .Wr(Wr), .clk(clk), .rst(rst), .DataOut(DataOut), .Done(Done), .Stall(Stall), .CacheHit(CacheHit), .err(err),
+    .cache_en(cache_en), .cache_tag_in(tag_in), .cache_index(cache_index), .cache_offset(cache_offset), 
+    .cache_data_in(cache_data_in), .cache_compare(cache_compare), .cache_write(cache_write), .cache_valid_in(cache_valid_in), 
+    .cache_tag_out(tag_out), .cache_data_out(cache_data_out), .cache_hit(cache_hit), .cache_dirty(cache_dirty), .cache_valid_out(cache_valid_out), 
+    .mem_addr(mem_addr), .mem_data_in(mem_data_in), .mem_write(mem_write), .mem_read(mem_read), .mem_data_out(mem_data_out), .mem_stall(mem_stall), .mem_busy(mem_busy));
+   
 
    
-  parameter  IDLE = 4'h0, COMP_READ = 4'h1, MEM_READ = 4'h2, MEM_READ_STALL = 4'h3, ACCESS_WRITE = 4'h4, COMP_WRITE = 4'h5, MEM_WRITE_0 = 4'h6, MEM_WRITE_1 = 4'h7, MEM_WRITE_2 = 4'h8, MEM_WRITE_3 = 4'h9;
-   assign tag = cache_addr[15:11];
-   assign index = cache_addr[10:3];
-   assign offset = cache_addr[2:0];
-   //assign mystate = state;
-   assign mystate_n = next_state;
-   assign CacheHit = cache_hit & state == COMP_READ;
-   assign Stall = sys_stall;
-   assign Done = cache_done;
-   assign complete = (mem_read_count == 4'h4)?1:0;
-   assign DataOut = DataOut_reg;
-   assign data_out_reg_in = DataOut_reg;
+
+   
+   
+  
+   
+
    assign err = cache_err | mem_err;
-   reg1 write_reg(.clk(clk), .rst(rst), .en(input_reg), .D(Wr), .Q(write));
-   reg1 read_reg(.clk(clk), .rst(rst), .en(input_reg), .D(Rd), .Q(read));
-   reg1 cachehitreg(.clk(clk), .rst(rst), .en(cache_status_en), .D(cache_hit), .Q(cache_hit_signal));
-   reg4 state_reg(.clk(clk), .rst(rst), .en(1'b1), .D(mystate_n), .Q(mystate));
-   reg16 mem_data_reg(.clk(clk), .rst(rst), .en(mem_data_available), .D(mem_data), .Q(mem_data_out));
-   reg16 cache_data_reg(.clk(clk), .rst(rst), .en (cache_data_en), .D  (cache_data), .Q  (cache_data_reg_out));
-   reg16 data_out_reg(.clk(clk), .rst(rst), .en (data_out_reg_en), .D  (DataOut_reg), .Q  (data_out_reg_out));
-   always @(*) begin
-    state = mystate; 
-    cache_compare = 0;
-    cache_write = 0;
-    memory_read = 0;
-    memory_write = 0;
-    cache_status_en = 0;
-    cache_en = 0;
-    cache_done = 0;
-    //mem_addr = Addr;
-    sys_stall = 1;
-    input_reg = 0;
-    mem_read_count_en = 0;
-    mem_read_count_clear = 0;
-    mem_data_available = 0;
-    cache_data_en = 0;
-    data_out_reg_en = 0;
-    //cache_addr = 16'h0000;
-    case(state)
-      IDLE: begin
-        sys_stall = 0;
-        input_reg = 1;
-        next_state = Rd? COMP_READ : Wr? COMP_WRITE : IDLE;
-        mem_read_count_clear = 1;
-        //DataOut_reg = cache_data_reg_out;
-        DataOut_reg = data_out_reg_out;
-      end
-      COMP_READ: begin 
-        cache_addr = Addr;
-        mem_read_count_clear = 1;
-        cache_en = 1;
-        cache_compare = 1;
-        cache_write = 0;
-        //next_state = (Rd&cache_hit&valid)? IDLE:((Rd&~cache_hit)|(Rd&cache_hit&~valid))? MEM_READ : Wr? COMP_WRITE : COMP_READ;
-        next_state = (cache_hit&valid)? IDLE:MEM_READ;
-        cache_done = (cache_hit&valid)? 1:0;
-        cache_status_en = 1;
-        mem_data_available = 0;
-        //cache_data_en = 1;
-        data_out_reg_en = 1;
-        DataOut_reg = (cache_hit&valid)? cache_data : 16'h0000;
-      end
-      MEM_READ: begin 
-        
-        mem_addr = {Addr[15:3], mem_read_count[1:0], 1'b0};
-        cache_addr = mem_addr;
-        memory_read = 1;
-        next_state = MEM_READ_STALL;
-      end
-      MEM_READ_STALL: begin
-        mem_read_count_en = 1;
-        next_state = mem_stall? MEM_READ_STALL : ACCESS_WRITE;
-      end
-      ACCESS_WRITE: begin 
-        cache_en = 1;
-        cache_write = 1;
-        cache_addr = (write&cache_hit_signal)?Addr:cache_addr;
-        cache_done = complete | (write&cache_hit_signal);
-        next_state = (complete | (write&cache_hit_signal))?IDLE:MEM_READ;
-        //mem_data_available = (read&Addr == mem_addr)?1:0;
-        data_out_reg_en = (read& (Addr == mem_addr))?1:0;
-        DataOut_reg = (read& (Addr == mem_addr))?mem_data:data_out_reg_out;
-
-      end
-      COMP_WRITE: begin 
-        cache_addr = Addr;
-        cache_en = 1;
-        cache_write = 1;
-        cache_compare = 1;
-        next_state = MEM_WRITE_0;
-        cache_status_en = 1;
-        mem_addr = Addr;
-      end
-      MEM_WRITE_0: begin 
-
-        memory_write = 1;
-        next_state = MEM_WRITE_1;
-      end
-      MEM_WRITE_1: begin
-        memory_write = 1;
-        next_state = MEM_WRITE_2;
-      end
-      MEM_WRITE_2: begin 
-        memory_write = 1;
-        next_state = MEM_WRITE_3;
-      end
-      MEM_WRITE_3: begin 
-        memory_write = 1;
-        next_state = (write&cache_hit_signal)?ACCESS_WRITE:MEM_READ;
-        mem_read_count_clear = next_state == MEM_READ?1:0;
-        //mem_data_available = ~mem_stall;
-        //cache_done = 1;
-      end
-      default: next_state = IDLE;
-    endcase // state
-  end
+  
+   
+   
+   
+   
+  
+   
    
 endmodule // mem_system
 
