@@ -4,16 +4,16 @@
    Filename        : execute.v
    Description     : This is the overall module for the execute stage of the processor.
 */
-module execute (aluOp, sl, sco, seq, lbi, slbi, btr, ror, aluSrc, jumpCtl, branchCtl, regData1, regData2, immVal, inc_pc, new_pc, Out, Zero, Ofl, PCsrc);
+module execute (aluOp, sl, sco, seq, lbi, slbi, btr, ror, aluSrc, regData1, regData2, immVal, Out, Zero, Ofl, PCsrc);
 
    input sl, sco, seq, ror;
    input lbi, slbi, aluSrc, btr;
-   input [15:0] regData1, regData2, immVal, inc_pc;
-   input [2:0] aluOp, jumpCtl, branchCtl;
-   wire [15:0] pc_add, InA, inA, InB, inB, rotaterightbits, immValShifted, jumpValSigned, branchValSigned, aluOut, setOut;
+   input [15:0] regData1, regData2, immVal;
+   input [2:0] aluOp;
+   wire [15:0] InA, inA, InB, inB, rotaterightbits, immValShifted, jumpValSigned, branchValSigned, aluOut, setOut;
    wire [2:0] opCode;
    wire sign, setOutput, cout, Cin, sltresult, sleresult, branch;
-   output [15:0] Out, new_pc;
+   output [15:0] Out;
    output Zero, Ofl, PCsrc;
 
    wire beqz, bnez, bltz, bgez;
@@ -38,11 +38,6 @@ module execute (aluOp, sl, sco, seq, lbi, slbi, btr, ror, aluSrc, jumpCtl, branc
 
    assign setOut = setOutput?16'h0001:16'h0000;
 
-   cla_16b jb_pc_add(.A(inc_pc), .B(immVal), .C_in(0), .S(pc_add), .C_out());
-
-
-   branchctlunit branchunit(.regData1(regData1), .branchCtl(branchCtl), .branch(branch));
-   assign PCsrc = branch|jumpCtl[2];
-   assign new_pc = jumpCtl[0]?aluOut:pc_add;
+   
 
 endmodule

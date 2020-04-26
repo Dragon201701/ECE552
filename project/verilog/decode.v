@@ -5,18 +5,20 @@
    Description     : This is the module for the overall decode stage of the processor.
 */
 module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVal, err, aluOp, regWriteIn, regWriteOut, aluSrc, btr, 
-    memWrite, memRead, MemToReg, branchCtl, jumpCtl, halt, noOp, slbi, lbi, seq, sl, sco, ror, Rs, Rt, RdIn, RdOut);
+    memWrite, memRead, MemToReg, branchCtl, jumpCtl, noOp, slbi, lbi, seq, sl, sco, ror, Rs, Rt, RdIn, RdOut, PC_inc, PC_new, PCsrc, flush, 
+    EX_Rd, EX_data, EX_link, EX_PC_inc, MEM_Rd, MEM_data, MEM_link, MEM_PC_inc);
 
-    input   clk, rst, regWriteIn;
-    input   [15:0]  instr; // instruction
+    input   clk, rst, regWriteIn, EX_link, MEM_link;
+    input   [15:0]  instr, PC_inc, EX_data, MEM_data, EX_PC_inc, MEM_PC_inc; // instruction
     input   [15:0]  writeData;
-    input   [2:0]   RdIn;
+    input   [2:0]   RdIn, EX_Rd, MEM_Rd;
     output err;
-    output [15:0]  read1Data, read2Data;
+    output [15:0]  read1Data, read2Data, PC_new;
     output [15:0] exImmVal;
     output [2:0] aluOp, jumpCtl, branchCtl, Rs, Rt, RdOut;
-    output regWriteOut, aluSrc, btr, memWrite, memRead, MemToReg, halt, noOp, slbi, lbi, seq, sl, sco, ror;
-    wire stu;
+    output regWriteOut, aluSrc, btr, memWrite, memRead, MemToReg, noOp, slbi, lbi, seq, sl, sco, ror, PCsrc, flush;
+    wire stu, flush;
+    wire    [15:0]  pc_add;
     
     //wire   [2:0]    Rs, Rt, Rd, regWrite; // R1 is either Rd or Rt, R2 is Rd. 
     // Instatiate register file
@@ -40,9 +42,29 @@ module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVal, err, 
 
     // Sign extension of immediate occurs here
     //assign signedImmVal = slbi ? immVal : immCtl ? { {8{immVal[7]}}, immVal[7:0]} : { {11{immVal[4]}} , immVal[4:0]};
+    cla_16b jb_pc_add(.A(jumpCtl[0]?(
+                        jumpCtl[1]? (
+                                        EX_link? EX_PC_inc:
+                                        MEM_link? MEM_PC_inc:
+                                        EX_Rd == Rs? EX_data:
+                                        MEM_Rd == Rs? MEM_data:
+                                        read1Data
+                                     ):
+                                    (
+                                        EX_Rd == Rs? EX_data:
+                                        MEM_Rd == Rs? MEM_data:
+                                        read1Data
+                                    ) 
+                        ):
+                        PC_inc), 
+        .B(exImmVal), .C_in(1'b0), .S(PC_new), .C_out());
+
+    branchctlunit branchunit(.regData1((EX_Rd == Rs)? EX_data : (MEM_Rd == Rs)? MEM_data : read1Data), .branchCtl(branchCtl), .branch(branch));
+    assign PCsrc = branch|jumpCtl[2];
+
 
     control controlUnit(.aluOp(aluOp), .clk(clk), .rst(rst), .instr(instr), .regWrite(regWriteOut), .aluSrc(aluSrc), .btr(btr), .memWrite(memWrite), 
-        .memRead(memRead), .MemToReg(MemToReg), .branchCtl(branchCtl), .jumpCtl(jumpCtl), .halt(halt),
+        .memRead(memRead), .MemToReg(MemToReg), .branchCtl(branchCtl), .jumpCtl(jumpCtl), .halt(),
         .noOp(noOp), .immCtl(), .extCtl(), .stu(stu), .slbi(slbi), .immPres(), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco), .ror(ror));
-
+    assign flush = branch | jumpCtl[2];
 endmodule

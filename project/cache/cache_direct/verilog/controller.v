@@ -197,7 +197,7 @@ module controller (
 	      	mem_addr_reg = {cache_tag_out, cache_index, evict_write_count[1:0], 1'b0};
 	      	mem_data_in_reg = cache_data_out;
 	      	evict_write_count_en = ~evict_complete;
-	      	memory_write_reg = ~evict_complete;
+	      	memory_write_reg = (mem_addr_reg == Addr)?0:~evict_complete;
 	      	next_state = evict_complete?MEM_READ:ACCESS_READ;
 	      	mem_read_count_clear = next_state == MEM_READ;
 	      end
