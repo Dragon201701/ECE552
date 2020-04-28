@@ -108,6 +108,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	regFile_bypass
 
+} {} {}} D:/ECE552/project/verilog/IDEXreg.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/IDEXreg.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module IDEXreg
+
+Top level modules:
+	IDEXreg
+
 } {} {}} D:/ECE552/project/verilog/dff.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/dff.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module dff
@@ -128,13 +135,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	memory2csync
-
-} {} {}} D:/ECE552/project/verilog/IDEXreg.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/IDEXreg.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module IDEXreg
-
-Top level modules:
-	IDEXreg
 
 } {} {}} D:/ECE552/project/verilog/count.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/count.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -170,6 +170,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	control
+
+} {} {}} D:/ECE552/project/verilog/IFIDreg.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/IFIDreg.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module IFIDreg
+
+Top level modules:
+	IFIDreg
 
 } {} {}} D:/ECE552/project/verilog/proc_hier_pbench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/proc_hier_pbench.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -213,13 +220,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	proc_hier_bench
 
-} {} {}} D:/ECE552/project/verilog/IFIDreg.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/IFIDreg.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module IFIDreg
-
-Top level modules:
-	IFIDreg
-
 } {} {}} D:/ECE552/project/verilog/mux4_16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/mux4_16.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module mux4_16
@@ -259,11 +259,6 @@ Top level modules:
 
 } {} {}} D:/ECE552/project/verilog/pipeline.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/pipeline.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module pipeline
-
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
-Top level modules:
-	pipeline
 -- Compiling module pipeline
 
 Top level modules:

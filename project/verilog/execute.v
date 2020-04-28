@@ -4,7 +4,7 @@
    Filename        : execute.v
    Description     : This is the overall module for the execute stage of the processor.
 */
-module execute (aluOp, sl, sco, seq, lbi, slbi, btr, ror, aluSrc, regData1, regData2, immVal, Out, Zero, Ofl, PCsrc);
+module execute (aluOp, sl, sco, seq, lbi, slbi, btr, ror, aluSrc, regData1, regData2, immVal, Out, Zero, Ofl);
 
    input sl, sco, seq, ror;
    input lbi, slbi, aluSrc, btr;
@@ -14,7 +14,7 @@ module execute (aluOp, sl, sco, seq, lbi, slbi, btr, ror, aluSrc, regData1, regD
    wire [2:0] opCode;
    wire sign, setOutput, cout, Cin, sltresult, sleresult, branch;
    output [15:0] Out;
-   output Zero, Ofl, PCsrc;
+   output Zero, Ofl;
 
    wire beqz, bnez, bltz, bgez;
 

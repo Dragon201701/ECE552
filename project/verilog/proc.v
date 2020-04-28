@@ -88,8 +88,8 @@ module proc (/*AUTOARG*/
    // Execute
    execute executeStage(.aluOp(IDEX_aluOp), .sl(IDEX_sl), .sco(IDEX_sco), .seq(IDEX_seq), .ror(IDEX_ror),
       .btr(IDEX_btr), .lbi(IDEX_lbi), .slbi(IDEX_slbi), .aluSrc(IDEX_aluSrc), 
-      .regData1(forwarding_ex_Rs?EXMEM_memAddr:(forwarding_mem_Rs?MEMWB_ALUout:IDEX_read1Data)), 
-      .regData2(forwarding_ex_Rt?EXMEM_memAddr:(forwarding_mem_Rt?MEMWB_ALUout:IDEX_read2Data)), 
+      .regData1(forwarding_ex_Rs?EXMEM_memAddr:(forwarding_mem_Rs?(MEMWB_MemToReg?MEMWB_memoryOut:MEMWB_ALUout):IDEX_read1Data)), 
+      .regData2(forwarding_ex_Rt?EXMEM_memAddr:(forwarding_mem_Rt?(MEMWB_MemToReg?MEMWB_memoryOut:MEMWB_ALUout):IDEX_read2Data)), 
       .immVal(IDEX_exImmVal), .Out(Out), .Zero(), .Ofl());
 
    EXMEMreg EXMEM(.clk(clk), .rst(rst),

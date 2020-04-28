@@ -9,7 +9,7 @@ module pipeline (clk, rst, IDEX_Rs, IDEX_Rt, IDEX_Rd, EXMEM_Rs, EXMEM_Rt, EXMEM_
 	wire 	stallcounterRst;
 	wire 	stallcountEn;
 	wire 	data_hazard;
-
+	wire 	jk_out;
 	//assign stallcounterRst = rst | ~stallCtl | stall;
 
 	//assign stall
@@ -17,18 +17,20 @@ module pipeline (clk, rst, IDEX_Rs, IDEX_Rt, IDEX_Rd, EXMEM_Rs, EXMEM_Rt, EXMEM_
 	//assign flush = 1'b0;
 	
     //assign stall = 1'b0;
+    // TODO: 尝试下能不能直接把 IF_RS和IF_Rt，ID_memRead接进来
     assign data_hazard = IDEX_memRead & ((IDEX_Rt == IFID_Rs)|(IDEX_Rt == IFID_Rt));
 	//count stall_cnt(.clk(clk), .rst(rst), .en(stallcountEn), .clear(stallcounterRst), .cnt_o(count_out) );
-	jk_r stall_ctl(.q(stall), .j(data_hazard), .k(1'b1), .clk(clk), .rst(rst));
-
+	jk_r stall_ctl(.q(jk_out), .j(data_hazard), .k(1'b1), .clk(clk), .rst(rst));
+	assign stall = jk_out? 0:data_hazard;
+	//assign stall = jk_out;
 /*	
 	assign count_in = (count_out == 4'h5)? 4'h0:count_out;
  	reg4 countdff(.clk(clk), .rst(stallcounterRst), .en(1'b1), .D(count_in), .Q(count));
 	cla_4b counter(.A(count), .B(4'h1), .C_in(1'b0), .S(count_out), .P(), .G(), .C_out());
 */
 
-	assign forwarding_ex_Rs = EXMEM_regWrite & (EXMEM_Rd == IDEX_Rs);
-	assign forwarding_ex_Rt = EXMEM_regWrite & (EXMEM_Rd == IDEX_Rt); 
+	assign forwarding_ex_Rs = EXMEM_regWrite & (EXMEM_Rd == IDEX_Rs) & ~jk_out;
+	assign forwarding_ex_Rt = EXMEM_regWrite & (EXMEM_Rd == IDEX_Rt) & ~jk_out; 
 	//assign forwarding_ex_Rd = EX
 	assign forwarding_mem_Rs = MEMWB_regWrite & (MEMWB_Rd == IDEX_Rs);
 	assign forwarding_mem_Rt = MEMWB_regWrite & (MEMWB_Rd == IDEX_Rt);

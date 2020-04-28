@@ -12,7 +12,8 @@ module IFIDreg (clk, rst, stall, PC_inc, PC,Rs, Rt, IFID_PC_inc, IFID_PC, instr,
 	reg3 IFID_Rs_reg(.clk(clk), .rst(rst), .en (~stall), .D  (Rs), .Q  (IFID_Rs));
 	reg3 IFID_Rt_reg(.clk(clk), .rst(rst), .en (~stall), .D  (Rt), .Q  (IFID_Rt));
 	reg1 IFID_halt_reg(.clk(clk), .rst(rst), .en(~stall), .D(halt), .Q(IFID_halt));
-	assign IFID_PC = stall?16'h0000:IFID_PC_reg_out;
+	//assign IFID_PC = stall?16'h0000:IFID_PC_reg_out;
+	assign IFID_PC = IFID_PC_reg_out;
 	assign IFID_PC_inc = stall?IFID_PC_reg_out:IFID_PC_inc_reg_out;
 	assign IFID_instr = stall?16'h0800:IFID_instr_reg_out;
 endmodule
