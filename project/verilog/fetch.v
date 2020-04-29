@@ -4,32 +4,35 @@
    Filename        : fetch.v
    Description     : This is the module for the overall fetch stage of the processor.
 */
-module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in, halt_out);
+module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in, halt_out, mem_err_in);
 
-   input clk, rst, PCsrc, stall, halt_in;
+   input clk, rst, PCsrc, stall, halt_in, mem_err_in;
    input [15:0] PC_new;
 
    output [15:0] PC_inc, instr, PC;
    output [2:0] Rs, Rt;
    output halt_out;
    wire   [15:0] PC_next;
-   wire halt, noOp;
+   wire halt, noOp, mem_err, instrmem_err;
    assign Rs = instr[10:8];
     assign Rt = instr[7:5];
    assign halt_out = (instr[15:11] == 5'b00000)?1:0;
    assign noOp = (instr[15:11] == 5'b00001)?1:0;
   assign PC_next = rst? 16'h0000 :
+                    //halt_in | stall | mem_err? PC :
                     PCsrc? PC_new :
-                   halt_in | stall? PC :
+                    halt_in | stall | mem_err? PC :
                    noOp? PC_inc :
                     PC_inc;
   reg16 pcreg(.clk(clk), .rst(rst), .en(~stall), .D(PC_next), .Q(PC));
   // Initialize memory
   // TODO: Change memory back to syn type
-  memory2c instr_mem(.data_out(instr), .data_in(PC), .addr(PC), .enable(~stall), .wr(1'b0), .createdump(clk), .clk(clk), .rst(rst) );
+  memory2c_align instr_mem(.data_out(instr), .data_in(PC), .addr(PC), .enable(~stall), .wr(1'b0), .createdump(clk), .clk(clk), .rst(rst), .err(instrmem_err));
    
   cla_16b incPC(.A(PC), .B(16'h0002), .C_in(1'b0), .S(PC_inc), .C_out());
    
+
+  jk_r memerr(.q(mem_err), .j(mem_err_in), .k(1'b0), .clk(clk), .rst(rst));
   //assign readReg1 = instr[10:8];
   //assign readReg2 = instr[7:5];
   // If lbi asserted, store into Rs.

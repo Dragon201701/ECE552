@@ -1,15 +1,18 @@
 /* $Author: karu $ */
 /* $LastChangedDate: 2009-03-04 23:09:45 -0600 (Wed, 04 Mar 2009) $ */
 /* $Rev: 45 $ */
+// Synthesizable memory
+
 //////////////////////////////////////
 //
 // Memory -- single cycle version
 //
 // written for CS/ECE 552, Spring '07
-// Pratap Ramamurthy, 19 Mar 2006
+// Pratap Ramamurthy, 19 Mar 2007
+// revised by David Wood, 1 May 2007
 //
 // This is a byte-addressable,
-// 16-bit wide, 64K-byte memory.
+// 16-bit wide, 64K-byte memory that supports aligned accesses only.
 //
 // All reads happen combinationally with zero delay.
 // All writes occur on rising clock edge.
@@ -32,7 +35,7 @@
 //
 //////////////////////////////////////
 
-module memory2c (data_out, data_in, addr, enable, wr, createdump, clk, rst);
+module memory2c_align (data_out, data_in, addr, enable, wr, createdump, clk, rst, err);
 
    output  [15:0] data_out;
    input [15:0]   data_in;
@@ -42,10 +45,11 @@ module memory2c (data_out, data_in, addr, enable, wr, createdump, clk, rst);
    input          createdump;
    input          clk;
    input          rst;
+   output         err;
 
    wire [15:0]    data_out;
    
-   reg [7:0]      mem [0:65535];
+   reg [7:0]      mem [0:127];
    reg            loaded;
    reg [16:0]     largest;
 
@@ -53,31 +57,40 @@ module memory2c (data_out, data_in, addr, enable, wr, createdump, clk, rst);
    integer        i;
 
 
-   //    assign data_temp_0 = mem[addr];
-   //    assign data_temp_2 = mem[{addr+8'h1];
-   assign         data_out = (enable & (~wr))? {mem[addr],mem[addr+8'h1]}: 0;
+   assign         err = enable & addr[0]; //word aligned; odd address is invalid
+
+   // unaligned access returns as if aligned
+   assign         data_out = addr[0] ? 
+                             ((enable & (~wr))? {mem[addr-8'h1],mem[addr]}: 0) :
+                             ((enable & (~wr))? {mem[addr],mem[addr+8'h1]}: 0);
+
    initial begin
       loaded = 0;
       largest = 0;
-      for (i = 0; i< 65536; i=i+1) begin
-         mem[i] = 8'd0;
-      end
+      /*
+       for (i=0; i<=65535; i=i+1) begin
+       mem[i] = 8'd0;
+       end          
+       */
    end
 
    always @(posedge clk) begin
       if (rst) begin
-         // first init to 0, then load loadfile_all.img
-         if (!loaded) begin
-            $readmemh("loadfile_all.img", mem);
-            loaded = 1;
-         end
+         /*
+          if (!loaded) begin
+          $readmemh("loadfile_all.img", mem);
+          loaded = 1;
+        end
+          */
       end
       else begin
-         if (enable & wr) begin
+         if (enable & wr & ~addr[0]) begin
             mem[addr] = data_in[15:8];       // The actual write
             mem[addr+1] = data_in[7:0];    // The actual write
-            if ({1'b0, addr} > largest) largest = addr;  // avoid negative numbers
+            // if ({1'b0, addr} > largest) largest = addr;  
+            // avoid negative numbers
          end
+         /*
          if (createdump) begin
             mcd = $fopen("dumpfile", "w");
             for (i=0; i<=largest+1; i=i+1) begin
@@ -85,9 +98,10 @@ module memory2c (data_out, data_in, addr, enable, wr, createdump, clk, rst);
             end
             $fclose(mcd);
          end
+          */
       end
    end
 
 
-endmodule  // memory2c
+endmodule
 // DUMMY LINE FOR REV CONTROL :0:

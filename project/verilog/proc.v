@@ -48,6 +48,7 @@ module proc (/*AUTOARG*/
 
    wire           flush, stall, forwarding_ex_Rs, forwarding_ex_Rt, forwarding_mem_Rs, forwarding_mem_Rt;
    wire           halt, IFID_halt, IDEX_halt, EXMEM_halt, MEMWB_halt;
+   wire           mem_err;
 
    pipeline Pipeline_Control(.clk(clk), .rst(rst), 
       .IFID_Rs(IFID_Rs), .IFID_Rt(IFID_Rt),
@@ -59,7 +60,7 @@ module proc (/*AUTOARG*/
       .stall(stall), .forwarding_ex_Rs(forwarding_ex_Rs), .forwarding_ex_Rt(forwarding_ex_Rt), .forwarding_mem_Rs(forwarding_mem_Rs), .forwarding_mem_Rt(forwarding_mem_Rt));
 
    // Fetch
-   fetch fetchStage(.clk(clk), .rst(rst), .PC_inc(PC_inc), .instr(instr), .PCsrc(PCsrc), .PC_new(PC_new), .PC(PC), .stall(stall), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt_in(MEMWB_halt), .halt_out(halt));
+   fetch fetchStage(.clk(clk), .rst(rst), .PC_inc(PC_inc), .instr(instr), .PCsrc(PCsrc), .PC_new(PC_new), .PC(PC), .stall(stall), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt_in(MEMWB_halt), .halt_out(halt), .mem_err_in(mem_err));
 
    IFIDreg IFID(.clk(clk), .rst(rst|flush), .stall(stall), .PC_inc(PC_inc), .PC(PC), .instr(instr), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt(halt),
       .IFID_PC_inc(IFID_PC_inc), .IFID_PC(IFID_PC), .IFID_instr(IFID_instr), .IFID_Rs(IFID_Rs), .IFID_Rt(IFID_Rt), .IFID_halt(IFID_halt));
@@ -104,7 +105,7 @@ module proc (/*AUTOARG*/
 
 
    // Memory
-   memory memoryStage(.aluOut(EXMEM_memAddr), .wrData(EXMEM_writeData), .memRead(EXMEM_memRead), .memWrite(EXMEM_memWrite), .clk(clk), .rst(rst), .memoryOut(memoryOut), .halt(halt));
+   memory memoryStage(.aluOut(EXMEM_memAddr), .wrData(EXMEM_writeData), .memRead(EXMEM_memRead), .memWrite(EXMEM_memWrite), .clk(clk), .rst(rst), .memoryOut(memoryOut), .halt(halt), .err(mem_err));
 
    MEMWBreg MEMWB(.clk(clk), .rst(rst), .memoryOut(memoryOut), .PC_inc(EXMEM_PC_inc), .ALUOut(EXMEM_memAddr), .PC(EXMEM_PC), .jumpCtl(EXMEM_jumpCtl), 
       .Rs(EXMEM_Rs), .Rt(EXMEM_Rt), .Rd(EXMEM_Rd), .MemToReg(EXMEM_MemToReg), .regWrite(EXMEM_regWrite), .lbi(EXMEM_lbi), .slbi(EXMEM_slbi), .halt(EXMEM_halt),

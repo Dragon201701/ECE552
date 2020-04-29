@@ -1,7 +1,7 @@
 module IDEXreg (clk, rst, Rs, IDEX_Rs, Rt, IDEX_Rt, Rd, IDEX_Rd, aluOp, IDEX_aluOp, jumpCtl, IDEX_jumpCtl,
 		read1Data, IDEX_read1Data, read2Data, IDEX_read2Data, exImmVal, IDEX_exImmVal, PC_new, IDEX_PC_new, PC, IDEX_PC, PC_inc, IDEX_PC_inc,
 		regWrite, IDEX_regWrite, aluSrc, IDEX_aluSrc, btr, IDEX_btr, memWrite, IDEX_memWrite, memRead, IDEX_memRead, MemToReg, IDEX_MemToReg, lbi, IDEX_lbi, slbi, IDEX_slbi, 
-		seq, IDEX_seq, sl, IDEX_sl, sco, IDEX_sco, ror, IDEX_ror,IDEX_PCsrc, halt, IDEX_halt,
+		seq, IDEX_seq, sl, IDEX_sl, sco, IDEX_sco, ror, IDEX_ror, halt, IDEX_halt,
 		stall);
 
 		input clk, rst;
@@ -13,7 +13,7 @@ module IDEXreg (clk, rst, Rs, IDEX_Rs, Rt, IDEX_Rt, Rd, IDEX_Rd, aluOp, IDEX_alu
 		output	[15:0]	IDEX_read1Data, IDEX_read2Data, IDEX_exImmVal, IDEX_PC_new, IDEX_PC, IDEX_PC_inc;
 
 		input			regWrite, aluSrc, btr, memWrite, memRead, MemToReg, slbi, lbi, seq, sl, sco, ror, halt;
-		input			IDEX_regWrite, IDEX_aluSrc, IDEX_btr, IDEX_memWrite, IDEX_memRead, IDEX_MemToReg, IDEX_slbi, IDEX_lbi, IDEX_seq, IDEX_sl, IDEX_sco, IDEX_ror, IDEX_PCsrc, IDEX_halt;
+		input			IDEX_regWrite, IDEX_aluSrc, IDEX_btr, IDEX_memWrite, IDEX_memRead, IDEX_MemToReg, IDEX_slbi, IDEX_lbi, IDEX_seq, IDEX_sl, IDEX_sco, IDEX_ror, IDEX_halt;
 
 		input			stall;
 
