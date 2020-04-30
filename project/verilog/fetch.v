@@ -21,7 +21,7 @@ module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in
   assign PC_next = rst? 16'h0000 :
                     //halt_in | stall | mem_err? PC :
                     PCsrc? PC_new :
-                    halt_in | stall | mem_err ? PC :
+                    halt_in | stall | mem_err | instrmem_err ? PC :
                    noOp? PC_inc :
                     PC_inc;
   reg16 pcreg(.clk(clk), .rst(rst), .en(~stall), .D(PC_next), .Q(PC));
