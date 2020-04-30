@@ -12,8 +12,9 @@ module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in
    output [15:0] PC_inc, instr, PC;
    output [2:0] Rs, Rt;
    output halt_out, instrmem_err;
-   wire   [15:0] PC_next;
+   wire   [15:0] PC_next, instr_out;
    wire halt, noOp;
+   assign instr = instrmem_err?16'h0000:instr_out;
    assign Rs = instr[10:8];
     assign Rt = instr[7:5];
    assign halt_out = (instr[15:11] == 5'b00000)?1:0;
@@ -27,7 +28,7 @@ module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in
   reg16 pcreg(.clk(clk), .rst(rst), .en(~stall), .D(PC_next), .Q(PC));
   // Initialize memory
   // TODO: Change memory back to syn type
-  memory2c_align instr_mem(.data_out(instr), .data_in(PC), .addr(PC), .enable(~stall), .wr(1'b0), .createdump(clk), .clk(clk), .rst(rst), .err(instrmem_err));
+  memory2c_align instr_mem(.data_out(instr_out), .data_in(PC), .addr(PC), .enable(~stall), .wr(1'b0), .createdump(clk), .clk(clk), .rst(rst), .err(instrmem_err));
    
   cla_16b incPC(.A(PC), .B(16'h0002), .C_in(1'b0), .S(PC_inc), .C_out());
    

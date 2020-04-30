@@ -275,15 +275,15 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 gS7NhM?Hz@ePfaE<ae_;?0
-IVTVc3<3TVf5i?CoL7DeeQ3
+!s100 c]@K[<JM<]dAmM4nS6nMc1
+I6_f;GVZWY2OlT?LdPao_A3
 R1
-w1588213614
+w1588280749
 8D:/ECE552/project/verilog/fetch.v
 FD:/ECE552/project/verilog/fetch.v
 L0 7
 R3
-!s108 1588214143.000000
+!s108 1588280756.000000
 !s107 D:/ECE552/project/verilog/fetch.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/verilog/fetch.v|
 !i113 0
@@ -418,15 +418,15 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 N`i^D5ojRcYYT[_ffTeg`1
-ITc^CQCEF8kBVbXP>jkkgK1
+!s100 EBnW@zcL8_W]]HHo^7=O=3
+I6EFJAA<9LLf[^PiE<NdnC1
 R1
-w1588275452
+w1588278136
 8D:/ECE552/project/verilog/memory2c_align.v
 FD:/ECE552/project/verilog/memory2c_align.v
 L0 36
 R3
-!s108 1588275458.000000
+!s108 1588278138.000000
 !s107 D:/ECE552/project/verilog/memory2c_align.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/verilog/memory2c_align.v|
 !i113 0
@@ -662,15 +662,15 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 i=blNneQR_RbXAGUmikjj1
-I:S@AP56T`Mj4^4:4e@::Y3
+!s100 c>XM47dKS`=T@E39?MOcb2
+ID6<UH=O6iVoQ<Y<Fjdkd:1
 R1
-w1588275632
+w1588280819
 8D:/ECE552/project/verilog/proc.v
 FD:/ECE552/project/verilog/proc.v
 L0 4
 R3
-!s108 1588275635.000000
+!s108 1588280825.000000
 !s107 D:/ECE552/project/verilog/proc.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/verilog/proc.v|
 !i113 0

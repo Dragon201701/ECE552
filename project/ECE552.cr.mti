@@ -271,6 +271,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	sext5_16
 
+} {} {}} D:/ECE552/project/verilog/memory2c_align.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/memory2c_align.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module memory2c_align
+
+Top level modules:
+	memory2c_align
+
 } {} {}} D:/ECE552/project/verilog/mux8_16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/mux8_16.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module mux8_16
