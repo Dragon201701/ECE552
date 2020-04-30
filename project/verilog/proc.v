@@ -48,7 +48,10 @@ module proc (/*AUTOARG*/
 
    wire           flush, stall, forwarding_ex_Rs, forwarding_ex_Rt, forwarding_mem_Rs, forwarding_mem_Rt;
    wire           halt, IFID_halt, IDEX_halt, EXMEM_halt, MEMWB_halt;
-   wire           mem_err;
+   wire           datamem_err, mem_err, instrmem_err;
+
+   jk_r memerr(.q(mem_err), .j(instrmem_err | datamem_err), .k(1'b0), .clk(clk), .rst(rst));
+  
 
    pipeline Pipeline_Control(.clk(clk), .rst(rst), 
       .IFID_Rs(IFID_Rs), .IFID_Rt(IFID_Rt),
@@ -60,9 +63,10 @@ module proc (/*AUTOARG*/
       .stall(stall), .forwarding_ex_Rs(forwarding_ex_Rs), .forwarding_ex_Rt(forwarding_ex_Rt), .forwarding_mem_Rs(forwarding_mem_Rs), .forwarding_mem_Rt(forwarding_mem_Rt));
 
    // Fetch
-   fetch fetchStage(.clk(clk), .rst(rst), .PC_inc(PC_inc), .instr(instr), .PCsrc(PCsrc), .PC_new(PC_new), .PC(PC), .stall(stall), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt_in(MEMWB_halt), .halt_out(halt), .mem_err_in(mem_err));
+   fetch fetchStage(.clk(clk), .rst(rst), .PC_inc(PC_inc), .instr(instr), .PCsrc(PCsrc), .PC_new(PC_new), .PC(PC), .stall(stall), .Rs(Fetch_Rs), .Rt(Fetch_Rt), 
+      .halt_in(MEMWB_halt | mem_err), .halt_out(halt), .mem_err(mem_err), .instrmem_err(instrmem_err));
 
-   IFIDreg IFID(.clk(clk), .rst(rst|flush), .stall(stall), .PC_inc(PC_inc), .PC(PC), .instr(instr), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt(halt),
+   IFIDreg IFID(.clk(clk), .rst(rst|flush|mem_err), .stall(stall), .PC_inc(PC_inc), .PC(PC), .instr(instr), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt(halt),
       .IFID_PC_inc(IFID_PC_inc), .IFID_PC(IFID_PC), .IFID_instr(IFID_instr), .IFID_Rs(IFID_Rs), .IFID_Rt(IFID_Rt), .IFID_halt(IFID_halt));
 
    // Deode
@@ -73,7 +77,7 @@ module proc (/*AUTOARG*/
       .EX_Rd(IDEX_Rd), .EX_data(Out), .EX_link(IDEX_jumpCtl[1]), .EX_PC_inc(IDEX_PC_inc), .MEM_Rd(EXMEM_Rd), .MEM_data(memoryOut), .MEM_link(EXMEM_jumpCtl[1]), .MEM_PC_inc(EXMEM_PC_inc));
 
 
-   IDEXreg IDEX(.clk(clk), .rst(rst), .Rs(Decode_Rs), .Rt(Decode_Rt), .Rd(RdOut), .aluOp(aluOp), .jumpCtl(jumpCtl), 
+   IDEXreg IDEX(.clk(clk), .rst(rst|mem_err), .Rs(Decode_Rs), .Rt(Decode_Rt), .Rd(RdOut), .aluOp(aluOp), .jumpCtl(jumpCtl), 
       .IDEX_Rs(IDEX_Rs), .IDEX_Rt(IDEX_Rt), .IDEX_Rd(IDEX_Rd), .IDEX_aluOp(IDEX_aluOp), .IDEX_jumpCtl(IDEX_jumpCtl), 
 
       .read1Data(read1Data), .read2Data(read2Data), .exImmVal(exImmVal), .PC_new(), .PC(IFID_PC), .PC_inc(IFID_PC_inc), 
@@ -93,7 +97,7 @@ module proc (/*AUTOARG*/
       .regData2(forwarding_ex_Rt?EXMEM_memAddr:(forwarding_mem_Rt?(MEMWB_MemToReg?MEMWB_memoryOut:MEMWB_ALUout):IDEX_read2Data)), 
       .immVal(IDEX_exImmVal), .Out(Out), .Zero(), .Ofl());
 
-   EXMEMreg EXMEM(.clk(clk), .rst(rst),
+   EXMEMreg EXMEM(.clk(clk), .rst(rst|mem_err),
       .Rs(IDEX_Rs), .Rt(IDEX_Rt), .Rd(IDEX_Rd), .jumpCtl(IDEX_jumpCtl), .memAddr(Out), .writeData(forwarding_ex_Rt?EXMEM_memAddr:(forwarding_mem_Rt?MEMWB_ALUout:IDEX_read2Data)), .PC_inc(IDEX_PC_inc), .PC_new(), .PC(IDEX_PC),
       .memRead(IDEX_memRead), .memWrite(IDEX_memWrite), .regWrite(IDEX_regWrite), .MemToReg(IDEX_MemToReg), .lbi(IDEX_lbi), .slbi(IDEX_slbi), .halt(IDEX_halt),
       .EXMEM_Rs(EXMEM_Rs), .EXMEM_Rt(EXMEM_Rt), .EXMEM_Rd(EXMEM_Rd), .EXMEM_jumpCtl(EXMEM_jumpCtl), 
@@ -105,9 +109,10 @@ module proc (/*AUTOARG*/
 
 
    // Memory
-   memory memoryStage(.aluOut(EXMEM_memAddr), .wrData(EXMEM_writeData), .memRead(EXMEM_memRead), .memWrite(EXMEM_memWrite), .clk(clk), .rst(rst), .memoryOut(memoryOut), .halt(halt), .err(mem_err));
+   memory memoryStage(.aluOut(EXMEM_memAddr), .wrData(EXMEM_writeData), .memRead(EXMEM_memRead), .memWrite(EXMEM_memWrite), .clk(clk), .rst(rst), .memoryOut(memoryOut), 
+      .halt(halt), .err(datamem_err));
 
-   MEMWBreg MEMWB(.clk(clk), .rst(rst), .memoryOut(memoryOut), .PC_inc(EXMEM_PC_inc), .ALUOut(EXMEM_memAddr), .PC(EXMEM_PC), .jumpCtl(EXMEM_jumpCtl), 
+   MEMWBreg MEMWB(.clk(clk), .rst(rst|mem_err), .memoryOut(memoryOut), .PC_inc(EXMEM_PC_inc), .ALUOut(EXMEM_memAddr), .PC(EXMEM_PC), .jumpCtl(EXMEM_jumpCtl), 
       .Rs(EXMEM_Rs), .Rt(EXMEM_Rt), .Rd(EXMEM_Rd), .MemToReg(EXMEM_MemToReg), .regWrite(EXMEM_regWrite), .lbi(EXMEM_lbi), .slbi(EXMEM_slbi), .halt(EXMEM_halt),
       .MEMWB_memoryOut(MEMWB_memoryOut), .MEMWB_PC_inc(MEMWB_PC_inc), .MEMWB_PC(MEMWB_PC), .MEMWB_ALUout(MEMWB_ALUout), .MEMWB_jumpCtl(MEMWB_jumpCtl),
       .MEMWB_Rs(MEMWB_Rs), .MEMWB_Rt(MEMWB_Rt), .MEMWB_Rd(MEMWB_Rd), .MEMWB_MemToReg(MEMWB_MemToReg), .MEMWB_regWrite(MEMWB_regWrite), .MEMWB_lbi(MEMWB_lbi), .MEMWB_slbi(MEMWB_slbi), .MEMWB_halt(MEMWB_halt));
