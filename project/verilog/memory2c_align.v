@@ -76,7 +76,7 @@ module memory2c_align (data_out, data_in, addr, enable, wr, createdump, clk, rst
     always @(posedge clk) begin
       if (rst) begin
         if (!loaded) begin
-          $readmemh("loadfile_all.img", mem);
+          $readmemh("../bin/stu_2/loadfile_all.img", mem);
           loaded = 1;
         end
       end

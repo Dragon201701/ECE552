@@ -100,7 +100,7 @@ module proc (/*AUTOARG*/
 
    EXMEMreg EXMEM(.clk(clk), .rst(rst),
       .Rs(IDEX_Rs), .Rt(IDEX_Rt), .Rd(IDEX_Rd), .jumpCtl(IDEX_jumpCtl), .memAddr(Out), .writeData(forwarding_ex_Rt?EXMEM_memAddr:(forwarding_mem_Rt?MEMWB_ALUout:IDEX_read2Data)), .PC_inc(IDEX_PC_inc), .PC_new(), .PC(IDEX_PC),
-      .memRead(IDEX_memRead), .memWrite(IDEX_memWrite), .regWrite(IDEX_regWrite), .MemToReg(IDEX_MemToReg), .lbi(IDEX_lbi), .slbi(IDEX_slbi), .halt(IDEX_halt),
+      .memRead(IDEX_memRead & ~datamem_err), .memWrite(IDEX_memWrite & ~datamem_err), .regWrite(IDEX_regWrite & ~datamem_err), .MemToReg(IDEX_MemToReg & ~datamem_err), .lbi(IDEX_lbi), .slbi(IDEX_slbi), .halt(IDEX_halt),
       .EXMEM_Rs(EXMEM_Rs), .EXMEM_Rt(EXMEM_Rt), .EXMEM_Rd(EXMEM_Rd), .EXMEM_jumpCtl(EXMEM_jumpCtl), 
       .EXMEM_memAddr(EXMEM_memAddr), .EXMEM_writeData(EXMEM_writeData), .EXMEM_PC_inc(EXMEM_PC_inc), .EXMEM_PC_new(), .EXMEM_PC(EXMEM_PC),
       .EXMEM_memRead(EXMEM_memRead), .EXMEM_memWrite(EXMEM_memWrite), .EXMEM_regWrite(EXMEM_regWrite), .EXMEM_MemToReg(EXMEM_MemToReg), 
