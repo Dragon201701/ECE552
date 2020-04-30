@@ -51,7 +51,7 @@ module proc (/*AUTOARG*/
    wire           datamem_err, mem_err, instrmem_err;
 
    jk_r memerr(.q(mem_err), .j(instrmem_err | datamem_err), .k(1'b0), .clk(clk), .rst(rst));
-   assign halt = MEMWB_halt | mem_err | instrmem_err | datamem_err;
+   assign halt = MEMWB_halt | mem_err;
 
    pipeline Pipeline_Control(.clk(clk), .rst(rst), 
       .IFID_Rs(IFID_Rs), .IFID_Rt(IFID_Rt),
