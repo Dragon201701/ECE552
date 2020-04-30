@@ -185,13 +185,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	dec3to8
 
-} {} {}} D:/ECE552/project/verilog/proc_hier_pbench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/proc_hier_pbench.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc_hier_pbench
-
-Top level modules:
-	proc_hier_pbench
-
 } {} {}} D:/ECE552/project/verilog/IFIDreg.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/IFIDreg.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module IFIDreg

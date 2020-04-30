@@ -47,11 +47,11 @@ module proc (/*AUTOARG*/
    wire           MEMWB_MemToReg, MEMWB_regWrite, MEMWB_lbi, MEMWB_slbi;
 
    wire           flush, stall, forwarding_ex_Rs, forwarding_ex_Rt, forwarding_mem_Rs, forwarding_mem_Rt;
-   wire           halt, IFID_halt, IDEX_halt, EXMEM_halt, MEMWB_halt;
+   wire           halt, halt_out, IFID_halt, IDEX_halt, EXMEM_halt, MEMWB_halt;
    wire           datamem_err, mem_err, instrmem_err;
 
    jk_r memerr(.q(mem_err), .j(instrmem_err | datamem_err), .k(1'b0), .clk(clk), .rst(rst));
-  
+   assign halt = MEMWB_halt | mem_err;
 
    pipeline Pipeline_Control(.clk(clk), .rst(rst), 
       .IFID_Rs(IFID_Rs), .IFID_Rt(IFID_Rt),
@@ -64,9 +64,9 @@ module proc (/*AUTOARG*/
 
    // Fetch
    fetch fetchStage(.clk(clk), .rst(rst), .PC_inc(PC_inc), .instr(instr), .PCsrc(PCsrc), .PC_new(PC_new), .PC(PC), .stall(stall), .Rs(Fetch_Rs), .Rt(Fetch_Rt), 
-      .halt_in(MEMWB_halt | mem_err), .halt_out(halt), .mem_err(mem_err), .instrmem_err(instrmem_err));
+      .halt_in(halt), .halt_out(halt_out), .mem_err(mem_err), .instrmem_err(instrmem_err));
 
-   IFIDreg IFID(.clk(clk), .rst(rst|flush|mem_err), .stall(stall), .PC_inc(PC_inc), .PC(PC), .instr(instr), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt(halt),
+   IFIDreg IFID(.clk(clk), .rst(rst|flush|mem_err), .stall(stall), .PC_inc(PC_inc), .PC(PC), .instr(instr), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt(halt_out),
       .IFID_PC_inc(IFID_PC_inc), .IFID_PC(IFID_PC), .IFID_instr(IFID_instr), .IFID_Rs(IFID_Rs), .IFID_Rt(IFID_Rt), .IFID_halt(IFID_halt));
 
    // Deode
