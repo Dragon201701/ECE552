@@ -63,8 +63,8 @@ module controller (
 	output [15:0] mem_addr, mem_data_in;
 	output mem_read, mem_write;
 
-	parameter  IDLE = 4'h0, COMP_READ = 4'h1, MEM_READ = 4'h2, MEM_READ_STALL = 4'h3, ACCESS_WRITE = 4'h4, COMP_WRITE = 4'h5, MEM_WRITE_0 = 4'h6, MEM_WRITE_1 = 4'h7, MEM_WRITE_2 = 4'h8, MEM_WRITE_3 = 4'h9,
-            ACCESS_READ = 4'ha, EVICT_WRITE_0 = 4'hb, EVICT_WRITE_1 = 4'hc, EVICT_WRITE_2 = 4'hd, EVICT_WRITE_3 = 4'he;
+	parameter  COMP = 4'h0, MEM_READ = 4'h1, MEM_READ_STALL = 4'h2, ACCESS_WRITE = 4'h3, MEM_WRITE_0 = 4'h4, MEM_WRITE_1 = 4'h5, MEM_WRITE_2 = 4'h6, MEM_WRITE_3 = 4'h7,
+            ACCESS_READ = 4'h8, EVICT_WRITE_0 = 4'h9, EVICT_WRITE_1 = 4'h10, EVICT_WRITE_2 = 4'h11, EVICT_WRITE_3 = 4'h12;
 
 
 	wire [3:0] mem_read_count, evict_write_count, mystate, mystate_n;
@@ -84,7 +84,7 @@ module controller (
     assign c1_tag_in = cache_addr[15:11];
     assign c1_index = cache_addr[10:3];
     assign c1_offset = cache_addr[2:0];
-    assign CacheHit = ((c0_hit & c0_valid_out)|(c1_hit & c1_valid_out)) & (state == COMP_READ | state == COMP_WRITE);
+    assign CacheHit = ((c0_hit & c0_valid_out)|(c1_hit & c1_valid_out)) & (state == COMP);
     assign mystate_n = next_state;
     assign mem_addr = mem_addr_reg;
     assign c0_compare = c0_compare_reg;
@@ -104,7 +104,7 @@ module controller (
     assign c0_valid_in = c0_valid_in_reg;
     assign c1_valid_in = c1_valid_in_reg;
     assign victim_cache_dirty = victim? c1_dirty:c0_dirty;
-    assign victimway_en = state == IDLE;
+    assign victimway_en = state == COMP;
 	reg4 state_reg(.clk(clk), .rst(rst), .en(1'b1), .D(mystate_n), .Q(mystate));
 
 	reg1 write_reg(.clk(clk), .rst(rst), .en(input_reg), .D(Wr), .Q(write));
@@ -165,7 +165,40 @@ module controller (
 	    c1_valid_in_reg = 0;
 
 	    case(state)
-	      IDLE: begin
+	    	COMP: begin
+	    		cache_addr = Addr;
+	    		mem_addr_reg = Addr;
+	    		sys_stall = 0;
+	    		input_reg = 1;
+	    		mem_read_count_clear = 1;
+	        	evict_write_cout_clear = 1;
+
+	    		c0_en_reg = Rd | Wr;
+	        	c1_en_reg = Rd | Wr;
+	        	
+	        	c0_write_reg = Wr;
+	        	c1_write_reg = Wr;
+
+	        	c0_compare_reg = 1;
+	       		c1_compare_reg = 1;
+	    		
+	    		next_state = ((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out))? COMP : 
+	    					Rd? ((c0_valid_out&c1_valid_out&victim_cache_dirty)?ACCESS_READ:MEM_READ) :
+	    					Wr? MEM_WRITE_0 : COMP;
+	    		c0_status_en = 1;
+	        	c1_status_en = 1;
+
+	        	cache_way = (~c0_valid_out&~c1_valid_out)? 0:
+	        			(c0_valid_out&~c1_valid_out)? 1:
+	        			(~c0_valid_out&c1_valid_out)? 0:
+	        			victim;
+	        	cache_done = ((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out));
+	        	data_out_reg_en = Rd&((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out));
+	        	mem_data_in_reg = DataIn;
+	        	DataOut_reg =(c0_hit&c0_valid_out)? c0_data_out :
+	        			 (c1_hit&c1_valid_out)? c1_data_out : data_out_reg_out;
+	    	end
+	      /*IDLE: begin
 	        sys_stall = 0;
 	        input_reg = 1;
 	        next_state = Rd? COMP_READ : Wr? COMP_WRITE : IDLE;
@@ -175,9 +208,7 @@ module controller (
 	        DataOut_reg = data_out_reg_out;
 	      end
 	      COMP_READ: begin 
-
-	        cache_addr = Addr;
-
+	        /*cache_addr = Addr;
 	        c0_en_reg = 1;
 	        c1_en_reg = 1;
 	        c0_compare_reg = 1;
@@ -186,25 +217,49 @@ module controller (
 	        c1_write_reg = 0;
 
 	        next_state = ((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out))? IDLE:
-	        			(c0_valid_out&c1_valid_out&victim_cache_dirty)?ACCESS_READ:MEM_READ;
+	        			(c0_valid_out&c1_valid_out&victim_cache_dirty)?ACCESS_READ:MEM_READ;*/
 
-	        cache_way = (~c0_valid_out&~c1_valid_out)? 0:
+	        /*cache_way = (~c0_valid_out&~c1_valid_out)? 0:
 	        			(c0_valid_out&~c1_valid_out)? 1:
 	        			(~c0_valid_out&c1_valid_out)? 0:
-	        			victim;
+	        			victim;*/
 
-	        cache_done = ((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out))? 1:0;
+	        //cache_done = ((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out))? 1:0;
 	        //cache_status_en = 1;
-	        c0_status_en = 1;
-	        c1_status_en = 1;
+	        //c0_status_en = 1;
+	        //c1_status_en = 1;
 
 
-	        mem_data_available = 0;
+	        //mem_data_available = 0;
 	        //cache_data_en = 1;
-	        data_out_reg_en = ((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out));
-	        DataOut_reg =(c0_hit&c0_valid_out)? c0_data_out :
-	        			 (c1_hit&c1_valid_out)? c1_data_out : 16'h0000;
-	      end
+	        //data_out_reg_en = ((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out));
+	        /*DataOut_reg =(c0_hit&c0_valid_out)? c0_data_out :
+	        			 (c1_hit&c1_valid_out)? c1_data_out : 16'h0000*/
+	      /* end
+	      COMP_WRITE: begin 
+	        /*cache_addr = Addr;
+	        //cache_en_reg = 1;
+	        c0_en_reg = 1;
+	        c1_en_reg = 1;
+
+	        //cache_write_reg = 1;
+	        c0_write_reg = 1;
+	        c1_write_reg = 1;
+
+	        //cache_compare_reg = 1;
+	        c0_compare_reg = 1;
+	        c1_compare_reg = 1;
+
+
+	        next_state =  ((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out))? IDLE: MEM_WRITE_0;*/
+	        //cache_status_en = 1;
+	        //c0_status_en = 1;
+	        //c1_status_en = 1;
+
+	        //mem_addr_reg = Addr;
+	        //cache_done = ((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out));
+	        //mem_data_in_reg = DataIn;
+	      //end*/
 	      MEM_READ: begin 
 	        
 	        mem_addr_reg = {Addr[15:3], mem_read_count[1:0], 1'b0};
@@ -229,7 +284,7 @@ module controller (
 
 
 	        cache_done = complete;
-	        next_state = complete?IDLE:MEM_READ;
+	        next_state = complete?COMP:MEM_READ;
 	        //mem_data_available = (read&Addr == mem_addr)?1:0;
 	        data_out_reg_en = (read& (Addr == mem_addr))?1:0;
 	        DataOut_reg = (read& (Addr == mem_addr))?mem_data_out:data_out_reg_out;
@@ -237,30 +292,7 @@ module controller (
 	        c1_valid_in_reg = complete&cache_way;
 	      end
 
-	      COMP_WRITE: begin 
-	        cache_addr = Addr;
-	        //cache_en_reg = 1;
-	        c0_en_reg = 1;
-	        c1_en_reg = 1;
-
-	        //cache_write_reg = 1;
-	        c0_write_reg = 1;
-	        c1_write_reg = 1;
-
-	        //cache_compare_reg = 1;
-	        c0_compare_reg = 1;
-	        c1_compare_reg = 1;
-
-
-	        next_state =  ((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out))? IDLE: MEM_WRITE_0;
-	        //cache_status_en = 1;
-	        c0_status_en = 1;
-	        c1_status_en = 1;
-
-	        mem_addr_reg = Addr;
-	        cache_done = ((c0_hit&c0_valid_out)|(c1_hit&c1_valid_out));
-	        mem_data_in_reg = DataIn;
-	      end
+	      
 	      MEM_WRITE_0: begin 
 
 	        memory_write_reg = 1;
@@ -321,7 +353,7 @@ module controller (
 	      	next_state = evict_complete? MEM_READ:ACCESS_READ;
 	      	mem_read_count_clear = next_state == MEM_READ;
 	      end*/
-	      default: next_state = IDLE;
+	      default: next_state = COMP;
 	    endcase // state
   	end
 

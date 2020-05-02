@@ -1,11 +1,4 @@
-D:/ECE552/project/cache/cache_assoc/verilog/controller.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/controller.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module controller
-
-Top level modules:
-	controller
-
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/victimway.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/victimway.v
+D:/ECE552/project/cache/cache_assoc/verilog/victimway.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/victimway.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module victimway
 
@@ -87,19 +80,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	reg4
 
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/mem_system.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/mem_system.v
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/clkrst.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/clkrst.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module mem_system
+-- Compiling module clkrst
 
 Top level modules:
-	mem_system
-
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/xor2.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module xor2
-
-Top level modules:
-	xor2
+	clkrst
 
 } {} {}} D:/ECE552/project/cache/cache_assoc/verilog/nand2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/nand2.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -108,19 +94,26 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	nand2
 
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/clkrst.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/clkrst.v
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/xor2.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/xor2.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module clkrst
+-- Compiling module xor2
 
 Top level modules:
-	clkrst
+	xor2
 
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/xor3.v
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/mem_system.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/mem_system.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module xor3
+-- Compiling module mem_system
 
 Top level modules:
-	xor3
+	mem_system
+
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/cache.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/cache.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module cache
+
+Top level modules:
+	cache
 
 } {} {}} D:/ECE552/project/cache/cache_assoc/verilog/nand3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/nand3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -129,12 +122,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	nand3
 
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/cache.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/cache.v
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/xor3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module cache
+-- Compiling module xor3
 
 Top level modules:
-	cache
+	xor3
 
 } {} {}} D:/ECE552/project/cache/cache_assoc/verilog/four_bank_mem.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/four_bank_mem.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -164,40 +157,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	nor2
 
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/not1.v
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/mem_system_hier.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/mem_system_hier.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module not1
+-- Compiling module mem_system_hier
 
 Top level modules:
-	not1
-
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/nor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/nor3.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module nor3
-
-Top level modules:
-	nor3
-
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/memc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/memc.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module memc
-
-Top level modules:
-	memc
-
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/memc.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/memc.syn.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module memc
-
-Top level modules:
-	memc
-
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/final_memory.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/final_memory.syn.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module final_memory
-
-Top level modules:
-	final_memory
+	mem_system_hier
 
 } {} {}} D:/ECE552/project/cache/cache_assoc/verilog/final_memory.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/final_memory.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -206,11 +171,39 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	final_memory
 
-} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/mem_system_hier.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/mem_system_hier.v
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/final_memory.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/final_memory.syn.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module mem_system_hier
+-- Compiling module final_memory
 
 Top level modules:
-	mem_system_hier
+	final_memory
+
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/memc.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/memc.syn.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module memc
+
+Top level modules:
+	memc
+
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/memc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/memc.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module memc
+
+Top level modules:
+	memc
+
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/nor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/nor3.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module nor3
+
+Top level modules:
+	nor3
+
+} {} {}} D:/ECE552/project/cache/cache_assoc/verilog/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/cache/cache_assoc/verilog/not1.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module not1
+
+Top level modules:
+	not1
 
 } {} {}}

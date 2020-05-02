@@ -5,6 +5,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	EXMEMreg
 
+} {} {}} D:/ECE552/project/verilog/fetch.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/fetch.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module fetch
+
+Top level modules:
+	fetch
+
 } {} {}} D:/ECE552/project/verilog/execute.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/execute.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module execute
@@ -39,13 +46,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	clkrst
-
-} {} {}} D:/ECE552/project/verilog/proc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/proc.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc
-
-Top level modules:
-	proc
 
 } {} {}} D:/ECE552/project/verilog/decode.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/decode.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -257,18 +257,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	pipeline
 
-} {} {}} D:/ECE552/project/verilog/stallmem.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/stallmem.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module stallmem
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
-
-Top level modules:
-	stallmem
--- Compiling module stallmem
-
-Top level modules:
-	stallmem
-
 } {} {}} D:/ECE552/project/verilog/reg1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/reg1.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module reg1
@@ -284,6 +272,11 @@ Top level modules:
 	sext5_16
 
 } {} {}} D:/ECE552/project/verilog/memory2c_align.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/memory2c_align.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module memory2c_align
+
+Top level modules:
+	memory2c_align
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module memory2c_align
 

@@ -51,6 +51,7 @@ module proc (/*AUTOARG*/
    wire           datamem_err, mem_err, instrmem_err;
    wire           mem_done;
    jk_r memerr(.q(mem_err), .j(datamem_err), .k(1'b0), .clk(clk), .rst(rst));
+   jk_r memstall(.q(q));
    assign halt = MEMWB_halt | mem_err;
    assign stall = mem_stall|instr_stall;
 
@@ -104,7 +105,8 @@ module proc (/*AUTOARG*/
       .EXMEM_Rs(EXMEM_Rs), .EXMEM_Rt(EXMEM_Rt), .EXMEM_Rd(EXMEM_Rd), .EXMEM_jumpCtl(EXMEM_jumpCtl), 
       .EXMEM_memAddr(EXMEM_memAddr), .EXMEM_writeData(EXMEM_writeData), .EXMEM_PC_inc(EXMEM_PC_inc), .EXMEM_PC_new(), .EXMEM_PC(EXMEM_PC),
       .EXMEM_memRead(EXMEM_memRead), .EXMEM_memWrite(EXMEM_memWrite), .EXMEM_regWrite(EXMEM_regWrite), .EXMEM_MemToReg(EXMEM_MemToReg), 
-      .EXMEM_lbi(EXMEM_lbi), .EXMEM_slbi(EXMEM_slbi), .EXMEM_halt(EXMEM_halt));
+      .EXMEM_lbi(EXMEM_lbi), .EXMEM_slbi(EXMEM_slbi), .EXMEM_halt(EXMEM_halt), 
+      .stall(mem_stall));
 
 
 

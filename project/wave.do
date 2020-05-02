@@ -1,21 +1,12 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R0_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R1_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R2_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R3_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R4_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R5_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R6_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R7_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R0_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R1_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R2_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R3_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R4_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R5_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R6_out
-add wave -noupdate -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R7_out
+add wave -noupdate -expand -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R1_out
+add wave -noupdate -expand -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R2_out
+add wave -noupdate -expand -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R3_out
+add wave -noupdate -expand -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R4_out
+add wave -noupdate -expand -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R5_out
+add wave -noupdate -expand -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R6_out
+add wave -noupdate -expand -group Registers /proc_hier_pbench/DUT/p0/decodeStage/decodeRegisters/registers/R7_out
 add wave -noupdate -expand -group Fetch /proc_hier_pbench/DUT/p0/fetchStage/instr
 add wave -noupdate -expand -group Fetch /proc_hier_pbench/DUT/p0/fetchStage/PC
 add wave -noupdate -expand -group Fetch /proc_hier_pbench/DUT/p0/fetchStage/PC_inc
@@ -101,16 +92,11 @@ add wave -noupdate -group EXMEM /proc_hier_pbench/DUT/p0/EXMEM_Rs
 add wave -noupdate -group EXMEM /proc_hier_pbench/DUT/p0/EXMEM_Rt
 add wave -noupdate -group EXMEM /proc_hier_pbench/DUT/p0/EXMEM_Rd
 add wave -noupdate -group EXMEM /proc_hier_pbench/DUT/p0/EXMEM_regWrite
-add wave -noupdate -group Memory /proc_hier_pbench/DUT/p0/memoryStage/memRead
-add wave -noupdate -group Memory /proc_hier_pbench/DUT/p0/memoryStage/memWrite
-add wave -noupdate -group Memory /proc_hier_pbench/DUT/p0/memoryStage/wrData
-add wave -noupdate -group Memory /proc_hier_pbench/DUT/p0/memoryStage/aluOut
-add wave -noupdate -group Memory /proc_hier_pbench/DUT/p0/memoryStage/memoryOut
-add wave -noupdate -group Memory /proc_hier_pbench/DUT/p0/memoryStage/memRead
-add wave -noupdate -group Memory /proc_hier_pbench/DUT/p0/memoryStage/memWrite
-add wave -noupdate -group Memory /proc_hier_pbench/DUT/p0/memoryStage/wrData
-add wave -noupdate -group Memory /proc_hier_pbench/DUT/p0/memoryStage/aluOut
-add wave -noupdate -group Memory /proc_hier_pbench/DUT/p0/memoryStage/memoryOut
+add wave -noupdate -expand -group Memory /proc_hier_pbench/DUT/p0/memoryStage/memRead
+add wave -noupdate -expand -group Memory /proc_hier_pbench/DUT/p0/memoryStage/memWrite
+add wave -noupdate -expand -group Memory /proc_hier_pbench/DUT/p0/memoryStage/wrData
+add wave -noupdate -expand -group Memory /proc_hier_pbench/DUT/p0/memoryStage/aluOut
+add wave -noupdate -expand -group Memory /proc_hier_pbench/DUT/p0/memoryStage/memoryOut
 add wave -noupdate -group MEMWB /proc_hier_pbench/DUT/p0/MEMWB_PC
 add wave -noupdate -group MEMWB /proc_hier_pbench/DUT/p0/MEMWB_Rs
 add wave -noupdate -group MEMWB /proc_hier_pbench/DUT/p0/MEMWB_Rt
@@ -125,8 +111,9 @@ add wave -noupdate /proc_hier_pbench/DUT/p0/halt
 add wave -noupdate /proc_hier_pbench/DUT/p0/fetchStage/instrmem_err
 add wave -noupdate /proc_hier_pbench/DUT/p0/fetchStage/instrmem_stall
 add wave -noupdate /proc_hier_pbench/DUT/p0/fetchStage/instr_out
+add wave -noupdate /proc_hier_pbench/DUT/p0/mem_stall
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {1541 ns} 0}
+WaveRestoreCursors {{Cursor 1} {2118 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 169
 configure wave -valuecolwidth 100
@@ -142,4 +129,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {3655 ns}
+WaveRestoreZoom {0 ns} {11870 ns}

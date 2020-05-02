@@ -97,7 +97,7 @@ module stallmem (DataOut, Done, Stall, CacheHit, err, Addr, DataIn, Rd, Wr, crea
    always @(posedge clk) begin
       if (rst) begin
          if (!loaded) begin
-            $readmemh("loadfile_all.img", mem);
+            $readmemh("../bin/loadstoreTest/loadfile_all.img", mem);
             loaded = 1;
          end
       end
