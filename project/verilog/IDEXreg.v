@@ -2,15 +2,15 @@ module IDEXreg (clk, rst, Rs, IDEX_Rs, Rt, IDEX_Rt, Rd, IDEX_Rd, aluOp, IDEX_alu
 		read1Data, IDEX_read1Data, read2Data, IDEX_read2Data, exImmVal, IDEX_exImmVal, PC_new, IDEX_PC_new, PC, IDEX_PC, PC_inc, IDEX_PC_inc,
 		regWrite, IDEX_regWrite, aluSrc, IDEX_aluSrc, btr, IDEX_btr, memWrite, IDEX_memWrite, memRead, IDEX_memRead, MemToReg, IDEX_MemToReg, lbi, IDEX_lbi, slbi, IDEX_slbi, 
 		seq, IDEX_seq, sl, IDEX_sl, sco, IDEX_sco, ror, IDEX_ror, halt, IDEX_halt,
-		stall, no_Op, IDEX_noOp);
+		stall, no_Op, IDEX_noOp, instr, IDEX_instr);
 
 		input clk, rst, no_Op;
 
 		input	[2:0]	Rs, Rt, Rd, aluOp, jumpCtl;
 		output	[2:0]	IDEX_Rs, IDEX_Rt, IDEX_Rd, IDEX_aluOp, IDEX_jumpCtl;
 
-		input	[15:0]	read1Data, read2Data, exImmVal, PC_new, PC, PC_inc;
-		output	[15:0]	IDEX_read1Data, IDEX_read2Data, IDEX_exImmVal, IDEX_PC_new, IDEX_PC, IDEX_PC_inc;
+		input	[15:0]	read1Data, read2Data, exImmVal, PC_new, PC, PC_inc, instr;
+		output	[15:0]	IDEX_read1Data, IDEX_read2Data, IDEX_exImmVal, IDEX_PC_new, IDEX_PC, IDEX_PC_inc, IDEX_instr;
 
 		input			regWrite, aluSrc, btr, memWrite, memRead, MemToReg, slbi, lbi, seq, sl, sco, ror, halt;
 		input			IDEX_regWrite, IDEX_aluSrc, IDEX_btr, IDEX_memWrite, IDEX_memRead, IDEX_MemToReg, IDEX_slbi, IDEX_lbi, IDEX_seq, IDEX_sl, IDEX_sco, IDEX_ror, IDEX_halt;
@@ -19,7 +19,8 @@ module IDEXreg (clk, rst, Rs, IDEX_Rs, Rt, IDEX_Rt, Rd, IDEX_Rd, aluOp, IDEX_alu
                 
 		output IDEX_noOp;
 		wire IDEX_regWrite_out, IDEX_memRead_out, IDEX_memWrite_out;
-		
+	
+	        reg16   IDEX_instr_reg(.clk(clk), .rst(rst), .en (~stall), .D  (instr), .Q  (IDEX_instr));	
 		reg3	IDEX_Rs_reg(.clk(clk), .rst(rst), .en(~stall), .D(Rs), .Q(IDEX_Rs));
 		reg3	IDEX_Rt_reg(.clk(clk), .rst(rst), .en(~stall), .D(Rt), .Q(IDEX_Rt));
 		reg3	IDEX_Rd_reg(.clk(clk), .rst(rst), .en(~stall), .D(Rd), .Q(IDEX_Rd));
@@ -47,8 +48,8 @@ module IDEXreg (clk, rst, Rs, IDEX_Rs, Rt, IDEX_Rt, Rd, IDEX_Rd, aluOp, IDEX_alu
 		reg1    IDEX_noOp_reg(.clk(clk), .rst(rst), .en (~stall), .D  (no_Op), .Q  (IDEX_noOp));
 
 		//reg1 	IDEX_PCsrc_reg(.clk(clk), .rst(rst), .en (~stall), .D  (PCsrc), .Q  (IDEX_PCsrc));
-		assign IDEX_regWrite = stall?1'b0:IDEX_regWrite_out;
-		assign IDEX_memRead = stall?1'b0:IDEX_memRead_out;
-		assign IDEX_memWrite = stall?1'b0:IDEX_memWrite_out;
+		//assign IDEX_regWrite = stall?1'b0:IDEX_regWrite_out;
+		//assign IDEX_memRead = stall?1'b0:IDEX_memRead_out;
+		//assign IDEX_memWrite = stall?1'b0:IDEX_memWrite_out;
 
 endmodule

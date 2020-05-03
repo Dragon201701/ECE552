@@ -35,6 +35,7 @@ module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in
   cla_16b incPC(.A(PC), .B(16'h0002), .C_in(1'b0), .S(PC_inc), .C_out());
   mem_system instr_mem(.Done(), .DataOut(instr_out), .Addr(PC), .DataIn(PC), .Rd(1'b1), .Wr(1'b0), .createdump(clk), .clk(clk), .rst(rst), .Stall(instrmem_stall), .CacheHit(), .err(instrmem_err));
 
+
   //assign readReg1 = instr[10:8];
   //assign readReg2 = instr[7:5];
   // If lbi asserted, store into Rs.
