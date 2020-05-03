@@ -8,16 +8,18 @@
 module memory (aluOut, wrData, memRead, memWrite, clk, rst, memoryOut, halt, err, Done, Stall, lbi);
 
    input memRead, memWrite, clk, rst, halt, lbi;
-  
+    
    input [15:0] wrData, aluOut;
    output [15:0] memoryOut;
    wire [15:0] memoryOut_t;
    output err, Done, Stall;
-   wire   en;
+   wire   en, jk_out;
    wire [15:0]    wrData_reg, memAddr_reg;
-   assign en = memWrite | memRead;
+   assign en = (memWrite | memRead) & ~jk_out;
    reg16 wrDatareg(.clk(clk), .rst(rst), .en(memWrite), .D(wrData), .Q(wrData_reg));
    reg16 memAddrreg(.clk(clk), .rst(rst), .en(en), .D(aluOut), .Q(memAddr_reg));
+
+   jk_r deassert(.q(jk_out), .j(1'b1), .k(memWrite | memRead), .clk(clk), .rst(rst));
    // Memory segment
    // Initialize memory
    // TODO: Change memory back to syn type 
