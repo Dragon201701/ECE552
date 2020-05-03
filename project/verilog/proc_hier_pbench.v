@@ -96,7 +96,7 @@ module proc_hier_pbench();
                       MemAddress, MemDataOut );
          end
 
-         if (MemWrite) begin
+        if (MemWrite) begin
             $fdisplay(trace_file,"STORE: ADDR: 0x%04x VALUE: 0x%04x",
                       MemAddress, MemDataIn  );
          end
@@ -130,7 +130,7 @@ module proc_hier_pbench();
    assign PC = DUT.p0.PC;
    assign Inst = DUT.p0.instr;
    
-   assign RegWrite = DUT.p0.decodeStage.regWriteIn;
+   assign RegWrite = DUT.p0.decodeStage.regWriteIn & ~DUT.p0.stall;
    // Is register file being written to, one bit signal (1 means yes, 0 means no)
    //    
    assign WriteRegister = DUT.p0.MEMWB_Rd;
@@ -140,6 +140,9 @@ module proc_hier_pbench();
    // Data being written to the register. (16 bits)
    
    //assign MemRead =  (DUT.p0.memRxout & ~DUT.p0.notdonem);
+   //assign MemRead = DUT.p0.MEMWB_memRead & DUT.p0.mem_done;
+   
+   // OLD ->
    assign MemRead = DUT.p0.EXMEM_memRead;
    // Is memory being read, one bit signal (1 means yes, 0 means no)
    
@@ -147,13 +150,20 @@ module proc_hier_pbench();
    assign MemWrite = DUT.p0.EXMEM_memWrite;
    // Is memory being written to (1 bit signal)
    
+   // OLD
    assign MemAddress = DUT.p0.EXMEM_memAddr;
+   //assign MemAddress = DUT.p0.MEMWB_ALUout;
    // Address to access memory with (for both reads and writes to memory, 16 bits)
    
    assign MemDataIn = DUT.p0.EXMEM_writeData;
    // Data to be written to memory for memory writes (16 bits)
    
+   //assign MemDataOut = DUT.p0.MEMWB_memoryOut;
    assign MemDataOut = DUT.p0.memoryOut;
+   
+   
+   
+   
    // Data read from memory for memory reads (16 bits)
 
    // new added 05/03
@@ -173,7 +183,7 @@ module proc_hier_pbench();
    // Signal indicating a valid data cache hit
    // Above assignment is a dummy example
    
-   assign Halt = DUT.p0.halt;
+   assign Halt = DUT.p0.MEMWB_halt;
    // Processor halted
    
    

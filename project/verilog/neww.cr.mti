@@ -1,0 +1,211 @@
+/afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/nor2.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/nor2.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module nor2
+
+Top level modules:
+	nor2
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/not1.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/not1.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module not1
+
+Top level modules:
+	not1
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/nor3.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/nor3.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module nor3
+
+Top level modules:
+	nor3
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/memc.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/memc.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module memc
+
+Top level modules:
+	memc
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/memc.syn.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/memc.syn.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module memc
+
+Top level modules:
+	memc
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/final_memory.syn.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/final_memory.syn.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module final_memory
+
+Top level modules:
+	final_memory
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/final_memory.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/final_memory.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module final_memory
+
+Top level modules:
+	final_memory
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/nand2.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/nand2.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module nand2
+
+Top level modules:
+	nand2
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/nand3.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/nand3.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module nand3
+
+Top level modules:
+	nand3
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/cache.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/cache.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module cache
+
+Top level modules:
+	cache
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/fullAdder_1b.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/fullAdder_1b.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module fullAdder_1b
+
+Top level modules:
+	fullAdder_1b
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/four_bank_mem.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/four_bank_mem.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module four_bank_mem
+
+Top level modules:
+	four_bank_mem
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/cla_4b.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/cla_4b.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module cla_4b
+
+Top level modules:
+	cla_4b
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/memv.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/memv.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module memv
+
+Top level modules:
+	memv
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/memv.syn.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/memv.syn.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module memv
+
+Top level modules:
+	memv
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/mem_system_perfbench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/mem_system_perfbench.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mem_system_perfbench
+
+Top level modules:
+	mem_system_perfbench
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/mem_system_ref.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/mem_system_ref.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mem_system_ref
+
+Top level modules:
+	mem_system_ref
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/reg1.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/reg1.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module reg1
+
+Top level modules:
+	reg1
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/dff.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/dff.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/reg3.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/reg3.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module reg3
+
+Top level modules:
+	reg3
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/mem_system_hier.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/mem_system_hier.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mem_system_hier
+
+Top level modules:
+	mem_system_hier
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/reg4.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/reg4.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module reg4
+
+Top level modules:
+	reg4
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/mem_system.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/mem_system.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mem_system
+
+Top level modules:
+	mem_system
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/clkrst.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/clkrst.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/xor2.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/xor2.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module xor2
+
+Top level modules:
+	xor2
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/xor3.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/xor3.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module xor3
+
+Top level modules:
+	xor3
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/reg16.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/reg16.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module reg16
+
+Top level modules:
+	reg16
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/victimway.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/victimway.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module victimway
+
+Top level modules:
+	victimway
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/count_4b.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/count_4b.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module count_4b
+
+Top level modules:
+	count_4b
+
+} {} {}} /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/k/e/keyser/cs552/albert_repo/ECE552/project/cache/cache_assoc/verilog/mem_system_randbench.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mem_system_randbench
+
+Top level modules:
+	mem_system_randbench
+
+} {} {}}
