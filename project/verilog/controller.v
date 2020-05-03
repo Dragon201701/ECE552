@@ -75,7 +75,9 @@ module controller (
 	reg   [3:0] state, next_state;
 	reg c0_status_en, c1_status_en, c0_compare_reg, c1_compare_reg, memory_read_reg, memory_write_reg, c0_write_reg, c1_write_reg, cache_status_en, mem_read_count_en, mem_read_count_clear, input_reg, data_out_reg_en,
 	c0_data_en, c1_data_en, mem_data_available, sys_stall, cache_done, c0_en_reg, c1_en_reg, evict_write_count_en, evict_write_cout_clear, c0_valid_in_reg, c1_valid_in_reg, cache_way;
-
+	wire curr_state_wire, next_state_wire;
+	assign curr_state_wire = state;
+	assign next_state_wire = next_state;
 	assign c0_data_in = (((c0_write_reg & ~c0_compare_reg)|(c1_write_reg & ~c1_compare_reg))&(mem_read_count != 4'h0))?mem_data_out:DataIn;
 	assign c1_data_in = (((c0_write_reg & ~c0_compare_reg)|(c1_write_reg & ~c1_compare_reg))&(mem_read_count != 4'h0))?mem_data_out:DataIn;
 	assign c0_tag_in = cache_addr[15:11];
@@ -96,7 +98,7 @@ module controller (
     assign DataOut = DataOut_reg;
     assign complete = (mem_read_count == 4'h4)?1:0;
     assign evict_complete = (evict_write_count == 4'h3); 
-    assign Stall = sys_stall;
+    assign Stall = sys_stall | ((curr_state_wire == COMP) & (next_state_wire != COMP));
     assign Done = cache_done;
     assign c0_en = c0_en_reg;
     assign c1_en = c1_en_reg;
@@ -168,7 +170,7 @@ module controller (
 	    	COMP: begin
 	    		cache_addr = Addr;
 	    		mem_addr_reg = Addr;
-	    		sys_stall = (Rd&~read)|(Wr&~write);
+	    		sys_stall = 0;
 	    		input_reg = 1;
 	    		mem_read_count_clear = 1;
 	        	evict_write_cout_clear = 1;

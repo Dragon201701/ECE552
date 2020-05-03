@@ -1046,3 +1046,52 @@ Exception c0000005 has occurred at address 402d3527. Traceback:
 StackWalk failed 0
 # End of Stack Trace
 
+# Current time Sun May 03 10:41:18 2020
+# ModelSim SE Stack Trace
+# Program = vish
+# Id = "10.6d"
+# Version = "2018.02"
+# Date = "Feb 24 2018"
+# Platform = win64
+
+Exception c0000005 has occurred at address 402d3527. Traceback:
+# 0    0x402d3527: 'Mtirpc_Init + 0x122557'
+# 1    0x402d3206: 'Mtirpc_Init + 0x122236'
+# 2    0x402e247e: 'Mtirpc_Init + 0x1314ae'
+# 3    0x40218da2: 'Mtirpc_Init + 0x67dd2'
+# 4    0x403dc8b5: 'TPedit_Init + 0x3b545'
+# 5    0x4021645f: 'Mtirpc_Init + 0x6548f'
+# 6    0x4015a408: 'Tclsqlite3_SafeInit + 0xb45e8'
+# 7    0x6be1b914: 'TclCallVarTraces + 0x2f4'
+# 8    0x6be28aa4: 'TclPtrMakeUpvar + 0x734'
+# 9    0x6bdb447b: 'Tcl_SetExitProc + 0x3c6b'
+# 10   0x6bd46c03: 'TclNRRunCallbacks + 0x63'
+# 11   0x6bd4586c: 'TclCleanupCommand + 0x88c'
+# 12   0x6bd499a9: 'Tcl_GlobalEval + 0x49'
+# 13   0x40160f2a: 'Tclsqlite3_SafeInit + 0xbb10a'
+# 14   0x4016151f: 'Tclsqlite3_SafeInit + 0xbb6ff'
+# 15   0x401620da: 'Tclsqlite3_SafeInit + 0xbc2ba'
+# 16   0x6bd46234: 'TclInvokeStringCommand + 0x84'
+# 17   0x6bd46c03: 'TclNRRunCallbacks + 0x63'
+# 18   0xf6470bfa: 'Itcl_EvalMemberCode + 0x3ba'
+# 19   0xf6471dbb: 'Itcl_ExecMethod + 0x23b'
+# 20   0xf6479879: 'Itcl_EvalArgs + 0x1c9'
+# 21   0xf6474b51: 'Itcl_HandleInstance + 0x2c1'
+# 22   0x6bd46c03: 'TclNRRunCallbacks + 0x63'
+# 23   0x6bc13f1e: 'TkSetWindowMenuBar + 0x96e'
+# 24   0x6bb63636: 'TkWinHandleMenuEvent + 0x486'
+# 25   0x6bb64193: 'TkWinHandleMenuEvent + 0xfe3'
+# 26   0x07ae5b6d: 'CallWindowProcW + 0x3bd'
+# 27   0x07ae5562: 'DispatchMessageW + 0x1f2'
+# 28   0x6be425f1: 'Tcl_WaitForEvent + 0x161'
+# 29   0x6bded083: 'Tcl_DoOneEvent + 0xf3'
+# 30   0x6bbcaee5: 'Tk_MainLoop + 0x25'
+# 31   0x6bc0d282: 'Tk_MainEx + 0x932'
+# 32   0x401d3280: 'Mtirpc_Init + 0x222b0'
+# 33   0x401d58b8: 'Mtirpc_Init + 0x248e8'
+# 34   0x405f02cf: 'Tclsqlite_Init + 0x1a5f'
+# 35   0x07fa7bd4: 'BaseThreadInitThunk + 0x14'
+# 36   0x086cced1: 'RtlUserThreadStart + 0x21'
+StackWalk failed 0
+# End of Stack Trace
+
