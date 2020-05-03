@@ -1,0 +1,12 @@
+          // Original test: ./nfischer/hw4/problem6/ld_1.asm
+          // Author: nfischer
+          // Test source code follows
+          
+          
+          //load at offset
+0000 c132 lbi  r1, 50     //mem location
+0002 c208 lbi  r2, 8      //value to store
+0004 c300 lbi  r3, 0      //clear r3
+0006 814a st   r2, r1, 10  //store at mem location +10
+0008 896a ld   r3, r1, 10  //load from mem location +10
+000a 0000 halt
