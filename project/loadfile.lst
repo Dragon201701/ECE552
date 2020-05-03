@@ -1,6 +1,12 @@
-          // Test provided by Karu 
-          //Simple ror 
-0000 c1d2 lbi r1, 210
-0002 c203 lbi r2, 3
-0004 d14e ror r3, r1, r2
-0006 0000 halt // added by Karu
+          // Original test: ./nfischer/hw4/problem6/ld_2.asm
+          // Author: nfischer
+          // Test source code follows
+          
+          
+          //load at negative offset
+0000 c132 lbi  r1, 50     //mem location
+0002 c208 lbi  r2, 8      //value to store
+0004 c300 lbi  r3, 0      //clear r3
+0006 8156 st   r2, r1, -10  //store at mem location -10
+0008 8976 ld   r3, r1, -10  //load from mem location -10
+000a 0000 halt

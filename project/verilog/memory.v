@@ -14,7 +14,10 @@ module memory (aluOut, wrData, memRead, memWrite, clk, rst, memoryOut, halt, err
    wire [15:0] memoryOut_t;
    output err, Done, Stall;
    wire   en;
+   wire [15:0]    wrData_reg, memAddr_reg;
    assign en = memWrite | memRead;
+   reg16 wrDatareg(.clk(clk), .rst(rst), .en(memWrite), .D(wrData), .Q(wrData_reg));
+   reg16 memAddrreg(.clk(clk), .rst(rst), .en(en), .D(aluOut), .Q(memAddr_reg));
    // Memory segment
    // Initialize memory
    // TODO: Change memory back to syn type 
@@ -23,13 +26,13 @@ module memory (aluOut, wrData, memRead, memWrite, clk, rst, memoryOut, halt, err
 
    mem_system data_mem(
    // Outputs
-   .DataOut(memoryOut_t), .Done(Done), .Stall(Stall), .CacheHit(), .err(err),
+   .DataOut(memoryOut), .Done(Done), .Stall(Stall), .CacheHit(), .err(err),
    // Inputs
-   .Addr(aluOut), .DataIn(wrData), .Rd(memRead), .Wr(memWrite), .createdump(clk), .clk(clk), .rst(rst)
+   .Addr(memAddr_reg), .DataIn(wrData_reg), .Rd(memRead), .Wr(memWrite), .createdump(clk), .clk(clk), .rst(rst)
    );
 
 
-   assign memoryOut = lbi ? aluOut : memoryOut_t;
+   //assign memoryOut = lbi ? aluOut : memoryOut_t;
 
 endmodule
 

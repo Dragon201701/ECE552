@@ -31,11 +31,11 @@ module IDEXreg (clk, rst, Rs, IDEX_Rs, Rt, IDEX_Rt, Rd, IDEX_Rd, aluOp, IDEX_alu
 		reg16	IDEX_PC_new_reg(.clk(clk), .rst(rst), .en (~stall), .D  (PC_new), .Q  (IDEX_PC_new));
 		reg16	IDEX_PC_inc_reg(.clk(clk), .rst(rst), .en (~stall), .D  (PC_inc), .Q  (IDEX_PC_inc));
 		reg16	IDEX_PC_reg(.clk(clk), .rst(rst), .en (~stall), .D  (PC), .Q  (IDEX_PC));
-		reg1 	IDEX_regWrite_reg(.clk(clk), .rst(rst), .en (~stall), .D  (stall?1'b0:regWrite), .Q  (IDEX_regWrite)); // 1'b1
+		reg1 	IDEX_regWrite_reg(.clk(clk), .rst(rst), .en (~stall), .D  (regWrite), .Q  (IDEX_regWrite)); // 1'b1
 		reg1 	IDEX_aluSrc_reg(.clk(clk), .rst(rst), .en (~stall), .D  (aluSrc), .Q  (IDEX_aluSrc));
 		reg1 	IDEX_btr_reg(.clk(clk), .rst(rst), .en (~stall), .D  (btr), .Q  (IDEX_btr));
-		reg1 	IDEX_memWrite_reg(.clk(clk), .rst(rst), .en (~stall), .D  (stall?1'b0:memWrite), .Q  (IDEX_memWrite)); // 1'b1
-		reg1 	IDEX_memRead_reg(.clk(clk), .rst(rst), .en (~stall), .D  (stall?1'b0:memRead), .Q  (IDEX_memRead)); // 1'b1
+		reg1 	IDEX_memWrite_reg(.clk(clk), .rst(rst), .en (~stall), .D  (memWrite), .Q  (IDEX_memWrite)); // 1'b1
+		reg1 	IDEX_memRead_reg(.clk(clk), .rst(rst), .en (~stall), .D  (memRead), .Q  (IDEX_memRead)); // 1'b1
 		reg1 	IDEX_MemToReg_reg(.clk(clk), .rst(rst), .en (~stall), .D  (MemToReg), .Q  (IDEX_MemToReg));
 		reg1 	IDEX_slbi_reg(.clk(clk), .rst(rst), .en (~stall), .D  (slbi), .Q  (IDEX_slbi));
 		reg1 	IDEX_lbi_reg(.clk(clk), .rst(rst), .en (~stall), .D  (lbi), .Q  (IDEX_lbi));
@@ -47,8 +47,8 @@ module IDEXreg (clk, rst, Rs, IDEX_Rs, Rt, IDEX_Rt, Rd, IDEX_Rd, aluOp, IDEX_alu
 		reg1    IDEX_noOp_reg(.clk(clk), .rst(rst), .en (~stall), .D  (no_Op), .Q  (IDEX_noOp));
 
 		//reg1 	IDEX_PCsrc_reg(.clk(clk), .rst(rst), .en (~stall), .D  (PCsrc), .Q  (IDEX_PCsrc));
-		//assign IDEX_regWrite = stall?1'b0:IDEX_regWrite_out;
-		//assign IDEX_memRead = stall?1'b0:IDEX_memRead_out;
-		//assign IDEX_memWrite = stall?1'b0:IDEX_memWrite_out;
+		assign IDEX_regWrite = stall?1'b0:IDEX_regWrite_out;
+		assign IDEX_memRead = stall?1'b0:IDEX_memRead_out;
+		assign IDEX_memWrite = stall?1'b0:IDEX_memWrite_out;
 
 endmodule
