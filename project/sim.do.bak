@@ -1,1 +1,2 @@
-vsim -gui work.proc_hier_pbench -novopt 
+vsim -gui work.proc_hier_pbench -voptargs=+acc -debugdb -wlf
+do wave.do

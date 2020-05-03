@@ -168,7 +168,7 @@ module controller (
 	    	COMP: begin
 	    		cache_addr = Addr;
 	    		mem_addr_reg = Addr;
-	    		sys_stall = 0;
+	    		sys_stall = (Rd&~read)|(Wr&~write);
 	    		input_reg = 1;
 	    		mem_read_count_clear = 1;
 	        	evict_write_cout_clear = 1;

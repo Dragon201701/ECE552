@@ -53,6 +53,7 @@ module proc (/*AUTOARG*/
    wire           halt, halt_out, IFID_halt, IDEX_halt, EXMEM_halt, MEMWB_halt;
    wire           datamem_err, mem_err, instrmem_err;
    wire           mem_done;
+   wire           instrmem_stall;
    jk_r memerr(.q(mem_err), .j(datamem_err), .k(1'b0), .clk(clk), .rst(rst));
    jk_r memstall(.q(q));
    assign halt = MEMWB_halt | mem_err;
@@ -69,7 +70,7 @@ module proc (/*AUTOARG*/
 
    // Fetch
    fetch fetchStage(.clk(clk), .rst(rst), .PC_inc(PC_inc), .instr(instr), .PCsrc(PCsrc), .PC_new(PC_new), .PC(PC), .stall(stall), .Rs(Fetch_Rs), .Rt(Fetch_Rt), 
-      .halt_in(halt), .halt_out(halt_out), .mem_err(mem_err), .instrmem_err(instrmem_err));
+      .halt_in(halt), .halt_out(halt_out), .mem_err(mem_err), .instrmem_err(instrmem_err), .instrmem_stall(instrmem_stall));
 
    IFIDreg IFID(.clk(clk), .rst(rst|flush), .stall(stall), .PC_inc(PC_inc), .PC(PC), .instr(instr), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt(halt_out),
       .IFID_PC_inc(IFID_PC_inc), .IFID_PC(IFID_PC), .IFID_instr(IFID_instr), .IFID_Rs(IFID_Rs), .IFID_Rt(IFID_Rt), .IFID_halt(IFID_halt));

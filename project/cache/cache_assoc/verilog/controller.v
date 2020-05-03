@@ -96,7 +96,7 @@ module controller (
     assign DataOut = DataOut_reg;
     assign complete = (mem_read_count == 4'h4)?1:0;
     assign evict_complete = (evict_write_count == 4'h4); 
-    assign Stall = sys_stall;
+    assign Stall = sys_stall | Rd | Wr;
     assign Done = cache_done;
     assign c0_en = c0_en_reg;
     assign c1_en = c1_en_reg;
