@@ -9,7 +9,9 @@ module EXMEMreg (clk, rst, Rs, Rt, Rd, jumpCtl, memAddr, writeData, memRead, mem
 	output	[15:0]	EXMEM_memAddr, EXMEM_writeData, EXMEM_PC_inc, EXMEM_PC_new, EXMEM_PC, EXMEM_instr;
 	output			EXMEM_memRead, EXMEM_memWrite, EXMEM_regWrite, EXMEM_MemToReg, EXMEM_lbi, EXMEM_slbi, EXMEM_halt;
         output EXMEM_noOp;
-
+    /*wire EXMEM_memRead_out, EXMEM_memWrite_out;
+    assign EXMEM_memRead = EXMEM_memRead_out & ~stall;
+    assign EXMEM_memWrite = EXMEM_memWrite_out & ~stall;*/
 	reg16   EXMEM_instr_reg(.clk(clk), .rst(rst), .en (~stall), .D  (instr), .Q  (EXMEM_instr));
 	reg3 EXMEM_Rs_reg(.clk(clk), .rst(rst), .en(~stall), .D(Rs), .Q(EXMEM_Rs));
 	reg3 EXMEM_Rt_reg(.clk(clk), .rst(rst), .en(~stall), .D(Rt), .Q(EXMEM_Rt));
@@ -27,6 +29,7 @@ module EXMEMreg (clk, rst, Rs, Rt, Rd, jumpCtl, memAddr, writeData, memRead, mem
 	reg1 	EXMEM_lbi_reg(.clk(clk), .rst(rst), .en (~stall), .D  (lbi), .Q  (EXMEM_lbi));
 	reg1 	EXMEM_slbi_reg(.clk(clk), .rst(rst), .en (~stall), .D  (slbi), .Q  (EXMEM_slbi));
 	reg1 	EXMEM_halt_reg(.clk(clk), .rst(rst), .en (~stall), .D  (halt), .Q  (EXMEM_halt));
-        reg1    EXMEM_noOp_reg(.clk(clk), .rst(rst), .en (~stall), .D  (no_Op), .Q  (EXMEM_noOp));
+    reg1    EXMEM_noOp_reg(.clk(clk), .rst(rst), .en (~stall), .D  (no_Op), .Q  (EXMEM_noOp));
+
 
 	endmodule

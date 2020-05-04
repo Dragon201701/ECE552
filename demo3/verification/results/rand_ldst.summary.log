@@ -1,0 +1,48 @@
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_large.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_large_1.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_large_2.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_large_3.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_large_4.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_large_5.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_large_6.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_large_7.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_large_8.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_large_9.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_small.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_small_1.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_small_2.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_small_3.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_small_4.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_small_5.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_small_6.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_small_7.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_small_8.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldld_rand_small_9.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_large.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_large_1.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_large_2.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_large_3.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_large_4.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_large_5.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_large_6.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_large_7.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_large_8.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_large_9.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_small.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_small_1.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_small_2.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_small_3.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_small_4.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_small_5.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_small_6.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_small_7.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_small_8.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/ldst_rand_small_9.asm SUCCESS CPI:13.0 CYCLES:39 ICOUNT:3 IHITRATE: 0 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/rpt_ld_test_0.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/rpt_ld_test_1.asm FAILED
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/rpt_reg_test_0.asm RELAX-PASS
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/rpt_reg_test_1.asm RELAX-PASS
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/rpt_st_test_0.asm RELAX-PASS
+/u/s/i/sinclair/courses/cs552/spring2020/handouts/testprograms/public/rand_ldst/rpt_st_test_1.asm RELAX-PASS
