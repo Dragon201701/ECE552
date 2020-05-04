@@ -30,7 +30,7 @@ module memory (aluOut, wrData, memRead, memWrite, clk, rst, memoryOut, halt, err
    // Outputs
    .DataOut(memoryOut), .Done(Done), .Stall(Stall), .CacheHit(), .err(err),
    // Inputs
-   .Addr(memAddr_reg), .DataIn(wrData_reg), .Rd(memRead), .Wr(memWrite), .createdump(clk), .clk(clk), .rst(rst)
+   .Addr(aluOut), .DataIn(wrData_reg), .Rd(memRead), .Wr(memWrite), .createdump(clk), .clk(clk), .rst(rst)
    );
 
 

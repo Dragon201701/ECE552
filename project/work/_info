@@ -29,10 +29,10 @@ n@_opt1
 R4
 R0
 T_opt2
-!s110 1588550609
-VbhzUL<?K@=;4<DoYkoMX@3
+!s110 1588556855
+V^zBDXe_^[^11>2h:8J29D2
 R1
-=1-14b31f2d024b-5eaf5bd0-277-528
+=1-14b31f2d024b-5eaf7434-285-934
 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
 R3
 n@_opt2
@@ -563,20 +563,21 @@ R20
 R9
 R3
 vmemory
-R5
-r1
-!s85 0
-31
+!s110 1588556795
 !i10b 1
-!s100 aS8E[0bk9SV1goR2>_8EV0
-IMWha]oHBc<`OYT7ngm[l[1
+!s100 lXCgm:WYkIVLZV>B5@H<40
+IaHd`8JfDfjz7H^dkS:]8`0
+R5
 R6
-R16
+w1588556789
 8D:/ECE552/project/verilog/memory.v
 FD:/ECE552/project/verilog/memory.v
 L0 8
 R7
-R17
+r1
+!s85 0
+31
+!s108 1588556795.000000
 !s107 D:/ECE552/project/verilog/memory.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/ECE552/project/verilog/memory.v|
 !i113 0

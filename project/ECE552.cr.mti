@@ -40,19 +40,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	wb
 
-} {} {}} D:/ECE552/project/verilog/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/alu.v
+} {} {}} D:/ECE552/project/verilog/memc.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/memc.syn.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module alu
+-- Compiling module memc
 
 Top level modules:
-	alu
-
-} {} {}} D:/ECE552/project/verilog/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/not1.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module not1
-
-Top level modules:
-	not1
+	memc
 
 } {} {}} D:/ECE552/project/verilog/final_memory.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/final_memory.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -61,12 +54,19 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	final_memory
 
-} {} {}} D:/ECE552/project/verilog/memc.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/memc.syn.v
+} {} {}} D:/ECE552/project/verilog/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/not1.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module memc
+-- Compiling module not1
 
 Top level modules:
-	memc
+	not1
+
+} {} {}} D:/ECE552/project/verilog/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/alu.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module alu
+
+Top level modules:
+	alu
 
 } {} {}} D:/ECE552/project/verilog/controller.v {2 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/controller.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -344,26 +344,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	dec3to8
 
-} {} {}} D:/ECE552/project/verilog/reg16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/reg16.v
+} {} {}} D:/ECE552/project/verilog/memv.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/memv.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module reg16
+-- Compiling module memv
 
 Top level modules:
-	reg16
-
-} {} {}} D:/ECE552/project/verilog/cla_4b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/cla_4b.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module cla_4b
-
-Top level modules:
-	cla_4b
-
-} {} {}} D:/ECE552/project/verilog/fullAdder_1b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/fullAdder_1b.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module fullAdder_1b
-
-Top level modules:
-	fullAdder_1b
+	memv
 
 } {} {}} D:/ECE552/project/verilog/victimway.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/victimway.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -372,19 +358,26 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	victimway
 
-} {} {}} D:/ECE552/project/verilog/memv.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/memv.v
+} {} {}} D:/ECE552/project/verilog/fullAdder_1b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/fullAdder_1b.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module memv
+-- Compiling module fullAdder_1b
 
 Top level modules:
-	memv
+	fullAdder_1b
 
-} {} {}} D:/ECE552/project/verilog/sext5_16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/sext5_16.v
+} {} {}} D:/ECE552/project/verilog/cla_4b.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/cla_4b.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module sext5_16
+-- Compiling module cla_4b
 
 Top level modules:
-	sext5_16
+	cla_4b
+
+} {} {}} D:/ECE552/project/verilog/reg16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/reg16.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module reg16
+
+Top level modules:
+	reg16
 
 } {} {}} D:/ECE552/project/verilog/stallmem.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/stallmem.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -393,12 +386,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	stallmem
 
-} {} {}} D:/ECE552/project/verilog/memory2c_align.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/memory2c_align.v
+} {} {}} D:/ECE552/project/verilog/sext5_16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/sext5_16.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module memory2c_align
+-- Compiling module sext5_16
 
 Top level modules:
-	memory2c_align
+	sext5_16
 
 } {} {}} D:/ECE552/project/verilog/mux8_16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/mux8_16.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -406,6 +399,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	mux8_16
+
+} {} {}} D:/ECE552/project/verilog/memory2c_align.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/memory2c_align.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module memory2c_align
+
+Top level modules:
+	memory2c_align
 
 } {} {}} D:/ECE552/project/verilog/reg3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/reg3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
