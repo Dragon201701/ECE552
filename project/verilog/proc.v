@@ -56,9 +56,8 @@ module proc (/*AUTOARG*/
    wire           mem_done;
    wire           instrmem_stall;
    jk_r memerr(.q(mem_err), .j(datamem_err), .k(1'b0), .clk(clk), .rst(rst));
-   jk_r memstall(.q(q));
    assign halt = MEMWB_halt | mem_err;
-   assign stall = mem_stall|instr_stall;
+   assign stall = mem_stall|instr_stall|instrmem_stall;
 
    pipeline Pipeline_Control(.clk(clk), .rst(rst), 
       .IFID_Rs(IFID_Rs), .IFID_Rt(IFID_Rt),
@@ -113,7 +112,7 @@ module proc (/*AUTOARG*/
       .EXMEM_memRead(EXMEM_memRead), .EXMEM_memWrite(EXMEM_memWrite), .EXMEM_regWrite(EXMEM_regWrite), .EXMEM_MemToReg(EXMEM_MemToReg), 
       .EXMEM_lbi(EXMEM_lbi), .EXMEM_slbi(EXMEM_slbi), .EXMEM_halt(EXMEM_halt), 
       .instr(IDEX_instr), .EXMEM_instr(EXMEM_instr),
-      .stall(mem_stall), .no_Op(IDEX_noOp), .EXMEM_noOp(EXMEM_noOp)  );
+      .stall(stall), .no_Op(IDEX_noOp), .EXMEM_noOp(EXMEM_noOp));
 
   
       reg16 instr_check(.clk(clk), .rst(rst), .en (1'b1), .D  (EXMEM_instr), .Q  (EXMEM_prev_instr));
