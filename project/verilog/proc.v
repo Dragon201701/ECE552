@@ -20,6 +20,7 @@ module proc (/*AUTOARG*/
    
    // As desribed in the homeworks, use the err signal to trap corner
    // cases that you think are illegal in your statemachines
+   wire MEMWB_memRead, stall_1_cycle;
    wire store_check, load_check, reg_write_check;
    wire [15:0] EXMEM_prev_instr, MEMWB_prev_instr;
    wire regWriteIn, regWriteOut, btr, aluSrc, memWrite, memRead, MemToReg, no_Op, slbi, lbi, stuCtl, PCsrc;
@@ -117,7 +118,7 @@ module proc (/*AUTOARG*/
   
       reg16 instr_check(.clk(clk), .rst(rst), .en (1'b1), .D  (EXMEM_instr), .Q  (EXMEM_prev_instr));
       assign store_check = (EXMEM_prev_instr == EXMEM_instr) ? 1'b0 : EXMEM_memWrite; 
-      assign load_check = (EXMEM_prev_instr == EXMEM_instr) ? 1'b0 :EXMEM_memRead;
+      //assign load_check = (EXMEM_prev_instr == EXMEM_instr) ? 1'b0 :EXMEM_memRead;
 
    // Memory
    memory memoryStage(.aluOut(EXMEM_memAddr), .wrData(EXMEM_writeData), .memRead(EXMEM_memRead), .memWrite(EXMEM_memWrite), .clk(clk), .rst(rst), .memoryOut(memoryOut), 
@@ -128,6 +129,11 @@ module proc (/*AUTOARG*/
       .MEMWB_memoryOut(MEMWB_memoryOut), .MEMWB_PC_inc(MEMWB_PC_inc), .MEMWB_PC(MEMWB_PC), .MEMWB_ALUout(MEMWB_ALUout), .MEMWB_jumpCtl(MEMWB_jumpCtl),
       .no_Op(EXMEM_noOp), .MEMWB_noOp(MEMWB_noOp), .memRead(EXMEM_memRead), .MEMWB_memRead(MEMWB_memRead), .instr(EXMEM_instr), .MEMWB_instr(MEMWB_instr),
       .MEMWB_Rs(MEMWB_Rs), .MEMWB_Rt(MEMWB_Rt), .MEMWB_Rd(MEMWB_Rd), .MEMWB_MemToReg(MEMWB_MemToReg), .MEMWB_regWrite(MEMWB_regWrite), .MEMWB_lbi(MEMWB_lbi), .MEMWB_slbi(MEMWB_slbi), .MEMWB_halt(MEMWB_halt));
+ 
+   reg1 stall_extra(.clk(clk), .rst(rst), .en(1'b1), .D( stall), .Q(stall_1_cycle)); 
+   reg16 instr_check3(.clk(clk), .rst(rst), .en (1'b1), .D  (MEMWB_instr), .Q  (MEMWB_prev_instr)); 
+   assign load_check = (MEMWB_prev_instr == MEMWB_instr & ~stall & (EXMEM_memRead) & (stall_1_cycle == 1'b1) ) ? 1'b1 : 1'b0;
+
    // Wb
    wb wbStage(.PC_inc(MEMWB_PC_inc), .jumpCtl(MEMWB_jumpCtl), .memToReg(MEMWB_MemToReg), .memData(MEMWB_memoryOut), .aluOut(MEMWB_ALUout), .writeData(writeData));
 
