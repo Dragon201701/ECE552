@@ -125,7 +125,7 @@ module proc (/*AUTOARG*/
       .halt(halt), .err(datamem_err), .Done(mem_done), .Stall(mem_stall), .lbi(EXMEM_lbi));
 
    MEMWBreg MEMWB(.clk(clk), .rst(rst), .memoryOut(memoryOut), .PC_inc(EXMEM_PC_inc), .ALUOut(EXMEM_memAddr), .PC(EXMEM_PC), .jumpCtl(EXMEM_jumpCtl), .stall(stall), 
-      .Rs(EXMEM_Rs), .Rt(EXMEM_Rt), .Rd(EXMEM_Rd), .MemToReg(EXMEM_MemToReg), .regWrite(EXMEM_regWrite), .lbi(EXMEM_lbi), .slbi(EXMEM_slbi), .halt(EXMEM_halt),
+      .Rs(EXMEM_Rs), .Rt(EXMEM_Rt), .Rd(EXMEM_jumpCtl[1]?3'b111:EXMEM_Rd), .MemToReg(EXMEM_MemToReg), .regWrite(EXMEM_regWrite), .lbi(EXMEM_lbi), .slbi(EXMEM_slbi), .halt(EXMEM_halt),
       .MEMWB_memoryOut(MEMWB_memoryOut), .MEMWB_PC_inc(MEMWB_PC_inc), .MEMWB_PC(MEMWB_PC), .MEMWB_ALUout(MEMWB_ALUout), .MEMWB_jumpCtl(MEMWB_jumpCtl),
       .no_Op(EXMEM_noOp), .MEMWB_noOp(MEMWB_noOp), .memRead(EXMEM_memRead), .MEMWB_memRead(MEMWB_memRead), .instr(EXMEM_instr), .MEMWB_instr(MEMWB_instr),
       .MEMWB_Rs(MEMWB_Rs), .MEMWB_Rt(MEMWB_Rt), .MEMWB_Rd(MEMWB_Rd), .MEMWB_MemToReg(MEMWB_MemToReg), .MEMWB_regWrite(MEMWB_regWrite), .MEMWB_lbi(MEMWB_lbi), .MEMWB_slbi(MEMWB_slbi), .MEMWB_halt(MEMWB_halt));
