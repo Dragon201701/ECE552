@@ -71,7 +71,7 @@ module proc (/*AUTOARG*/
 
    // Fetch
    fetch fetchStage(.clk(clk), .rst(rst), .PC_inc(PC_inc), .instr(instr), .PCsrc(PCsrc), .PC_new(PC_new), .PC(PC), .stall(stall), .Rs(Fetch_Rs), .Rt(Fetch_Rt), 
-      .halt_in(halt), .halt_out(halt_out), .mem_err(mem_err), .instrmem_err(instrmem_err), .instrmem_stall(instrmem_stall));
+      .halt_in(halt), .halt_out(halt_out), .mem_err(mem_err), .instrmem_err(instrmem_err), .instrmem_stall(instrmem_stall), .IFID_halt(IFID_halt));
 
    IFIDreg IFID(.clk(clk), .rst(rst), .stall(stall), .PC_inc(PC_inc), .PC(PC), .instr(instr), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt(halt_out), .flush(flush),
       .IFID_PC_inc(IFID_PC_inc), .IFID_PC(IFID_PC), .IFID_instr(IFID_instr), .IFID_Rs(IFID_Rs), .IFID_Rt(IFID_Rt), .IFID_halt(IFID_halt), .instrmem_stall(instrmem_stall));

@@ -4,9 +4,9 @@
    Filename        : fetch.v
    Description     : This is the module for the overall fetch stage of the processor.
 */
-module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in, halt_out, mem_err, instrmem_err, instrmem_stall);
+module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in, halt_out, mem_err, instrmem_err, instrmem_stall, IFID_halt);
 
-   input clk, rst, PCsrc, stall, halt_in, mem_err;
+   input clk, rst, PCsrc, stall, halt_in, mem_err, IFID_halt;
    input [15:0] PC_new;
 
    output [15:0] PC_inc, instr, PC;
@@ -14,7 +14,7 @@ module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in
    output halt_out, instrmem_err, instrmem_stall;
    wire   [15:0] PC_next, instr_out;
    wire halt, noOp, instrmem_stall;
-   assign instr = instrmem_err?16'h0000:instr_out;
+   assign instr = instrmem_err | IFID_halt?16'h0000:instr_out;
                   //stall | instrmem_stall? 16'h0800 : instr_out;
    assign Rs = instr[10:8];
     assign Rt = instr[7:5];
