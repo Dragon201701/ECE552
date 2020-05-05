@@ -46,8 +46,8 @@ module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVal, err, 
     cla_16b jb_pc_add(.A(jumpCtl[0]?(
                         jumpCtl[1]? (
                                         EX_link? EX_PC_inc:
-                                        MEM_jump[1]?read1Data:
-                                        (EX_Rd == Rs) & ((Rs != 3'b000 & EXMEM_noOp != 1'b1) | EX_lbi | EX_slbi)? EX_data:
+                                        MEM_jump[1]?( (Rs==3'b111)? MEM_PC_inc:read1Data ):
+                                        ((EX_Rd == Rs) & ((Rs != 3'b000 & EXMEM_noOp != 1'b1) | EX_lbi | EX_slbi))? EX_data:
                                         ((MEM_jump[1]?MEM_Rs:MEM_Rd) == Rs) & ((Rs != 3'b000 & MEMWB_noOp != 1'b1) | MEM_lbi | MEM_slbi)? (MEM_memWrite?MEM_data:MEM_addr):
                                         read1Data
                                      ):
