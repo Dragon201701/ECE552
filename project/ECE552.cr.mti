@@ -12,7 +12,7 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	nand3
 
-} {} {}} D:/ECE552/project/verilog/MEMWBreg.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/MEMWBreg.v
+} {} {}} D:/ECE552/project/verilog/MEMWBreg.v {1 {vlog -work work -vopt -stats=none {D:\ECE552\project\verilog\MEMWBreg.v}
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module MEMWBreg
 
@@ -40,12 +40,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	wb
 
-} {} {}} D:/ECE552/project/verilog/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/alu.v
+} {} {}} D:/ECE552/project/verilog/alu.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/reg4.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module alu
+-- Compiling module reg4
 
 Top level modules:
-	alu
+	reg4
 
 } {} {}} D:/ECE552/project/verilog/not1.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/not1.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -99,6 +99,13 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	proc_hier
 
+} {} {}} D:/ECE552/project/verilog/proc.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/proc.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module proc
+
+Top level modules:
+	proc
+
 } {} {}} D:/ECE552/project/verilog/xor3.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/xor3.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module xor3
@@ -134,12 +141,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	branchctlunit
 
-} {} {}} D:/ECE552/project/verilog/count.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/count.v
+} {} {}} D:/ECE552/project/verilog/IFIDreg.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/IFIDreg.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module count
+-- Compiling module IFIDreg
 
 Top level modules:
-	count
+	IFIDreg
 
 } {} {}} D:/ECE552/project/verilog/final_memory.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/final_memory.syn.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -155,7 +162,7 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	proc_hier_bench
 
-} {} {}} D:/ECE552/project/verilog/mux4_16.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/mux4_16.v
+} {} {}} D:/ECE552/project/verilog/mux4_16.v {1 {vlog -work work -vopt -stats=none {D:\ECE552\project\verilog\mux4_16.v}
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module mux4_16
 
@@ -194,13 +201,8 @@ Top level modules:
 
 } {} {}} D:/ECE552/project/verilog/EXMEMreg.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/EXMEMreg.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module EXMEMreg
 
--- Compiling module EXMEMreg
-Top level modules:
-
-	EXMEMreg
 Top level modules:
 	EXMEMreg
 
@@ -218,12 +220,12 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 Top level modules:
 	execute
 
-} {} {}} D:/ECE552/project/verilog/decode.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/proc.v
+} {} {}} D:/ECE552/project/verilog/decode.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/decode.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc
+-- Compiling module decode
 
 Top level modules:
-	proc
+	decode
 
 } {} {}} D:/ECE552/project/verilog/shifter.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/shifter.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
