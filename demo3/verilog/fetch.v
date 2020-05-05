@@ -4,9 +4,9 @@
    Filename        : fetch.v
    Description     : This is the module for the overall fetch stage of the processor.
 */
-module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in, halt_out, mem_err, instrmem_err, instrmem_stall);
+module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in, halt_out, mem_err, instrmem_err, instrmem_stall, IFID_halt);
 
-   input clk, rst, PCsrc, stall, halt_in, mem_err;
+   input clk, rst, PCsrc, stall, halt_in, mem_err, IFID_halt;
    input [15:0] PC_new;
 
    output [15:0] PC_inc, instr, PC;
@@ -14,21 +14,22 @@ module fetch (clk, rst, PCsrc, stall, PC_new, PC_inc, PC, instr, Rs, Rt, halt_in
    output halt_out, instrmem_err, instrmem_stall;
    wire   [15:0] PC_next, instr_out;
    wire halt, noOp, instrmem_stall;
-   assign instr = instrmem_err?16'h0000:instr_out;
+   assign instr = instrmem_err | IFID_halt?16'h0000:instr_out;
                   //stall | instrmem_stall? 16'h0800 : instr_out;
    assign Rs = instr[10:8];
     assign Rt = instr[7:5];
    assign halt_out = (instr[15:11] == 5'b00000)&~rst?1:0;
    assign noOp = (instr[15:11] == 5'b00001)?1:0;
   assign PC_next = rst? 16'h0000 :
-                    halt_in  | mem_err ? PC :
-                    stall? PC :
                     PCsrc? PC_new :
-                    //halt_in | stall | mem_err | instrmem_err ? PC :
+                    halt_in | mem_err ? PC :
+                    stall? PC :
                     
+                    //halt_in | stall | mem_err | instrmem_err ? PC :
+                    //halt_in? PC:
                    noOp? PC_inc :
                     PC_inc;
-  reg16 pcreg(.clk(clk), .rst(rst), .en(~stall), .D(PC_next), .Q(PC));
+  reg16 pcreg(.clk(clk), .rst(rst), .en(~stall | PCsrc), .D(PC_next), .Q(PC));
   // Initialize memory
   // TODO: Change memory back to syn type
   //memory2c_align instr_mem(.data_out(instr_out), .data_in(PC), .addr(PC), .enable(~stall), .wr(1'b0), .createdump(clk), .clk(clk), .rst(rst), .err(instrmem_err));

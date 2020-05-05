@@ -16,7 +16,7 @@ module memory (aluOut, wrData, memRead, memWrite, clk, rst, memoryOut, halt, err
    wire   en, jk_out;
    wire [15:0]    wrData_reg, memAddr_reg;
    assign en = (memWrite | memRead) & ~jk_out;
-   reg16 wrDatareg(.clk(clk), .rst(rst), .en(memWrite), .D(wrData), .Q(wrData_reg));
+   //reg16 wrDatareg(.clk(clk), .rst(rst), .en(memWrite), .D(wrData), .Q(wrData_reg));
    reg16 memAddrreg(.clk(clk), .rst(rst), .en(en), .D(aluOut), .Q(memAddr_reg));
 
    jk_r deassert(.q(jk_out), .j(1'b1), .k(memWrite | memRead), .clk(clk), .rst(rst));
@@ -30,7 +30,7 @@ module memory (aluOut, wrData, memRead, memWrite, clk, rst, memoryOut, halt, err
    // Outputs
    .DataOut(memoryOut), .Done(Done), .Stall(Stall), .CacheHit(), .err(err),
    // Inputs
-   .Addr(aluOut), .DataIn(wrData_reg), .Rd(memRead), .Wr(memWrite), .createdump(clk), .clk(clk), .rst(rst)
+   .Addr(aluOut), .DataIn(wrData), .Rd(memRead), .Wr(memWrite), .createdump(clk), .clk(clk), .rst(rst)
    );
 
 

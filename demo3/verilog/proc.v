@@ -71,9 +71,9 @@ module proc (/*AUTOARG*/
 
    // Fetch
    fetch fetchStage(.clk(clk), .rst(rst), .PC_inc(PC_inc), .instr(instr), .PCsrc(PCsrc), .PC_new(PC_new), .PC(PC), .stall(stall), .Rs(Fetch_Rs), .Rt(Fetch_Rt), 
-      .halt_in(halt), .halt_out(halt_out), .mem_err(mem_err), .instrmem_err(instrmem_err), .instrmem_stall(instrmem_stall));
+      .halt_in(halt), .halt_out(halt_out), .mem_err(mem_err), .instrmem_err(instrmem_err), .instrmem_stall(instrmem_stall), .IFID_halt(IFID_halt));
 
-   IFIDreg IFID(.clk(clk), .rst(rst|flush), .stall(stall), .PC_inc(PC_inc), .PC(PC), .instr(instr), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt(halt_out),
+   IFIDreg IFID(.clk(clk), .rst(rst), .stall(stall), .PC_inc(PC_inc), .PC(PC), .instr(instr), .Rs(Fetch_Rs), .Rt(Fetch_Rt), .halt(halt_out), .flush(flush),
       .IFID_PC_inc(IFID_PC_inc), .IFID_PC(IFID_PC), .IFID_instr(IFID_instr), .IFID_Rs(IFID_Rs), .IFID_Rt(IFID_Rt), .IFID_halt(IFID_halt), .instrmem_stall(instrmem_stall));
 
    // Deode
@@ -82,7 +82,8 @@ module proc (/*AUTOARG*/
       
       .jumpCtl(jumpCtl), .no_Op(no_Op), .slbi(slbi), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco), .ror(ror), .Rs(Decode_Rs), .Rt(Decode_Rt), .RdIn(MEMWB_Rd), .RdOut(RdOut),
       .PC_inc(IFID_PC_inc), .PC_new(PC_new), .PCsrc(PCsrc), .flush(flush), .EXMEM_noOp(EXMEM_noOp), .MEMWB_noOp(MEMWB_noOp),
-      .EX_Rd(IDEX_Rd), .EX_data(Out), .EX_link(IDEX_jumpCtl[1]), .EX_PC_inc(IDEX_PC_inc), .MEM_Rd(EXMEM_Rd), .MEM_data(memoryOut), .MEM_link(EXMEM_jumpCtl[1]), .MEM_PC_inc(EXMEM_PC_inc));
+      .EX_Rd(IDEX_Rd), .EX_data(Out), .EX_link(IDEX_jumpCtl[1]), .EX_PC_inc(IDEX_PC_inc), .EX_lbi(IDEX_lbi), .EX_slbi(IDEX_slbi),
+      .MEM_Rd(EXMEM_Rd), .MEM_Rs(EXMEM_Rs), .MEM_data(memoryOut), .MEM_addr(EXMEM_memAddr), .MEM_memWrite(EXMEM_memWrite), .MEM_jump(EXMEM_jumpCtl), .MEM_PC_inc(EXMEM_PC_inc), .MEM_lbi(EXMEM_lbi), .MEM_slbi(EXMEM_slbi));
 
 
    IDEXreg IDEX(.clk(clk), .rst(rst), .Rs(Decode_Rs), .Rt(Decode_Rt), .Rd(RdOut), .aluOp(aluOp), .jumpCtl(jumpCtl), 
@@ -106,7 +107,7 @@ module proc (/*AUTOARG*/
       .immVal(IDEX_exImmVal), .Out(Out), .Zero(), .Ofl());
 
    EXMEMreg EXMEM(.clk(clk), .rst(rst),
-      .Rs(IDEX_Rs), .Rt(IDEX_Rt), .Rd(IDEX_Rd), .jumpCtl(IDEX_jumpCtl), .memAddr(Out), .writeData(forwarding_ex_Rt?EXMEM_memAddr:(forwarding_mem_Rt?writeData:IDEX_read2Data)), .PC_inc(IDEX_PC_inc), .PC_new(), .PC(IDEX_PC),
+      .Rs(IDEX_Rs), .Rt(IDEX_Rt), .Rd(IDEX_Rd), .jumpCtl(IDEX_jumpCtl), .memAddr(Out), .writeData(forwarding_ex_Rt?EXMEM_memAddr:(forwarding_mem_Rt?(MEMWB_MemToReg?MEMWB_memoryOut:writeData):IDEX_read2Data)), .PC_inc(IDEX_PC_inc), .PC_new(), .PC(IDEX_PC),
       .memRead(IDEX_memRead), .memWrite(IDEX_memWrite), .regWrite(IDEX_regWrite), .MemToReg(IDEX_MemToReg), .lbi(IDEX_lbi), .slbi(IDEX_slbi), .halt(IDEX_halt),
       .EXMEM_Rs(EXMEM_Rs), .EXMEM_Rt(EXMEM_Rt), .EXMEM_Rd(EXMEM_Rd), .EXMEM_jumpCtl(EXMEM_jumpCtl), 
       .EXMEM_memAddr(EXMEM_memAddr), .EXMEM_writeData(EXMEM_writeData), .EXMEM_PC_inc(EXMEM_PC_inc), .EXMEM_PC_new(), .EXMEM_PC(EXMEM_PC),
@@ -125,7 +126,7 @@ module proc (/*AUTOARG*/
       .halt(halt), .err(datamem_err), .Done(mem_done), .Stall(mem_stall), .lbi(EXMEM_lbi));
 
    MEMWBreg MEMWB(.clk(clk), .rst(rst), .memoryOut(memoryOut), .PC_inc(EXMEM_PC_inc), .ALUOut(EXMEM_memAddr), .PC(EXMEM_PC), .jumpCtl(EXMEM_jumpCtl), .stall(stall), 
-      .Rs(EXMEM_Rs), .Rt(EXMEM_Rt), .Rd(EXMEM_Rd), .MemToReg(EXMEM_MemToReg), .regWrite(EXMEM_regWrite), .lbi(EXMEM_lbi), .slbi(EXMEM_slbi), .halt(EXMEM_halt),
+      .Rs(EXMEM_Rs), .Rt(EXMEM_Rt), .Rd(EXMEM_jumpCtl[1]?3'b111:EXMEM_Rd), .MemToReg(EXMEM_MemToReg), .regWrite(EXMEM_regWrite), .lbi(EXMEM_lbi), .slbi(EXMEM_slbi), .halt(EXMEM_halt),
       .MEMWB_memoryOut(MEMWB_memoryOut), .MEMWB_PC_inc(MEMWB_PC_inc), .MEMWB_PC(MEMWB_PC), .MEMWB_ALUout(MEMWB_ALUout), .MEMWB_jumpCtl(MEMWB_jumpCtl),
       .no_Op(EXMEM_noOp), .MEMWB_noOp(MEMWB_noOp), .memRead(EXMEM_memRead), .MEMWB_memRead(MEMWB_memRead), .instr(EXMEM_instr), .MEMWB_instr(MEMWB_instr),
       .MEMWB_Rs(MEMWB_Rs), .MEMWB_Rt(MEMWB_Rt), .MEMWB_Rd(MEMWB_Rd), .MEMWB_MemToReg(MEMWB_MemToReg), .MEMWB_regWrite(MEMWB_regWrite), .MEMWB_lbi(MEMWB_lbi), .MEMWB_slbi(MEMWB_slbi), .MEMWB_halt(MEMWB_halt));

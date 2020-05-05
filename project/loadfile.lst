@@ -1,15 +1,163 @@
-          // Original test: ./shi-ting/hw4/problem6/jalr_0.asm
-          // Author: shi-ting
-          // Test source code follows
+          // cacheTest
+          //
+          // Tests for final pipelined design with
+          // Icache, Dcache, and main memory
+          //
+          // CS/ECE 552, Spring 2006
+          // Andy Phelps  4 May 2006
+          // Modified for byte addressable memory
+          // Pratap Ramamurthy 7th May, 2007
           
+          // Execute a loop for 5 iterations so that we
+          // have a chance to get some hits in the I$
           
-          //Author Shi-Ting, shi-ting
-0000 c108 lbi r1, 8
-0002 3906 jalr r1, 6
-0004 0000 halt
-0006 a143 roli r2, r1, 3
-0008 0000 halt
-000a 0000 halt
-000c 0000 halt
-000e 39fe jalr r1, -2
+0000 c005 lbi r0, 5
+0002 c10a lbi r1, 10          // r1 = 10
+0004      .loop1:
+0004 4123 addi r1, r1, 3      // r1 = 13,16,19,22,25
+0006 401f addi r0, r0, -1
+0008 68fa bnez r0, .loop1
+000a 2006 j .label2           // final r1 = 0x0019
+000c 2002 j .death            // does not execute
+000e 0000 halt
+0010      .death:
 0010 0000 halt
+          
+          // Store incrementing values to incrementing
+          // addresses at "DataPlace"+1.  Don't start
+          // storing until the second iteration of
+          // the loop to avoid doing D$ misses and I$
+          // misses at the same time. (Not yet anyway.)
+          
+0012      .label2:
+0012 c007 lbi r0, 7                // loop counter
+0014 c201 lbi r2, U.DataPlace
+0016 929c slbi r2, L.DataPlace     // store area
+0018 c300 lbi r3, 0                // delay 1 iteration before store
+001a      .loop2:
+001a 7b02 bgez r3, .skip2          // skip first iteration
+001c 9a22 stu r1, r2, 2            // store 0x1a,0x1b,0x1c,0x1d,0x1e,0x1f
+001e      .skip2:
+001e 437f addi r3, r3, -1
+0020 401f addi r0, r0, -1
+0022 4121 addi r1, r1, 1
+0024 68f4 bnez r0, .loop2
+          
+          
+          // Store various values at "DataPlace"+0x200.
+          // We store eight values, and the middle six of
+          // these conflict with the six previous stores.
+          // For direct-mapped, these will victimize; for
+          // two-way, they will coexist.
+          //
+          // Note that the stores aren't all done in order;
+          // this allows the case where there are two
+          // misses in a row despite the block size of 2.
+          
+0026 c201 lbi r2, U.DataPlace
+0028 4248 addi r2, r2, 0x08        // Add 0x0800 to final address
+002a 929c slbi r2, L.DataPlace     //
+002c 425e addi r2, r2, -2          // r2 = DataPlace + 0x0200 - 2 
+002e c305 lbi r3, 0x05
+0030 c410 lbi r4, 0x10
+0032 c515 lbi r5, 0x15
+          
+0034 9a62 stu r3, r2, 2          // DataPlace + 0x0200 = 0x05
+0036 9a82 stu r4, r2, 2          // DataPlace + 0x0201 = 0x10
+0038 9aa2 stu r5, r2, 2          // DataPlace + 0x0202 = 0x15
+003a 9a84 stu r4, r2, 4          // DataPlace + 0x0204 = 0x10
+003c 9a64 stu r3, r2, 4          // DataPlace + 0x0206 = 0x05
+003e 9a82 stu r4, r2, 2          // DataPlace + 0x0207 = 0x10
+0040 4254 addi r2, r2, -12        // r2 = DataPlace+0x0201
+0042 9a64 stu r3, r2, 4          // DataPlace + 0x0203 = 0x05
+0044 9aa4 stu r5, r2, 4          // DataPlace + 0x0205 = 0x15
+                                 // r2 = DataPlace+0x0205
+0046 4256 addi r2, r2, -10        // r2 = DataPlace+0x0200
+          
+          
+          
+          // Store various values at "DataPlace"+0x400.
+          // We store eight values.  They all conflict with
+          // the last eight stores, and the middle six of
+          // these conflict with *both* sets of previous stores.
+          // For direct-mapped, these will all victimize; for
+          // two-way, the middle six will victimize.
+          //
+          // Note that the stores aren't all done in order;
+          // this allows the case where there are two
+          // misses in a row despite the block size of 2.
+          
+0048 c601 lbi r6, U.DataPlace
+004a 46c4 addi r6, r6, 0x04      // Add 0x0400 to final address
+004c 969c slbi r6, L.DataPlace   //
+004e 46de addi r6, r6, -2       // r6 = DataPlace + 0x0400 - 2 
+0050 c325 lbi r3, 0x25
+0052 c430 lbi r4, 0x30
+0054 c535 lbi r5, 0x35
+          
+0056 9e62 stu r3, r6, 2          // DataPlace + 0x0400 = 0x25
+0058 9e82 stu r4, r6, 2          // DataPlace + 0x0401 = 0x30
+005a 9ea2 stu r5, r6, 2          // DataPlace + 0x0402 = 0x35
+005c 9e84 stu r4, r6, 4          // DataPlace + 0x0404 = 0x30
+005e 9e64 stu r3, r6, 4          // DataPlace + 0x0406 = 0x25
+0060 9e82 stu r4, r6, 2          // DataPlace + 0x0407 = 0x30
+0062 46d4 addi r6, r6, -12        // r6 = DataPlace+0x0401
+0064 9e64 stu r3, r6, 4          // DataPlace + 0x0403 = 0x25
+0066 9ea4 stu r5, r6, 4          // DataPlace + 0x0405 = 0x35
+                                 // r6 = DataPlace+0x0405
+0068 46d6 addi r6, r6, -10        // r6 = DataPlace+0x0400
+          
+006a c001 lbi r0, U.DataPlace
+006c 909c slbi r0, L.DataPlace   // r0 = DataPlace
+          
+006e 8822 ld r1, r0, 2
+0070 8a62 ld r3, r2, 2
+0072 8e82 ld r4, r6, 2
+0074 8aa4 ld r5, r2, 4
+0076 88e4 ld r7, r0, 4
+0078 dfbc add r7, r7, r5
+007a df9c add r7, r7, r4
+007c df7c add r7, r7, r3
+007e df3c add r7, r7, r1
+0080 8826 ld r1, r0, 6
+0082 8a68 ld r3, r2, 8
+0084 8e88 ld r4, r6, 8
+0086 88a8 ld r5, r0, 8
+0088 dfbc add r7, r7, r5
+008a df9c add r7, r7, r4
+008c df7c add r7, r7, r3
+008e df3c add r7, r7, r1
+          
+0090 c000 lbi r0, U.loop1
+0092 9004 slbi r0, L.loop1
+0094 8820 ld r1, r0, 0        // just a random load from code area
+          
+0096 8632 st r1, r6, 18
+0098 86f4 st r7, r6, 20
+          
+009a 2302 j .wayout
+          
+009c      zerofill 0x100
+          
+019c      .DataPlace:
+          
+019c      zerofill 0xfa
+          
+0296      .wayout2:
+          
+0296 c3aa lbi r3, 0xaa
+0298 8678 st r3, r6, 24
+029a 0000 halt                // MADE IT
+029c 2566 j .loop1   // not executed
+029e 2564 j .loop1   // not executed
+02a0 2562 j .loop1   // not executed
+          
+02a2      zerofill 0xfc
+          
+039e      .wayout:
+039e c355 lbi r3, 0x55
+03a0 8676 st r3, r6, 22
+03a2 26f2 j .wayout2
+03a4 0000 halt
+          
+03a6      zerofill 0x180
