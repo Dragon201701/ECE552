@@ -6,13 +6,13 @@
 */
 module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVal, err, aluOp, regWriteIn, regWriteOut, aluSrc, btr,
     EXMEM_noOp, MEMWB_noOp, memWrite, memRead, MemToReg, branchCtl, jumpCtl, no_Op, slbi, lbi, seq, sl, sco, ror, Rs, Rt, RdIn, RdOut, PC_inc, PC_new, PCsrc, flush, 
-    EX_Rd, EX_data, EX_link, EX_PC_inc, EX_lbi, EX_slbi, MEM_Rd, MEM_data, MEM_link, MEM_PC_inc, MEM_lbi, MEM_slbi);
+    EX_Rd, EX_data, EX_link, EX_PC_inc, EX_lbi, EX_slbi, MEM_Rd, MEM_data, MEM_addr, MEM_memWrite, MEM_link, MEM_PC_inc, MEM_lbi, MEM_slbi);
 
     input   clk, rst, regWriteIn, EX_link, MEM_link;
-    input   [15:0]  instr, PC_inc, EX_data, MEM_data, EX_PC_inc, MEM_PC_inc; // instruction
+    input   [15:0]  instr, PC_inc, EX_data, MEM_data, MEM_addr, EX_PC_inc, MEM_PC_inc; // instruction
     input   [15:0]  writeData;
     input   [2:0]   RdIn, EX_Rd, MEM_Rd;
-    input EXMEM_noOp, MEMWB_noOp, EX_lbi, EX_slbi, MEM_lbi, MEM_slbi;
+    input EXMEM_noOp, MEMWB_noOp, EX_lbi, EX_slbi, MEM_lbi, MEM_slbi, MEM_memWrite;
     output err;
     output [15:0]  read1Data, read2Data, PC_new;
     output [15:0] exImmVal;
@@ -48,7 +48,7 @@ module decode (instr, writeData, rst, clk, read1Data, read2Data, exImmVal, err, 
                                         EX_link? EX_PC_inc:
                                         MEM_link? MEM_PC_inc:
                                         (EX_Rd == Rs) & ((Rs != 3'b000 & EXMEM_noOp != 1'b1) | EX_lbi | EX_slbi)? EX_data:
-                                        (MEM_Rd == Rs) & ((Rs != 3'b000 & MEMWB_noOp != 1'b1) | MEM_lbi | MEM_slbi)? MEM_data:
+                                        (MEM_Rd == Rs) & ((Rs != 3'b000 & MEMWB_noOp != 1'b1) | MEM_lbi | MEM_slbi)? (MEM_memWrite?MEM_data:MEM_addr):
                                         read1Data
                                      ):
                                     (
