@@ -11,7 +11,7 @@ module proc_hier_pbench();
    
 
    wire [15:0] PC;
-   wire [15:0] Inst;           /* This should be the 15 bits of the FF that
+   wire [15:0] Inst;           /* This should be the 16 bits of the FF that
                                   stores instructions fetched from instruction memory
                                */
    wire        RegWrite;       /* Whether register file is being written to */
@@ -76,16 +76,16 @@ module proc_hier_pbench();
          end    
 
          $fdisplay(sim_log_file, "SIMLOG:: Cycle %d PC: %8x I: %8x R: %d %3d %8x M: %d %d %8x %8x",
-                   DUT.c0.cycle_count,
-                   PC,
-                   Inst,
-                   RegWrite,
-                   WriteRegister,
-                   WriteData,
-                   MemRead,
-                   MemWrite,
-                   MemAddress,
-                   MemDataIn);
+                  DUT.c0.cycle_count,
+                  PC,
+                  Inst,
+                  RegWrite,
+                  WriteRegister,
+                  WriteData,
+                  MemRead,
+                  MemWrite,
+                  MemAddress,
+                  MemDataIn);
          if (RegWrite) begin
             $fdisplay(trace_file,"REG: %d VALUE: 0x%04x",
                       WriteRegister,
@@ -96,7 +96,7 @@ module proc_hier_pbench();
                       MemAddress, MemDataOut );
          end
 
-        if (MemWrite) begin
+         if (MemWrite) begin
             $fdisplay(trace_file,"STORE: ADDR: 0x%04x VALUE: 0x%04x",
                       MemAddress, MemDataIn  );
          end
@@ -130,73 +130,54 @@ module proc_hier_pbench();
    assign PC = DUT.p0.PC;
    assign Inst = DUT.p0.instr;
    
-   //assign RegWrite = DUT.p0.MEMWB_regWrite & ~DUT.p0.stall;
-   assign RegWrite = DUT.p0.reg_write_check;
-   // OLD
-   //assign RegWrite = DUT.p0.decodeStage.regWriteIn & ~DUT.p0.stall;
+   assign RegWrite = DUT.p0.decodeStage.regWriteIn;
    // Is register file being written to, one bit signal (1 means yes, 0 means no)
    //    
-   assign WriteRegister = DUT.p0.MEMWB_Rd;
+   assign WriteRegister = DUT.p0.decodeStage.RdIn;
    // The name of the register being written to. (3 bit signal)
    
-   assign WriteData = DUT.p0.writeData;
+   assign WriteData = DUT.p0.decodeStage.writeData;
    // Data being written to the register. (16 bits)
    
-   //assign MemRead =  (DUT.p0.memRxout & ~DUT.p0.notdonem);
-   //assign MemRead = DUT.p0.MEMWB_memRead & DUT.p0.mem_done;
-   
-   // OLD ->
-   //assign MemRead = DUT.p0.EXMEM_memRead & ~DUT.p0.stall;
-   assign MemRead = DUT.p0.load_check;
+   assign MemRead =  (DUT.p0.memoryStage.memRead & DUT.p0.mem_done);
    // Is memory being read, one bit signal (1 means yes, 0 means no)
    
-   assign MemWrite = DUT.p0.store_check;
-   //assign MemWrite = DUT.p0.EXMEM_memWrite & ~DUT.p0.stall;
+   assign MemWrite = (DUT.p0.memoryStage.memWrite & DUT.p0.mem_done);
    // Is memory being written to (1 bit signal)
    
-   // OLD
-   assign MemAddress = DUT.p0.EXMEM_memAddr;
-   //assign MemAddress = DUT.p0.MEMWB_ALUout;
+   assign MemAddress = DUT.p0.memoryStage.aluOut;
    // Address to access memory with (for both reads and writes to memory, 16 bits)
    
-   assign MemDataIn = DUT.p0.EXMEM_writeData;
+   assign MemDataIn = DUT.p0.memoryStage.wrData;
    // Data to be written to memory for memory writes (16 bits)
    
-   //assign MemDataOut = DUT.p0.MEMWB_memoryOut;
-   assign MemDataOut = DUT.p0.memoryOut;
-   
-   
-   
-   
+   assign MemDataOut = DUT.p0.memoryStage.memoryOut;
    // Data read from memory for memory reads (16 bits)
 
    // new added 05/03
-   //assign ICacheReq = DUT.p0.readData;
+   assign ICacheReq = DUT.p0.fetchStage.instr_mem.Rd;
    // Signal indicating a valid instruction read request to cache
    // Above assignment is a dummy example
    
-   //assign ICacheHit = DUT.p0.readData;
+   assign ICacheHit = DUT.p0.fetchStage.instr_mem.CacheHit;
    // Signal indicating a valid instruction cache hit
    // Above assignment is a dummy example
 
-   //assign DCacheReq = DUT.p0.readData;
+   assign DCacheReq = DUT.p0.memoryStage.memRead | DUT.p0.memoryStage.memWrite;
    // Signal indicating a valid instruction data read or write request to cache
    // Above assignment is a dummy example
    //    
-   //assign DCacheHit = DUT.p0.readData;
+   assign DCacheHit = DUT.p0.memoryStage.data_mem.CacheHit;
    // Signal indicating a valid data cache hit
    // Above assignment is a dummy example
    
-   assign Halt = DUT.p0.MEMWB_halt;
+   assign Halt = DUT.p0.halt;
    // Processor halted
    
    
    /* Add anything else you want here */
-   wire   [15:0]  PC_IFID, PC_IDEX, PC_EXMEM, PC_MEMWB;
-   assign PC_IFID = DUT.p0.IFID_PC;
-   assign PC_IDEX = DUT.p0.IDEX_PC;
-   assign PC_EXMEM = DUT.p0.EXMEM_PC;
-   assign PC_MEMWB = DUT.p0.MEMWB_PC;
+
+   
 endmodule
 
 // DUMMY LINE FOR REV CONTROL :0:

@@ -1163,3 +1163,47 @@ Exception c0000005 has occurred at address 402d3527. Traceback:
 StackWalk failed 0
 # End of Stack Trace
 
+# Current time Mon May 04 22:29:22 2020
+# ModelSim SE Stack Trace
+# Program = vish
+# Id = "10.6d"
+# Version = "2018.02"
+# Date = "Feb 24 2018"
+# Platform = win64
+
+Exception c0000005 has occurred at address 402dad5c. Traceback:
+# 0    0x402dad5c: 'Mtirpc_Init + 0x129d8c'
+# 1    0x402d3206: 'Mtirpc_Init + 0x122236'
+# 2    0x402e247e: 'Mtirpc_Init + 0x1314ae'
+# 3    0x40218da2: 'Mtirpc_Init + 0x67dd2'
+# 4    0x403dc8b5: 'TPedit_Init + 0x3b545'
+# 5    0x4021645f: 'Mtirpc_Init + 0x6548f'
+# 6    0x4015a408: 'Tclsqlite3_SafeInit + 0xb45e8'
+# 7    0x708bb914: 'TclCallVarTraces + 0x2f4'
+# 8    0x708c8aa4: 'TclPtrMakeUpvar + 0x734'
+# 9    0x7085447b: 'Tcl_SetExitProc + 0x3c6b'
+# 10   0x707e6c03: 'TclNRRunCallbacks + 0x63'
+# 11   0x707e6c03: 'TclNRRunCallbacks + 0x63'
+# 12   0x9eb20bfa: 'Itcl_EvalMemberCode + 0x3ba'
+# 13   0x9eb21dbb: 'Itcl_ExecMethod + 0x23b'
+# 14   0x9eb29879: 'Itcl_EvalArgs + 0x1c9'
+# 15   0x9eb24b51: 'Itcl_HandleInstance + 0x2c1'
+# 16   0x707e6c03: 'TclNRRunCallbacks + 0x63'
+# 17   0x707e586c: 'TclCleanupCommand + 0x88c'
+# 18   0x707e8d4f: 'Tcl_EvalEx + 0x1f'
+# 19   0x7062431a: 'Tk_BindEvent + 0x91a'
+# 20   0x7065bd41: 'TkBindEventProc + 0x291'
+# 21   0x7066c614: 'Tk_HandleEvent + 0x2f4'
+# 22   0x7066b2da: 'TkDeleteThreadExitHandler + 0x31a'
+# 23   0x7088d41c: 'Tcl_ServiceEvent + 0x9c'
+# 24   0x7088d0b4: 'Tcl_DoOneEvent + 0x124'
+# 25   0x7066aee5: 'Tk_MainLoop + 0x25'
+# 26   0x706ad282: 'Tk_MainEx + 0x932'
+# 27   0x401d3280: 'Mtirpc_Init + 0x222b0'
+# 28   0x401d58b8: 'Mtirpc_Init + 0x248e8'
+# 29   0x405f02cf: 'Tclsqlite_Init + 0x1a5f'
+# 30   0xb0db7bd4: 'BaseThreadInitThunk + 0x14'
+# 31   0xb200ced1: 'RtlUserThreadStart + 0x21'
+StackWalk failed 0
+# End of Stack Trace
+

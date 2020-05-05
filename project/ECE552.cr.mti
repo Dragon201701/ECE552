@@ -91,11 +91,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	fetch
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module fetch
-
-Top level modules:
-	fetch
 
 } {} {}} D:/ECE552/project/verilog/proc_hier.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/proc_hier.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -271,13 +266,6 @@ Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 Top level modules:
 	nor2
-
-} {} {}} D:/ECE552/project/verilog/proc_hier_pbench.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/proc_hier_pbench.v
-Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module proc_hier_pbench
-
-Top level modules:
-	proc_hier_pbench
 
 } {} {}} D:/ECE552/project/verilog/memv.syn.v {1 {vlog -work work -vopt -stats=none D:/ECE552/project/verilog/memv.syn.v
 Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
