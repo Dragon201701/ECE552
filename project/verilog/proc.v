@@ -82,7 +82,8 @@ module proc (/*AUTOARG*/
       
       .jumpCtl(jumpCtl), .no_Op(no_Op), .slbi(slbi), .lbi(lbi), .seq(seq), .sl(sl), .sco(sco), .ror(ror), .Rs(Decode_Rs), .Rt(Decode_Rt), .RdIn(MEMWB_Rd), .RdOut(RdOut),
       .PC_inc(IFID_PC_inc), .PC_new(PC_new), .PCsrc(PCsrc), .flush(flush), .EXMEM_noOp(EXMEM_noOp), .MEMWB_noOp(MEMWB_noOp),
-      .EX_Rd(IDEX_Rd), .EX_data(Out), .EX_link(IDEX_jumpCtl[1]), .EX_PC_inc(IDEX_PC_inc), .MEM_Rd(EXMEM_Rd), .MEM_data(memoryOut), .MEM_link(EXMEM_jumpCtl[1]), .MEM_PC_inc(EXMEM_PC_inc));
+      .EX_Rd(IDEX_Rd), .EX_data(Out), .EX_link(IDEX_jumpCtl[1]), .EX_PC_inc(IDEX_PC_inc), .EX_lbi(IDEX_lbi), .EX_slbi(IDEX_slbi),
+      .MEM_Rd(EXMEM_Rd), .MEM_data(memoryOut), .MEM_link(EXMEM_jumpCtl[1]), .MEM_PC_inc(EXMEM_PC_inc), .MEM_lbi(EXMEM_lbi), .MEM_slbi(EXMEM_slbi));
 
 
    IDEXreg IDEX(.clk(clk), .rst(rst), .Rs(Decode_Rs), .Rt(Decode_Rt), .Rd(RdOut), .aluOp(aluOp), .jumpCtl(jumpCtl), 
